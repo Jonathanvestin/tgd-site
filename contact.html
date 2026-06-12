@@ -164,12 +164,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .zone-label{font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(10,10,10,.5);font-weight:500}
 .zone-tag{font-size:.65rem;font-weight:500;color:var(--black);background:rgba(10,10,10,0.08);padding:.3rem .7rem}
 /* FOOTER */
-.footer-mini{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.06);padding:2rem 4vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-.footer-logo{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);text-decoration:none}
-.footer-links-list{display:flex;gap:1.5rem;list-style:none;flex-wrap:wrap}
-.footer-links-list a{font-size:.6rem;color:rgba(189,181,166,.45);text-decoration:none;font-weight:300;transition:color .2s}
-.footer-links-list a:hover{color:var(--ivory-muted)}
-.footer-copy{font-size:.6rem;color:rgba(189,181,166,.3);font-weight:300}
+
+
+
+
+
+
 /* STICKY MOBILE */
 .sticky-mobile{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--black);border-top:1px solid rgba(201,169,110,0.15);padding:.8rem 1rem;gap:.6rem}
 @media(max-width:900px){.sticky-mobile{display:flex}}
@@ -189,14 +189,24 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 @media(max-width:900px){.wa-float{bottom:80px;right:16px;width:46px;height:46px}}
 
 
-/* footer standard */
-.footer-mini{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.06);padding:2rem 4vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-.footer-mini{flex-direction:column;text-align:center}
-.footer-logo-text{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);text-decoration:none}
-.footer-links-list{display:flex;gap:2rem;list-style:none;flex-wrap:wrap}
-.footer-links-list a{font-size:.62rem;color:rgba(189,181,166,0.45);text-decoration:none;font-weight:300;transition:color .2s}
-.footer-links-list a:hover{color:var(--ivory-muted)}
-.footer-copy{font-size:.6rem;color:rgba(189,181,166,0.3);font-weight:300}
+
+
+
+
+
+
+
+
+
+/* ═══ FOOTER TGD (corrigé) ═══ */
+footer.footer-mini{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.06);padding:2rem 4vw;display:flex;flex-direction:row;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;text-align:left}
+footer.footer-mini a.footer-logo{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);text-decoration:none}
+footer.footer-mini ul.footer-links-list{display:flex;flex-direction:row;gap:2rem;list-style:none;flex-wrap:wrap;margin:0;padding:0}
+footer.footer-mini ul.footer-links-list li{margin:0;padding:0;list-style:none}
+footer.footer-mini ul.footer-links-list a{font-size:.62rem;color:rgba(189,181,166,0.45);text-decoration:none;font-weight:300;transition:color .2s}
+footer.footer-mini ul.footer-links-list a:hover{color:var(--ivory-muted)}
+footer.footer-mini span.footer-copy{font-size:.6rem;color:rgba(189,181,166,0.3);font-weight:300}
+@media(max-width:768px){footer.footer-mini{flex-direction:column;text-align:center}}
 </style>
 </head>
 <body>
@@ -491,7 +501,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 
 <footer class="footer-mini">
   <a href="index.html" class="footer-logo">The Gentleman Driver</a>
-      <ul class="footer-links-list">
+  <ul class="footer-links-list">
     <li><a href="convoyage.html">Convoyage</a></li>
     <li><a href="convoyage-premium.html">Premium</a></li>
     <li><a href="convoyage-electrique.html">&#201;lectrique</a></li>

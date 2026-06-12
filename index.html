@@ -277,7 +277,7 @@ footer{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.07);pad
 .footer-links a{font-size:.73rem;color:var(--ivory-muted);text-decoration:none;font-weight:300;transition:color .2s}
 .footer-links a:hover{color:var(--gold)}
 .footer-bottom{border-top:1px solid rgba(201,169,110,0.07);padding-top:1.8rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-.footer-copy{font-size:.62rem;color:rgba(189,181,166,0.4);font-weight:300}
+
 .footer-legal{display:flex;gap:2rem;list-style:none}
 .footer-legal a{font-size:.62rem;color:rgba(189,181,166,0.4);text-decoration:none;font-weight:300;transition:color .2s}
 .footer-legal a:hover{color:var(--ivory-muted)}
@@ -391,20 +391,30 @@ footer{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.07);pad
 @media(max-width:900px){.wa-float{bottom:80px;right:16px;width:46px;height:46px}}
 
 
-footer .footer-links-list{list-style:none;display:flex;flex-direction:column;gap:.55rem;padding:0;margin:0}
-footer .footer-links-list li{margin:0}
-footer .footer-links-list a{font-size:.68rem;color:var(--ivory-muted,#bdb5a6);text-decoration:none;font-weight:300;letter-spacing:.03em;transition:color .2s}
-footer .footer-links-list a:hover{color:var(--gold,#c9a96e)}
+
+
+
+
 footer .footer-contact a{color:var(--gold,#c9a96e);text-decoration:none}
 
-/* footer standard */
-.footer-mini{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.06);padding:2rem 4vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-.footer-mini{flex-direction:column;text-align:center}
-.footer-logo-text{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);text-decoration:none}
-.footer-links-list{display:flex;gap:2rem;list-style:none;flex-wrap:wrap}
-.footer-links-list a{font-size:.62rem;color:rgba(189,181,166,0.45);text-decoration:none;font-weight:300;transition:color .2s}
-.footer-links-list a:hover{color:var(--ivory-muted)}
-.footer-copy{font-size:.6rem;color:rgba(189,181,166,0.3);font-weight:300}
+
+
+
+
+
+
+
+
+
+/* ═══ FOOTER TGD (corrigé) ═══ */
+footer.footer-mini{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.06);padding:2rem 4vw;display:flex;flex-direction:row;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;text-align:left}
+footer.footer-mini a.footer-logo{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);text-decoration:none}
+footer.footer-mini ul.footer-links-list{display:flex;flex-direction:row;gap:2rem;list-style:none;flex-wrap:wrap;margin:0;padding:0}
+footer.footer-mini ul.footer-links-list li{margin:0;padding:0;list-style:none}
+footer.footer-mini ul.footer-links-list a{font-size:.62rem;color:rgba(189,181,166,0.45);text-decoration:none;font-weight:300;transition:color .2s}
+footer.footer-mini ul.footer-links-list a:hover{color:var(--ivory-muted)}
+footer.footer-mini span.footer-copy{font-size:.6rem;color:rgba(189,181,166,0.3);font-weight:300}
+@media(max-width:768px){footer.footer-mini{flex-direction:column;text-align:center}}
 </style>
 </head>
 <body>
@@ -817,7 +827,7 @@ footer .footer-contact a{color:var(--gold,#c9a96e);text-decoration:none}
 <!-- FOOTER -->
 <footer class="footer-mini">
   <a href="index.html" class="footer-logo">The Gentleman Driver</a>
-      <ul class="footer-links-list">
+  <ul class="footer-links-list">
     <li><a href="convoyage.html">Convoyage</a></li>
     <li><a href="convoyage-premium.html">Premium</a></li>
     <li><a href="convoyage-electrique.html">&#201;lectrique</a></li>

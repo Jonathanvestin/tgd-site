@@ -150,16 +150,16 @@ section{padding:6rem 4vw}
 .testi-role{font-size:.68rem;color:var(--ivory-muted);font-weight:300;margin-top:2px}
 
 /* FOOTER */
-.footer-mini{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.06);padding:2rem 4vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-.footer-logo{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);text-decoration:none}
+
+
 .footer-links{display:flex;gap:2rem;list-style:none}
 .footer-links a{font-size:.62rem;color:rgba(189,181,166,0.45);text-decoration:none;font-weight:300;transition:color .2s}
 .footer-links a:hover{color:var(--ivory-muted)}
-.footer-copy{font-size:.6rem;color:rgba(189,181,166,0.3);font-weight:300}
+
 
 @media(max-width:1024px){.histoire-inner{grid-template-columns:1fr;gap:3rem}.histoire-photo{display:none}.equipe-grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:900px){.stats-row{grid-template-columns:1fr 1fr}.valeurs-grid{grid-template-columns:1fr}.testi-grid{grid-template-columns:1fr}.nav-links,.nav-cta{display:none}.burger{display:flex}}
-@media(max-width:600px){.equipe-grid{grid-template-columns:1fr 1fr}.stats-row{grid-template-columns:1fr 1fr}.footer-mini{flex-direction:column;text-align:center}}
+@media(max-width:600px){.equipe-grid{grid-template-columns:1fr 1fr}.stats-row{grid-template-columns:1fr 1fr}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 .fu{opacity:0;animation:fadeUp .7s ease forwards}
 .d1{animation-delay:.1s}.d2{animation-delay:.25s}.d3{animation-delay:.4s}
@@ -183,13 +183,23 @@ section{padding:6rem 4vw}
 @media(max-width:900px){.wa-float{bottom:80px;right:16px;width:46px;height:46px}}
 
 
-.footer-mini{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.06);padding:2rem 4vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-.footer-mini{flex-direction:column;text-align:center}
-.footer-logo-text{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);text-decoration:none}
-.footer-links-list{display:flex;gap:2rem;list-style:none;flex-wrap:wrap}
-.footer-links-list a{font-size:.62rem;color:rgba(189,181,166,0.45);text-decoration:none;font-weight:300;transition:color .2s}
-.footer-links-list a:hover{color:var(--ivory-muted)}
-.footer-copy{font-size:.6rem;color:rgba(189,181,166,0.3);font-weight:300}
+
+
+
+
+
+
+
+
+/* ═══ FOOTER TGD (corrigé) ═══ */
+footer.footer-mini{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.06);padding:2rem 4vw;display:flex;flex-direction:row;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;text-align:left}
+footer.footer-mini a.footer-logo{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);text-decoration:none}
+footer.footer-mini ul.footer-links-list{display:flex;flex-direction:row;gap:2rem;list-style:none;flex-wrap:wrap;margin:0;padding:0}
+footer.footer-mini ul.footer-links-list li{margin:0;padding:0;list-style:none}
+footer.footer-mini ul.footer-links-list a{font-size:.62rem;color:rgba(189,181,166,0.45);text-decoration:none;font-weight:300;transition:color .2s}
+footer.footer-mini ul.footer-links-list a:hover{color:var(--ivory-muted)}
+footer.footer-mini span.footer-copy{font-size:.6rem;color:rgba(189,181,166,0.3);font-weight:300}
+@media(max-width:768px){footer.footer-mini{flex-direction:column;text-align:center}}
 </style>
 
 <script type="application/ld+json">
@@ -466,7 +476,7 @@ section{padding:6rem 4vw}
 
 <footer class="footer-mini">
   <a href="index.html" class="footer-logo">The Gentleman Driver</a>
-      <ul class="footer-links-list">
+  <ul class="footer-links-list">
     <li><a href="convoyage.html">Convoyage</a></li>
     <li><a href="convoyage-premium.html">Premium</a></li>
     <li><a href="convoyage-electrique.html">&#201;lectrique</a></li>

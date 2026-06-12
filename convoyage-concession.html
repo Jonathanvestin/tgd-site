@@ -133,19 +133,19 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .btn-gold{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--black);background:transparent;border:2px solid var(--black);padding:1rem 2rem;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s;font-family:'Montserrat',sans-serif}
 .btn-gold:hover{background:var(--black);color:var(--ivory)}
 /* FOOTER */
-.footer-mini{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.06);padding:2rem 4vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-.footer-logo-text{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);text-decoration:none}
-.footer-links-list{display:flex;gap:2rem;list-style:none;flex-wrap:wrap}
-.footer-links-list a{font-size:.62rem;color:rgba(189,181,166,0.45);text-decoration:none;font-weight:300;transition:color .2s}
-.footer-links-list a:hover{color:var(--ivory-muted)}
-.footer-copy{font-size:.6rem;color:rgba(189,181,166,0.3);font-weight:300}
+
+
+
+
+
+
 /* HIGHLIGHT BOX */
 .highlight-box{background:rgba(201,169,110,0.06);border-left:3px solid var(--gold);padding:1.5rem 2rem;margin:1.5rem 0}
 .highlight-box p{font-size:.83rem;color:var(--ivory);line-height:1.8;font-weight:300;margin:0}
 .highlight-box p strong{color:var(--gold)}
 /* RESPONSIVE */
 @media(max-width:900px){.proof-band{grid-template-columns:1fr 1fr}.related-grid{grid-template-columns:1fr}.cta-section{flex-direction:column}}
-@media(max-width:600px){.proof-band{grid-template-columns:1fr 1fr}.footer-mini{flex-direction:column;text-align:center}}
+@media(max-width:600px){.proof-band{grid-template-columns:1fr 1fr}}
 
 
 /* ─── BARRE STICKY MOBILE ─── */
@@ -167,14 +167,24 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 @media(max-width:900px){.wa-float{bottom:80px;right:16px;width:46px;height:46px}}
 
 
-/* footer standard */
-.footer-mini{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.06);padding:2rem 4vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-.footer-mini{flex-direction:column;text-align:center}
-.footer-logo-text{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);text-decoration:none}
-.footer-links-list{display:flex;gap:2rem;list-style:none;flex-wrap:wrap}
-.footer-links-list a{font-size:.62rem;color:rgba(189,181,166,0.45);text-decoration:none;font-weight:300;transition:color .2s}
-.footer-links-list a:hover{color:var(--ivory-muted)}
-.footer-copy{font-size:.6rem;color:rgba(189,181,166,0.3);font-weight:300}
+
+
+
+
+
+
+
+
+
+/* ═══ FOOTER TGD (corrigé) ═══ */
+footer.footer-mini{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.06);padding:2rem 4vw;display:flex;flex-direction:row;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;text-align:left}
+footer.footer-mini a.footer-logo{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);text-decoration:none}
+footer.footer-mini ul.footer-links-list{display:flex;flex-direction:row;gap:2rem;list-style:none;flex-wrap:wrap;margin:0;padding:0}
+footer.footer-mini ul.footer-links-list li{margin:0;padding:0;list-style:none}
+footer.footer-mini ul.footer-links-list a{font-size:.62rem;color:rgba(189,181,166,0.45);text-decoration:none;font-weight:300;transition:color .2s}
+footer.footer-mini ul.footer-links-list a:hover{color:var(--ivory-muted)}
+footer.footer-mini span.footer-copy{font-size:.6rem;color:rgba(189,181,166,0.3);font-weight:300}
+@media(max-width:768px){footer.footer-mini{flex-direction:column;text-align:center}}
 </style>
 </head>
 <body>
@@ -346,7 +356,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 
 <footer class="footer-mini">
   <a href="index.html" class="footer-logo">The Gentleman Driver</a>
-      <ul class="footer-links-list">
+  <ul class="footer-links-list">
     <li><a href="convoyage.html">Convoyage</a></li>
     <li><a href="convoyage-premium.html">Premium</a></li>
     <li><a href="convoyage-electrique.html">&#201;lectrique</a></li>
