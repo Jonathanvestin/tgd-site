@@ -396,6 +396,15 @@ footer .footer-links-list li{margin:0}
 footer .footer-links-list a{font-size:.68rem;color:var(--ivory-muted,#bdb5a6);text-decoration:none;font-weight:300;letter-spacing:.03em;transition:color .2s}
 footer .footer-links-list a:hover{color:var(--gold,#c9a96e)}
 footer .footer-contact a{color:var(--gold,#c9a96e);text-decoration:none}
+
+/* footer standard */
+.footer-mini{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.06);padding:2rem 4vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-mini{flex-direction:column;text-align:center}
+.footer-logo-text{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);text-decoration:none}
+.footer-links-list{display:flex;gap:2rem;list-style:none;flex-wrap:wrap}
+.footer-links-list a{font-size:.62rem;color:rgba(189,181,166,0.45);text-decoration:none;font-weight:300;transition:color .2s}
+.footer-links-list a:hover{color:var(--ivory-muted)}
+.footer-copy{font-size:.6rem;color:rgba(189,181,166,0.3);font-weight:300}
 </style>
 </head>
 <body>
@@ -806,19 +815,9 @@ footer .footer-contact a{color:var(--gold,#c9a96e);text-decoration:none}
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <div class="footer-grid">
-    <div>
-      <div class="footer-brand">The Gentleman Driver</div>
-      <div class="footer-tagline">Convoyage &middot; Chauffeur &middot; Excellence</div>
-      <p class="footer-desc">Partenaire logistique s&#233;rieux des professionnels de l&#8217;automobile depuis 2021. Bas&#233; en &#206;le-de-France, op&#233;rant en France et en Europe.</p>
-      <div class="footer-contact"><a href="tel:+33761092626">07 61 09 26 26</a> &mdash; 7j/7 de 7h &#224; 22h</div>
-      <div class="footer-contact"><a href="mailto:contact@the-gentleman-driver.com">contact@the-gentleman-driver.com</a></div>
-      <div class="footer-contact">Charenton-le-Pont, 94 &mdash; &#206;le-de-France</div>
-    </div>
-    <div>
-      <div class="footer-col-title">Services</div>
-          <ul class="footer-links-list">
+<footer class="footer-mini">
+  <a href="index.html" class="footer-logo">The Gentleman Driver</a>
+      <ul class="footer-links-list">
     <li><a href="convoyage.html">Convoyage</a></li>
     <li><a href="convoyage-premium.html">Premium</a></li>
     <li><a href="convoyage-electrique.html">&#201;lectrique</a></li>
@@ -831,37 +830,12 @@ footer .footer-contact a{color:var(--gold,#c9a96e);text-decoration:none}
     <li><a href="chauffeur-longue-distance.html">Longue distance</a></li>
     <li><a href="transport-plateau.html">Plateau</a></li>
     <li><a href="entreprises.html">Entreprises</a></li>
+    <li><a href="a-propos.html">&#192; propos</a></li>
     <li><a href="faq.html">FAQ</a></li>
     <li><a href="contact.html">Contact</a></li>
+    <li><a href="mentions-legales.html">Mentions l&#233;gales</a></li>
   </ul>
-    </div>
-    <div>
-      <div class="footer-col-title">Entreprise</div>
-      <ul class="footer-links-list">
-        <li><a href="#adn">Notre ADN</a></li>
-        <li><a href="#coverage">Zone d&#8217;intervention</a></li>
-        <li><a href="#clients">Nos clients</a></li>
-        <li><a href="contact.html">Contact &amp; devis</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="footer-col-title">Informations</div>
-      <ul class="footer-links-list">
-        <li><a href="#">Mentions l&#233;gales</a></li>
-        <li><a href="#">CGV</a></li>
-        <li><a href="#">Confidentialit&#233;</a></li>
-        <li><a href="https://g.page/r/CefU8JXTd0rDEAE/review" target="_blank" rel="noopener">Laisser un avis Google</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="footer-copy">&copy; 2024 The Gentleman Driver &mdash; SASU &mdash; Tous droits r&#233;serv&#233;s</div>
-    <ul class="footer-legal">
-      <li><a href="#">Mentions l&#233;gales</a></li>
-      <li><a href="#">CGV</a></li>
-      <li><a href="#">Confidentialit&#233;</a></li>
-    </ul>
-  </div>
+  <span class="footer-copy">&copy; 2025 The Gentleman Driver &mdash; SASU</span>
 </footer>
 
 
