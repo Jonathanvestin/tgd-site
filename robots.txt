@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://thegentlemandriver.fr/sitemap.xml
+
+# Block admin/api from indexing
+Disallow: /api/

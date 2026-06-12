@@ -1,0 +1,81 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/api/reviews",
+      "dest": "/api/reviews.js"
+    },
+    {
+      "src": "/convoyage-electrique",
+      "dest": "/convoyage-electrique.html"
+    },
+    {
+      "src": "/convoyage-premium",
+      "dest": "/convoyage-premium.html"
+    },
+    {
+      "src": "/convoyage-paris",
+      "dest": "/convoyage-paris.html"
+    },
+    {
+      "src": "/convoyage-concession",
+      "dest": "/convoyage-concession.html"
+    },
+    {
+      "src": "/convoyage-luxe",
+      "dest": "/convoyage-luxe.html"
+    },
+    {
+      "src": "/convoyage-lyon",
+      "dest": "/convoyage-lyon.html"
+    },
+    {
+      "src": "/convoyage-marseille",
+      "dest": "/convoyage-marseille.html"
+    },
+    {
+      "src": "/convoyage-bordeaux",
+      "dest": "/convoyage-bordeaux.html"
+    },
+    {
+      "src": "/convoyage-lille",
+      "dest": "/convoyage-lille.html"
+    },
+    {
+      "src": "/convoyage-nice",
+      "dest": "/convoyage-nice.html"
+    },
+    {
+      "src": "/convoyage-toulouse",
+      "dest": "/convoyage-toulouse.html"
+    },
+    {
+      "src": "/convoyage-nantes",
+      "dest": "/convoyage-nantes.html"
+    },
+    {
+      "src": "/convoyage-strasbourg",
+      "dest": "/convoyage-strasbourg.html"
+    },
+    {
+      "src": "/convoyage-montpellier",
+      "dest": "/convoyage-montpellier.html"
+    },
+    {
+      "src": "/chauffeur-longue-distance",
+      "dest": "/chauffeur-longue-distance.html"
+    },
+    {
+      "src": "/livraison-0km",
+      "dest": "/livraison-0km.html"
+    },
+    {
+      "src": "/transport-plateau",
+      "dest": "/transport-plateau.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
+}
