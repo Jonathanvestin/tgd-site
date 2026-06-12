@@ -390,21 +390,6 @@ footer{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.07);pad
 .wa-float svg{width:26px;height:26px;fill:#fff}
 @media(max-width:900px){.wa-float{bottom:80px;right:16px;width:46px;height:46px}}
 
-
-footer .footer-links-list{list-style:none;display:flex;flex-direction:column;gap:.55rem;padding:0;margin:0}
-footer .footer-links-list li{margin:0}
-footer .footer-links-list a{font-size:.68rem;color:var(--ivory-muted,#bdb5a6);text-decoration:none;font-weight:300;letter-spacing:.03em;transition:color .2s}
-footer .footer-links-list a:hover{color:var(--gold,#c9a96e)}
-footer .footer-contact a{color:var(--gold,#c9a96e);text-decoration:none}
-
-/* footer standard */
-.footer-mini{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.06);padding:2rem 4vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-.footer-mini{flex-direction:column;text-align:center}
-.footer-logo-text{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);text-decoration:none}
-.footer-links-list{display:flex;gap:2rem;list-style:none;flex-wrap:wrap}
-.footer-links-list a{font-size:.62rem;color:rgba(189,181,166,0.45);text-decoration:none;font-weight:300;transition:color .2s}
-.footer-links-list a:hover{color:var(--ivory-muted)}
-.footer-copy{font-size:.6rem;color:rgba(189,181,166,0.3);font-weight:300}
 </style>
 </head>
 <body>
@@ -815,9 +800,19 @@ footer .footer-contact a{color:var(--gold,#c9a96e);text-decoration:none}
 </section>
 
 <!-- FOOTER -->
-<footer class="footer-mini">
-  <a href="index.html" class="footer-logo">The Gentleman Driver</a>
-      <ul class="footer-links-list">
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">The Gentleman Driver</div>
+      <div class="footer-tagline">Convoyage &middot; Chauffeur &middot; Excellence</div>
+      <p class="footer-desc">Partenaire logistique s&#233;rieux des professionnels de l&#8217;automobile depuis 2021. Bas&#233; en &#206;le-de-France, op&#233;rant en France et en Europe.</p>
+      <div class="footer-contact"><a href="tel:+33761092626">07 61 09 26 26</a> &mdash; 7j/7 de 7h &#224; 22h</div>
+      <div class="footer-contact"><a href="mailto:contact@the-gentleman-driver.com">contact@the-gentleman-driver.com</a></div>
+      <div class="footer-contact">Charenton-le-Pont, 94 &mdash; &#206;le-de-France</div>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+          <ul class="footer-links-list">
     <li><a href="convoyage.html">Convoyage</a></li>
     <li><a href="convoyage-premium.html">Premium</a></li>
     <li><a href="convoyage-electrique.html">&#201;lectrique</a></li>
@@ -835,12 +830,39 @@ footer .footer-contact a{color:var(--gold,#c9a96e);text-decoration:none}
     <li><a href="contact.html">Contact</a></li>
     <li><a href="mentions-legales.html">Mentions l&#233;gales</a></li>
   </ul>
-  <span class="footer-copy">&copy; 2025 The Gentleman Driver &mdash; SASU</span>
+    </div>
+    <div>
+      <div class="footer-col-title">Entreprise</div>
+      <ul class="footer-links-list">
+        <li><a href="#adn">Notre ADN</a></li>
+        <li><a href="#coverage">Zone d&#8217;intervention</a></li>
+        <li><a href="#clients">Nos clients</a></li>
+        <li><a href="contact.html">Contact &amp; devis</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Informations</div>
+      <ul class="footer-links-list">
+        <li><a href="#">Mentions l&#233;gales</a></li>
+        <li><a href="#">CGV</a></li>
+        <li><a href="#">Confidentialit&#233;</a></li>
+        <li><a href="https://g.page/r/CefU8JXTd0rDEAE/review" target="_blank" rel="noopener">Laisser un avis Google</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">&copy; 2024 The Gentleman Driver &mdash; SASU &mdash; Tous droits r&#233;serv&#233;s</div>
+    <ul class="footer-legal">
+      <li><a href="#">Mentions l&#233;gales</a></li>
+      <li><a href="#">CGV</a></li>
+      <li><a href="#">Confidentialit&#233;</a></li>
+    </ul>
+  </div>
 </footer>
 
 
-<script src="tgd-reviews.js"></script>
-<script>
+<script src="tgd-reviews.js">
+
 (function(){
   document.querySelectorAll('.tgd-form').forEach(function(form){
     if(form.id === 'form-contact') return;
@@ -907,11 +929,6 @@ footer .footer-contact a{color:var(--gold,#c9a96e);text-decoration:none}
 })();
 </script>
 <!-- BARRE STICKY MOBILE -->
-<a href="https://wa.me/33761092626" target="_blank" rel="noopener" class="wa-float" aria-label="Nous contacter sur WhatsApp">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
-  </svg>
-</a>
 <div class="sticky-mobile">
   <a href="tel:+33761092626" class="sticky-btn call">
     <span class="sticky-btn-icon">&#128222;</span>
