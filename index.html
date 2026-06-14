@@ -77,21 +77,44 @@
         {"@type": "Country", "name": "Suisse"},
         {"@type": "Country", "name": "Allemagne"},
         {"@type": "Country", "name": "Espagne"},
-        {"@type": "Country", "name": "Italie"}
+        {"@type": "Country", "name": "Italie"},
+        {"@type": "City", "name": "Paris"},
+        {"@type": "City", "name": "Lyon"},
+        {"@type": "City", "name": "Marseille"},
+        {"@type": "City", "name": "Bordeaux"},
+        {"@type": "City", "name": "Toulouse"},
+        {"@type": "City", "name": "Nantes"},
+        {"@type": "City", "name": "Lille"},
+        {"@type": "City", "name": "Strasbourg"},
+        {"@type": "City", "name": "Nice"},
+        {"@type": "City", "name": "Montpellier"}
+      ],
+      "knowsAbout": [
+        "convoyage automobile",
+        "transport de véhicule",
+        "mise en main véhicule",
+        "chauffeur longue distance",
+        "livraison 0 km",
+        "transport sur plateau",
+        "convoyage véhicule électrique",
+        "convoyage concession automobile",
+        "logistique automobile"
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Services de mobilité automobile",
         "itemListElement": [
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Convoyage automobile", "description": "Transport de véhicule entre deux points en France et en Europe par un convoyeur professionnel qualifié, avec PV contradictoire, assurance tous risques et plaques W professionnelles."}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mise en main véhicule", "description": "Remise du véhicule neuf ou d'occasion au client final avec explication complète des équipements, activation des services connectés et personnalisation des réglages."}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Chauffeur avec votre véhicule", "description": "Chauffeur professionnel qui conduit votre propre véhicule pour vos déplacements longue distance, retours après vente ou déménagements."}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Livraison 0 km", "description": "Livraison de véhicules neufs depuis le port ou le centre logistique jusqu'à la concession ou au client final, avec rapport kilométrique garanti."}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Transport sur plateau", "description": "Transport de véhicules non-roulants, accidentés, de collection ou exotiques sur plateau fermé. Rapatriement après sinistre ou panne."}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Solutions entreprises", "description": "Partenariat logistique pour concessions, loueurs LLD et gestionnaires de flotte. Interlocuteur unique, équipes dédiées, reporting et tarifs négociés sur volume."}}
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Convoyage automobile", "description": "Transport de véhicule entre deux points en France et en Europe par un convoyeur professionnel qualifié, avec PV contradictoire, assurance tous risques et plaques W professionnelles.", "url": "https://thegentlemandriver.fr/convoyage.html"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mise en main véhicule", "description": "Remise du véhicule neuf ou d'occasion au client final avec explication complète des équipements, activation des services connectés et personnalisation des réglages.", "url": "https://thegentlemandriver.fr/mise-en-main.html"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Chauffeur avec votre véhicule", "description": "Chauffeur professionnel qui conduit votre propre véhicule pour vos déplacements longue distance, retours après vente ou déménagements.", "url": "https://thegentlemandriver.fr/chauffeur.html"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Livraison 0 km", "description": "Livraison de véhicules neufs depuis le port ou le centre logistique jusqu'à la concession ou au client final, avec rapport kilométrique garanti.", "url": "https://thegentlemandriver.fr/livraison-0km.html"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Transport sur plateau", "description": "Transport de véhicules non-roulants, accidentés, de collection ou exotiques sur plateau fermé. Rapatriement après sinistre ou panne.", "url": "https://thegentlemandriver.fr/transport-plateau.html"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Solutions entreprises", "description": "Partenariat logistique pour concessions, loueurs LLD et gestionnaires de flotte. Interlocuteur unique, équipes dédiées, reporting et tarifs négociés sur volume.", "url": "https://thegentlemandriver.fr/entreprises.html"}}
         ]
       },
-      "sameAs": ["https://the-gentleman-driver.com"]
+      "sameAs": [
+        "https://the-gentleman-driver.com"
+      ]
     },
     {
       "@type": "FAQPage",
@@ -104,17 +127,17 @@
         },
         {
           "@type": "Question",
-          "name": "Dans quelles régions intervenez-vous ?",
-          "acceptedAnswer": {"@type": "Answer", "text": "The Gentleman Driver intervient sur toute la France métropolitaine ainsi qu'en Europe (Belgique, Luxembourg, Suisse, Allemagne, Espagne, Italie). Basés à Charenton-le-Pont (94), nous assurons des missions depuis et vers Paris, Lyon, Marseille, Bordeaux, Toulouse, Nantes, Lille, Strasbourg, Nice et Montpellier."}
+          "name": "Dans quelles villes et régions intervenez-vous ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "The Gentleman Driver intervient sur toute la France métropolitaine ainsi qu'en Europe (Belgique, Luxembourg, Suisse, Allemagne, Espagne, Italie). Basés à Charenton-le-Pont (94), nous assurons des missions depuis et vers Paris, Lyon, Marseille, Bordeaux, Toulouse, Nantes, Lille, Strasbourg, Nice, Montpellier et toutes les autres villes."}
         },
         {
           "@type": "Question",
           "name": "Combien coûte un convoyage automobile ?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Le tarif dépend de la distance, du type de mission et des contraintes logistiques. Nous établissons un devis personnalisé sous 2 heures. Contactez-nous au 07 61 09 26 26 ou via le formulaire en ligne."}
+          "acceptedAnswer": {"@type": "Answer", "text": "Le tarif dépend de la distance, du type de mission et des contraintes logistiques. Nous établissons un devis personnalisé sous 2 heures, 7j/7. Contactez-nous au 07 61 09 26 26 ou via le formulaire en ligne."}
         },
         {
           "@type": "Question",
-          "name": "Êtes-vous assurés pendant le transport ?",
+          "name": "Êtes-vous assurés pendant le transport du véhicule ?",
           "acceptedAnswer": {"@type": "Answer", "text": "Oui. Tous nos convoyeurs opèrent avec une assurance tous risques active et une franchise zéro pour nos clients. Un procès-verbal contradictoire est signé à l'enlèvement et à la livraison. Nous utilisons des plaques W professionnelles."}
         },
         {
@@ -125,9 +148,28 @@
         {
           "@type": "Question",
           "name": "Proposez-vous des solutions pour les concessions automobiles ?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Oui, nous sommes partenaires de concessions BMW, Mercedes, Audi, Porsche et autres marques premium. Nous proposons interlocuteur unique, livraison 0 km, mise en main des véhicules neufs, reporting détaillé et tarifs négociés sur volume."}
+          "acceptedAnswer": {"@type": "Answer", "text": "Oui, nous sommes partenaires de concessions BMW, Mercedes, Audi, Porsche et autres marques. Nous proposons un interlocuteur unique, la livraison 0 km, la mise en main des véhicules neufs, un reporting détaillé et des tarifs négociés sur volume."}
+        },
+        {
+          "@type": "Question",
+          "name": "Convoyez-vous des véhicules électriques ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Oui. The Gentleman Driver convoyage des véhicules électriques et hybrides rechargeables partout en France et en Europe. Nos convoyeurs sont formés aux spécificités des véhicules électriques : gestion de la charge, anticipation des bornes sur le trajet, protocoles de conduite économique."}
+        },
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce que la livraison 0 km ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "La livraison 0 km consiste à transporter un véhicule neuf depuis le port ou le centre logistique jusqu'à la concession ou au client final, en garantissant que le kilométrage au compteur correspond strictement au trajet effectué. C'est un service critique pour les concessions soucieuses de la valeur de leurs véhicules neufs."}
         }
       ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://thegentlemandriver.fr/#website",
+      "url": "https://thegentlemandriver.fr",
+      "name": "The Gentleman Driver",
+      "description": "Convoyage automobile professionnel en France et en Europe",
+      "publisher": {"@id": "https://thegentlemandriver.fr/#business"},
+      "inLanguage": "fr-FR"
     }
   ]
 }

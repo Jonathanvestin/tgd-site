@@ -1,4 +1,49 @@
+# The Gentleman Driver — robots.txt
+
+# Moteurs de recherche classiques
 User-agent: *
 Allow: /
+Disallow: /api/
 
-Sitemap: https://www.thegentlemandriver.fr/sitemap.xml
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Bots IA — tous autorisés à indexer et citer le contenu
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://thegentlemandriver.fr/sitemap.xml
