@@ -130,6 +130,11 @@
       "source": "/pourquoi-nous.html",
       "destination": "/pourquoi-nous",
       "permanent": true
+    },
+    {
+      "source": "/jonathan.html",
+      "destination": "/jonathan",
+      "permanent": true
     }
   ],
   "rewrites": [
@@ -240,6 +245,10 @@
     {
       "source": "/pourquoi-nous",
       "destination": "/pourquoi-nous.html"
+    },
+    {
+      "source": "/jonathan",
+      "destination": "/jonathan.html"
     }
   ]
 }
