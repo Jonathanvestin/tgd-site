@@ -1,8 +1,37 @@
 User-agent: *
 Allow: /
 
+# IA crawlers — autorisés explicitement
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# API non indexée
+User-agent: *
+Disallow: /api/
+
 # Sitemap
 Sitemap: https://thegentlemandriver.fr/sitemap.xml
-
-# Block admin/api from indexing
-Disallow: /api/

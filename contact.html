@@ -238,7 +238,9 @@ section{padding:4.5rem 4vw !important}
     <li><a href="convoyage.html">Convoyage</a></li>
     <li><a href="mise-en-main.html">Mise en main</a></li>
     <li><a href="chauffeur.html">Chauffeur</a></li>
-    <li><a href="entreprises.html">Entreprises</a></li>
+    <li><a href="entreprises.html">Entreprises</a>
+  <a href="transport-plateau.html" onclick="document.getElementById(\'mm\').classList.remove(\'open\')">Plateau</a></li>
+    <li><a href="transport-plateau.html">Plateau</a></li>
     <li><a href="a-propos.html">&#192; propos</a></li>
     <li><a href="faq.html">FAQ</a></li>
     <li><a href="contact.html" class="active">Contact</a></li>
@@ -254,6 +256,7 @@ section{padding:4.5rem 4vw !important}
   <a href="mise-en-main.html">Mise en main</a>
   <a href="chauffeur.html">Chauffeur</a>
   <a href="entreprises.html">Entreprises</a>
+  <a href="transport-plateau.html" onclick="document.getElementById(\'mm\').classList.remove(\'open\')">Plateau</a>
   <a href="a-propos.html">&#192; propos</a>
   <a href="faq.html">FAQ</a>
   <a href="contact.html" style="color:var(--gold)">Contact</a>
@@ -531,7 +534,9 @@ section{padding:4.5rem 4vw !important}
     <li><a href="chauffeur.html">Chauffeur</a></li>
     <li><a href="chauffeur-longue-distance.html">Longue distance</a></li>
     <li><a href="transport-plateau.html">Plateau</a></li>
-    <li><a href="entreprises.html">Entreprises</a></li>
+    <li><a href="entreprises.html">Entreprises</a>
+  <a href="transport-plateau.html" onclick="document.getElementById(\'mm\').classList.remove(\'open\')">Plateau</a></li>
+    <li><a href="transport-plateau.html">Plateau</a></li>
     <li><a href="a-propos.html">&#192; propos</a></li>
     <li><a href="faq.html">FAQ</a></li>
     <li><a href="contact.html">Contact</a></li>
@@ -614,6 +619,38 @@ document.getElementById('form-contact').addEventListener('submit', function(e) {
     btn.disabled = false;
   });
 });
+</script>
+
+<!-- GOOGLE PLACES AUTOCOMPLETE -->
+<script>
+(function() {
+  var GAPI_KEY = 'AIzaSyDRieZQ11aacfFPpool9J3m4Rjb9dqGrHU';
+  var script = document.createElement('script');
+  script.src = 'https://maps.googleapis.com/maps/api/js?key=' + GAPI_KEY + '&libraries=places&callback=initTGDAutocomplete';
+  script.async = true;
+  script.defer = true;
+  document.head.appendChild(script);
+})();
+
+function initTGDAutocomplete() {
+  var fields = ['adresse_depart', 'adresse_destination'];
+  var opts = {
+    componentRestrictions: { country: ['fr','be','lu','ch','de','es','it'] },
+    fields: ['formatted_address'],
+    types: ['geocode', 'establishment']
+  };
+  fields.forEach(function(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var ac = new google.maps.places.Autocomplete(el, opts);
+    ac.addListener('place_changed', function() {
+      var place = ac.getPlace();
+      if (place && place.formatted_address) {
+        el.value = place.formatted_address;
+      }
+    });
+  });
+}
 </script>
 
 <!-- WHATSAPP FLOTTANT -->

@@ -25,44 +25,112 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "THE GENTLEMAN DRIVER - Convoyage & Services de Mobilité",
-  "description": "Convoyage automobile professionnel, mise en main et chauffeur à disposition en France et Europe. Partenaire logistique s&#233;rieux pour concessions, loueurs et gestionnaires de flotte.",
-  "url": "https://thegentlemandriver.fr",
-  "telephone": "+33761092626",
-  "email": "contact@the-gentleman-driver.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "4 rue Jean Pigeon",
-    "addressLocality": "Charenton-le-Pont",
-    "postalCode": "94220",
-    "addressCountry": "FR"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 48.8194,
-    "longitude": 2.4089
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    "opens": "07:00",
-    "closes": "22:00"
-  },
-  "priceRange": "€€€",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "28",
-    "bestRating": "5"
-  },
-  "founder": {
-    "@type": "Person",
-    "name": "Jonathan Vestin"
-  },
-  "foundingDate": "2021",
-  "areaServed": ["France", "Belgique", "Luxembourg", "Suisse", "Allemagne", "Espagne", "Italie"],
-  "serviceType": ["Convoyage automobile", "Mise en main véhicule", "Chauffeur avec véhicule", "Transport plateau", "Solutions entreprises"]
+  "@graph": [
+    {
+      "@type": ["ProfessionalService", "LocalBusiness"],
+      "@id": "https://thegentlemandriver.fr/#business",
+      "name": "The Gentleman Driver",
+      "legalName": "THE GENTLEMAN DRIVER SASU",
+      "description": "Depuis 2021, The Gentleman Driver assure le convoyage automobile professionnel, la mise en main de véhicules neufs, le service chauffeur avec votre véhicule et le transport sur plateau en France et en Europe. Plus de 1 200 000 km parcourus sans incident, 5 étoiles Google, devis sous 2h.",
+      "slogan": "Le convoyeur automobile des professionnels et des particuliers exigeants",
+      "url": "https://thegentlemandriver.fr",
+      "telephone": "+33761092626",
+      "email": "contact@the-gentleman-driver.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "4 rue Jean Pigeon",
+        "addressLocality": "Charenton-le-Pont",
+        "postalCode": "94220",
+        "addressRegion": "Île-de-France",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.8194,
+        "longitude": 2.4089
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "07:00",
+        "closes": "22:00"
+      },
+      "priceRange": "€€",
+      "currenciesAccepted": "EUR",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "28",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Jonathan Vestin",
+        "jobTitle": "Fondateur & Gérant"
+      },
+      "foundingDate": "2021",
+      "numberOfEmployees": {"@type": "QuantitativeValue", "value": 5},
+      "areaServed": [
+        {"@type": "Country", "name": "France"},
+        {"@type": "Country", "name": "Belgique"},
+        {"@type": "Country", "name": "Luxembourg"},
+        {"@type": "Country", "name": "Suisse"},
+        {"@type": "Country", "name": "Allemagne"},
+        {"@type": "Country", "name": "Espagne"},
+        {"@type": "Country", "name": "Italie"}
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services de mobilité automobile",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Convoyage automobile", "description": "Transport de véhicule entre deux points en France et en Europe par un convoyeur professionnel qualifié, avec PV contradictoire, assurance tous risques et plaques W professionnelles."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mise en main véhicule", "description": "Remise du véhicule neuf ou d'occasion au client final avec explication complète des équipements, activation des services connectés et personnalisation des réglages."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Chauffeur avec votre véhicule", "description": "Chauffeur professionnel qui conduit votre propre véhicule pour vos déplacements longue distance, retours après vente ou déménagements."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Livraison 0 km", "description": "Livraison de véhicules neufs depuis le port ou le centre logistique jusqu'à la concession ou au client final, avec rapport kilométrique garanti."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Transport sur plateau", "description": "Transport de véhicules non-roulants, accidentés, de collection ou exotiques sur plateau fermé. Rapatriement après sinistre ou panne."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Solutions entreprises", "description": "Partenariat logistique pour concessions, loueurs LLD et gestionnaires de flotte. Interlocuteur unique, équipes dédiées, reporting et tarifs négociés sur volume."}}
+        ]
+      },
+      "sameAs": ["https://the-gentleman-driver.com"]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://thegentlemandriver.fr/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce que le convoyage automobile ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Le convoyage automobile consiste à déplacer un véhicule d'un point A à un point B par un conducteur professionnel qualifié, sans que le propriétaire n'ait à se déplacer. The Gentleman Driver réalise ces missions en France et en Europe avec un PV contradictoire signé à l'enlèvement et à la livraison, une assurance tous risques et des plaques W professionnelles."}
+        },
+        {
+          "@type": "Question",
+          "name": "Dans quelles régions intervenez-vous ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "The Gentleman Driver intervient sur toute la France métropolitaine ainsi qu'en Europe (Belgique, Luxembourg, Suisse, Allemagne, Espagne, Italie). Basés à Charenton-le-Pont (94), nous assurons des missions depuis et vers Paris, Lyon, Marseille, Bordeaux, Toulouse, Nantes, Lille, Strasbourg, Nice et Montpellier."}
+        },
+        {
+          "@type": "Question",
+          "name": "Combien coûte un convoyage automobile ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Le tarif dépend de la distance, du type de mission et des contraintes logistiques. Nous établissons un devis personnalisé sous 2 heures. Contactez-nous au 07 61 09 26 26 ou via le formulaire en ligne."}
+        },
+        {
+          "@type": "Question",
+          "name": "Êtes-vous assurés pendant le transport ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Oui. Tous nos convoyeurs opèrent avec une assurance tous risques active et une franchise zéro pour nos clients. Un procès-verbal contradictoire est signé à l'enlèvement et à la livraison. Nous utilisons des plaques W professionnelles."}
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle est la différence entre convoyage et mise en main ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Le convoyage déplace un véhicule d'un point à un autre. La mise en main accompagne la remise du véhicule neuf ou d'occasion au client final : explication des équipements, activation des services connectés, personnalisation des réglages. The Gentleman Driver propose les deux, souvent combinés pour les concessions."}
+        },
+        {
+          "@type": "Question",
+          "name": "Proposez-vous des solutions pour les concessions automobiles ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Oui, nous sommes partenaires de concessions BMW, Mercedes, Audi, Porsche et autres marques premium. Nous proposons interlocuteur unique, livraison 0 km, mise en main des véhicules neufs, reporting détaillé et tarifs négociés sur volume."}
+        }
+      ]
+    }
+  ]
 }
 </script>
 <title>Convoyage Automobile Professionnel — The Gentleman Driver | France & Europe</title>
@@ -447,7 +515,9 @@ section{padding:4.5rem 4vw !important}
     <li><a href="convoyage.html">Convoyage</a></li>
     <li><a href="mise-en-main.html">Mise en main</a></li>
     <li><a href="chauffeur.html">Chauffeur</a></li>
-    <li><a href="entreprises.html">Entreprises</a></li>
+    <li><a href="entreprises.html">Entreprises</a>
+  <a href="transport-plateau.html" onclick="document.getElementById(\'mm\').classList.remove(\'open\')">Plateau</a></li>
+    <li><a href="transport-plateau.html">Plateau</a></li>
     <li><a href="a-propos.html">À propos</a></li>
     <li><a href="faq.html">FAQ</a></li>
     <li><a href="contact.html">Contact</a></li>
@@ -463,6 +533,7 @@ section{padding:4.5rem 4vw !important}
   <a href="mise-en-main.html" onclick="document.getElementById('mm').classList.remove('open')">Mise en main</a>
   <a href="chauffeur.html" onclick="document.getElementById('mm').classList.remove('open')">Chauffeur</a>
   <a href="entreprises.html" onclick="document.getElementById('mm').classList.remove('open')">Entreprises</a>
+  <a href="transport-plateau.html" onclick="document.getElementById(\'mm\').classList.remove(\'open\')">Plateau</a>
   <a href="a-propos.html" onclick="document.getElementById('mm').classList.remove('open')">À propos</a>
   <a href="faq.html" onclick="document.getElementById('mm').classList.remove('open')">FAQ</a>
   <a href="contact.html" onclick="document.getElementById('mm').classList.remove('open')">Contact</a>
@@ -576,7 +647,7 @@ section{padding:4.5rem 4vw !important}
         <li>Plaques W professionnelles</li>
       </ul>
     </div>
-    <div class="service-card">
+    <a href="transport-plateau.html" class="service-card" style="display:block;text-decoration:none;color:inherit;">
       <div class="service-num">05</div>
       <h3 class="service-title">Transport sur plateau</h3>
       <p class="service-desc">V&#233;hicule en panne, sinistr&#233;, de collection ou trop pr&#233;cieux pour rouler&#160;? Nous organisons le transport sur plateau en sous-traitance avec des partenaires s&#233;lectionn&#233;s.</p>
@@ -588,7 +659,7 @@ section{padding:4.5rem 4vw !important}
         <li>Coordination logistique prise en charge</li>
         <li>Devis sous 2h comme toute mission</li>
       </ul>
-    </div>
+    </a>
     <div class="service-card">
       <div class="service-num">06</div>
       <h3 class="service-title">Solutions entreprises</h3>
@@ -857,7 +928,9 @@ section{padding:4.5rem 4vw !important}
     <li><a href="chauffeur.html">Chauffeur</a></li>
     <li><a href="chauffeur-longue-distance.html">Longue distance</a></li>
     <li><a href="transport-plateau.html">Plateau</a></li>
-    <li><a href="entreprises.html">Entreprises</a></li>
+    <li><a href="entreprises.html">Entreprises</a>
+  <a href="transport-plateau.html" onclick="document.getElementById(\'mm\').classList.remove(\'open\')">Plateau</a></li>
+    <li><a href="transport-plateau.html">Plateau</a></li>
     <li><a href="a-propos.html">&#192; propos</a></li>
     <li><a href="faq.html">FAQ</a></li>
     <li><a href="contact.html">Contact</a></li>
