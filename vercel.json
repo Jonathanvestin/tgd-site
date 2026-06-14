@@ -1,81 +1,58 @@
 {
   "version": 2,
-  "routes": [
-    {
-      "src": "/api/reviews",
-      "dest": "/api/reviews.js"
-    },
-    {
-      "src": "/convoyage-electrique",
-      "dest": "/convoyage-electrique.html"
-    },
-    {
-      "src": "/convoyage-premium",
-      "dest": "/convoyage-premium.html"
-    },
-    {
-      "src": "/convoyage-paris",
-      "dest": "/convoyage-paris.html"
-    },
-    {
-      "src": "/convoyage-concession",
-      "dest": "/convoyage-concession.html"
-    },
-    {
-      "src": "/convoyage-luxe",
-      "dest": "/convoyage-luxe.html"
-    },
-    {
-      "src": "/convoyage-lyon",
-      "dest": "/convoyage-lyon.html"
-    },
-    {
-      "src": "/convoyage-marseille",
-      "dest": "/convoyage-marseille.html"
-    },
-    {
-      "src": "/convoyage-bordeaux",
-      "dest": "/convoyage-bordeaux.html"
-    },
-    {
-      "src": "/convoyage-lille",
-      "dest": "/convoyage-lille.html"
-    },
-    {
-      "src": "/convoyage-nice",
-      "dest": "/convoyage-nice.html"
-    },
-    {
-      "src": "/convoyage-toulouse",
-      "dest": "/convoyage-toulouse.html"
-    },
-    {
-      "src": "/convoyage-nantes",
-      "dest": "/convoyage-nantes.html"
-    },
-    {
-      "src": "/convoyage-strasbourg",
-      "dest": "/convoyage-strasbourg.html"
-    },
-    {
-      "src": "/convoyage-montpellier",
-      "dest": "/convoyage-montpellier.html"
-    },
-    {
-      "src": "/chauffeur-longue-distance",
-      "dest": "/chauffeur-longue-distance.html"
-    },
-    {
-      "src": "/livraison-0km",
-      "dest": "/livraison-0km.html"
-    },
-    {
-      "src": "/transport-plateau",
-      "dest": "/transport-plateau.html"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
+  "redirects": [
+    { "source": "/a-propos.html", "destination": "/a-propos", "permanent": true },
+    { "source": "/chauffeur.html", "destination": "/chauffeur", "permanent": true },
+    { "source": "/chauffeur-longue-distance.html", "destination": "/chauffeur-longue-distance", "permanent": true },
+    { "source": "/contact.html", "destination": "/contact", "permanent": true },
+    { "source": "/convoyage.html", "destination": "/convoyage", "permanent": true },
+    { "source": "/convoyage-bordeaux.html", "destination": "/convoyage-bordeaux", "permanent": true },
+    { "source": "/convoyage-concession.html", "destination": "/convoyage-concession", "permanent": true },
+    { "source": "/convoyage-electrique.html", "destination": "/convoyage-electrique", "permanent": true },
+    { "source": "/convoyage-lille.html", "destination": "/convoyage-lille", "permanent": true },
+    { "source": "/convoyage-luxe.html", "destination": "/convoyage-luxe", "permanent": true },
+    { "source": "/convoyage-lyon.html", "destination": "/convoyage-lyon", "permanent": true },
+    { "source": "/convoyage-marseille.html", "destination": "/convoyage-marseille", "permanent": true },
+    { "source": "/convoyage-montpellier.html", "destination": "/convoyage-montpellier", "permanent": true },
+    { "source": "/convoyage-nantes.html", "destination": "/convoyage-nantes", "permanent": true },
+    { "source": "/convoyage-nice.html", "destination": "/convoyage-nice", "permanent": true },
+    { "source": "/convoyage-paris.html", "destination": "/convoyage-paris", "permanent": true },
+    { "source": "/convoyage-premium.html", "destination": "/convoyage-premium", "permanent": true },
+    { "source": "/convoyage-strasbourg.html", "destination": "/convoyage-strasbourg", "permanent": true },
+    { "source": "/convoyage-toulouse.html", "destination": "/convoyage-toulouse", "permanent": true },
+    { "source": "/entreprises.html", "destination": "/entreprises", "permanent": true },
+    { "source": "/faq.html", "destination": "/faq", "permanent": true },
+    { "source": "/livraison-0km.html", "destination": "/livraison-0km", "permanent": true },
+    { "source": "/mentions-legales.html", "destination": "/mentions-legales", "permanent": true },
+    { "source": "/mise-en-main.html", "destination": "/mise-en-main", "permanent": true },
+    { "source": "/transport-plateau.html", "destination": "/transport-plateau", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/api/reviews", "destination": "/api/reviews.js" },
+    { "source": "/a-propos", "destination": "/a-propos.html" },
+    { "source": "/chauffeur", "destination": "/chauffeur.html" },
+    { "source": "/chauffeur-longue-distance", "destination": "/chauffeur-longue-distance.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/convoyage", "destination": "/convoyage.html" },
+    { "source": "/convoyage-bordeaux", "destination": "/convoyage-bordeaux.html" },
+    { "source": "/convoyage-concession", "destination": "/convoyage-concession.html" },
+    { "source": "/convoyage-electrique", "destination": "/convoyage-electrique.html" },
+    { "source": "/convoyage-lille", "destination": "/convoyage-lille.html" },
+    { "source": "/convoyage-luxe", "destination": "/convoyage-luxe.html" },
+    { "source": "/convoyage-lyon", "destination": "/convoyage-lyon.html" },
+    { "source": "/convoyage-marseille", "destination": "/convoyage-marseille.html" },
+    { "source": "/convoyage-montpellier", "destination": "/convoyage-montpellier.html" },
+    { "source": "/convoyage-nantes", "destination": "/convoyage-nantes.html" },
+    { "source": "/convoyage-nice", "destination": "/convoyage-nice.html" },
+    { "source": "/convoyage-paris", "destination": "/convoyage-paris.html" },
+    { "source": "/convoyage-premium", "destination": "/convoyage-premium.html" },
+    { "source": "/convoyage-strasbourg", "destination": "/convoyage-strasbourg.html" },
+    { "source": "/convoyage-toulouse", "destination": "/convoyage-toulouse.html" },
+    { "source": "/entreprises", "destination": "/entreprises.html" },
+    { "source": "/faq", "destination": "/faq.html" },
+    { "source": "/livraison-0km", "destination": "/livraison-0km.html" },
+    { "source": "/mentions-legales", "destination": "/mentions-legales.html" },
+    { "source": "/mise-en-main", "destination": "/mise-en-main.html" },
+    { "source": "/transport-plateau", "destination": "/transport-plateau.html" }
   ]
 }
