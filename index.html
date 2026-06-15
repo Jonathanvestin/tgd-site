@@ -138,7 +138,7 @@
         {
           "@type": "Question",
           "name": "Êtes-vous assurés pendant le transport du véhicule ?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Oui. Tous nos convoyeurs opèrent avec une assurance tous risques active et une franchise zéro pour nos clients. Un procès-verbal contradictoire est signé à l'enlèvement et à la livraison. Nous utilisons des plaques W professionnelles."}
+          "acceptedAnswer": {"@type": "Answer", "text": "Oui. Tous nos convoyages sont couverts par notre assurance professionnelle AXA tous risques, active dès la prise en charge du véhicule. La franchise est à notre charge — zéro franchise pour nos clients. Vous n'avez pas à déclarer la mission à votre propre assureur. Un procès-verbal contradictoire est signé à l'enlèvement et à la livraison. Nous utilisons des plaques W professionnelles."}
         },
         {
           "@type": "Question",
@@ -563,6 +563,14 @@ footer.footer-mini span.footer-copy{color:rgba(189,181,166,0.55) !important}
 
 /* rythme espacements validé */
 .hero{min-height:88vh !important;height:auto !important}
+
+/* ═══ TRUST BAR ═══ */
+.trust-bar{background:rgba(201,169,110,0.07);border-bottom:1px solid rgba(201,169,110,0.12);padding:.6rem 4vw;overflow:hidden}
+.trust-bar-inner{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:.6rem 1.4rem}
+.trust-item{display:inline-flex;align-items:center;gap:.4rem;font-size:.6rem;letter-spacing:.08em;color:rgba(245,240,232,.75);white-space:nowrap}
+.trust-item svg{color:var(--gold);flex-shrink:0}
+.trust-sep{color:rgba(201,169,110,0.35);font-size:.8rem}
+@media(max-width:600px){.trust-bar-inner{justify-content:flex-start}.trust-sep{display:none}}
 section{padding:4.5rem 4vw !important}
 .cta-section{padding:5rem 4vw !important}
 .adn{gap:4rem !important}
@@ -599,6 +607,7 @@ section{padding:4.5rem 4vw !important}
     <li><a href="/mise-en-main">Mise en main</a></li>
     <li><a href="/entreprises">Entreprises</a></li>
     <li><a href="/a-propos">&#192; propos</a></li>
+    <li><a href="/blog">Blog</a></li>
     <li><a href="/contact">Contact</a></li>
   </ul>
   <a href="/contact" class="nav-cta">Devis gratuit</a>
@@ -619,8 +628,24 @@ section{padding:4.5rem 4vw !important}
   <a href="/etudes-de-cas" onclick="document.getElementById('mm').classList.remove('open')">Études de cas</a>
   <a href="/a-propos" onclick="document.getElementById('mm').classList.remove('open')">À propos</a>
   <a href="/faq" onclick="document.getElementById('mm').classList.remove('open')">FAQ</a>
+  <a href="/blog" onclick="document.getElementById('mm').classList.remove('open')">Blog</a>
   <a href="/contact" onclick="document.getElementById('mm').classList.remove('open')">Contact</a>
   <a href="/contact" class="btn-primary" onclick="document.getElementById('mm').classList.remove('open')">Devis gratuit</a>
+</div>
+
+<!-- TRUST BAR AXA -->
+<div class="trust-bar" aria-label="Garanties">
+  <div class="trust-bar-inner">
+    <span class="trust-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Assurance AXA tous risques</span>
+    <span class="trust-sep" aria-hidden="true">·</span>
+    <span class="trust-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Franchise zéro pour nos clients</span>
+    <span class="trust-sep" aria-hidden="true">·</span>
+    <span class="trust-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>PV contradictoire signé</span>
+    <span class="trust-sep" aria-hidden="true">·</span>
+    <span class="trust-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Devis sous 2h — 7j/7</span>
+    <span class="trust-sep" aria-hidden="true">·</span>
+    <span class="trust-item">&#9733; 5/5 Google (100+ avis)</span>
+  </div>
 </div>
 
 <!-- HERO -->

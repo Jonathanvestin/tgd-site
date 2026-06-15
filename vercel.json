@@ -154,6 +154,22 @@
   ],
   "rewrites": [
     {
+      "source": "/blog",
+      "destination": "/blog.html"
+    },
+    {
+      "source": "/blog/assurance-convoyage-automobile",
+      "destination": "/blog/assurance-convoyage-automobile.html"
+    },
+    {
+      "source": "/blog/convoyage-vehicule-electrique-guide",
+      "destination": "/blog/convoyage-vehicule-electrique-guide.html"
+    },
+    {
+      "source": "/blog/mise-en-main-vehicule-neuf-ce-qui-fait-la-difference",
+      "destination": "/blog/mise-en-main-vehicule-neuf-ce-qui-fait-la-difference.html"
+    },
+    {
       "source": "/api/reviews",
       "destination": "/api/reviews.js"
     },

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Le blog The Gentleman Driver — conseils convoyage automobile, retours de mission, expertise électrique, mise en main. Lu par les professionnels de l'automobile.">
+<meta name="robots" content="index, follow">
+<title>Blog Convoyage Automobile — The Gentleman Driver</title>
+<link rel="canonical" href="https://thegentlemandriver.fr/blog">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Gentleman Driver">
+<meta property="og:title" content="Blog Convoyage Automobile — The Gentleman Driver">
+<meta property="og:description" content="Conseils, retours de mission et expertise convoyage automobile par The Gentleman Driver.">
+<meta property="og:url" content="https://thegentlemandriver.fr/blog">
+<meta property="og:image" content="https://thegentlemandriver.fr/og-image.jpg">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0A0A'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia%2C serif' font-size='11' fill='%23C9A96E' font-weight='bold' letter-spacing='0.5'%3ETGD%3C/text%3E%3Cline x1='4' y1='22' x2='28' y2='22' stroke='%23C9A96E' stroke-width='0.8' opacity='0.5'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--black:#0A0A0A;--black-2:#111111;--black-3:#1A1A1A;--gold:#C9A96E;--gold-light:#E8D5B0;--gold-dark:#9A7A47;--ivory:#F5F0E8;--ivory-muted:#BDB5A6}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--ivory);font-family:'Montserrat',sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-thumb{background:var(--gold-dark)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 4vw;height:80px;background:rgba(10,10,10,0.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,169,110,0.1)}
+.nav-logo{display:flex;align-items:center;text-decoration:none}
+.nav-links{display:flex;gap:1.4rem;list-style:none}
+.nav-links a{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ivory-muted);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--black);background:var(--gold);padding:.55rem 1.4rem;text-decoration:none;font-weight:500;transition:background .2s}
+.nav-cta:hover{background:var(--gold-light)}
+.burger{display:none;background:none;border:none;cursor:pointer;padding:.5rem;flex-direction:column;gap:5px}
+.burger span{display:block;width:22px;height:1px;background:var(--ivory)}
+@media(max-width:900px){.nav-links,.nav-cta{display:none}.burger{display:flex}}
+.mobile-menu{position:fixed;inset:0;background:var(--black);z-index:200;display:flex;flex-direction:column;padding:2rem 4vw;gap:1.5rem;transform:translateX(100%);transition:transform .3s}
+.mobile-menu.open{transform:translateX(0)}
+.mobile-menu a{font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ivory-muted);text-decoration:none}
+.mobile-close{background:none;border:none;color:var(--ivory);font-size:1.5rem;cursor:pointer;align-self:flex-end}
+.btn-primary{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--black);background:var(--gold);padding:.65rem 1.8rem;text-decoration:none;font-weight:500;display:inline-block;transition:background .2s}
+.btn-primary:hover{background:var(--gold-light)}
+/* BLOG STYLES */
+.blog-hero{padding:160px 4vw 80px;text-align:center}
+.blog-eyebrow{font-size:.58rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);font-weight:500;display:inline-flex;align-items:center;gap:1rem;margin-bottom:1.5rem}
+.blog-eyebrow::before,.blog-eyebrow::after{content:'';display:block;width:30px;height:1px;background:var(--gold)}
+.blog-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4vw,3.5rem);font-weight:300;line-height:1.1;color:var(--ivory);margin-bottom:1.2rem}
+.blog-title em{font-style:italic;color:var(--gold)}
+.blog-sub{font-size:.85rem;color:var(--ivory-muted);max-width:560px;margin:0 auto 3rem}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;padding:0 4vw 6rem;max-width:1200px;margin:0 auto}
+.blog-card{background:var(--black-2);text-decoration:none;display:block;transition:background .2s}
+.blog-card:hover{background:var(--black-3)}
+.blog-card-cat{font-size:.52rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:500;padding:1.5rem 1.5rem .5rem}
+.blog-card-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;line-height:1.2;color:var(--ivory);padding:.5rem 1.5rem 1rem}
+.blog-card-excerpt{font-size:.75rem;color:var(--ivory-muted);padding:0 1.5rem 1rem;line-height:1.75}
+.blog-card-meta{font-size:.6rem;color:rgba(189,181,166,0.45);padding:.8rem 1.5rem 1.5rem;border-top:1px solid rgba(201,169,110,0.07)}
+.blog-card-link{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-top:.6rem;display:inline-block}
+@media(max-width:900px){.blog-grid{grid-template-columns:1fr}}
+footer.footer-mini{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.06);padding:2.5rem 4vw;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1.4rem;text-align:center}
+footer.footer-mini a.footer-logo{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);text-decoration:none}
+footer.footer-mini ul.footer-links-list{display:flex;flex-direction:row;justify-content:center;align-items:center;gap:2rem;list-style:none;flex-wrap:wrap;margin:0;padding:0}
+footer.footer-mini ul.footer-links-list a{font-size:.62rem;color:rgba(189,181,166,0.72);text-decoration:none;font-weight:300;transition:color .2s}
+footer.footer-mini ul.footer-links-list a:hover{color:var(--ivory-muted)}
+footer.footer-mini span.footer-copy{font-size:.6rem;color:rgba(189,181,166,0.55);font-weight:300}
+.nav-dropdown{position:relative}
+.nav-dropdown-menu{display:none;position:absolute;top:calc(100% + 8px);left:0;background:rgba(10,10,10,0.98);border:1px solid rgba(201,169,110,0.12);min-width:220px;padding:.5rem 0;list-style:none;z-index:200}
+.nav-dropdown:hover .nav-dropdown-menu{display:block}
+.nav-dropdown-menu li a{display:block;padding:.45rem 1.2rem;font-size:.63rem;letter-spacing:.1em;color:var(--ivory-muted)}
+.nav-dropdown-menu li a:hover{color:var(--gold)}
+.nav-dropdown-section{display:block;padding:.5rem 1.2rem .2rem;font-size:.48rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,169,110,0.5);font-weight:500;cursor:default;border-top:1px solid rgba(201,169,110,0.08);margin-top:.3rem}
+.nav-dropdown-section:first-child{border-top:none;margin-top:0}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">
+    <span style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;letter-spacing:.15em;color:var(--ivory)">THE GENTLEMAN DRIVER</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/">Accueil</a></li>
+    <li class="nav-dropdown">
+      <a href="/convoyage" class="nav-dropdown-toggle">Convoyage &#9662;</a>
+      <ul class="nav-dropdown-menu">
+        <li class="nav-dropdown-section">Convoyage &#8212; le v&#233;hicule roule</li>
+        <li><a href="/convoyage">Convoyage automobile</a></li>
+        <li><a href="/convoyage-electrique">&#201;lectrique &amp; hybride</a></li>
+        <li><a href="/convoyage-premium">Premium &amp; prestige</a></li>
+        <li><a href="/convoyage-paris">Paris &amp; &#206;le-de-France</a></li>
+        <li><a href="/convoyage-concession">Concessions auto</a></li>
+        <li class="nav-dropdown-section">Livraison 0&#160;km &#8212; sur plateau</li>
+        <li><a href="/transport-plateau">V&#233;hicules neufs &amp; occasions</a></li>
+      </ul>
+    </li>
+    <li><a href="/chauffeur">Chauffeur</a></li>
+    <li><a href="/mise-en-main">Mise en main</a></li>
+    <li><a href="/entreprises">Entreprises</a></li>
+    <li><a href="/blog" style="color:var(--gold)">Blog</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul>
+  <a href="/contact" class="nav-cta">Devis gratuit</a>
+  <button type="button" class="burger" onclick="document.getElementById('mm').classList.add('open')" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-menu" id="mm">
+  <button type="button" class="mobile-close" onclick="document.getElementById('mm').classList.remove('open')">&#x2715;</button>
+  <a href="/" onclick="document.getElementById('mm').classList.remove('open')">Accueil</a>
+  <a href="/convoyage" onclick="document.getElementById('mm').classList.remove('open')">Convoyage</a>
+  <a href="/chauffeur" onclick="document.getElementById('mm').classList.remove('open')">Chauffeur</a>
+  <a href="/mise-en-main" onclick="document.getElementById('mm').classList.remove('open')">Mise en main</a>
+  <a href="/entreprises" onclick="document.getElementById('mm').classList.remove('open')">Entreprises</a>
+  <a href="/blog" onclick="document.getElementById('mm').classList.remove('open')">Blog</a>
+  <a href="/contact" onclick="document.getElementById('mm').classList.remove('open')">Contact</a>
+  <a href="/contact" class="btn-primary" onclick="document.getElementById('mm').classList.remove('open')">Devis gratuit</a>
+</div>
+
+<div class="blog-hero">
+  <div class="blog-eyebrow">Le terrain, pas les promesses</div>
+  <h1 class="blog-title">L&#8217;expertise <em>convoyage</em><br>vue de l&#8217;int&#233;rieur</h1>
+  <p class="blog-sub">Retours de mission, conseils pratiques, v&#233;hicules &#233;lectriques, mise en main&#160;: ce que nos convoyeurs apprennent sur le terrain chaque jour.</p>
+</div>
+
+<div class="blog-grid">
+
+  <a href="/blog/assurance-convoyage-automobile" class="blog-card">
+    <div class="blog-card-cat">Garanties &amp; s&#233;curit&#233;</div>
+    <h2 class="blog-card-title">Convoyage automobile&#160;: que couvre vraiment l&#8217;assurance de votre prestataire&#160;?</h2>
+    <p class="blog-card-excerpt">AXA, MMA, franchise, tiers ou tous risques&#160;: ce que vous devez exiger avant de confier vos cl&#233;s &#8212; et pourquoi la diff&#233;rence n&#8217;est pas que commerciale.</p>
+    <div class="blog-card-meta">
+      Juin 2026 &#183; 5 min de lecture
+      <span class="blog-card-link">Lire l&#8217;article &#8594;</span>
+    </div>
+  </a>
+
+  <a href="/blog/convoyage-vehicule-electrique-guide" class="blog-card">
+    <div class="blog-card-cat">V&#233;hicules &#233;lectriques</div>
+    <h2 class="blog-card-title">Convoyer un v&#233;hicule &#233;lectrique&#160;: le guide complet (y compris pour le ferry)</h2>
+    <p class="blog-card-excerpt">Borne, autonomie, 80&#160;%, contraintes ferry en Corse &#8212; tout ce qu&#8217;un convoyeur doit ma&#238;triser avant de prendre le volant d&#8217;une Tesla, d&#8217;une Porsche Taycan ou d&#8217;un EV6.</p>
+    <div class="blog-card-meta">
+      Juin 2026 &#183; 7 min de lecture
+      <span class="blog-card-link">Lire l&#8217;article &#8594;</span>
+    </div>
+  </a>
+
+  <a href="/blog/mise-en-main-vehicule-neuf-ce-qui-fait-la-difference" class="blog-card">
+    <div class="blog-card-cat">Mise en main</div>
+    <h2 class="blog-card-title">Ce qui fait (vraiment) la diff&#233;rence lors d&#8217;une mise en main v&#233;hicule neuf</h2>
+    <p class="blog-card-excerpt">1h15 en moyenne&#160;: ce n&#8217;est pas du temps perdu, c&#8217;est votre image de marque en jeu. Ce que vos clients retiennent, et pourquoi &#231;a se joue dans les 10 premi&#232;res minutes.</p>
+    <div class="blog-card-meta">
+      Mai 2026 &#183; 6 min de lecture
+      <span class="blog-card-link">Lire l&#8217;article &#8594;</span>
+    </div>
+  </a>
+
+</div>
+
+<footer class="footer-mini">
+  <a href="/" class="footer-logo">The Gentleman Driver</a>
+  <ul class="footer-links-list">
+    <li><span class="footer-group-label">CONVOYAGE</span></li>
+    <li><a href="/convoyage">Convoyage auto</a></li>
+    <li><a href="/convoyage-electrique">&#201;lectrique</a></li>
+    <li><a href="/transport-plateau">Plateau</a></li>
+    <li><span class="footer-sep">&#183;</span></li>
+    <li><span class="footer-group-label">SERVICES</span></li>
+    <li><a href="/mise-en-main">Mise en main</a></li>
+    <li><a href="/chauffeur">Chauffeur</a></li>
+    <li><a href="/entreprises">Entreprises</a></li>
+    <li><span class="footer-sep">&#183;</span></li>
+    <li><span class="footer-group-label">&#192; PROPOS</span></li>
+    <li><a href="/a-propos">&#192; propos</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/faq">FAQ</a></li>
+    <li><a href="/contact">Contact</a></li>
+    <li><a href="/mentions-legales">Mentions l&#233;gales</a></li>
+  </ul>
+  <span class="footer-copy">&#169; 2026 The Gentleman Driver &#8212; SASU &#8212; Charenton-le-Pont (94)</span>
+</footer>
+</body>
+</html>

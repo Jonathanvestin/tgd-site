@@ -268,6 +268,14 @@ section{padding:4.5rem 4vw !important}
 .founder{padding:4.5rem 4vw !important}
 
 
+
+/* ═══ TRUST BAR ═══ */
+.trust-bar{background:rgba(201,169,110,0.07);border-bottom:1px solid rgba(201,169,110,0.12);padding:.55rem 4vw;overflow:hidden}
+.trust-bar-inner{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:.5rem 1.2rem}
+.trust-item{display:inline-flex;align-items:center;gap:.35rem;font-size:.58rem;letter-spacing:.07em;color:rgba(245,240,232,.7);white-space:nowrap}
+.trust-item svg{color:var(--gold);flex-shrink:0}
+.trust-sep{color:rgba(201,169,110,0.3);font-size:.8rem}
+@media(max-width:600px){.trust-sep{display:none}}
 </style>
 
 <script type="application/ld+json">
@@ -306,11 +314,26 @@ section{padding:4.5rem 4vw !important}
     <li><a href="/mise-en-main">Mise en main</a></li>
     <li><a href="/entreprises">Entreprises</a></li>
     <li><a href="/a-propos">&#192; propos</a></li>
+    <li><a href="/blog">Blog</a></li>
     <li><a href="/contact">Contact</a></li>
   </ul>
   <a href="/contact" class="nav-cta">Devis gratuit</a>
   <button type="button" class="burger" onclick="document.getElementById('mm').classList.add('open')" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
+<!-- TRUST BAR AXA -->
+<div class="trust-bar" aria-label="Garanties">
+  <div class="trust-bar-inner">
+    <span class="trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Assurance AXA tous risques</span>
+    <span class="trust-sep" aria-hidden="true">·</span>
+    <span class="trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Franchise zéro</span>
+    <span class="trust-sep" aria-hidden="true">·</span>
+    <span class="trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>PV contradictoire signé</span>
+    <span class="trust-sep" aria-hidden="true">·</span>
+    <span class="trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Devis 2h — 7j/7</span>
+    <span class="trust-sep" aria-hidden="true">·</span>
+    <span class="trust-item">&#9733; 5/5 Google</span>
+  </div>
+</div>
 
 <div class="mobile-menu" id="mm">
   <button type="button" class="mobile-close" onclick="document.getElementById('mm').classList.remove('open')">&#x2715;</button>
@@ -326,6 +349,7 @@ section{padding:4.5rem 4vw !important}
   <a href="/etudes-de-cas" onclick="document.getElementById('mm').classList.remove('open')">Études de cas</a>
   <a href="/a-propos" onclick="document.getElementById('mm').classList.remove('open')">À propos</a>
   <a href="/faq" onclick="document.getElementById('mm').classList.remove('open')">FAQ</a>
+  <a href="/blog" onclick="document.getElementById('mm').classList.remove('open')">Blog</a>
   <a href="/contact" onclick="document.getElementById('mm').classList.remove('open')">Contact</a>
   <a href="/contact" class="btn-primary" onclick="document.getElementById('mm').classList.remove('open')">Devis gratuit</a>
 </div>
