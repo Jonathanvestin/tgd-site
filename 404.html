@@ -100,6 +100,15 @@ footer.footer-mini span.footer-copy{font-size:.6rem;color:rgba(189,181,166,0.3);
 /* lisibilité menu haut */
 .nav-links a{font-size:.7rem !important;letter-spacing:.12em;transition:color .2s}
 .nav-links a:hover{color:var(--gold) !important}
+/* ─── DROPDOWN ─── */
+.nav-dropdown{position:relative}
+.nav-dropdown-menu{display:none;position:absolute;top:100%;left:-1rem;background:rgba(10,10,10,0.98);border:1px solid rgba(201,169,110,0.15);min-width:210px;padding:.8rem 0 .5rem;z-index:200;backdrop-filter:blur(12px)}
+.nav-dropdown-menu::before{content:'';position:absolute;top:-12px;left:0;right:0;height:12px}
+.nav-dropdown:hover .nav-dropdown-menu{display:block}
+.nav-dropdown-menu li{list-style:none}
+.nav-dropdown-menu li a{display:block;padding:.6rem 1.2rem;font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ivory-muted);text-decoration:none;transition:color .15s,background .15s;white-space:nowrap}
+.nav-dropdown-menu li a:hover{color:var(--gold);background:rgba(201,169,110,0.05)}
+.nav-dropdown-toggle{cursor:pointer}
 .nav-cta{font-size:.7rem !important}
 /* lisibilité menu bas */
 footer.footer-mini ul.footer-links-list a{color:rgba(189,181,166,0.72) !important}

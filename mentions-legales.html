@@ -39,6 +39,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .nav-links{display:flex;gap:1.4rem;list-style:none}
 .nav-links a{font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ivory-muted);text-decoration:none;font-weight:400;transition:color .2s;white-space:nowrap}
 .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+/* ─── DROPDOWN ─── */
+.nav-dropdown{position:relative}
+.nav-dropdown-menu{display:none;position:absolute;top:100%;left:-1rem;background:rgba(10,10,10,0.98);border:1px solid rgba(201,169,110,0.15);min-width:210px;padding:.8rem 0 .5rem;z-index:200;backdrop-filter:blur(12px)}
+.nav-dropdown-menu::before{content:'';position:absolute;top:-12px;left:0;right:0;height:12px}
+.nav-dropdown:hover .nav-dropdown-menu{display:block}
+.nav-dropdown-menu li{list-style:none}
+.nav-dropdown-menu li a{display:block;padding:.6rem 1.2rem;font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ivory-muted);text-decoration:none;transition:color .15s,background .15s;white-space:nowrap}
+.nav-dropdown-menu li a:hover{color:var(--gold);background:rgba(201,169,110,0.05)}
+.nav-dropdown-toggle{cursor:pointer}
 .nav-cta{font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;font-weight:500;color:var(--black);background:var(--gold);border:none;padding:.6rem 1.2rem;cursor:pointer;text-decoration:none;transition:background .2s;font-family:'Montserrat',sans-serif;white-space:nowrap}
 .nav-cta:hover{background:var(--gold-light)}
 .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
@@ -164,11 +173,22 @@ section{padding:4.5rem 4vw !important}
   </a>
   <ul class="nav-links">
     <li><a href="/">Accueil</a></li>
-    <li><a href="/convoyage">Convoyage</a></li>
+    <li class="nav-dropdown">
+      <a href="/convoyage" class="nav-dropdown-toggle">Convoyage &#9662;</a>
+      <ul class="nav-dropdown-menu">
+        <li><a href="/convoyage">Convoyage automobile</a></li>
+        <li><a href="/convoyage-electrique">&#201;lectrique &amp; hybride</a></li>
+        <li><a href="/convoyage-premium">Premium &amp; prestige</a></li>
+        <li><a href="/convoyage-paris">Paris &amp; &#206;le-de-France</a></li>
+        <li><a href="/convoyage-concession">Concessions auto</a></li>
+        <li><a href="/livraison-0km">Livraison 0&#160;km</a></li>
+        <li><a href="/transport-plateau">Transport plateau</a></li>
+      </ul>
+    </li>
     <li><a href="/chauffeur">Chauffeur</a></li>
     <li><a href="/mise-en-main">Mise en main</a></li>
     <li><a href="/entreprises">Entreprises</a></li>
-    <li><a href="/a-propos">À propos</a></li>
+    <li><a href="/a-propos">&#192; propos</a></li>
     <li><a href="/contact">Contact</a></li>
   </ul>
   <a href="/contact" class="nav-cta">Devis gratuit</a>
