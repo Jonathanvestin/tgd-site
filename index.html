@@ -911,7 +911,7 @@ section{padding:4.5rem 4vw !important}
   <div class="founder-inner">
     <div class="founder-line"></div>
     <div>
-      <p class="founder-quote">&#171;&#160;On n&#8217;a jamais refus&#233; une mission parce que le v&#233;hicule &#233;tait trop beau. On en a refus&#233; parce que le d&#233;lai &#233;tait impossible &#224; tenir correctement. C&#8217;est &#231;a, le vrai s&#233;rieux.&#160;&#187;</p>
+      <p class="founder-quote">&#171;&#160;Nous n&#8217;avons jamais refus&#233; une mission parce que le v&#233;hicule &#233;tait trop beau. Nous en avons refus&#233; parce que le d&#233;lai &#233;tait impossible &#224; tenir correctement. C&#8217;est &#231;a, le vrai s&#233;rieux.&#160;&#187;</p>
       <div class="founder-name">Jonathan V.</div>
       <div class="founder-role">Fondateur &mdash; The Gentleman Driver, 2021</div>
     </div>
@@ -966,9 +966,10 @@ section{padding:4.5rem 4vw !important}
   
     <div class="cta-form-title">Devis rapide</div>
     <div class="f-row">
-      <input name="votre_soci_233_t_233" type="text" class="f-input" placeholder="Votre soci&#233;t&#233;" aria-label="Votre soci&#233;t&#233;">
-      <input name="votre_pr_233_nom" type="text" class="f-input" placeholder="Votre pr&#233;nom" required aria-label="Votre pr&#233;nom">
+      <input name="prenom" type="text" class="f-input" placeholder="Pr&#233;nom *" required aria-label="Pr&#233;nom">
+      <input name="nom" type="text" class="f-input" placeholder="Nom *" required aria-label="Nom">
     </div>
+    <input name="societe" type="text" class="f-input" placeholder="Soci&#233;t&#233; (optionnel)" aria-label="Soci&#233;t&#233;" style="margin-bottom:.9rem">
     <select name="type_mission_1" class="f-select" aria-label="Type mission 1">
       <option value="">Type de mission&#8230;</option>
       <option>Convoyage automobile</option>
@@ -1105,33 +1106,79 @@ section{padding:4.5rem 4vw !important}
   </a>
 </div>
 
-<!-- GOOGLE PLACES AUTOCOMPLETE — HOMEPAGE -->
+<!-- AUTOCOMPLETE ADRESSE — Nominatim (homepage) -->
 <script>
 (function() {
-  var GAPI_KEY = 'AIzaSyDRieZQ11aacfFPpool9J3m4Rjb9dqGrHU';
-  var script = document.createElement('script');
-  script.src = 'https://maps.googleapis.com/maps/api/js?key=' + GAPI_KEY + '&libraries=places&callback=initHPAutocomplete';
-  script.async = true;
-  script.defer = true;
-  document.head.appendChild(script);
-})();
+  var COUNTRIES = 'fr,be,lu,ch,de,es,it';
+  var timers = {};
 
-function initHPAutocomplete() {
-  var opts = {
-    componentRestrictions: { country: ['fr','be','lu','ch','de','es','it'] },
-    fields: ['formatted_address'],
-    types: ['geocode', 'establishment']
-  };
-  ['hp_depart', 'hp_destination'].forEach(function(id) {
-    var el = document.getElementById(id);
-    if (!el) return;
-    var ac = new google.maps.places.Autocomplete(el, opts);
-    ac.addListener('place_changed', function() {
-      var place = ac.getPlace();
-      if (place && place.formatted_address) el.value = place.formatted_address;
+  function initACField(inputEl) {
+    var wrapper = document.createElement('div');
+    wrapper.className = 'tgd-ac-wrapper';
+    inputEl.parentNode.insertBefore(wrapper, inputEl);
+    wrapper.appendChild(inputEl);
+
+    var list = document.createElement('ul');
+    list.className = 'tgd-ac-list';
+    wrapper.appendChild(list);
+
+    var activeIdx = -1;
+    var currentResults = [];
+
+    function showList(items) {
+      currentResults = items;
+      activeIdx = -1;
+      list.innerHTML = '';
+      if (!items.length) { list.style.display = 'none'; return; }
+      items.forEach(function(item) {
+        var li = document.createElement('li');
+        li.textContent = item.display_name;
+        li.addEventListener('mousedown', function(e) {
+          e.preventDefault();
+          inputEl.value = item.display_name;
+          list.style.display = 'none';
+        });
+        list.appendChild(li);
+      });
+      list.style.display = 'block';
+    }
+
+    function hideList() { list.style.display = 'none'; activeIdx = -1; }
+
+    inputEl.addEventListener('input', function() {
+      var q = inputEl.value.trim();
+      clearTimeout(timers[inputEl.id]);
+      if (q.length < 3) { hideList(); return; }
+      timers[inputEl.id] = setTimeout(function() {
+        fetch('https://nominatim.openstreetmap.org/search?format=json&limit=5&countrycodes=' + COUNTRIES + '&q=' + encodeURIComponent(q), { headers: { 'Accept-Language': 'fr' } })
+          .then(function(r) { return r.json(); })
+          .then(function(data) { showList(data); })
+          .catch(function() { hideList(); });
+      }, 350);
+    });
+
+    inputEl.addEventListener('keydown', function(e) {
+      var items = list.querySelectorAll('li');
+      if (!items.length || list.style.display === 'none') return;
+      if (e.key === 'ArrowDown') { e.preventDefault(); activeIdx = Math.min(activeIdx + 1, items.length - 1); }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); activeIdx = Math.max(activeIdx - 1, 0); }
+      else if (e.key === 'Enter' && activeIdx >= 0) { e.preventDefault(); inputEl.value = currentResults[activeIdx].display_name; hideList(); return; }
+      else if (e.key === 'Escape') { hideList(); return; }
+      else { return; }
+      items.forEach(function(li, i) { li.classList.toggle('active', i === activeIdx); });
+      if (activeIdx >= 0) items[activeIdx].scrollIntoView({ block: 'nearest' });
+    });
+
+    document.addEventListener('click', function(e) { if (!wrapper.contains(e.target)) hideList(); });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    ['hp_depart', 'hp_destination'].forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) initACField(el);
     });
   });
-}
+})();
 </script>
 
 </body>
