@@ -818,24 +818,68 @@ section{padding:4.5rem 4vw !important}
   </a>
 </div>
 
-<!-- GOOGLE PLACES AUTOCOMPLETE -->
+<!-- AUTOCOMPLETE NOMINATIM -->
 <script>
 (function() {
-  var GAPI_KEY = 'AIzaSyDRieZQ11aacfFPpool9J3m4Rjb9dqGrHU';
-  var script = document.createElement('script');
-  script.src = 'https://maps.googleapis.com/maps/api/js?key=' + GAPI_KEY + '&libraries=places&callback=initCHAutocomplete';
-  script.async = true; script.defer = true;
-  document.head.appendChild(script);
-})();
-function initCHAutocomplete() {
-  var opts = { componentRestrictions: { country: ['fr','be','lu','ch','de','es','it'] }, fields: ['formatted_address'], types: ['geocode','establishment'] };
-  ['ch_depart','ch_destination'].forEach(function(id) {
-    var el = document.getElementById(id);
-    if (!el) return;
-    var ac = new google.maps.places.Autocomplete(el, opts);
-    ac.addListener('place_changed', function() { var p = ac.getPlace(); if (p && p.formatted_address) el.value = p.formatted_address; });
+  var COUNTRIES = 'fr,be,lu,ch,de,es,it';
+  var timers = {};
+  function initACField(inputEl) {
+    var wrapper = document.createElement('div');
+    wrapper.className = 'tgd-ac-wrapper';
+    wrapper.style.cssText = 'position:relative';
+    inputEl.parentNode.insertBefore(wrapper, inputEl);
+    wrapper.appendChild(inputEl);
+    var list = document.createElement('ul');
+    list.className = 'tgd-ac-list';
+    list.style.cssText = 'position:absolute;top:100%;left:0;right:0;z-index:9999;background:#fff;border:1px solid #d4af37;border-top:none;border-radius:0 0 6px 6px;max-height:220px;overflow-y:auto;box-shadow:0 4px 12px rgba(0,0,0,0.12);display:none;list-style:none;margin:0;padding:0';
+    wrapper.appendChild(list);
+    var activeIdx = -1, currentResults = [];
+    function showList(items) {
+      currentResults = items; activeIdx = -1; list.innerHTML = '';
+      if (!items.length) { list.style.display = 'none'; return; }
+      items.forEach(function(item) {
+        var li = document.createElement('li');
+        li.textContent = item.display_name;
+        li.style.cssText = 'padding:10px 14px;cursor:pointer;font-size:.85rem;color:#1a1a2e;border-bottom:1px solid #f0f0f0';
+        li.addEventListener('mousedown', function(e) { e.preventDefault(); inputEl.value = item.display_name; list.style.display = 'none'; });
+        li.addEventListener('mouseenter', function() { li.style.background = '#f8f4e8'; });
+        li.addEventListener('mouseleave', function() { li.style.background = ''; });
+        list.appendChild(li);
+      });
+      list.style.display = 'block';
+    }
+    function hideList() { list.style.display = 'none'; activeIdx = -1; }
+    inputEl.addEventListener('input', function() {
+      var q = inputEl.value.trim();
+      clearTimeout(timers[inputEl.id]);
+      if (q.length < 3) { hideList(); return; }
+      timers[inputEl.id] = setTimeout(function() {
+        fetch('https://nominatim.openstreetmap.org/search?format=json&limit=5&countrycodes=' + COUNTRIES + '&q=' + encodeURIComponent(q), { headers: { 'Accept-Language': 'fr' } })
+          .then(function(r) { return r.json(); })
+          .then(function(data) { showList(data); })
+          .catch(function() { hideList(); });
+      }, 350);
+    });
+    inputEl.addEventListener('keydown', function(e) {
+      var items = list.querySelectorAll('li');
+      if (!items.length || list.style.display === 'none') return;
+      if (e.key === 'ArrowDown') { e.preventDefault(); activeIdx = Math.min(activeIdx + 1, items.length - 1); }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); activeIdx = Math.max(activeIdx - 1, 0); }
+      else if (e.key === 'Enter' && activeIdx >= 0) { e.preventDefault(); inputEl.value = currentResults[activeIdx].display_name; hideList(); return; }
+      else if (e.key === 'Escape') { hideList(); return; }
+      else { return; }
+      items.forEach(function(li, i) { li.style.background = i === activeIdx ? '#f8f4e8' : ''; });
+      if (activeIdx >= 0) items[activeIdx].scrollIntoView({ block: 'nearest' });
+    });
+    document.addEventListener('click', function(e) { if (!wrapper.contains(e.target)) hideList(); });
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    ['ch_depart','ch_destination'].forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) initACField(el);
+    });
   });
-}
+})();
 </script>
 </body>
 </html>

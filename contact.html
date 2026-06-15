@@ -596,7 +596,19 @@ section{padding:4.5rem 4vw !important}
 <script>
 var currentStep = 1;
 
+function validateStep(step) {
+  var panel = document.getElementById('panel-' + step);
+  var valid = true;
+  panel.querySelectorAll('[required]').forEach(function(f) {
+    f.classList.remove('error');
+    if (!f.value.trim()) { f.classList.add('error'); valid = false; }
+  });
+  return valid;
+}
+
 function goToStep(step) {
+  // Si on avance, valider le panel actuel d'abord
+  if (step > currentStep && !validateStep(currentStep)) return;
   document.getElementById('panel-' + currentStep).classList.remove('active');
   document.getElementById('ind-' + currentStep).classList.remove('active');
   document.getElementById('ind-' + currentStep).classList.add('done');
@@ -621,7 +633,10 @@ document.getElementById('form-contact').addEventListener('submit', function(e) {
   e.preventDefault();
   var form = this;
   var valid = true;
-  form.querySelectorAll('[required]').forEach(function(f) {
+  // Vérifier uniquement les champs required visibles (panel actif)
+  var activePanel = form.querySelector('.form-panel.active');
+  var scope = activePanel || form;
+  scope.querySelectorAll('[required]').forEach(function(f) {
     f.classList.remove('error');
     if (!f.value.trim()) { f.classList.add('error'); valid = false; }
   });
