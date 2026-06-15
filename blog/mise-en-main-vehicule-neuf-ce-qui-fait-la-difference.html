@@ -66,8 +66,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 footer.footer-mini{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.06);padding:2.5rem 4vw;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1.4rem;text-align:center}
 footer.footer-mini a.footer-logo{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);text-decoration:none}
 footer.footer-mini ul.footer-links-list{display:flex;flex-direction:row;justify-content:center;align-items:center;gap:2rem;list-style:none;flex-wrap:wrap;margin:0;padding:0}
-footer.footer-mini ul.footer-links-list a{font-size:.62rem;color:rgba(189,181,166,0.72);text-decoration:none;font-weight:300}
+footer.footer-mini ul.footer-links-list li{margin:0;padding:0;list-style:none}
+footer.footer-mini ul.footer-links-list a{font-size:.62rem;color:rgba(189,181,166,0.72);text-decoration:none;font-weight:300;transition:color .2s}
+footer.footer-mini ul.footer-links-list a:hover{color:var(--ivory-muted)}
 footer.footer-mini span.footer-copy{font-size:.6rem;color:rgba(189,181,166,0.55);font-weight:300}
+footer.footer-mini .footer-group-label{font-size:.5rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500;opacity:.7;cursor:default;display:inline-flex;align-items:center;line-height:1}
+footer.footer-mini .footer-sep{color:rgba(201,169,110,0.2);font-size:1rem;line-height:1;cursor:default;display:inline-flex;align-items:center}
 </style>
 </head>
 <body>
@@ -78,7 +82,7 @@ footer.footer-mini span.footer-copy{font-size:.6rem;color:rgba(189,181,166,0.55)
     <li><a href="/convoyage">Convoyage</a></li>
     <li><a href="/mise-en-main">Mise en main</a></li>
     <li><a href="/entreprises">Entreprises</a></li>
-    <li><a href="/blog" class="active">Blog</a></li>
+    <li><a href="/blog" style="color:var(--gold)">Blog</a></li>
     <li><a href="/contact">Contact</a></li>
   </ul>
   <a href="/contact" class="nav-cta">Devis gratuit</a>
@@ -158,7 +162,7 @@ footer.footer-mini span.footer-copy{font-size:.6rem;color:rgba(189,181,166,0.55)
 
   <p>C&#8217;est pourquoi nos convoyeurs sont form&#233;s sp&#233;cifiquement &#224; la mise en main&#160;: pas seulement &#224; conduire, mais &#224; pr&#233;senter, &#224; r&#233;pondre, &#224; repr&#233;senter la marque du concessionnaire devant son client final.</p>
 
-  <p>Nous utilisons notre outil PV Digital pour documenter cha&#160;que &#233;tape&#160;: photos de l&#8217;&#233;tat du v&#233;hicule &#224; la remise, signature &#233;lectronique du client, rapport transmis automatiquement &#224; la concession. La concession sait ce qui s&#8217;est pass&#233;. Le client a une trace. Et en cas de litige&#160;: tout est document&#233;.</p>
+  <p>Nous utilisons notre outil PV Digital pour documenter chaque &#233;tape&#160;: photos de l&#8217;&#233;tat du v&#233;hicule &#224; la remise, signature &#233;lectronique du client, rapport transmis &#224; la concession dans les 2 heures suivant la livraison. La concession sait ce qui s&#8217;est pass&#233;. Le client a une trace. Et en cas de litige&#160;: tout est document&#233;.</p>
 
   <div class="article-cta">
     <h3>Vos prochaines mises en main</h3>
@@ -173,13 +177,26 @@ footer.footer-mini span.footer-copy{font-size:.6rem;color:rgba(189,181,166,0.55)
 <footer class="footer-mini">
   <a href="/" class="footer-logo">The Gentleman Driver</a>
   <ul class="footer-links-list">
-    <li><a href="/convoyage">Convoyage</a></li>
+    <li class="footer-group-label">Convoyage</li>
+    <li><a href="/convoyage">Automobile</a></li>
+    <li><a href="/convoyage-electrique">&#201;lectrique</a></li>
+    <li><a href="/convoyage-premium">Premium</a></li>
+    <li><a href="/transport-plateau">Plateau</a></li>
+    <li class="footer-sep">&#183;</li>
+    <li class="footer-group-label">Services</li>
+    <li><a href="/chauffeur">Chauffeur</a></li>
     <li><a href="/mise-en-main">Mise en main</a></li>
+    <li><a href="/entreprises">Entreprises</a></li>
+    <li class="footer-sep">&#183;</li>
+    <li class="footer-group-label">&#192; propos</li>
+    <li><a href="/pourquoi-nous">Pourquoi nous</a></li>
+    <li><a href="/a-propos">L&#8217;&#233;quipe</a></li>
     <li><a href="/blog">Blog</a></li>
+    <li><a href="/faq">FAQ</a></li>
     <li><a href="/contact">Contact</a></li>
     <li><a href="/mentions-legales">Mentions l&#233;gales</a></li>
   </ul>
-  <span class="footer-copy">&#169; 2026 The Gentleman Driver</span>
+  <span class="footer-copy">&#169; 2026 The Gentleman Driver &#8212; SASU &#8212; Charenton-le-Pont (94)</span>
 </footer>
 </body>
 </html>

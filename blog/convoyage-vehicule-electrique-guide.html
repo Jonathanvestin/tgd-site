@@ -67,8 +67,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 footer.footer-mini{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.06);padding:2.5rem 4vw;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1.4rem;text-align:center}
 footer.footer-mini a.footer-logo{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);text-decoration:none}
 footer.footer-mini ul.footer-links-list{display:flex;flex-direction:row;justify-content:center;align-items:center;gap:2rem;list-style:none;flex-wrap:wrap;margin:0;padding:0}
-footer.footer-mini ul.footer-links-list a{font-size:.62rem;color:rgba(189,181,166,0.72);text-decoration:none;font-weight:300}
+footer.footer-mini ul.footer-links-list li{margin:0;padding:0;list-style:none}
+footer.footer-mini ul.footer-links-list a{font-size:.62rem;color:rgba(189,181,166,0.72);text-decoration:none;font-weight:300;transition:color .2s}
+footer.footer-mini ul.footer-links-list a:hover{color:var(--ivory-muted)}
 footer.footer-mini span.footer-copy{font-size:.6rem;color:rgba(189,181,166,0.55);font-weight:300}
+footer.footer-mini .footer-group-label{font-size:.5rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500;opacity:.7;cursor:default;display:inline-flex;align-items:center;line-height:1}
+footer.footer-mini .footer-sep{color:rgba(201,169,110,0.2);font-size:1rem;line-height:1;cursor:default;display:inline-flex;align-items:center}
 </style>
 </head>
 <body>
@@ -81,7 +85,7 @@ footer.footer-mini span.footer-copy{font-size:.6rem;color:rgba(189,181,166,0.55)
     <li><a href="/convoyage">Convoyage</a></li>
     <li><a href="/convoyage-electrique">&#201;lectrique</a></li>
     <li><a href="/mise-en-main">Mise en main</a></li>
-    <li><a href="/blog" class="active">Blog</a></li>
+    <li><a href="/blog" style="color:var(--gold)">Blog</a></li>
     <li><a href="/contact">Contact</a></li>
   </ul>
   <a href="/contact" class="nav-cta">Devis gratuit</a>
@@ -119,13 +123,13 @@ footer.footer-mini span.footer-copy{font-size:.6rem;color:rgba(189,181,166,0.55)
 
   <h2>Le cas ferry Corse&#160;: une contrainte r&#233;glementaire stricte</h2>
 
-  <p>C&#8217;est la situation la plus complexe que nous ayons g&#233;r&#233;e. Les compagnies mari&#233;es (Corsica Ferries, La M&#233;ridionale, SNCM) imposent que les v&#233;hicules &#233;lectriques embarquent avec une charge maximale de 50&#160;% de la batterie &#8212; et certaines descendent &#224; 30&#160;% selon les traverse&#233;es. Raison&#160;: risque incendie en salle des machines.</p>
+  <p>C&#8217;est la situation la plus complexe que nous ayons g&#233;r&#233;e. Les compagnies maritimes (Corsica Ferries, La M&#233;ridionale, SNCM) imposent que les v&#233;hicules &#233;lectriques embarquent avec une charge maximale de 50&#160;% de la batterie &#8212; et certaines descendent &#224; 30&#160;% selon les travers&#233;es. Raison&#160;: risque incendie en salle des machines.</p>
 
-  <p>Sur notre mission Corse, nous avions une exigence client de livraison avec 70&#160;% de charge &#224; l&#8217;arriv&#233;e. La contrainte ferry &#233;tait &#224; 50&#160;% maximum &#224; l&#8217;embarquement. Il a fallu&#160;:</p>
+  <p>Sur notre mission Marseille&#8202;&#8594;&#8202;Ajaccio, nous avions une exigence client de livraison avec 70&#160;% de charge &#224; l&#8217;arriv&#233;e. La contrainte ferry &#233;tait &#224; 50&#160;% maximum &#224; l&#8217;embarquement. Il a fallu&#160;:</p>
 
   <ul class="checklist">
-    <li>Planifier une recharge &#224; Toulon avant l&#8217;embarquement pour tomber &#224; exactement 48&#160;%</li>
-    <li>Identifier une borne disponible &#224; l&#8217;arriv&#233;e &#224; Bastia pour recharger avant livraison</li>
+    <li>Planifier une recharge &#224; Marseille avant l&#8217;embarquement pour tomber &#224; exactement 48&#160;%</li>
+    <li>Identifier une borne disponible &#224; l&#8217;arriv&#233;e &#224; Ajaccio pour recharger avant livraison</li>
     <li>G&#233;rer l&#8217;incertitude de la dur&#233;e de travers&#233;e (8h &#224; 12h selon conditions)</li>
     <li>Communiquer en temps r&#233;el avec le client sur chaque &#233;tape</li>
   </ul>
@@ -135,15 +139,17 @@ footer.footer-mini span.footer-copy{font-size:.6rem;color:rgba(189,181,166,0.55)
   <p>La France compte plus de 185&#160;000 points de recharge ouverts au public en 2026. Mais tous ne sont pas compatibles avec tous les v&#233;hicules. Un convoyeur professionnel v&#233;rifie avant chaque mission&#160;:</p>
 
   <ul class="checklist">
-    <li>Le type de connecteur (CCS Combo, CHAdeMO, Type 2, Tesla)</li>
+    <li>Le type de connecteur (CCS Combo, CHAdeMO, Type&#160;2, Tesla)</li>
     <li>La puissance disponible sur la borne (50&#160;kW, 150&#160;kW, 350&#160;kW)</li>
     <li>La puissance maximale accept&#233;e par le v&#233;hicule</li>
-    <li>La disponibilit&#233; des bornes sur le trac&#233; (Ionity, Fastned, Recharge, Tesla Supercharger)</li>
+    <li>La disponibilit&#233; des bornes sur le trac&#233; (Ionity, Tesla Supercharger, Electra, TotalEnergies)</li>
   </ul>
 
   <h2>L&#8217;autonomie r&#233;elle vs l&#8217;autonomie WLTP</h2>
 
-  <p>Un constructeur annonce 550&#160;km d&#8217;autonomie WLTP. En conditions r&#233;elles d&#8217;autoroute (130&#160;km/h, chauffage actif, hiver), comptez 350 &#224; 400&#160;km. Un convoyeur qui ne tient pas compte de cet &#233;cart prend le risque de tomber en panne. Ce n&#8217;est jamais arriv&#233; chez The Gentleman Driver &#8212; parce que nous planifions sur les chiffres r&#233;els, pas sur les chiffres constructeur.</p>
+  <p>Le WLTP (Worldwide Harmonised Light Vehicle Test Procedure) est le cycle d&#8217;homologation europ&#233;en qui sert de base aux autonomies annonc&#233;es par les constructeurs. Il est mesur&#233; en laboratoire, dans des conditions id&#233;ales&#160;: temp&#233;rature mod&#233;r&#233;e, vitesse mixte ville/route, sans climatisation ni autoroute soutenue. En pratique, sur autoroute &#224; 130&#160;km/h avec le chauffage actif en hiver, l&#8217;autonomie r&#233;elle tombe souvent 30 &#224; 40&#160;% en dessous du chiffre WLTP.</p>
+
+  <p>Un constructeur annonce 550&#160;km d&#8217;autonomie WLTP&#160;: comptez 350 &#224; 400&#160;km r&#233;els sur autoroute. Un convoyeur qui ne tient pas compte de cet &#233;cart prend le risque de tomber en panne. Ce n&#8217;est jamais arriv&#233; chez The Gentleman Driver&#160;: nous planifions sur les chiffres r&#233;els, pas sur les chiffres constructeur.</p>
 
   <h2>Les v&#233;hicules &#233;lectriques que nous convoyons r&#233;guli&#232;rement</h2>
 
@@ -171,13 +177,26 @@ footer.footer-mini span.footer-copy{font-size:.6rem;color:rgba(189,181,166,0.55)
 <footer class="footer-mini">
   <a href="/" class="footer-logo">The Gentleman Driver</a>
   <ul class="footer-links-list">
-    <li><a href="/convoyage">Convoyage</a></li>
+    <li class="footer-group-label">Convoyage</li>
+    <li><a href="/convoyage">Automobile</a></li>
     <li><a href="/convoyage-electrique">&#201;lectrique</a></li>
+    <li><a href="/convoyage-premium">Premium</a></li>
+    <li><a href="/transport-plateau">Plateau</a></li>
+    <li class="footer-sep">&#183;</li>
+    <li class="footer-group-label">Services</li>
+    <li><a href="/chauffeur">Chauffeur</a></li>
+    <li><a href="/mise-en-main">Mise en main</a></li>
+    <li><a href="/entreprises">Entreprises</a></li>
+    <li class="footer-sep">&#183;</li>
+    <li class="footer-group-label">&#192; propos</li>
+    <li><a href="/pourquoi-nous">Pourquoi nous</a></li>
+    <li><a href="/a-propos">L&#8217;&#233;quipe</a></li>
     <li><a href="/blog">Blog</a></li>
+    <li><a href="/faq">FAQ</a></li>
     <li><a href="/contact">Contact</a></li>
     <li><a href="/mentions-legales">Mentions l&#233;gales</a></li>
   </ul>
-  <span class="footer-copy">&#169; 2026 The Gentleman Driver</span>
+  <span class="footer-copy">&#169; 2026 The Gentleman Driver &#8212; SASU &#8212; Charenton-le-Pont (94)</span>
 </footer>
 </body>
 </html>
