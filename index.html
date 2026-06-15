@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Convoyage automobile professionnel partout en France et Europe. Mise en main, chauffeur avec votre véhicule, livraison 0 km. Service 7j/7, assurance tous risques, devis gratuit sous 2h. Appelez le 07 61 09 26 26.">
+<meta name="description" content="Convoyage automobile, mise en main et chauffeur avec votre véhicule — partout en France et Europe. Partenaire concessions BMW et Mini depuis 2021. PV contradictoire, assurance tous risques, devis fixe sous 2h. 07 61 09 26 26.">
   <!-- SEO -->
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://thegentlemandriver.fr/">
@@ -174,7 +174,7 @@
   ]
 }
 </script>
-<title>Convoyage Automobile Professionnel — The Gentleman Driver | France & Europe</title>
+<title>Convoyage Automobile & Mise en Main | The Gentleman Driver — Partenaire Concessions BMW, Mini</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -973,8 +973,8 @@ section{padding:4.5rem 4vw !important}
       <option>Solutions entreprises</option>
     </select>
     <div class="f-row">
-      <input name="d_233_part" type="text" class="f-input" placeholder="D&#233;part" aria-label="D&#233;part">
-      <input name="destination" type="text" class="f-input" placeholder="Destination" required aria-label="Destination">
+      <input name="d_233_part" id="hp_depart" type="text" class="f-input" placeholder="D&#233;part" aria-label="D&#233;part" autocomplete="off">
+      <input name="destination" id="hp_destination" type="text" class="f-input" placeholder="Destination" required aria-label="Destination" autocomplete="off">
     </div>
     <input name="t_233_l_233_phone_ou_e_mail" type="text" class="f-input" placeholder="T&#233;l&#233;phone ou e-mail" aria-label="T&#233;l&#233;phone ou e-mail">
     <button type="submit" class="btn-primary" style="display:block;text-align:center;width:100%;border:none;cursor:pointer">Envoyer la demande</button>
@@ -1097,6 +1097,35 @@ section{padding:4.5rem 4vw !important}
     <span class="sticky-btn-label">Devis</span>
   </a>
 </div>
+
+<!-- GOOGLE PLACES AUTOCOMPLETE — HOMEPAGE -->
+<script>
+(function() {
+  var GAPI_KEY = 'AIzaSyDRieZQ11aacfFPpool9J3m4Rjb9dqGrHU';
+  var script = document.createElement('script');
+  script.src = 'https://maps.googleapis.com/maps/api/js?key=' + GAPI_KEY + '&libraries=places&callback=initHPAutocomplete';
+  script.async = true;
+  script.defer = true;
+  document.head.appendChild(script);
+})();
+
+function initHPAutocomplete() {
+  var opts = {
+    componentRestrictions: { country: ['fr','be','lu','ch','de','es','it'] },
+    fields: ['formatted_address'],
+    types: ['geocode', 'establishment']
+  };
+  ['hp_depart', 'hp_destination'].forEach(function(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var ac = new google.maps.places.Autocomplete(el, opts);
+    ac.addListener('place_changed', function() {
+      var place = ac.getPlace();
+      if (place && place.formatted_address) el.value = place.formatted_address;
+    });
+  });
+}
+</script>
 
 </body>
 </html>

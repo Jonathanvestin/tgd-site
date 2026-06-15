@@ -663,8 +663,8 @@ section{padding:4.5rem 4vw !important}
       </select>
     </div>
     <div class="f-row">
-      <div class="f-group"><label class="f-label">D&#233;part</label><input name="adresse_ou_ville" type="text" class="f-input" placeholder="Adresse ou ville" required aria-label="Adresse ou ville"></div>
-      <div class="f-group"><label class="f-label">Destination</label><input name="adresse_ou_ville" type="text" class="f-input" placeholder="Adresse ou ville" required aria-label="Adresse ou ville"></div>
+      <div class="f-group"><label class="f-label">D&#233;part</label><input name="adresse_ou_ville" id="ch_depart" type="text" class="f-input" autocomplete="off" placeholder="Adresse ou ville" required aria-label="Adresse ou ville"></div>
+      <div class="f-group"><label class="f-label">Destination</label><input name="adresse_ou_ville" id="ch_destination" type="text" class="f-input" autocomplete="off" placeholder="Adresse ou ville" required aria-label="Adresse ou ville"></div>
     </div>
     <div class="f-group">
       <label class="f-label">Forfait souhait&#233;</label>
@@ -795,5 +795,24 @@ section{padding:4.5rem 4vw !important}
   </a>
 </div>
 
+<!-- GOOGLE PLACES AUTOCOMPLETE -->
+<script>
+(function() {
+  var GAPI_KEY = 'AIzaSyDRieZQ11aacfFPpool9J3m4Rjb9dqGrHU';
+  var script = document.createElement('script');
+  script.src = 'https://maps.googleapis.com/maps/api/js?key=' + GAPI_KEY + '&libraries=places&callback=initCHAutocomplete';
+  script.async = true; script.defer = true;
+  document.head.appendChild(script);
+})();
+function initCHAutocomplete() {
+  var opts = { componentRestrictions: { country: ['fr','be','lu','ch','de','es','it'] }, fields: ['formatted_address'], types: ['geocode','establishment'] };
+  ['ch_depart','ch_destination'].forEach(function(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var ac = new google.maps.places.Autocomplete(el, opts);
+    ac.addListener('place_changed', function() { var p = ac.getPlace(); if (p && p.formatted_address) el.value = p.formatted_address; });
+  });
+}
+</script>
 </body>
 </html>
