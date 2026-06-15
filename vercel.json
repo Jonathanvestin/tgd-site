@@ -107,8 +107,13 @@
       "permanent": true
     },
     {
+      "source": "/livraison-0km",
+      "destination": "/transport-plateau",
+      "permanent": true
+    },
+    {
       "source": "/livraison-0km.html",
-      "destination": "/livraison-0km",
+      "destination": "/transport-plateau",
       "permanent": true
     },
     {
@@ -235,10 +240,6 @@
     {
       "source": "/faq",
       "destination": "/faq.html"
-    },
-    {
-      "source": "/livraison-0km",
-      "destination": "/livraison-0km.html"
     },
     {
       "source": "/mentions-legales",
