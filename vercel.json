@@ -132,8 +132,13 @@
       "permanent": true
     },
     {
+      "source": "/jonathan",
+      "destination": "/a-propos",
+      "permanent": true
+    },
+    {
       "source": "/jonathan.html",
-      "destination": "/jonathan",
+      "destination": "/a-propos",
       "permanent": true
     },
     {
@@ -250,10 +255,6 @@
     {
       "source": "/pourquoi-nous",
       "destination": "/pourquoi-nous.html"
-    },
-    {
-      "source": "/jonathan",
-      "destination": "/jonathan.html"
     },
     {
       "source": "/etudes-de-cas",
