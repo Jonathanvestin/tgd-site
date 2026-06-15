@@ -170,6 +170,10 @@
       "destination": "/blog/mise-en-main-vehicule-neuf-ce-qui-fait-la-difference.html"
     },
     {
+      "source": "/blog/comprendre-vehicule-electrique-sans-baratin",
+      "destination": "/blog/comprendre-vehicule-electrique-sans-baratin.html"
+    },
+    {
       "source": "/api/reviews",
       "destination": "/api/reviews.js"
     },

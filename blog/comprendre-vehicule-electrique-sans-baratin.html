@@ -3,19 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Le blog The Gentleman Driver — conseils convoyage automobile, retours de mission, expertise électrique, mise en main. Lu par les professionnels de l'automobile.">
+<meta name="description" content="Comprendre l'électrique sans le baratin : 80%, AC/DC, charge rapide, infrastructure France, transition réglementaire et avantage en nature. Ce que tout conducteur devrait savoir.">
 <meta name="robots" content="index, follow">
-<title>Blog Convoyage Automobile — The Gentleman Driver</title>
-<link rel="canonical" href="https://thegentlemandriver.fr/blog">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="The Gentleman Driver">
-<meta property="og:title" content="Blog Convoyage Automobile — The Gentleman Driver">
-<meta property="og:description" content="Conseils, retours de mission et expertise convoyage automobile par The Gentleman Driver.">
-<meta property="og:url" content="https://thegentlemandriver.fr/blog">
+<title>Comprendre l'électrique sans le baratin — The Gentleman Driver</title>
+<link rel="canonical" href="https://thegentlemandriver.fr/blog/comprendre-vehicule-electrique-sans-baratin">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Comprendre l'électrique sans le baratin">
+<meta property="og:description" content="80%, AC/DC, bornes, transition réglementaire : ce que tout conducteur ou chef de parc devrait savoir, expliqué sans jargon.">
+<meta property="og:url" content="https://thegentlemandriver.fr/blog/comprendre-vehicule-electrique-sans-baratin">
 <meta property="og:image" content="https://thegentlemandriver.fr/og-image.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Comprendre l&#8217;électrique sans le baratin",
+  "datePublished": "2026-06-15",
+  "dateModified": "2026-06-15",
+  "author": {"@type": "Person", "name": "Jonathan Vestin"},
+  "publisher": {"@type": "Organization", "name": "The Gentleman Driver", "url": "https://thegentlemandriver.fr"}
+}
+</script>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0A0A'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia%2C serif' font-size='11' fill='%23C9A96E' font-weight='bold' letter-spacing='0.5'%3ETGD%3C/text%3E%3Cline x1='4' y1='22' x2='28' y2='22' stroke='%23C9A96E' stroke-width='0.8' opacity='0.5'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--black:#0A0A0A;--black-2:#111111;--black-3:#1A1A1A;--gold:#C9A96E;--gold-light:#E8D5B0;--gold-dark:#9A7A47;--ivory:#F5F0E8;--ivory-muted:#BDB5A6}
@@ -28,8 +37,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .nav-links{display:flex;gap:1.4rem;list-style:none}
 .nav-links a{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ivory-muted);text-decoration:none;transition:color .2s}
 .nav-links a:hover{color:var(--gold)}
-.nav-cta{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--black);background:var(--gold);padding:.55rem 1.4rem;text-decoration:none;font-weight:500;transition:background .2s}
-.nav-cta:hover{background:var(--gold-light)}
+.nav-cta{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--black);background:var(--gold);padding:.55rem 1.4rem;text-decoration:none;font-weight:500}
 .burger{display:none;background:none;border:none;cursor:pointer;padding:.5rem;flex-direction:column;gap:5px}
 .burger span{display:block;width:22px;height:1px;background:var(--ivory)}
 @media(max-width:900px){.nav-links,.nav-cta{display:none}.burger{display:flex}}
@@ -37,30 +45,42 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .mobile-menu.open{transform:translateX(0)}
 .mobile-menu a{font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ivory-muted);text-decoration:none}
 .mobile-close{background:none;border:none;color:var(--ivory);font-size:1.5rem;cursor:pointer;align-self:flex-end}
-.btn-primary{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--black);background:var(--gold);padding:.65rem 1.8rem;text-decoration:none;font-weight:500;display:inline-block;transition:background .2s}
-.btn-primary:hover{background:var(--gold-light)}
-/* BLOG STYLES */
-.blog-hero{padding:160px 4vw 80px;text-align:center}
-.blog-eyebrow{font-size:.58rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);font-weight:500;display:inline-flex;align-items:center;gap:1rem;margin-bottom:1.5rem}
-.blog-eyebrow::before,.blog-eyebrow::after{content:'';display:block;width:30px;height:1px;background:var(--gold)}
-.blog-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4vw,3.5rem);font-weight:300;line-height:1.1;color:var(--ivory);margin-bottom:1.2rem}
-.blog-title em{font-style:italic;color:var(--gold)}
-.blog-sub{font-size:.85rem;color:var(--ivory-muted);max-width:560px;margin:0 auto 3rem}
-.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;padding:0 4vw 6rem;max-width:1200px;margin:0 auto}
-.blog-card{background:var(--black-2);text-decoration:none;display:block;transition:background .2s}
-.blog-card:hover{background:var(--black-3)}
-.blog-card-cat{font-size:.52rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:500;padding:1.5rem 1.5rem .5rem}
-.blog-card-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;line-height:1.2;color:var(--ivory);padding:.5rem 1.5rem 1rem}
-.blog-card-excerpt{font-size:.75rem;color:var(--ivory-muted);padding:0 1.5rem 1rem;line-height:1.75}
-.blog-card-meta{font-size:.6rem;color:rgba(189,181,166,0.45);padding:.8rem 1.5rem 1.5rem;border-top:1px solid rgba(201,169,110,0.07)}
-.blog-card-link{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-top:.6rem;display:inline-block}
-@media(max-width:900px){.blog-grid{grid-template-columns:1fr}}
+.btn-primary{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--black);background:var(--gold);padding:.65rem 1.8rem;text-decoration:none;font-weight:500;display:inline-block}
+/* TRUST BAR */
+.trust-bar{background:rgba(201,169,110,0.07);border-bottom:1px solid rgba(201,169,110,0.12);padding:.55rem 4vw;overflow:hidden}
+.trust-bar-inner{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:.5rem 1.2rem}
+.trust-item{display:inline-flex;align-items:center;gap:.35rem;font-size:.58rem;letter-spacing:.07em;color:rgba(245,240,232,.7);white-space:nowrap}
+.trust-item svg{color:var(--gold);flex-shrink:0}
+.trust-sep{color:rgba(201,169,110,0.3);font-size:.8rem}
+/* ARTICLE */
+.article-header{padding:140px 4vw 60px;max-width:780px;margin:0 auto}
+.art-cat{font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:1.2rem}
+.art-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;line-height:1.1;color:var(--ivory);margin-bottom:1.2rem}
+.art-meta{font-size:.65rem;color:rgba(189,181,166,0.5);margin-bottom:2rem}
+.art-intro{font-size:.95rem;color:var(--ivory-muted);line-height:1.9;border-left:2px solid var(--gold);padding-left:1.5rem;margin-bottom:3rem}
+.article-body{max-width:780px;margin:0 auto;padding:0 4vw 6rem}
+.article-body h2{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:300;color:var(--ivory);margin:3rem 0 1rem;padding-top:1rem;border-top:1px solid rgba(201,169,110,0.1)}
+.article-body h2:first-of-type{border-top:none}
+.article-body p{font-size:.84rem;color:var(--ivory-muted);line-height:1.9;margin-bottom:1.2rem}
+.article-body strong{color:var(--ivory);font-weight:500}
+.article-body ul{margin:1rem 0 1.5rem 0;list-style:none}
+.article-body ul li{font-size:.83rem;color:var(--ivory-muted);padding:.4rem 0 .4rem 1.6rem;position:relative;line-height:1.8}
+.article-body ul li::before{content:'—';position:absolute;left:0;color:var(--gold)}
+.info-box{background:var(--black-2);border-left:2px solid var(--gold);padding:1.4rem 1.8rem;margin:1.5rem 0}
+.info-box p{margin-bottom:0;font-size:.82rem}
+.article-cta{background:var(--black-2);padding:3rem 1.8rem;margin:3rem 0;text-align:center}
+.article-cta h3{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--ivory);margin-bottom:.8rem}
+.article-cta p{font-size:.82rem;color:var(--ivory-muted);margin-bottom:1.5rem}
+/* FOOTER */
 footer.footer-mini{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.06);padding:2.5rem 4vw;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1.4rem;text-align:center}
-footer.footer-mini a.footer-logo{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);text-decoration:none}
+footer.footer-mini a.footer-logo{text-decoration:none}
 footer.footer-mini ul.footer-links-list{display:flex;flex-direction:row;justify-content:center;align-items:center;gap:2rem;list-style:none;flex-wrap:wrap;margin:0;padding:0}
+footer.footer-mini ul.footer-links-list li{margin:0;padding:0;list-style:none}
 footer.footer-mini ul.footer-links-list a{font-size:.62rem;color:rgba(189,181,166,0.72);text-decoration:none;font-weight:300;transition:color .2s}
 footer.footer-mini ul.footer-links-list a:hover{color:var(--ivory-muted)}
 footer.footer-mini span.footer-copy{font-size:.6rem;color:rgba(189,181,166,0.55);font-weight:300}
+footer.footer-mini .footer-group-label{font-size:.5rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500;opacity:.7;cursor:default;display:inline-flex;align-items:center;line-height:1}
+footer.footer-mini .footer-sep{color:rgba(201,169,110,0.2);font-size:1rem;line-height:1;cursor:default;display:inline-flex;align-items:center}
 .nav-dropdown{position:relative}
 .nav-dropdown-menu{display:none;position:absolute;top:calc(100% + 8px);left:0;background:rgba(10,10,10,0.98);border:1px solid rgba(201,169,110,0.12);min-width:220px;padding:.5rem 0;list-style:none;z-index:200}
 .nav-dropdown:hover .nav-dropdown-menu{display:block}
@@ -78,19 +98,17 @@ footer.footer-mini span.footer-copy{font-size:.6rem;color:rgba(189,181,166,0.55)
   <ul class="nav-links">
     <li><a href="/">Accueil</a></li>
     <li class="nav-dropdown">
-      <a href="/convoyage" class="nav-dropdown-toggle">Convoyage &#9662;</a>
+      <a href="/convoyage">Convoyage &#9662;</a>
       <ul class="nav-dropdown-menu">
         <li class="nav-dropdown-section">Convoyage &#8212; le v&#233;hicule roule</li>
         <li><a href="/convoyage">Convoyage automobile</a></li>
         <li><a href="/convoyage-electrique">&#201;lectrique &amp; hybride</a></li>
         <li><a href="/convoyage-premium">Premium &amp; prestige</a></li>
         <li><a href="/convoyage-paris">Paris &amp; &#206;le-de-France</a></li>
-        <li><a href="/convoyage-concession">Concessions auto</a></li>
         <li class="nav-dropdown-section">Livraison 0&#160;km &#8212; sur plateau</li>
         <li><a href="/transport-plateau">V&#233;hicules neufs &amp; occasions</a></li>
       </ul>
     </li>
-    <li><a href="/chauffeur">Chauffeur</a></li>
     <li><a href="/mise-en-main">Mise en main</a></li>
     <li><a href="/entreprises">Entreprises</a></li>
     <li><a href="/blog" style="color:var(--gold)">Blog</a></li>
@@ -104,62 +122,89 @@ footer.footer-mini span.footer-copy{font-size:.6rem;color:rgba(189,181,166,0.55)
   <button type="button" class="mobile-close" onclick="document.getElementById('mm').classList.remove('open')">&#x2715;</button>
   <a href="/" onclick="document.getElementById('mm').classList.remove('open')">Accueil</a>
   <a href="/convoyage" onclick="document.getElementById('mm').classList.remove('open')">Convoyage</a>
-  <a href="/chauffeur" onclick="document.getElementById('mm').classList.remove('open')">Chauffeur</a>
-  <a href="/mise-en-main" onclick="document.getElementById('mm').classList.remove('open')">Mise en main</a>
-  <a href="/entreprises" onclick="document.getElementById('mm').classList.remove('open')">Entreprises</a>
   <a href="/blog" onclick="document.getElementById('mm').classList.remove('open')">Blog</a>
   <a href="/contact" onclick="document.getElementById('mm').classList.remove('open')">Contact</a>
   <a href="/contact" class="btn-primary" onclick="document.getElementById('mm').classList.remove('open')">Devis gratuit</a>
 </div>
 
-<div class="blog-hero">
-  <div class="blog-eyebrow">Le terrain, pas les promesses</div>
-  <h1 class="blog-title">L&#8217;expertise <em>convoyage</em><br>vue de l&#8217;int&#233;rieur</h1>
-  <p class="blog-sub">Retours de mission, conseils pratiques, v&#233;hicules &#233;lectriques, mise en main&#160;: ce que nos convoyeurs apprennent sur le terrain chaque jour.</p>
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <span class="trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Assurance AXA tous risques</span>
+    <span class="trust-sep">·</span>
+    <span class="trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Franchise z&#233;ro</span>
+    <span class="trust-sep">·</span>
+    <span class="trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Devis 2h &#8212; 7j/7</span>
+    <span class="trust-sep">·</span>
+    <span class="trust-item">&#9733; 5/5 Google</span>
+  </div>
 </div>
 
-<div class="blog-grid">
+<header class="article-header">
+  <div class="art-cat">Ce que tout le monde devrait savoir</div>
+  <h1 class="art-title">Comprendre l&#8217;&#233;lectrique<br><em>sans le baratin</em></h1>
+  <div class="art-meta">Par Jonathan Vestin &#183; Juin 2026 &#183; 8 min de lecture</div>
+  <p class="art-intro">Pas de PowerPoint. Pas de jargon marketing. Juste ce qu&#8217;un conducteur ou un chef de parc doit comprendre pour ne plus avoir peur de l&#8217;&#233;lectrique &#8212; et pour ne pas faire de b&#234;tises.</p>
+</header>
 
-  <a href="/blog/assurance-convoyage-automobile" class="blog-card">
-    <div class="blog-card-cat">Garanties &amp; s&#233;curit&#233;</div>
-    <h2 class="blog-card-title">Convoyage automobile&#160;: que couvre vraiment l&#8217;assurance de votre prestataire&#160;?</h2>
-    <p class="blog-card-excerpt">AXA, MMA, franchise, tiers ou tous risques&#160;: ce que vous devez exiger avant de confier vos cl&#233;s &#8212; et pourquoi la diff&#233;rence n&#8217;est pas que commerciale.</p>
-    <div class="blog-card-meta">
-      Juin 2026 &#183; 5 min de lecture
-      <span class="blog-card-link">Lire l&#8217;article &#8594;</span>
-    </div>
-  </a>
+<div class="article-body">
 
-  <a href="/blog/convoyage-vehicule-electrique-guide" class="blog-card">
-    <div class="blog-card-cat">V&#233;hicules &#233;lectriques</div>
-    <h2 class="blog-card-title">Convoyer un v&#233;hicule &#233;lectrique&#160;: le guide complet (y compris pour le ferry)</h2>
-    <p class="blog-card-excerpt">Borne, autonomie, 80&#160;%, contraintes ferry en Corse &#8212; tout ce qu&#8217;un convoyeur doit ma&#238;triser avant de prendre le volant d&#8217;une Tesla, d&#8217;une Porsche Taycan ou d&#8217;un EV6.</p>
-    <div class="blog-card-meta">
-      Juin 2026 &#183; 7 min de lecture
-      <span class="blog-card-link">Lire l&#8217;article &#8594;</span>
-    </div>
-  </a>
+  <h2>Pourquoi on charge &#224; 80&#160;% et pas &#224; 100&#160;%</h2>
+  <p>La r&#233;ponse est chimique. Une batterie lithium-ion fonctionne en d&#233;pla&#231;ant des ions entre deux &#233;lectrodes. Plus elle est charg&#233;e, plus la tension interne monte. &#192; haut niveau de charge, les r&#233;actions chimiques s&#8217;acc&#233;l&#232;rent &#8212; et elles d&#233;gradent les mat&#233;riaux de la cellule plus rapidement.</p>
+  <p>La zone id&#233;ale pour la batterie, c&#8217;est entre 20 et 80&#160;%. Comme un muscle qu&#8217;on ne pousse jamais &#224; l&#8217;extr&#234;me&#160;: il dure plus longtemps. &#192; 100&#160;% r&#233;gulier, on acc&#233;l&#232;re ce vieillissement.</p>
+  <p>En pratique&#160;: pour les trajets quotidiens, on programme la recharge &#224; 80&#160;%. Pour un long trajet demain matin&#160;: on va &#224; 100&#160;% la veille et on part rapidement. On ne laisse pas la batterie &#224; 100&#160;% gar&#233;e toute la nuit &#8212; certains v&#233;hicules (Tesla, BMW) le g&#232;rent automatiquement avec la &#171;&#160;charge programm&#233;e&#160;&#187;.</p>
+  <div class="info-box">
+    <p>Garantie constructeur standard&#160;: 8 ans ou 150&#160;000&#160;km, avec minimum 70&#160;% de capacit&#233; r&#233;siduelle. Les batteries bien trait&#233;es d&#233;passent largement ces seuils.</p>
+  </div>
 
-  <a href="/blog/mise-en-main-vehicule-neuf-ce-qui-fait-la-difference" class="blog-card">
-    <div class="blog-card-cat">Mise en main</div>
-    <h2 class="blog-card-title">Ce qui fait (vraiment) la diff&#233;rence lors d&#8217;une mise en main v&#233;hicule neuf</h2>
-    <p class="blog-card-excerpt">1h15 en moyenne&#160;: ce n&#8217;est pas du temps perdu, c&#8217;est votre image de marque en jeu. Ce que vos clients retiennent, et pourquoi &#231;a se joue dans les 10 premi&#232;res minutes.</p>
-    <div class="blog-card-meta">
-      Mai 2026 &#183; 6 min de lecture
-      <span class="blog-card-link">Lire l&#8217;article &#8594;</span>
-    </div>
-  </a>
+  <h2>AC et DC&#160;: pourquoi la prise normale est lente</h2>
+  <p>Il existe deux types d&#8217;&#233;lectricit&#233;. Le <strong>courant alternatif (AC)</strong> &#8212; celui du r&#233;seau, de vos prises &#8212; change de direction 50 fois par seconde. On l&#8217;utilise parce qu&#8217;il se transporte bien sur de longues distances. Le <strong>courant continu (DC)</strong>, lui, circule toujours dans le m&#234;me sens. C&#8217;est le seul qu&#8217;une batterie peut stocker.</p>
+  <p>Le probl&#232;me&#160;: une batterie ne peut pas absorber directement l&#8217;AC du r&#233;seau. Deux options&#160;:</p>
+  <ul>
+    <li><strong>Recharge AC (lente ou semi-rapide)</strong>&#160;: la conversion est faite par le chargeur embarqu&#233; dans le v&#233;hicule. Limit&#233;e &#224; 7, 11 ou 22&#160;kW selon les mod&#232;les. Borne wallbox&#160;: c&#8217;est de l&#8217;AC.</li>
+    <li><strong>Recharge DC (rapide)</strong>&#160;: la borne elle-m&#234;me fait la conversion et envoie directement du DC au v&#233;hicule. 50, 150, 350&#160;kW. Ionity, Tesla Supercharger, Electra&#160;: c&#8217;est du DC. La borne co&#251;te entre 50&#160;000 et 200&#160;000&#160;&#8364; &#8212; ce qui explique le prix &#224; l&#8217;usage.</li>
+  </ul>
+  <div class="info-box">
+    <p><strong>Pour un chef de parc&#160;:</strong> installer des bornes AC 7 ou 11&#160;kW sur le parking de l&#8217;entreprise co&#251;te quelques milliers d&#8217;euros par point. Suffisant pour recharger du soir au matin. Pas besoin de borne DC sauf usage sp&#233;cifique longue distance.</p>
+  </div>
 
+  <h2>Pourquoi la charge ralentit apr&#232;s 80&#160;%</h2>
+  <p>Vous &#234;tes sur une borne rapide. De 10 &#224; 80&#160;%, le v&#233;hicule accepte pleine puissance. Puis tout ralentit. Ce n&#8217;est pas une panne. C&#8217;est une protection.</p>
+  <p>En fin de charge, les cellules sont presque pleines. Continuer &#224; pousser fort risque de les endommager &#8212; surchauffe locale, contraintes m&#233;caniques. Le BMS (Battery Management System) r&#233;duit volontairement le courant entrant. On appelle &#231;a la <em>phase de saturation</em>. Passer de 80 &#224; 100&#160;% peut prendre autant de temps que de 10 &#224; 80&#160;%.</p>
+  <p><strong>Pour un convoyeur, &#231;a change tout&#160;:</strong> si on a besoin de 90&#160;% pour terminer un trajet, il faut l&#8217;int&#233;grer dans la planification en amont, pas le d&#233;couvrir sur place.</p>
 
-  <a href="/blog/comprendre-vehicule-electrique-sans-baratin" class="blog-card">
-    <div class="blog-card-cat">V&#233;hicules &#233;lectriques</div>
-    <h2 class="blog-card-title">Comprendre l&#8217;&#233;lectrique sans le baratin</h2>
-    <p class="blog-card-excerpt">80&#160;%, AC/DC, infrastructure France, avantage en nature, transition r&#233;glementaire&#160;: tout ce qu&#8217;un conducteur ou chef de parc devrait savoir &#8212; sans jargon et sans PowerPoint.</p>
-    <div class="blog-card-meta">
-      Juin 2026 &#183; 8 min de lecture
-      <span class="blog-card-link">Lire l&#8217;article &#8594;</span>
-    </div>
-  </a>
+  <h2>L&#8217;infrastructure en France&#160;: l&#8217;&#233;tat r&#233;el</h2>
+  <p>Fin 2025, la France comptait <strong>185&#160;501 points de recharge publics</strong>, +20&#160;% en un an. En apparence, c&#8217;est bien. En r&#233;alit&#233;, c&#8217;est plus complexe.</p>
+  <ul>
+    <li><strong>Toutes les bornes ne se valent pas.</strong> 46&#160;% sont dans des commerces &#8212; lentes (7-22&#160;kW AC). Utiles pour faire ses courses, pas pour une urgence sur route.</li>
+    <li><strong>Le r&#233;seau autoroutier est couvert.</strong> 100&#160;% des aires de service ont une borne rapide. Tesla Supercharger, Ionity, Electra sont g&#233;n&#233;ralement fiables.</li>
+    <li><strong>Les pannes existent.</strong> Borne hors service, logiciel plant&#233;, paiement refus&#233;. On ne peut pas pr&#233;voir. On peut avoir un plan B&#160;: toujours conna&#238;tre la borne suivante sur l&#8217;itin&#233;raire.</li>
+    <li><strong>Les disparit&#233;s r&#233;gionales persistent.</strong> &#206;le-de-France et Rh&#244;ne-Alpes sont bien &#233;quip&#233;es. Certains axes secondaires restent fragiles.</li>
+  </ul>
+  <div class="info-box">
+    <p>Notre approche&#160;: nous planifions toujours au moins deux options de recharge par trajet. On n&#8217;arrive jamais sur une borne sans alternative identifi&#233;e.</p>
+  </div>
+
+  <h2>La transition&#160;: ce n&#8217;est pas la faute des patrons</h2>
+  <p>C&#8217;est le sujet le plus d&#233;licat &#8212; et le plus important lors des interventions en entreprise. Beaucoup de salari&#233;s vivent le passage &#224; l&#8217;&#233;lectrique comme une d&#233;cision impos&#233;e. La r&#233;alit&#233;&#160;: les entreprises n&#8217;ont pas choisi cette transition. Elles y sont contraintes par&#160;:</p>
+  <ul>
+    <li><strong>La loi LOM</strong> et sa taxe incitative&#160;: 4&#160;000&#160;&#8364; par v&#233;hicule non conforme en 2026, 5&#160;000&#160;&#8364; en 2027. Une PME avec 50 v&#233;hicules qui ne se met pas en conformit&#233; peut payer plusieurs centaines de milliers d&#8217;euros.</li>
+    <li><strong>Les ZFE-m&#160;:</strong> les v&#233;hicules les plus polluants sont progressivement interdits dans les grandes agglom&#233;rations. Une flotte thermique ancienne peut devenir inutilisable.</li>
+    <li><strong>La fin du thermique neuf en 2035</strong>&#160;: droit europ&#233;en, pas une rumeur.</li>
+    <li><strong>Les obligations ESG&#160;:</strong> de plus en plus d&#8217;entreprises doivent d&#233;clarer l&#8217;empreinte carbone de leur flotte &#224; leurs actionnaires et clients.</li>
+  </ul>
+  <div class="info-box">
+    <p><strong>Et pour le salari&#233;, la r&#233;alit&#233; financi&#232;re est souvent meilleure qu&#8217;il ne le croit.</strong> Abattement de 70&#160;% sur l&#8217;avantage en nature jusqu&#8217;en 2027. &#201;lectricit&#233; de recharge non comptabilis&#233;e. Borne &#224; domicile prise en charge sans avantage si restitu&#233;e. Un v&#233;hicule &#233;lectrique de fonction co&#251;te 3 &#224; 4 fois moins en cotisations sociales qu&#8217;un thermique &#233;quivalent. Le probl&#232;me&#160;: personne ne le dit clairement lors de l&#8217;attribution du v&#233;hicule.</p>
+  </div>
+  <p>C&#8217;est exactement ce type d&#8217;explication que nous apportons lors de nos interventions. Un salari&#233; qui comprend pourquoi &#8212; et ce que &#231;a lui apporte sur sa fiche de paie &#8212; accepte, s&#8217;adapte, prend soin du v&#233;hicule.</p>
+
+  <div class="article-cta">
+    <h3>Formation &#233;lectrique pour vos &#233;quipes</h3>
+    <p>Nous proposons des interventions de sensibilisation pour les gestionnaires de parc, chauffeurs et conducteurs. Format court, concret, adapt&#233; &#224; votre flotte.</p>
+    <a href="/convoyage-electrique" class="btn-primary">Notre expertise &#233;lectrique</a>
+  </div>
+
+  <p style="margin-top:2rem"><a href="/blog" style="color:var(--gold);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase">&#8592; Retour au blog</a></p>
 
 </div>
 
