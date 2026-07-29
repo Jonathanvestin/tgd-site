@@ -11,7 +11,7 @@
 - **Siège** : 4 rue Jean Pigeon, 94220 Charenton-le-Pont, France
 - **Téléphone** : +33 7 61 09 26 26
 - **Email** : contact@the-gentleman-driver.com
-- **Site web** : https://thegentlemandriver.fr
+- **Site web** : https://www.thegentlemandriver.fr
 
 ## Ce que nous faisons
 
@@ -91,34 +91,34 @@ Oui, France entière. Basés à Charenton-le-Pont (94), nous intervenons depuis 
 
 ## Pages principales
 
-- Accueil : https://thegentlemandriver.fr/
-- Convoyage : https://thegentlemandriver.fr/convoyage.html
-- Mise en main : https://thegentlemandriver.fr/mise-en-main.html
-- Chauffeur : https://thegentlemandriver.fr/chauffeur.html
-- Transport plateau : https://thegentlemandriver.fr/transport-plateau.html
-- Livraison 0 km : https://thegentlemandriver.fr/livraison-0km.html
-- Entreprises : https://thegentlemandriver.fr/entreprises.html
-- FAQ : https://thegentlemandriver.fr/faq.html
-- Contact : https://thegentlemandriver.fr/contact.html
-- À propos : https://thegentlemandriver.fr/a-propos.html
+- Accueil : https://www.thegentlemandriver.fr/
+- Convoyage : https://www.thegentlemandriver.fr/convoyage.html
+- Mise en main : https://www.thegentlemandriver.fr/mise-en-main.html
+- Chauffeur : https://www.thegentlemandriver.fr/chauffeur.html
+- Transport plateau : https://www.thegentlemandriver.fr/transport-plateau.html
+- Livraison 0 km : https://www.thegentlemandriver.fr/livraison-0km.html
+- Entreprises : https://www.thegentlemandriver.fr/entreprises.html
+- FAQ : https://www.thegentlemandriver.fr/faq.html
+- Contact : https://www.thegentlemandriver.fr/contact.html
+- À propos : https://www.thegentlemandriver.fr/a-propos.html
 
 ## Pages SEO locales
 
-- Convoyage Paris : https://thegentlemandriver.fr/convoyage-paris.html
-- Convoyage Lyon : https://thegentlemandriver.fr/convoyage-lyon.html
-- Convoyage Marseille : https://thegentlemandriver.fr/convoyage-marseille.html
-- Convoyage Bordeaux : https://thegentlemandriver.fr/convoyage-bordeaux.html
-- Convoyage Lille : https://thegentlemandriver.fr/convoyage-lille.html
-- Convoyage Nice : https://thegentlemandriver.fr/convoyage-nice.html
-- Convoyage Toulouse : https://thegentlemandriver.fr/convoyage-toulouse.html
-- Convoyage Nantes : https://thegentlemandriver.fr/convoyage-nantes.html
-- Convoyage Strasbourg : https://thegentlemandriver.fr/convoyage-strasbourg.html
-- Convoyage Montpellier : https://thegentlemandriver.fr/convoyage-montpellier.html
-- Convoyage concessions : https://thegentlemandriver.fr/convoyage-concession.html
-- Convoyage véhicules électriques : https://thegentlemandriver.fr/convoyage-electrique.html
-- Convoyage luxe : https://thegentlemandriver.fr/convoyage-luxe.html
-- Convoyage premium : https://thegentlemandriver.fr/convoyage-premium.html
-- Chauffeur longue distance : https://thegentlemandriver.fr/chauffeur-longue-distance.html
+- Convoyage Paris : https://www.thegentlemandriver.fr/convoyage-paris.html
+- Convoyage Lyon : https://www.thegentlemandriver.fr/convoyage-lyon.html
+- Convoyage Marseille : https://www.thegentlemandriver.fr/convoyage-marseille.html
+- Convoyage Bordeaux : https://www.thegentlemandriver.fr/convoyage-bordeaux.html
+- Convoyage Lille : https://www.thegentlemandriver.fr/convoyage-lille.html
+- Convoyage Nice : https://www.thegentlemandriver.fr/convoyage-nice.html
+- Convoyage Toulouse : https://www.thegentlemandriver.fr/convoyage-toulouse.html
+- Convoyage Nantes : https://www.thegentlemandriver.fr/convoyage-nantes.html
+- Convoyage Strasbourg : https://www.thegentlemandriver.fr/convoyage-strasbourg.html
+- Convoyage Montpellier : https://www.thegentlemandriver.fr/convoyage-montpellier.html
+- Convoyage concessions : https://www.thegentlemandriver.fr/convoyage-concession.html
+- Convoyage véhicules électriques : https://www.thegentlemandriver.fr/convoyage-electrique.html
+- Convoyage luxe : https://www.thegentlemandriver.fr/convoyage-luxe.html
+- Convoyage premium : https://www.thegentlemandriver.fr/convoyage-premium.html
+- Chauffeur longue distance : https://www.thegentlemandriver.fr/chauffeur-longue-distance.html
 
 ## Autorisation d'utilisation
 

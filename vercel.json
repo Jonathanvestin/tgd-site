@@ -2,6 +2,17 @@
   "version": 2,
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "thegentlemandriver.fr"
+        }
+      ],
+      "destination": "https://www.thegentlemandriver.fr/:path*",
+      "permanent": true
+    },
+    {
       "source": "/a-propos.html",
       "destination": "/a-propos",
       "permanent": true

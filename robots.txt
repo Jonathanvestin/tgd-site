@@ -46,4 +46,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://thegentlemandriver.fr/sitemap.xml
+Sitemap: https://www.thegentlemandriver.fr/sitemap.xml
