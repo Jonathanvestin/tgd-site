@@ -92,33 +92,33 @@ Oui, France entière. Basés à Charenton-le-Pont (94), nous intervenons depuis 
 ## Pages principales
 
 - Accueil : https://www.thegentlemandriver.fr/
-- Convoyage : https://www.thegentlemandriver.fr/convoyage.html
-- Mise en main : https://www.thegentlemandriver.fr/mise-en-main.html
-- Chauffeur : https://www.thegentlemandriver.fr/chauffeur.html
-- Transport plateau : https://www.thegentlemandriver.fr/transport-plateau.html
-- Livraison 0 km : https://www.thegentlemandriver.fr/livraison-0km.html
-- Entreprises : https://www.thegentlemandriver.fr/entreprises.html
-- FAQ : https://www.thegentlemandriver.fr/faq.html
-- Contact : https://www.thegentlemandriver.fr/contact.html
-- À propos : https://www.thegentlemandriver.fr/a-propos.html
+- Convoyage : https://www.thegentlemandriver.fr/convoyage
+- Mise en main : https://www.thegentlemandriver.fr/mise-en-main
+- Chauffeur : https://www.thegentlemandriver.fr/chauffeur
+- Transport plateau : https://www.thegentlemandriver.fr/transport-plateau
+- Livraison 0 km : https://www.thegentlemandriver.fr/livraison-0km
+- Entreprises : https://www.thegentlemandriver.fr/entreprises
+- FAQ : https://www.thegentlemandriver.fr/faq
+- Contact : https://www.thegentlemandriver.fr/contact
+- À propos : https://www.thegentlemandriver.fr/a-propos
 
 ## Pages SEO locales
 
-- Convoyage Paris : https://www.thegentlemandriver.fr/convoyage-paris.html
-- Convoyage Lyon : https://www.thegentlemandriver.fr/convoyage-lyon.html
-- Convoyage Marseille : https://www.thegentlemandriver.fr/convoyage-marseille.html
-- Convoyage Bordeaux : https://www.thegentlemandriver.fr/convoyage-bordeaux.html
-- Convoyage Lille : https://www.thegentlemandriver.fr/convoyage-lille.html
-- Convoyage Nice : https://www.thegentlemandriver.fr/convoyage-nice.html
-- Convoyage Toulouse : https://www.thegentlemandriver.fr/convoyage-toulouse.html
-- Convoyage Nantes : https://www.thegentlemandriver.fr/convoyage-nantes.html
-- Convoyage Strasbourg : https://www.thegentlemandriver.fr/convoyage-strasbourg.html
-- Convoyage Montpellier : https://www.thegentlemandriver.fr/convoyage-montpellier.html
-- Convoyage concessions : https://www.thegentlemandriver.fr/convoyage-concession.html
-- Convoyage véhicules électriques : https://www.thegentlemandriver.fr/convoyage-electrique.html
-- Convoyage luxe : https://www.thegentlemandriver.fr/convoyage-luxe.html
-- Convoyage premium : https://www.thegentlemandriver.fr/convoyage-premium.html
-- Chauffeur longue distance : https://www.thegentlemandriver.fr/chauffeur-longue-distance.html
+- Convoyage Paris : https://www.thegentlemandriver.fr/convoyage-paris
+- Convoyage Lyon : https://www.thegentlemandriver.fr/convoyage-lyon
+- Convoyage Marseille : https://www.thegentlemandriver.fr/convoyage-marseille
+- Convoyage Bordeaux : https://www.thegentlemandriver.fr/convoyage-bordeaux
+- Convoyage Lille : https://www.thegentlemandriver.fr/convoyage-lille
+- Convoyage Nice : https://www.thegentlemandriver.fr/convoyage-nice
+- Convoyage Toulouse : https://www.thegentlemandriver.fr/convoyage-toulouse
+- Convoyage Nantes : https://www.thegentlemandriver.fr/convoyage-nantes
+- Convoyage Strasbourg : https://www.thegentlemandriver.fr/convoyage-strasbourg
+- Convoyage Montpellier : https://www.thegentlemandriver.fr/convoyage-montpellier
+- Convoyage concessions : https://www.thegentlemandriver.fr/convoyage-concession
+- Convoyage véhicules électriques : https://www.thegentlemandriver.fr/convoyage-electrique
+- Convoyage luxe : https://www.thegentlemandriver.fr/convoyage-luxe
+- Convoyage premium : https://www.thegentlemandriver.fr/convoyage-premium
+- Chauffeur longue distance : https://www.thegentlemandriver.fr/chauffeur-longue-distance
 
 ## Autorisation d'utilisation
 
