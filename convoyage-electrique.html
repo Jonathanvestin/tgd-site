@@ -17,7 +17,12 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Convoyage de véhicule électrique et hybride rechargeable">
 <meta name="twitter:description" content="Convoyage de véhicules électriques et hybrides rechargeables : gestion des arrêts recharge, protocole adapté et convoyeurs formés à ces motorisations.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0A0A'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia%2C serif' font-size='11' fill='%23C9A96E' font-weight='bold' letter-spacing='0.5'%3ETGD%3C/text%3E%3Cline x1='4' y1='22' x2='28' y2='22' stroke='%23C9A96E' stroke-width='0.8' opacity='0.5'/%3E%3C/svg%3E">
+<link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a0a0a">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -43,7 +48,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .nav-logo{display:flex;align-items:center;text-decoration:none}
 .nav-logo img{height:46px;width:auto;display:block}
 .nav-links{display:flex;gap:1.4rem;list-style:none}
-.nav-links a{font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:#D3CCBF;text-decoration:none;font-weight:400;transition:color .2s;white-space:nowrap}
+.nav-links a{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:#D3CCBF;text-decoration:none;font-weight:400;transition:color .2s;white-space:nowrap}
 .nav-links a:hover,.nav-links a.active{color:var(--gold)}
 /* ─── DROPDOWN ─── */
 .nav-dropdown{position:relative}
@@ -51,12 +56,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .nav-dropdown-menu::before{content:'';position:absolute;top:-12px;left:0;right:0;height:12px}
 .nav-dropdown:hover .nav-dropdown-menu{display:block}
 .nav-dropdown-menu li{list-style:none}
-.nav-dropdown-menu li a{display:block;padding:.6rem 1.2rem;font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:#D3CCBF;text-decoration:none;transition:color .15s,background .15s;white-space:nowrap}
+.nav-dropdown-menu li a{display:block;padding:.6rem 1.2rem;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:#D3CCBF;text-decoration:none;transition:color .15s,background .15s;white-space:nowrap}
 .nav-dropdown-menu li a:hover{color:var(--gold);background:rgba(201,169,110,0.05)}
 .nav-dropdown-toggle{cursor:pointer}
-.nav-dropdown-section{display:block;padding:.5rem 1.2rem .2rem;font-size:.48rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,169,110,0.5);font-weight:500;cursor:default;border-top:1px solid rgba(201,169,110,0.08);margin-top:.3rem}
+.nav-dropdown-section{display:block;padding:.5rem 1.2rem .2rem;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,169,110,0.5);font-weight:500;cursor:default;border-top:1px solid rgba(201,169,110,0.08);margin-top:.3rem}
 .nav-dropdown-section:first-child{border-top:none;margin-top:0}
-.nav-cta{font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;font-weight:500;color:var(--black);background:var(--gold);border:none;padding:.6rem 1.2rem;cursor:pointer;text-decoration:none;transition:background .2s;font-family:'Montserrat',sans-serif;white-space:nowrap}
+.nav-cta{font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;font-weight:500;color:var(--black);background:var(--gold);border:none;padding:.6rem 1.2rem;cursor:pointer;text-decoration:none;transition:background .2s;font-family:'Montserrat',sans-serif;white-space:nowrap}
 .nav-cta:hover{background:var(--gold-light)}
 .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
 .burger span{display:block;width:22px;height:1px;background:var(--ivory)}
@@ -72,14 +77,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,var(--black) 0%,rgba(10,10,10,.5) 50%,transparent 100%)}
 .hero-content{position:relative;z-index:2;padding:0 4vw 5rem;max-width:820px}
-.eyebrow{font-size:.6rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);font-weight:500;display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem}
+.eyebrow{font-size:.75rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);font-weight:500;display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem}
 .eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--gold)}
 .hero-content h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,4.5rem);font-weight:300;line-height:1.1;margin-bottom:1.2rem}
 .hero-content h1 em{font-style:italic;color:var(--gold)}
 .hero-sub{font-size:.88rem;color:rgba(245,240,232,.75);line-height:1.85;max-width:600px;font-weight:300}
 /* BREADCRUMB */
 .breadcrumb{background:var(--black-2);padding:.8rem 4vw;border-bottom:1px solid rgba(201,169,110,0.07)}
-.breadcrumb-inner{font-size:.65rem;color:var(--ivory-muted);font-weight:300;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.breadcrumb-inner{font-size:.75rem;color:var(--ivory-muted);font-weight:300;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
 .breadcrumb-inner a{color:var(--ivory-muted);text-decoration:none;transition:color .2s}
 .breadcrumb-inner a:hover{color:var(--gold)}
 .breadcrumb-inner span{color:rgba(189,181,166,.4)}
@@ -99,7 +104,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .proof-band{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(201,169,110,0.07)}
 .proof-item{background:var(--black-2);padding:2rem 1.5rem;text-align:center}
 .proof-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--gold);line-height:1;margin-bottom:.4rem}
-.proof-lbl{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ivory-muted);font-weight:400}
+.proof-lbl{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ivory-muted);font-weight:400}
 /* PROCESS */
 .process-grid{display:flex;flex-direction:column;gap:0;margin-top:2.5rem}
 .p-step{display:grid;grid-template-columns:60px 1fr;gap:1.5rem;padding-bottom:2.5rem;position:relative}
@@ -125,18 +130,18 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .related-card::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--gold);transition:width .4s}
 .related-card:hover{background:var(--black-3)}
 .related-card:hover::after{width:100%}
-.related-card-label{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:.6rem}
+.related-card-label{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:.6rem}
 .related-card-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--ivory);margin-bottom:.5rem}
 .related-card-desc{font-size:.75rem;color:var(--ivory-muted);line-height:1.7;font-weight:300}
-.related-card-arrow{font-size:.7rem;color:var(--gold);margin-top:.8rem;display:block}
+.related-card-arrow{font-size:.75rem;color:var(--gold);margin-top:.8rem;display:block}
 /* CTA */
 .cta-section{background:var(--gold);padding:5rem 4vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:2rem}
 .cta-text{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,3vw,2.5rem);font-weight:300;color:var(--black);line-height:1.3}
 .cta-text em{font-style:italic}
 .cta-actions{display:flex;gap:1rem;flex-wrap:wrap}
-.btn-dark{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--ivory);background:var(--black);border:none;padding:1rem 2rem;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s;font-family:'Montserrat',sans-serif}
+.btn-dark{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--ivory);background:var(--black);border:none;padding:1rem 2rem;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s;font-family:'Montserrat',sans-serif}
 .btn-dark:hover{background:var(--black-3)}
-.btn-gold{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--black);background:transparent;border:2px solid var(--black);padding:1rem 2rem;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s;font-family:'Montserrat',sans-serif}
+.btn-gold{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--black);background:transparent;border:2px solid var(--black);padding:1rem 2rem;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s;font-family:'Montserrat',sans-serif}
 .btn-gold:hover{background:var(--black);color:var(--ivory)}
 /* FOOTER */
 
@@ -157,10 +162,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 /* ─── BARRE STICKY MOBILE ─── */
 .sticky-mobile{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--black);border-top:1px solid rgba(201,169,110,0.15);padding:.8rem 1rem;gap:.6rem}
 @media(max-width:900px){.sticky-mobile{display:flex}}
-.sticky-btn{flex:1;padding:.75rem .5rem;text-align:center;text-decoration:none;font-family:'Montserrat',sans-serif;font-size:.6rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;border:none;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;transition:opacity .2s}
+.sticky-btn{flex:1;padding:.75rem .5rem;text-align:center;text-decoration:none;font-family:'Montserrat',sans-serif;font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;border:none;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;transition:opacity .2s}
 .sticky-btn:hover{opacity:.85}
 .sticky-btn-icon{font-size:1rem;line-height:1}
-.sticky-btn-label{font-size:.52rem;letter-spacing:.08em}
+.sticky-btn-label{font-size:.75rem;letter-spacing:.08em}
 .sticky-btn.call{background:var(--gold);color:var(--black)}
 .sticky-btn.whatsapp{background:#25D366;color:#fff}
 .sticky-btn.devis{background:var(--black-3);color:var(--gold);border:1px solid rgba(201,169,110,0.25)}
@@ -188,14 +193,14 @@ footer.footer-mini{background:var(--black-2);border-top:1px solid rgba(201,169,1
 footer.footer-mini a.footer-logo{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);text-decoration:none}
 footer.footer-mini ul.footer-links-list{display:flex;flex-direction:row;justify-content:center;gap:2rem;list-style:none;flex-wrap:wrap;margin:0;padding:0}
 footer.footer-mini ul.footer-links-list li{margin:0;padding:0;list-style:none}
-footer.footer-mini ul.footer-links-list a{font-size:.62rem;color:rgba(189,181,166,0.45);text-decoration:none;font-weight:300;transition:color .2s}
+footer.footer-mini ul.footer-links-list a{font-size:.75rem;color:rgba(189,181,166,0.45);text-decoration:none;font-weight:300;transition:color .2s}
 footer.footer-mini ul.footer-links-list a:hover{color:var(--ivory-muted)}
-footer.footer-mini span.footer-copy{font-size:.6rem;color:rgba(189,181,166,0.3);font-weight:300}
+footer.footer-mini span.footer-copy{font-size:.75rem;color:rgba(189,181,166,0.3);font-weight:300}
 
 /* lisibilité menu haut */
-.nav-links a{font-size:.7rem !important;letter-spacing:.12em;transition:color .2s}
+.nav-links a{font-size:.75rem !important;letter-spacing:.12em;transition:color .2s}
 .nav-links a:hover{color:var(--gold) !important}
-.nav-cta{font-size:.7rem !important}
+.nav-cta{font-size:.75rem !important}
 /* lisibilité menu bas */
 footer.footer-mini ul.footer-links-list a{color:rgba(189,181,166,0.72) !important}
 footer.footer-mini ul.footer-links-list a:hover{color:var(--ivory) !important}
@@ -213,7 +218,7 @@ section{padding:4.5rem 4vw !important}
 /* ═══ TRUST BAR ═══ */
 .trust-bar{background:rgba(201,169,110,0.07);border-bottom:1px solid rgba(201,169,110,0.12);padding:.55rem 4vw;overflow:hidden}
 .trust-bar-inner{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:.5rem 1.2rem}
-.trust-item{display:inline-flex;align-items:center;gap:.35rem;font-size:.58rem;letter-spacing:.07em;color:rgba(245,240,232,.7);white-space:nowrap}
+.trust-item{display:inline-flex;align-items:center;gap:.35rem;font-size:.75rem;letter-spacing:.07em;color:rgba(245,240,232,.7);white-space:nowrap}
 .trust-item svg{color:var(--gold);flex-shrink:0}
 .trust-sep{color:rgba(201,169,110,0.3);font-size:.8rem}
 @media(max-width:600px){.trust-sep{display:none}}
@@ -341,7 +346,7 @@ section{padding:4.5rem 4vw !important}
 <section class="content-section alt" id="formation-electrique">
   <div class="content-inner">
 
-    <p class="eyebrow" style="color:var(--gold);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.5rem">Formation &amp; transition</p>
+    <p class="eyebrow" style="color:var(--gold);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.5rem">Formation &amp; transition</p>
     <h2>Votre &#233;quipe est-elle pr&#234;te<br><em>pour l&#8217;&#233;lectrique&#160;?</em></h2>
     <p style="font-size:.9rem;color:var(--ivory-muted);max-width:680px;line-height:1.8;margin-bottom:2.5rem">Vous avez achet&#233; les v&#233;hicules. Vous avez install&#233; les bornes. Mais vos conducteurs, vos convoyeurs, vos &#233;quipes logistiques savent-ils vraiment comment se comporte un &#233;lectrique sur la route&#160;? C&#8217;est l&#224; que la plupart des probl&#232;mes commencent.</p>
 
@@ -349,12 +354,12 @@ section{padding:4.5rem 4vw !important}
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:3rem">
 
       <div class="highlight-box" style="margin:0">
-        <p style="font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem">Pression r&#233;glementaire</p>
+        <p style="font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem">Pression r&#233;glementaire</p>
         <p>La loi LOM impose aux entreprises de plus de 100 v&#233;hicules <strong>18&#160;% de VFE dans leur parc en 2026</strong>, 25&#160;% en 2027, 48&#160;% en 2030. En cas de non-conformit&#233;&#160;: <strong>4&#160;000&#160;&#8364; de taxe par v&#233;hicule manquant en 2026</strong>, 5&#160;000&#160;&#8364; d&#232;s 2027. Le compte &#224; rebours est lanc&#233; &#8212; et les flottes s&#8217;&#233;lectrifient en urgence, souvent sans que les &#233;quipes suivent.</p>
       </div>
 
       <div class="highlight-box" style="margin:0">
-        <p style="font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem">Avantage en nature &#8212; un levier sous-exploit&#233;</p>
+        <p style="font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem">Avantage en nature &#8212; un levier sous-exploit&#233;</p>
         <p>Un v&#233;hicule &#233;lectrique 100&#160;% peut b&#233;n&#233;ficier d&#8217;un <strong>abattement de 70&#160;% sur l&#8217;avantage en nature</strong> (plafonn&#233; &#224; 4&#160;641&#160;&#8364;/an) jusqu&#8217;au 31&#160;d&#233;cembre 2027. Concr&#232;tement&#160;: pour un salarié, la voiture &#233;lectrique de fonction est <strong>3 &#224; 4&#160;fois moins ch&#232;re fiscalement</strong> qu&#8217;un &#233;quivalent thermique. L&#8217;&#233;lectricit&#233; de recharge fournie par l&#8217;employeur est en plus totalement exclue du calcul. Ce dispositif est m&#233;connu &#8212; et mal expliqu&#233; lors des livraisons.</p>
       </div>
 
@@ -387,22 +392,22 @@ section{padding:4.5rem 4vw !important}
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:2.5rem 0">
 
       <div style="border:1px solid rgba(201,169,110,0.2);padding:1.8rem;background:rgba(201,169,110,0.03)">
-        <div style="font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem">Pour les gestionnaires de parc</div>
+        <div style="font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem">Pour les gestionnaires de parc</div>
         <p style="font-size:.82rem;color:var(--ivory-muted);line-height:1.75">Intervention dans vos locaux (ou en visio) pour <strong>briefer vos &#233;quipes</strong> sur la conduite &#233;lectrique optimis&#233;e, la gestion de charge en mission, les sp&#233;cificit&#233;s par marque (selon la marque et le mod&#232;le&hellip;), et les protocoles &#224; mettre en place pour &#233;viter les immobilisations inutiles.</p>
       </div>
 
       <div style="border:1px solid rgba(201,169,110,0.2);padding:1.8rem;background:rgba(201,169,110,0.03)">
-        <div style="font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem">Pour les conducteurs / salari&#233;s</div>
+        <div style="font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem">Pour les conducteurs / salari&#233;s</div>
         <p style="font-size:.82rem;color:var(--ivory-muted);line-height:1.75">Expliquer concr&#232;tement <strong>ce que l&#8217;&#233;lectrique change sur la fiche de paie</strong>&#160;: abattement de 70&#160;% sur l&#8217;avantage en nature, &#233;lectricit&#233; de recharge non comptabilis&#233;e, borne &#224; domicile sans avantage si restitu&#233;e. Et r&#233;pondre aux angoisses r&#233;elles&#160;: autonomie, pannes, arrêts sur route. Un salarié qui comprend, c&#8217;est un salarié qui accepte la transition.</p>
       </div>
 
       <div style="border:1px solid rgba(201,169,110,0.2);padding:1.8rem;background:rgba(201,169,110,0.03)">
-        <div style="font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem">Pour les concessions</div>
+        <div style="font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem">Pour les concessions</div>
         <p style="font-size:.82rem;color:var(--ivory-muted);line-height:1.75">Formation courte pour vos &#233;quipes de livraison sur la <strong>mise en main des mod&#232;les &#233;lectriques de votre gamme</strong> (selon votre v&#233;hicule&hellip;)&#160;: ce que le client doit savoir d&#232;s la premi&#232;re recharge, les points qui g&#233;n&#232;rent le plus de rappels SAV, comment expliquer l&#8217;avantage en nature &#224; un client acheteur pro.</p>
       </div>
 
       <div style="border:1px solid rgba(201,169,110,0.2);padding:1.8rem;background:rgba(201,169,110,0.03)">
-        <div style="font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem">Pour les DRH et responsables flotte</div>
+        <div style="font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem">Pour les DRH et responsables flotte</div>
         <p style="font-size:.82rem;color:var(--ivory-muted);line-height:1.75">&#201;change sur la <strong>communication interne autour de la transition</strong>&#160;: comment pr&#233;senter l&#8217;avantage en nature &#233;lectrique &#224; vos salari&#233;s (70&#160;% d&#8217;abattement jusqu&#8217;en 2027), comment lever les r&#233;sistances, quels arguments concrets utiliser pour que le passage &#224; l&#8217;&#233;lectrique soit per&#231;u comme un avantage et non une contrainte.</p>
       </div>
 
@@ -427,10 +432,10 @@ section{padding:4.5rem 4vw !important}
 ═══════════════════════════════════════════════ -->
 <section class="content-section" id="comprendre-electrique">
   <div class="content-inner" style="text-align:center;padding:3rem 0">
-    <p class="eyebrow" style="color:var(--gold);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.5rem">Ce que tout le monde devrait savoir</p>
+    <p class="eyebrow" style="color:var(--gold);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.5rem">Ce que tout le monde devrait savoir</p>
     <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;line-height:1.2;color:var(--ivory);margin-bottom:1.2rem">Comprendre l&#8217;&#233;lectrique<br><em>sans le baratin</em></h2>
     <p style="font-size:.88rem;color:var(--ivory-muted);max-width:580px;margin:0 auto 2rem;line-height:1.85">80&#160;%, AC&#160;vs&#160;DC, phase de saturation, infrastructure France, transition r&#233;glementaire et avantage en nature&#160;: tout ce qu&#8217;un conducteur ou chef de parc devrait savoir, expliqu&#233; sans jargon.</p>
-    <a href="/blog/comprendre-vehicule-electrique-sans-baratin" style="font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--black);background:var(--gold);padding:.65rem 1.8rem;text-decoration:none;font-weight:500;display:inline-block">Lire l&#8217;article &#8594;</a>
+    <a href="/blog/comprendre-vehicule-electrique-sans-baratin" style="font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--black);background:var(--gold);padding:.65rem 1.8rem;text-decoration:none;font-weight:500;display:inline-block">Lire l&#8217;article &#8594;</a>
   </div>
 </section>
 
@@ -544,7 +549,7 @@ section{padding:4.5rem 4vw !important}
     <li><a href="/mentions-legales">Mentions l&#233;gales</a></li>
   </ul>
   <span class="footer-copy">&#169; 2026 The Gentleman Driver &#8212; SASU &#8212; Charenton-le-Pont (94)</span>
-  <span class="footer-legal-mini" style="display:block;margin-top:.7rem;font-size:.55rem;color:rgba(189,181,166,0.22);font-weight:300;letter-spacing:.05em;line-height:1.8">SIRET 985 178 466 00019 &#183; RCS Cr&#233;teil &#183; Assurance RC Pro &#183; Assurance W Garage AXA</span>
+  <span class="footer-legal-mini" style="display:block;margin-top:.7rem;font-size:.75rem;color:rgba(189,181,166,0.22);font-weight:300;letter-spacing:.05em;line-height:1.8">SIRET 985 178 466 00019 &#183; RCS Cr&#233;teil &#183; Assurance RC Pro &#183; Assurance W Garage AXA</span>
 </footer>
 
 <script>

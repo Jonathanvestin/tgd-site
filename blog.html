@@ -13,7 +13,12 @@
 <meta property="og:description" content="Nos articles sur le convoyage automobile : assurance, véhicules électriques, contraintes de recharge et qualité de la mise en main d'un véhicule neuf.">
 <meta property="og:url" content="https://www.thegentlemandriver.fr/blog">
 <meta property="og:image" content="https://www.thegentlemandriver.fr/og-image.jpg">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0A0A'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia%2C serif' font-size='11' fill='%23C9A96E' font-weight='bold' letter-spacing='0.5'%3ETGD%3C/text%3E%3Cline x1='4' y1='22' x2='28' y2='22' stroke='%23C9A96E' stroke-width='0.8' opacity='0.5'/%3E%3C/svg%3E">
+<link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a0a0a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -26,9 +31,9 @@ body{background:var(--black);color:var(--ivory);font-family:'Montserrat',sans-se
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 4vw;height:80px;background:rgba(10,10,10,0.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,169,110,0.1)}
 .nav-logo{display:flex;align-items:center;text-decoration:none}
 .nav-links{display:flex;gap:1.4rem;list-style:none}
-.nav-links a{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:#D3CCBF;text-decoration:none;transition:color .2s}
+.nav-links a{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:#D3CCBF;text-decoration:none;transition:color .2s}
 .nav-links a:hover{color:var(--gold)}
-.nav-cta{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--black);background:var(--gold);padding:.55rem 1.4rem;text-decoration:none;font-weight:500;transition:background .2s}
+.nav-cta{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--black);background:var(--gold);padding:.55rem 1.4rem;text-decoration:none;font-weight:500;transition:background .2s}
 .nav-cta:hover{background:var(--gold-light)}
 .burger{display:none;background:none;border:none;cursor:pointer;padding:.5rem;flex-direction:column;gap:5px}
 .burger span{display:block;width:22px;height:1px;background:var(--ivory)}
@@ -37,11 +42,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .mobile-menu.open{transform:translateX(0)}
 .mobile-menu a{font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ivory-muted);text-decoration:none}
 .mobile-close{background:none;border:none;color:var(--ivory);font-size:1.5rem;cursor:pointer;align-self:flex-end}
-.btn-primary{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--black);background:var(--gold);padding:.65rem 1.8rem;text-decoration:none;font-weight:500;display:inline-block;transition:background .2s}
+.btn-primary{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--black);background:var(--gold);padding:.65rem 1.8rem;text-decoration:none;font-weight:500;display:inline-block;transition:background .2s}
 .btn-primary:hover{background:var(--gold-light)}
 /* BLOG STYLES */
 .blog-hero{padding:160px 4vw 80px;text-align:center}
-.blog-eyebrow{font-size:.58rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);font-weight:500;display:inline-flex;align-items:center;gap:1rem;margin-bottom:1.5rem}
+.blog-eyebrow{font-size:.75rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);font-weight:500;display:inline-flex;align-items:center;gap:1rem;margin-bottom:1.5rem}
 .blog-eyebrow::before,.blog-eyebrow::after{content:'';display:block;width:30px;height:1px;background:var(--gold)}
 .blog-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4vw,3.5rem);font-weight:300;line-height:1.1;color:var(--ivory);margin-bottom:1.2rem}
 .blog-title em{font-style:italic;color:var(--gold)}
@@ -49,24 +54,24 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;padding:0 4vw 6rem;max-width:1200px;margin:0 auto}
 .blog-card{background:var(--black-2);text-decoration:none;display:block;transition:background .2s}
 .blog-card:hover{background:var(--black-3)}
-.blog-card-cat{font-size:.52rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:500;padding:1.5rem 1.5rem .5rem}
+.blog-card-cat{font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:500;padding:1.5rem 1.5rem .5rem}
 .blog-card-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;line-height:1.2;color:var(--ivory);padding:.5rem 1.5rem 1rem}
 .blog-card-excerpt{font-size:.75rem;color:var(--ivory-muted);padding:0 1.5rem 1rem;line-height:1.75}
-.blog-card-meta{font-size:.6rem;color:rgba(189,181,166,0.45);padding:.8rem 1.5rem 1.5rem;border-top:1px solid rgba(201,169,110,0.07)}
-.blog-card-link{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-top:.6rem;display:inline-block}
+.blog-card-meta{font-size:.75rem;color:rgba(189,181,166,0.45);padding:.8rem 1.5rem 1.5rem;border-top:1px solid rgba(201,169,110,0.07)}
+.blog-card-link{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-top:.6rem;display:inline-block}
 @media(max-width:900px){.blog-grid{grid-template-columns:1fr}}
 footer.footer-mini{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.06);padding:2.5rem 4vw;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1.4rem;text-align:center}
 footer.footer-mini a.footer-logo{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);text-decoration:none}
 footer.footer-mini ul.footer-links-list{display:flex;flex-direction:row;justify-content:center;align-items:center;gap:2rem;list-style:none;flex-wrap:wrap;margin:0;padding:0}
-footer.footer-mini ul.footer-links-list a{font-size:.62rem;color:rgba(189,181,166,0.72);text-decoration:none;font-weight:300;transition:color .2s}
+footer.footer-mini ul.footer-links-list a{font-size:.75rem;color:rgba(189,181,166,0.72);text-decoration:none;font-weight:300;transition:color .2s}
 footer.footer-mini ul.footer-links-list a:hover{color:var(--ivory-muted)}
-footer.footer-mini span.footer-copy{font-size:.6rem;color:rgba(189,181,166,0.55);font-weight:300}
+footer.footer-mini span.footer-copy{font-size:.75rem;color:rgba(189,181,166,0.55);font-weight:300}
 .nav-dropdown{position:relative}
 .nav-dropdown-menu{display:none;position:absolute;top:calc(100% + 8px);left:0;background:rgba(10,10,10,0.98);border:1px solid rgba(201,169,110,0.12);min-width:220px;padding:.5rem 0;list-style:none;z-index:200}
 .nav-dropdown:hover .nav-dropdown-menu{display:block}
-.nav-dropdown-menu li a{display:block;padding:.45rem 1.2rem;font-size:.63rem;letter-spacing:.1em;color:var(--ivory-muted)}
+.nav-dropdown-menu li a{display:block;padding:.45rem 1.2rem;font-size:.75rem;letter-spacing:.1em;color:var(--ivory-muted)}
 .nav-dropdown-menu li a:hover{color:var(--gold)}
-.nav-dropdown-section{display:block;padding:.5rem 1.2rem .2rem;font-size:.48rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,169,110,0.5);font-weight:500;cursor:default;border-top:1px solid rgba(201,169,110,0.08);margin-top:.3rem}
+.nav-dropdown-section{display:block;padding:.5rem 1.2rem .2rem;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,169,110,0.5);font-weight:500;cursor:default;border-top:1px solid rgba(201,169,110,0.08);margin-top:.3rem}
 .nav-dropdown-section:first-child{border-top:none;margin-top:0}
 </style>
 </head>
@@ -188,7 +193,7 @@ footer.footer-mini span.footer-copy{font-size:.6rem;color:rgba(189,181,166,0.55)
     <li><a href="/mentions-legales">Mentions l&#233;gales</a></li>
   </ul>
   <span class="footer-copy">&#169; 2026 The Gentleman Driver &#8212; SASU &#8212; Charenton-le-Pont (94)</span>
-  <span class="footer-legal-mini" style="display:block;margin-top:.7rem;font-size:.55rem;color:rgba(189,181,166,0.22);font-weight:300;letter-spacing:.05em;line-height:1.8">SIRET 985 178 466 00019 &#183; RCS Cr&#233;teil &#183; Assurance RC Pro &#183; Assurance W Garage AXA</span>
+  <span class="footer-legal-mini" style="display:block;margin-top:.7rem;font-size:.75rem;color:rgba(189,181,166,0.22);font-weight:300;letter-spacing:.05em;line-height:1.8">SIRET 985 178 466 00019 &#183; RCS Cr&#233;teil &#183; Assurance RC Pro &#183; Assurance W Garage AXA</span>
 </footer>
 </body>
 </html>

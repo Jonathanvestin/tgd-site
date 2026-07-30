@@ -21,7 +21,12 @@
   <meta name="twitter:title" content="À Propos — The Gentleman Driver">
   <meta name="twitter:description" content="Fondé en 2021 par Jonathan Vestin. 5 collaborateurs, 1,2M km, 28 avis 5★. L'histoire d'un partenaire logistique premium.">
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0A0A'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia%2C serif' font-size='11' fill='%23C9A96E' font-weight='bold' letter-spacing='0.5'%3ETGD%3C/text%3E%3Cline x1='4' y1='22' x2='28' y2='22' stroke='%23C9A96E' stroke-width='0.8' opacity='0.5'/%3E%3C/svg%3E">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a0a0a">
 <title>Qui sommes-nous | The Gentleman Driver — Convoyage depuis 2021</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,7 +42,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .nav-logo{display:flex;align-items:center;text-decoration:none}
 .nav-logo img{height:46px;width:auto;display:block}
 .nav-links{display:flex;gap:1.4rem;list-style:none}
-.nav-links a{font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:#D3CCBF;text-decoration:none;font-weight:400;transition:color .2s;white-space:nowrap}
+.nav-links a{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:#D3CCBF;text-decoration:none;font-weight:400;transition:color .2s;white-space:nowrap}
 .nav-links a:hover,.nav-links a.active{color:var(--gold)}
 /* ─── DROPDOWN ─── */
 .nav-dropdown{position:relative}
@@ -45,12 +50,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .nav-dropdown-menu::before{content:'';position:absolute;top:-12px;left:0;right:0;height:12px}
 .nav-dropdown:hover .nav-dropdown-menu{display:block}
 .nav-dropdown-menu li{list-style:none}
-.nav-dropdown-menu li a{display:block;padding:.6rem 1.2rem;font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:#D3CCBF;text-decoration:none;transition:color .15s,background .15s;white-space:nowrap}
+.nav-dropdown-menu li a{display:block;padding:.6rem 1.2rem;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:#D3CCBF;text-decoration:none;transition:color .15s,background .15s;white-space:nowrap}
 .nav-dropdown-menu li a:hover{color:var(--gold);background:rgba(201,169,110,0.05)}
 .nav-dropdown-toggle{cursor:pointer}
-.nav-dropdown-section{display:block;padding:.5rem 1.2rem .2rem;font-size:.48rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,169,110,0.5);font-weight:500;cursor:default;border-top:1px solid rgba(201,169,110,0.08);margin-top:.3rem}
+.nav-dropdown-section{display:block;padding:.5rem 1.2rem .2rem;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,169,110,0.5);font-weight:500;cursor:default;border-top:1px solid rgba(201,169,110,0.08);margin-top:.3rem}
 .nav-dropdown-section:first-child{border-top:none;margin-top:0}
-.nav-cta{font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;font-weight:500;color:var(--black);background:var(--gold);border:none;padding:.6rem 1.2rem;cursor:pointer;text-decoration:none;transition:background .2s;font-family:'Montserrat',sans-serif;white-space:nowrap}
+.nav-cta{font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;font-weight:500;color:var(--black);background:var(--gold);border:none;padding:.6rem 1.2rem;cursor:pointer;text-decoration:none;transition:background .2s;font-family:'Montserrat',sans-serif;white-space:nowrap}
 .nav-cta:hover{background:var(--gold-light)}
 .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
 .burger span{display:block;width:22px;height:1px;background:var(--ivory)}
@@ -59,11 +64,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .mobile-menu a{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--ivory);text-decoration:none;font-weight:300}
 .mobile-menu a:hover{color:var(--gold)}
 .mobile-close{position:absolute;top:2rem;right:4vw;background:none;border:none;color:var(--ivory);font-size:1.8rem;cursor:pointer;font-family:'Cormorant Garamond',serif}
-@media(max-width:1100px){.nav-links{gap:.9rem}.nav-links a{font-size:.52rem}}
+@media(max-width:1100px){.nav-links{gap:.9rem}.nav-links a{font-size:.75rem}}
 @media(max-width:900px){.nav-links,.nav-cta{display:none}.burger{display:flex}}
-.btn-primary{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--black);background:var(--gold);border:none;padding:1rem 2.5rem;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s;font-family:'Montserrat',sans-serif}
+.btn-primary{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--black);background:var(--gold);border:none;padding:1rem 2.5rem;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s;font-family:'Montserrat',sans-serif}
 .btn-primary:hover{background:var(--gold-light)}
-.btn-ghost{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--ivory);background:transparent;border:1px solid rgba(245,240,232,.2);padding:1rem 2rem;cursor:pointer;text-decoration:none;display:inline-block;transition:border-color .2s,color .2s;font-family:'Montserrat',sans-serif}
+.btn-ghost{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--ivory);background:transparent;border:1px solid rgba(245,240,232,.2);padding:1rem 2rem;cursor:pointer;text-decoration:none;display:inline-block;transition:border-color .2s,color .2s;font-family:'Montserrat',sans-serif}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
 
 /* HERO */
@@ -72,7 +77,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:brightness(.35)}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,var(--black) 0%,rgba(10,10,10,0.4) 60%,transparent 100%)}
 .hero-content{position:relative;z-index:2;padding:0 4vw 5rem;max-width:800px}
-.eyebrow{font-size:.6rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);font-weight:500;display:flex;align-items:center;gap:1rem;margin-bottom:1.8rem}
+.eyebrow{font-size:.75rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);font-weight:500;display:flex;align-items:center;gap:1rem;margin-bottom:1.8rem}
 .eyebrow::before{content:'';display:block;width:30px;height:1px;background:var(--gold)}
 .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6vw,5.5rem);font-weight:300;line-height:1.05;color:var(--ivory);margin-bottom:1.5rem}
 .hero h1 em{font-style:italic;color:var(--gold)}
@@ -80,7 +85,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 
 /* SECTIONS */
 section{padding:6rem 4vw}
-.section-eyebrow{font-size:.58rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);font-weight:500;display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem}
+.section-eyebrow{font-size:.75rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);font-weight:500;display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem}
 .section-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--gold)}
 .section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3.2rem);font-weight:300;line-height:1.1;color:var(--ivory);margin-bottom:1.5rem}
 .section-title em{font-style:italic;color:var(--gold)}
@@ -90,8 +95,8 @@ section{padding:6rem 4vw}
 .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(201,169,110,0.08);margin-top:4rem}
 .stat{background:var(--black-2);padding:2.5rem 2rem;text-align:center}
 .stat-num{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:var(--gold);line-height:1;margin-bottom:.5rem}
-.stat-lbl{font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ivory-muted);font-weight:400}
-.stat-detail{font-size:.68rem;color:rgba(189,181,166,0.5);margin-top:.3rem;font-weight:300}
+.stat-lbl{font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ivory-muted);font-weight:400}
+.stat-detail{font-size:.75rem;color:rgba(189,181,166,0.5);margin-top:.3rem;font-weight:300}
 
 /* HISTOIRE */
 .histoire{background:var(--black-2)}
@@ -100,7 +105,7 @@ section{padding:6rem 4vw}
 .histoire-photo img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 20%;filter:brightness(.85)}
 .histoire-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 60%,rgba(10,10,10,0.6) 100%)}
 .histoire-photo-caption{position:absolute;bottom:1.5rem;left:1.5rem;right:1.5rem;z-index:1}
-.histoire-photo-caption-text{font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,240,232,0.6);font-weight:300}
+.histoire-photo-caption-text{font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,240,232,0.6);font-weight:300}
 .histoire-body{display:flex;flex-direction:column;gap:1.5rem}
 .histoire-body p{font-size:.85rem;color:var(--ivory-muted);line-height:1.9;font-weight:300}
 .histoire-body p strong{color:var(--ivory);font-weight:500}
@@ -122,14 +127,14 @@ section{padding:6rem 4vw}
 .membre:hover::after{width:100%}
 .membre-avatar{width:64px;height:64px;border:1px solid rgba(201,169,110,0.2);border-radius:0;display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem;background:var(--black-3);font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--gold)}
 .membre-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--ivory);margin-bottom:.3rem}
-.membre-role{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:.6rem}
-.membre-desc{font-size:.72rem;color:var(--ivory-muted);line-height:1.65;font-weight:300}
+.membre-role{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:.6rem}
+.membre-desc{font-size:.75rem;color:var(--ivory-muted);line-height:1.65;font-weight:300}
 .membre.fondateur{border-top:2px solid var(--gold)}
 
 /* FONDATEUR QUOTE */
 .founder-section{background:var(--gold);padding:5rem 4vw;text-align:center}
 .founder-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,3vw,2.2rem);font-weight:300;font-style:italic;color:var(--black);line-height:1.5;max-width:800px;margin:0 auto 2rem}
-.founder-sig{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(10,10,10,.6);font-weight:600}
+.founder-sig{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(10,10,10,.6);font-weight:600}
 
 /* TIMELINE */
 .timeline{background:var(--black-2);padding:6rem 4vw}
@@ -157,14 +162,14 @@ section{padding:6rem 4vw}
 .testi:hover{border-left-color:var(--gold)}
 .testi-stars{color:var(--gold);font-size:.8rem;letter-spacing:2px;margin-bottom:1rem}
 .testi-quote{font-family:'Cormorant Garamond',serif;font-size:1.08rem;font-style:italic;color:var(--ivory);line-height:1.6;margin-bottom:1.2rem;font-weight:300}
-.testi-author{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:500}
-.testi-role{font-size:.68rem;color:var(--ivory-muted);font-weight:300;margin-top:2px}
+.testi-author{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.testi-role{font-size:.75rem;color:var(--ivory-muted);font-weight:300;margin-top:2px}
 
 /* FOOTER */
 
 
 .footer-links{display:flex;gap:2rem;list-style:none}
-.footer-links a{font-size:.62rem;color:rgba(189,181,166,0.45);text-decoration:none;font-weight:300;transition:color .2s}
+.footer-links a{font-size:.75rem;color:rgba(189,181,166,0.45);text-decoration:none;font-weight:300;transition:color .2s}
 .footer-links a:hover{color:var(--ivory-muted)}
 
 
@@ -178,10 +183,10 @@ section{padding:6rem 4vw}
 /* ─── BARRE STICKY MOBILE ─── */
 .sticky-mobile{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--black);border-top:1px solid rgba(201,169,110,0.15);padding:.8rem 1rem;gap:.6rem}
 @media(max-width:900px){.sticky-mobile{display:flex}}
-.sticky-btn{flex:1;padding:.75rem .5rem;text-align:center;text-decoration:none;font-family:'Montserrat',sans-serif;font-size:.6rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;border:none;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;transition:opacity .2s}
+.sticky-btn{flex:1;padding:.75rem .5rem;text-align:center;text-decoration:none;font-family:'Montserrat',sans-serif;font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;border:none;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;transition:opacity .2s}
 .sticky-btn:hover{opacity:.85}
 .sticky-btn-icon{font-size:1rem;line-height:1}
-.sticky-btn-label{font-size:.52rem;letter-spacing:.08em}
+.sticky-btn-label{font-size:.75rem;letter-spacing:.08em}
 .sticky-btn.call{background:var(--gold);color:var(--black)}
 .sticky-btn.whatsapp{background:#25D366;color:#fff}
 .sticky-btn.devis{background:var(--black-3);color:var(--gold);border:1px solid rgba(201,169,110,0.25)}
@@ -208,14 +213,14 @@ footer.footer-mini{background:var(--black-2);border-top:1px solid rgba(201,169,1
 footer.footer-mini a.footer-logo{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);text-decoration:none}
 footer.footer-mini ul.footer-links-list{display:flex;flex-direction:row;justify-content:center;gap:2rem;list-style:none;flex-wrap:wrap;margin:0;padding:0}
 footer.footer-mini ul.footer-links-list li{margin:0;padding:0;list-style:none}
-footer.footer-mini ul.footer-links-list a{font-size:.62rem;color:rgba(189,181,166,0.45);text-decoration:none;font-weight:300;transition:color .2s}
+footer.footer-mini ul.footer-links-list a{font-size:.75rem;color:rgba(189,181,166,0.45);text-decoration:none;font-weight:300;transition:color .2s}
 footer.footer-mini ul.footer-links-list a:hover{color:var(--ivory-muted)}
-footer.footer-mini span.footer-copy{font-size:.6rem;color:rgba(189,181,166,0.3);font-weight:300}
+footer.footer-mini span.footer-copy{font-size:.75rem;color:rgba(189,181,166,0.3);font-weight:300}
 
 /* lisibilité menu haut */
-.nav-links a{font-size:.7rem !important;letter-spacing:.12em;transition:color .2s}
+.nav-links a{font-size:.75rem !important;letter-spacing:.12em;transition:color .2s}
 .nav-links a:hover{color:var(--gold) !important}
-.nav-cta{font-size:.7rem !important}
+.nav-cta{font-size:.75rem !important}
 /* lisibilité menu bas */
 footer.footer-mini ul.footer-links-list a{color:rgba(189,181,166,0.72) !important}
 footer.footer-mini ul.footer-links-list a:hover{color:var(--ivory) !important}
@@ -235,7 +240,7 @@ section{padding:4.5rem 4vw !important}
 /* ═══ TRUST BAR ═══ */
 .trust-bar{background:rgba(201,169,110,0.07);border-bottom:1px solid rgba(201,169,110,0.12);padding:.55rem 4vw;overflow:hidden}
 .trust-bar-inner{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:.5rem 1.2rem}
-.trust-item{display:inline-flex;align-items:center;gap:.35rem;font-size:.58rem;letter-spacing:.07em;color:rgba(245,240,232,.7);white-space:nowrap}
+.trust-item{display:inline-flex;align-items:center;gap:.35rem;font-size:.75rem;letter-spacing:.07em;color:rgba(245,240,232,.7);white-space:nowrap}
 .trust-item svg{color:var(--gold);flex-shrink:0}
 .trust-sep{color:rgba(201,169,110,0.3);font-size:.8rem}
 @media(max-width:600px){.trust-sep{display:none}}
@@ -500,9 +505,9 @@ section{padding:4.5rem 4vw !important}
         <span style="font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:var(--gold);line-height:1">5,0</span>
         <span style="color:var(--gold);font-size:1rem;letter-spacing:2px">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
       </div>
-      <div style="font-size:.68rem;color:var(--ivory-muted);letter-spacing:.1em;text-transform:uppercase">28 avis v&#233;rifi&#233;s Google</div>
+      <div style="font-size:.75rem;color:var(--ivory-muted);letter-spacing:.1em;text-transform:uppercase">28 avis v&#233;rifi&#233;s Google</div>
     </div>
-    <a href="https://search.google.com/local/reviews?placeid=ChIJczTzUUIzLWoR59TwldN3SsM" target="_blank" rel="noopener" class="btn-ghost" style="font-size:.58rem;padding:.65rem 1.4rem">Voir les avis Google &#x2197;</a>
+    <a href="https://search.google.com/local/reviews?placeid=ChIJczTzUUIzLWoR59TwldN3SsM" target="_blank" rel="noopener" class="btn-ghost" style="font-size:.75rem;padding:.65rem 1.4rem">Voir les avis Google &#x2197;</a>
   </div>
   <div class="testi-grid tgd-reviews-widget" data-max="3">
     <div class="testi">
@@ -525,7 +530,7 @@ section{padding:4.5rem 4vw !important}
     </div>
   </div>
   <div style="text-align:center;margin-top:2.5rem">
-    <a href="https://search.google.com/local/reviews?placeid=ChIJczTzUUIzLWoR59TwldN3SsM" target="_blank" rel="noopener" style="font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);text-decoration:none;font-weight:500;display:inline-flex;align-items:center;gap:8px;padding-bottom:3px;border-bottom:1px solid rgba(201,169,110,0.25)">
+    <a href="https://search.google.com/local/reviews?placeid=ChIJczTzUUIzLWoR59TwldN3SsM" target="_blank" rel="noopener" style="font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);text-decoration:none;font-weight:500;display:inline-flex;align-items:center;gap:8px;padding-bottom:3px;border-bottom:1px solid rgba(201,169,110,0.25)">
       Voir les 28 avis sur Google
       <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
     </a>
@@ -545,12 +550,12 @@ section{padding:4.5rem 4vw !important}
       </div>
       <div style="display:flex;flex-direction:column;gap:1.5rem">
         <div style="background:rgba(255,255,255,0.03);border-left:2px solid rgba(201,169,110,0.4);padding:1.2rem 1.5rem">
-          <div style="font-size:.52rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem">01</div>
+          <div style="font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem">01</div>
           <div style="font-size:.8rem;color:var(--ivory);font-weight:400;margin-bottom:.4rem">Le client de votre client est votre client</div>
           <div style="font-size:.75rem;color:var(--ivory-muted);line-height:1.7;font-weight:300">Quand on intervient pour une concession, c'est le client final qui juge. Pas le directeur. C'est lui qu'on soigne.</div>
         </div>
         <div style="background:rgba(255,255,255,0.03);border-left:2px solid rgba(201,169,110,0.4);padding:1.2rem 1.5rem">
-          <div style="font-size:.52rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem">02</div>
+          <div style="font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem">02</div>
           <div style="font-size:.8rem;color:var(--ivory);font-weight:400;margin-bottom:.4rem">Un interlocuteur unique, une responsabilité entière</div>
           <div style="font-size:.75rem;color:var(--ivory-muted);line-height:1.7;font-weight:300">Vous savez qui répond, qui conduit, et qui assume si quelque chose ne va pas. Cette clarté n'a pas de prix.</div>
         </div>
@@ -558,7 +563,7 @@ section{padding:4.5rem 4vw !important}
     </div>
     <blockquote style="margin:0;padding:2rem 2.5rem;background:rgba(201,169,110,0.04);border:1px solid rgba(201,169,110,0.15);font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,2vw,1.4rem);font-weight:300;font-style:italic;color:var(--ivory);line-height:1.5">
       «&nbsp;Vous n'achetez pas une mission. Vous payez un service à votre image, avec un interlocuteur unique qui répond de tout.&nbsp;»
-      <footer style="font-family:'Montserrat',sans-serif;font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-style:normal;margin-top:1rem;font-weight:500">Jonathan Vestin — Fondateur, The Gentleman Driver</footer>
+      <footer style="font-family:'Montserrat',sans-serif;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-style:normal;margin-top:1rem;font-weight:500">Jonathan Vestin — Fondateur, The Gentleman Driver</footer>
     </blockquote>
   </div>
 </section>
@@ -599,7 +604,7 @@ section{padding:4.5rem 4vw !important}
     <li><a href="/mentions-legales">Mentions l&#233;gales</a></li>
   </ul>
   <span class="footer-copy">&#169; 2026 The Gentleman Driver &#8212; SASU &#8212; Charenton-le-Pont (94)</span>
-  <span class="footer-legal-mini" style="display:block;margin-top:.7rem;font-size:.55rem;color:rgba(189,181,166,0.22);font-weight:300;letter-spacing:.05em;line-height:1.8">SIRET 985 178 466 00019 &#183; RCS Cr&#233;teil &#183; Assurance RC Pro &#183; Assurance W Garage AXA</span>
+  <span class="footer-legal-mini" style="display:block;margin-top:.7rem;font-size:.75rem;color:rgba(189,181,166,0.22);font-weight:300;letter-spacing:.05em;line-height:1.8">SIRET 985 178 466 00019 &#183; RCS Cr&#233;teil &#183; Assurance RC Pro &#183; Assurance W Garage AXA</span>
 </footer>
 
 
