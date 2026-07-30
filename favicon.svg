@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="The Gentleman Driver">
+  <rect width="64" height="64" rx="8" fill="#0a0a0a"/>
+  <text x="32" y="31" fill="#c9a96e" font-family="Georgia, 'Times New Roman', serif" font-size="20" font-weight="700" letter-spacing="1" text-anchor="middle" dominant-baseline="middle">TGD</text>
+  <path d="M10 44h44" stroke="#c9a96e" stroke-width="2" opacity=".65"/>
+</svg>

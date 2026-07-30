@@ -20,7 +20,12 @@
   <meta name="twitter:title" content="Convoyage automobile et mise en main — The Gentleman Driver">
   <meta name="twitter:description" content="Convoyage automobile, mise en main et chauffeur avec votre véhicule, en France et en Europe. PV contradictoire et assurance tous risques depuis 2021.">
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0A0A'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia%2C serif' font-size='11' fill='%23C9A96E' font-weight='bold' letter-spacing='0.5'%3ETGD%3C/text%3E%3Cline x1='4' y1='22' x2='28' y2='22' stroke='%23C9A96E' stroke-width='0.8' opacity='0.5'/%3E%3C/svg%3E">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a0a0a">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -201,9 +206,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .nav-logo{display:flex;align-items:center;text-decoration:none}
 .nav-logo img{height:46px;width:auto;display:block}
 .nav-links{display:flex;gap:1.4rem;list-style:none}
-.nav-links a{font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:#D3CCBF;text-decoration:none;font-weight:400;transition:color .2s;white-space:nowrap}
+.nav-links a{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:#D3CCBF;text-decoration:none;font-weight:400;transition:color .2s;white-space:nowrap}
 .nav-links a:hover,.nav-links a.active{color:var(--gold)}
-.nav-cta{font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;font-weight:500;color:var(--black);background:var(--gold);border:none;padding:.6rem 1.2rem;cursor:pointer;text-decoration:none;transition:background .2s;font-family:'Montserrat',sans-serif;white-space:nowrap}
+.nav-cta{font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;font-weight:500;color:var(--black);background:var(--gold);border:none;padding:.6rem 1.2rem;cursor:pointer;text-decoration:none;transition:background .2s;font-family:'Montserrat',sans-serif;white-space:nowrap}
 .nav-cta:hover{background:var(--gold-light)}
 .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
 .burger span{display:block;width:22px;height:1px;background:var(--ivory)}
@@ -212,9 +217,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .mobile-menu a{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--ivory);text-decoration:none;font-weight:300}
 .mobile-menu a:hover{color:var(--gold)}
 .mobile-close{position:absolute;top:2rem;right:4vw;background:none;border:none;color:var(--ivory);font-size:1.8rem;cursor:pointer;font-family:'Cormorant Garamond',serif}
-@media(max-width:1100px){.nav-links{gap:.9rem}.nav-links a{font-size:.52rem}}
+@media(max-width:1100px){.nav-links{gap:.9rem}.nav-links a{font-size:.75rem}}
 @media(max-width:900px){.nav-links,.nav-cta{display:none}.burger{display:flex}}
-@media(max-width:1100px){.nav-links{gap:.9rem}.nav-links a{font-size:.52rem}}
+@media(max-width:1100px){.nav-links{gap:.9rem}.nav-links a{font-size:.75rem}}
 @media(max-width:900px){.nav-links,.nav-cta{display:none}.burger{display:flex}}
 
 /* ─── HERO ─── */
@@ -224,21 +229,21 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .hero-right{background:var(--black-3);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .hero-right::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(201,169,110,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,169,110,0.04) 1px,transparent 1px);background-size:44px 44px}
 
-.eyebrow{font-size:.6rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);font-weight:500;display:flex;align-items:center;gap:1rem;margin-bottom:1.8rem}
+.eyebrow{font-size:.75rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);font-weight:500;display:flex;align-items:center;gap:1rem;margin-bottom:1.8rem}
 .eyebrow::before{content:'';display:block;width:30px;height:1px;background:var(--gold)}
 
 .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,5vw,5.2rem);font-weight:300;line-height:1.05;color:var(--ivory);margin-bottom:2rem}
 .hero h1 em{font-style:italic;color:var(--gold)}
 .hero-desc{font-size:.88rem;color:var(--ivory-muted);line-height:1.85;max-width:480px;margin-bottom:2.5rem;font-weight:300}
 
-.btn-primary{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--black);background:var(--gold);border:none;padding:1rem 2.5rem;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s;font-family:'Montserrat',sans-serif}
+.btn-primary{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--black);background:var(--gold);border:none;padding:1rem 2.5rem;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s;font-family:'Montserrat',sans-serif}
 .btn-primary:hover{background:var(--gold-light)}
-.btn-ghost{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--ivory);background:transparent;border:1px solid rgba(245,240,232,.2);padding:1rem 2rem;cursor:pointer;text-decoration:none;display:inline-block;transition:border-color .2s,color .2s;font-family:'Montserrat',sans-serif}
+.btn-ghost{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--ivory);background:transparent;border:1px solid rgba(245,240,232,.2);padding:1rem 2rem;cursor:pointer;text-decoration:none;display:inline-block;transition:border-color .2s,color .2s;font-family:'Montserrat',sans-serif}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
 
 /* Hero right — stats */
 .hero-right-inner{position:relative;z-index:1;padding:3rem;width:100%}
-.hero-stat-label{font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:2rem}
+.hero-stat-label{font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:2rem}
 .hero-stats-list{display:flex;flex-direction:column;gap:0}
 .hstat{padding:1.2rem 0;border-bottom:1px solid rgba(201,169,110,0.08);display:flex;align-items:baseline;gap:1.2rem}
 .hstat:last-child{border-bottom:none}
@@ -248,12 +253,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 
 /* ─── TICKER ─── */
 .ticker{background:var(--gold);overflow:hidden;white-space:nowrap;padding:.85rem 0}
-.ticker-inner{display:inline-block;animation:ticker 32s linear infinite;font-size:.58rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--black)}
+.ticker-inner{display:inline-block;animation:ticker 32s linear infinite;font-size:.75rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--black)}
 @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* ─── SECTIONS ─── */
 section{padding:6rem 4vw}
-.section-eyebrow{font-size:.58rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);font-weight:500;display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem}
+.section-eyebrow{font-size:.75rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);font-weight:500;display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem}
 .section-eyebrow::before{content:'';display:block;width:30px;height:1px;background:var(--gold)}
 .section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3.2rem);font-weight:300;line-height:1.1;color:var(--ivory);margin-bottom:1.5rem}
 .section-title em{font-style:italic;color:var(--gold)}
@@ -270,7 +275,7 @@ section{padding:6rem 4vw}
 .service-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--ivory);margin-bottom:1rem;line-height:1.2}
 .service-desc{font-size:.82rem;color:var(--ivory-muted);line-height:1.85;margin-bottom:2rem;font-weight:300}
 .service-list{list-style:none;display:flex;flex-direction:column;gap:0}
-.service-list li{font-size:.73rem;color:var(--ivory-muted);padding:.45rem 0;border-top:1px solid rgba(201,169,110,0.07);display:flex;align-items:center;gap:.8rem;font-weight:300}
+.service-list li{font-size:.75rem;color:var(--ivory-muted);padding:.45rem 0;border-top:1px solid rgba(201,169,110,0.07);display:flex;align-items:center;gap:.8rem;font-weight:300}
 .service-list li::before{content:'';display:block;width:4px;height:4px;background:var(--gold);flex-shrink:0}
 
 /* ─── ADN ─── */
@@ -293,7 +298,7 @@ section{padding:6rem 4vw}
   content:'KM';
   position:absolute;
   bottom:1.8rem; left:2rem;
-  font-size:0.6rem;
+  font-size:.75rem;
   font-weight:600;
   letter-spacing:0.4em;
   color:rgba(201,169,110,0.2);
@@ -301,7 +306,7 @@ section{padding:6rem 4vw}
 }
 .adn-badge{position:absolute;bottom:-1.5rem;right:-1.5rem;width:110px;height:110px;background:var(--gold);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
 .adn-badge-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--black);line-height:1}
-.adn-badge-lbl{font-size:.52rem;letter-spacing:.12em;text-transform:uppercase;color:var(--black);font-weight:600;margin-top:2px}
+.adn-badge-lbl{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--black);font-weight:600;margin-top:2px}
 .adn-points{margin-top:2.5rem;display:flex;flex-direction:column;gap:0}
 .adn-point{display:flex;gap:1.2rem;align-items:flex-start;padding:1.4rem 0;border-bottom:1px solid rgba(201,169,110,0.07)}
 .adn-point:last-child{border-bottom:none}
@@ -319,7 +324,7 @@ section{padding:6rem 4vw}
 .step-circle{width:4rem;height:4rem;border:1px solid rgba(201,169,110,0.25);background:var(--black-2);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;position:relative;z-index:1;font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--gold);transition:background .3s,border-color .3s}
 .process-step:hover .step-circle{background:var(--gold);border-color:var(--gold);color:var(--black)}
 .step-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--ivory);margin-bottom:.5rem}
-.step-desc{font-size:.73rem;color:var(--ivory-muted);line-height:1.7;font-weight:300}
+.step-desc{font-size:.75rem;color:var(--ivory-muted);line-height:1.7;font-weight:300}
 
 /* ─── COVERAGE ─── */
 .coverage{background:var(--black)}
@@ -327,8 +332,8 @@ section{padding:6rem 4vw}
 .coverage-zone{padding:1.4rem 0;border-bottom:1px solid rgba(201,169,110,0.07);display:flex;justify-content:space-between;align-items:center}
 .coverage-zone:last-child{border-bottom:none}
 .zone-name{font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:var(--ivory);font-weight:400}
-.zone-detail{font-size:.68rem;color:var(--ivory-muted);font-weight:300}
-.zone-status{font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.zone-detail{font-size:.75rem;color:var(--ivory-muted);font-weight:300}
+.zone-status{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:500}
 
 
 /* ─── CLIENTS ─── */
@@ -339,7 +344,7 @@ section{padding:6rem 4vw}
 .client-icon{width:46px;height:46px;border:1px solid rgba(201,169,110,0.18);display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem}
 .client-icon svg{width:19px;height:19px;stroke:var(--gold);fill:none;stroke-width:1.5}
 .client-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--ivory);margin-bottom:.5rem}
-.client-desc{font-size:.72rem;color:var(--ivory-muted);line-height:1.65;font-weight:300}
+.client-desc{font-size:.75rem;color:var(--ivory-muted);line-height:1.65;font-weight:300}
 
 /* ─── REVIEWS ─── */
 .reviews-header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;margin-bottom:2.5rem}
@@ -350,16 +355,16 @@ section{padding:6rem 4vw}
 .testi{background:var(--black-3);padding:2rem;border-left:2px solid var(--gold-dark)}
 .testi-stars{color:var(--gold);font-size:.8rem;letter-spacing:2px;margin-bottom:1rem}
 .testi-quote{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--ivory);line-height:1.6;margin-bottom:1.2rem;font-weight:300}
-.testi-author{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:500}
-.testi-role{font-size:.68rem;color:var(--ivory-muted);font-weight:300;margin-top:2px}
+.testi-author{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.testi-role{font-size:.75rem;color:var(--ivory-muted);font-weight:300;margin-top:2px}
 
 /* ─── FONDATEUR ─── */
 .founder{background:var(--black);padding:5rem 4vw;border-top:1px solid rgba(201,169,110,0.08);border-bottom:1px solid rgba(201,169,110,0.08)}
 .founder-inner{max-width:780px;margin:0 auto;display:grid;grid-template-columns:1px 1fr 1px;gap:3rem;align-items:center}
 .founder-line{height:80px;background:linear-gradient(to bottom,transparent,var(--gold-dark),transparent)}
 .founder-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,3vw,2rem);font-weight:300;font-style:italic;color:var(--ivory);line-height:1.5;margin-bottom:1.8rem;text-align:center}
-.founder-name{font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:500;text-align:center}
-.founder-role{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ivory-muted);font-weight:300;margin-top:4px;text-align:center}
+.founder-name{font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:500;text-align:center}
+.founder-role{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ivory-muted);font-weight:300;margin-top:4px;text-align:center}
 
 /* ─── CTA ─── */
 .cta-section{background:var(--black-2);padding:7rem 4vw;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
@@ -371,24 +376,24 @@ section{padding:6rem 4vw}
 .f-select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23BDB5A6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem;cursor:pointer}
 .f-select option{background:#111}
 .f-row{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
-.f-note{font-size:.62rem;color:var(--ivory-muted);text-align:center;margin-top:.8rem;font-weight:300}
+.f-note{font-size:.75rem;color:var(--ivory-muted);text-align:center;margin-top:.8rem;font-weight:300}
 
 /* ─── FOOTER ─── */
 footer{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.07);padding:4rem 4vw 2rem}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
 .footer-brand{font-family:'Cormorant Garamond',serif;font-size:.95rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);margin-bottom:.3rem}
-.footer-tagline{font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:400;margin-bottom:1.2rem}
+.footer-tagline{font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:400;margin-bottom:1.2rem}
 .footer-desc{font-size:.76rem;color:var(--ivory-muted);line-height:1.8;font-weight:300;margin-bottom:1.2rem}
-.footer-contact{font-size:.73rem;color:var(--ivory-muted);font-weight:300;margin-bottom:.35rem}
+.footer-contact{font-size:.75rem;color:var(--ivory-muted);font-weight:300;margin-bottom:.35rem}
 .footer-contact a{color:var(--gold);text-decoration:none}
-.footer-col-title{font-size:.58rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:1.2rem}
+.footer-col-title{font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:1.2rem}
 .footer-links{list-style:none;display:flex;flex-direction:column;gap:.55rem}
-.footer-links a{font-size:.73rem;color:var(--ivory-muted);text-decoration:none;font-weight:300;transition:color .2s}
+.footer-links a{font-size:.75rem;color:var(--ivory-muted);text-decoration:none;font-weight:300;transition:color .2s}
 .footer-links a:hover{color:var(--gold)}
 .footer-bottom{border-top:1px solid rgba(201,169,110,0.07);padding-top:1.8rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
 
 .footer-legal{display:flex;gap:2rem;list-style:none}
-.footer-legal a{font-size:.62rem;color:rgba(189,181,166,0.4);text-decoration:none;font-weight:300;transition:color .2s}
+.footer-legal a{font-size:.75rem;color:rgba(189,181,166,0.4);text-decoration:none;font-weight:300;transition:color .2s}
 .footer-legal a:hover{color:var(--ivory-muted)}
 
 /* ─── DROPDOWN NAV ─── */
@@ -397,22 +402,22 @@ footer{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.07);pad
 .nav-dropdown-menu::before{content:'';position:absolute;top:-12px;left:0;right:0;height:12px}
 .nav-dropdown:hover .nav-dropdown-menu{display:block}
 .nav-dropdown-menu li{list-style:none}
-.nav-dropdown-menu li a{display:block;padding:.6rem 1.2rem;font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:#D3CCBF;text-decoration:none;transition:color .15s,background .15s;white-space:nowrap}
+.nav-dropdown-menu li a{display:block;padding:.6rem 1.2rem;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:#D3CCBF;text-decoration:none;transition:color .15s,background .15s;white-space:nowrap}
 .nav-dropdown-menu li a:hover{color:var(--gold);background:rgba(201,169,110,0.05)}
 .nav-dropdown-toggle{cursor:pointer}
-.nav-dropdown-section{display:block;padding:.5rem 1.2rem .2rem;font-size:.48rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,169,110,0.5);font-weight:500;cursor:default;border-top:1px solid rgba(201,169,110,0.08);margin-top:.3rem}
+.nav-dropdown-section{display:block;padding:.5rem 1.2rem .2rem;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,169,110,0.5);font-weight:500;cursor:default;border-top:1px solid rgba(201,169,110,0.08);margin-top:.3rem}
 .nav-dropdown-section:first-child{border-top:none;margin-top:0}
 
 /* ─── FOOTER STRUCTURÉ ─── */
 .footer-structured{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.07);padding:4rem 4vw 0}
 .footer-inner{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
 .footer-logo-link{font-family:'Cormorant Garamond',serif;font-size:.95rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);text-decoration:none;display:block;margin-bottom:.4rem}
-.footer-tagline-txt{font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:400;margin-bottom:1rem}
-.footer-desc-txt{font-size:.72rem;color:var(--ivory-muted);line-height:1.8;font-weight:300;margin-bottom:1rem}
+.footer-tagline-txt{font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:400;margin-bottom:1rem}
+.footer-desc-txt{font-size:.75rem;color:var(--ivory-muted);line-height:1.8;font-weight:300;margin-bottom:1rem}
 .footer-contact-links{display:flex;flex-direction:column;gap:.35rem}
-.footer-contact-links a{font-size:.72rem;color:var(--gold);text-decoration:none;font-weight:300;transition:color .2s}
+.footer-contact-links a{font-size:.75rem;color:var(--gold);text-decoration:none;font-weight:300;transition:color .2s}
 .footer-contact-links a:hover{color:var(--ivory)}
-.footer-bottom-bar{border-top:1px solid rgba(201,169,110,0.07);padding:1.5rem 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.8rem;font-size:.6rem;color:rgba(189,181,166,0.35);letter-spacing:.05em}
+.footer-bottom-bar{border-top:1px solid rgba(201,169,110,0.07);padding:1.5rem 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.8rem;font-size:.75rem;color:rgba(189,181,166,0.35);letter-spacing:.05em}
 @media(max-width:800px){.footer-inner{grid-template-columns:1fr 1fr}.footer-brand-col{grid-column:1/-1}}
 @media(max-width:500px){.footer-inner{grid-template-columns:1fr}}
 
@@ -464,7 +469,7 @@ footer{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.07);pad
 .cme-label{
   position:absolute;
   top:2rem; left:3rem;
-  font-size:.55rem;letter-spacing:.35em;text-transform:uppercase;
+  font-size:.75rem;letter-spacing:.35em;text-transform:uppercase;
   color:rgba(201,169,110,0.4);font-weight:500;
 }
 .cme-main{
@@ -490,9 +495,9 @@ footer{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.07);pad
   font-family:'Cormorant Garamond',serif;
   font-size:3rem;font-weight:300;color:var(--gold);line-height:1;
 }
-.cme-km-unit{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory-muted);font-weight:400}
+.cme-km-unit{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory-muted);font-weight:400}
 .cme-line{height:1px;background:linear-gradient(to right,var(--gold-dark),transparent);margin-bottom:1.5rem}
-.cme-since{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,169,110,0.4);font-weight:400}
+.cme-since{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,169,110,0.4);font-weight:400}
 
 /* ── FORM STATES ── */
 .form-success-msg{display:none;background:rgba(90,138,100,0.12);border:1px solid rgba(90,138,100,0.3);padding:1.2rem 1.5rem;text-align:center;margin-top:1rem}
@@ -509,10 +514,10 @@ footer{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.07);pad
 /* ─── BARRE STICKY MOBILE ─── */
 .sticky-mobile{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--black);border-top:1px solid rgba(201,169,110,0.15);padding:.8rem 1rem;gap:.6rem}
 @media(max-width:900px){.sticky-mobile{display:flex}}
-.sticky-btn{flex:1;padding:.75rem .5rem;text-align:center;text-decoration:none;font-family:'Montserrat',sans-serif;font-size:.6rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;border:none;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;transition:opacity .2s}
+.sticky-btn{flex:1;padding:.75rem .5rem;text-align:center;text-decoration:none;font-family:'Montserrat',sans-serif;font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;border:none;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;transition:opacity .2s}
 .sticky-btn:hover{opacity:.85}
 .sticky-btn-icon{font-size:1rem;line-height:1}
-.sticky-btn-label{font-size:.52rem;letter-spacing:.08em}
+.sticky-btn-label{font-size:.75rem;letter-spacing:.08em}
 .sticky-btn.call{background:var(--gold);color:var(--black)}
 .sticky-btn.whatsapp{background:#25D366;color:#fff}
 .sticky-btn.devis{background:var(--black-3);color:var(--gold);border:1px solid rgba(201,169,110,0.25)}
@@ -546,16 +551,16 @@ footer.footer-mini{background:var(--black-2);border-top:1px solid rgba(201,169,1
 footer.footer-mini a.footer-logo{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);text-decoration:none}
 footer.footer-mini ul.footer-links-list{display:flex;flex-direction:row;justify-content:center;align-items:center;gap:2rem;list-style:none;flex-wrap:wrap;margin:0;padding:0}
 footer.footer-mini ul.footer-links-list li{margin:0;padding:0;list-style:none}
-footer.footer-mini ul.footer-links-list a{font-size:.62rem;color:rgba(189,181,166,0.45);text-decoration:none;font-weight:300;transition:color .2s}
+footer.footer-mini ul.footer-links-list a{font-size:.75rem;color:rgba(189,181,166,0.45);text-decoration:none;font-weight:300;transition:color .2s}
 footer.footer-mini ul.footer-links-list a:hover{color:var(--ivory-muted)}
-footer.footer-mini span.footer-copy{font-size:.6rem;color:rgba(189,181,166,0.3);font-weight:300}
-footer.footer-mini .footer-group-label{font-size:.5rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500;opacity:.7;cursor:default;display:inline-flex;align-items:center;line-height:1}
+footer.footer-mini span.footer-copy{font-size:.75rem;color:rgba(189,181,166,0.3);font-weight:300}
+footer.footer-mini .footer-group-label{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500;opacity:.7;cursor:default;display:inline-flex;align-items:center;line-height:1}
 footer.footer-mini .footer-sep{color:rgba(201,169,110,0.2);font-size:1rem;line-height:1;cursor:default;display:inline-flex;align-items:center}
 
 /* lisibilité menu haut */
-.nav-links a{font-size:.7rem !important;letter-spacing:.12em;transition:color .2s}
+.nav-links a{font-size:.75rem !important;letter-spacing:.12em;transition:color .2s}
 .nav-links a:hover{color:var(--gold) !important}
-.nav-cta{font-size:.7rem !important}
+.nav-cta{font-size:.75rem !important}
 /* lisibilité menu bas */
 footer.footer-mini ul.footer-links-list a{color:rgba(189,181,166,0.72) !important}
 footer.footer-mini ul.footer-links-list a:hover{color:var(--ivory) !important}
@@ -567,7 +572,7 @@ footer.footer-mini span.footer-copy{color:rgba(189,181,166,0.55) !important}
 /* ═══ TRUST BAR ═══ */
 .trust-bar{background:rgba(201,169,110,0.07);border-bottom:1px solid rgba(201,169,110,0.12);padding:.6rem 4vw;overflow:hidden}
 .trust-bar-inner{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:.6rem 1.4rem}
-.trust-item{display:inline-flex;align-items:center;gap:.4rem;font-size:.6rem;letter-spacing:.08em;color:rgba(245,240,232,.75);white-space:nowrap}
+.trust-item{display:inline-flex;align-items:center;gap:.4rem;font-size:.75rem;letter-spacing:.08em;color:rgba(245,240,232,.75);white-space:nowrap}
 .trust-item svg{color:var(--gold);flex-shrink:0}
 .trust-sep{color:rgba(201,169,110,0.35);font-size:.8rem}
 @media(max-width:600px){.trust-bar-inner{justify-content:flex-start}.trust-sep{display:none}}
@@ -713,7 +718,7 @@ section{padding:4.5rem 4vw !important}
         <li>Plaques W &mdash; z&#233;ro contravention</li>
         <li>&#192; partir de 0,88 &#8364; / km HT &#8212; devis fixe sous 2h</li>
       </ul>
-      <p style="font-size:.65rem;color:var(--ivory-muted);margin-top:.8rem;line-height:1.6">* Hors frais de route, sur longues distances.</p>
+      <p style="font-size:.75rem;color:var(--ivory-muted);margin-top:.8rem;line-height:1.6">* Hors frais de route, sur longues distances.</p>
     </div>
     <div class="service-card">
       <div class="service-num">02</div>
@@ -766,7 +771,7 @@ section{padding:4.5rem 4vw !important}
         <li>Coordination logistique prise en charge</li>
         <li>Devis sous 2h **</li>
       </ul>
-      <p style="font-size:.65rem;color:var(--ivory-muted);margin-top:.8rem;line-height:1.6">* Plateau ferm&#233; disponible sous r&#233;serve, selon disponibilit&#233; transporteur.<br>** Selon disponibilit&#233;, si nous sommes en mission.</p>
+      <p style="font-size:.75rem;color:var(--ivory-muted);margin-top:.8rem;line-height:1.6">* Plateau ferm&#233; disponible sous r&#233;serve, selon disponibilit&#233; transporteur.<br>** Selon disponibilit&#233;, si nous sommes en mission.</p>
     </a>
     <div class="service-card">
       <div class="service-num">06</div>
@@ -897,7 +902,7 @@ section{padding:4.5rem 4vw !important}
   <div class="section-eyebrow">Ils nous font confiance</div>
   <h2 class="section-title">Ceux qui nous font <em>confiance depuis le premier jour</em></h2>
   <div style="text-align:center;margin-bottom:3rem;padding:1.2rem 2rem;background:rgba(201,169,110,0.05);border:1px solid rgba(201,169,110,0.18);display:inline-block;width:100%;box-sizing:border-box">
-    <span style="font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:500">Plus de 10 soci&#233;t&#233;s nous font confiance &mdash; concessions, loueurs, entreprises et particuliers</span>
+    <span style="font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:500">Plus de 10 soci&#233;t&#233;s nous font confiance &mdash; concessions, loueurs, entreprises et particuliers</span>
     <span style="font-size:.75rem;color:var(--ivory-muted);font-weight:300;margin-left:1.5rem">Dont un r&#233;seau constructeur premium depuis 4 ans &#8212; livraisons, mises en main, transferts inter-sites.</span>
   </div>
   <div class="clients-grid">
@@ -932,10 +937,10 @@ section{padding:4.5rem 4vw !important}
       </div>
       <div style="display:flex;align-items:center;gap:8px">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-        <span style="font-size:.68rem;color:var(--ivory-muted);letter-spacing:.1em;text-transform:uppercase">Avis v&#233;rifi&#233;s Google</span>
+        <span style="font-size:.75rem;color:var(--ivory-muted);letter-spacing:.1em;text-transform:uppercase">Avis v&#233;rifi&#233;s Google</span>
       </div>
     </div>
-    <a href="https://search.google.com/local/reviews?placeid=ChIJczTzUUIzLWoR59TwldN3SsM" target="_blank" rel="noopener" class="btn-ghost" style="font-size:.58rem;padding:.65rem 1.4rem">Voir les avis Google &#x2197;</a>
+    <a href="https://search.google.com/local/reviews?placeid=ChIJczTzUUIzLWoR59TwldN3SsM" target="_blank" rel="noopener" class="btn-ghost" style="font-size:.75rem;padding:.65rem 1.4rem">Voir les avis Google &#x2197;</a>
   </div>
 
   <div class="testi-grid tgd-reviews-widget" data-max="3">
@@ -961,7 +966,7 @@ section{padding:4.5rem 4vw !important}
   </div>
 
   <div style="text-align:center;margin-top:2.5rem">
-    <a href="https://search.google.com/local/reviews?placeid=ChIJczTzUUIzLWoR59TwldN3SsM" target="_blank" rel="noopener" style="font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);text-decoration:none;font-weight:500;display:inline-flex;align-items:center;gap:8px;padding-bottom:3px;border-bottom:1px solid rgba(201,169,110,0.25)">
+    <a href="https://search.google.com/local/reviews?placeid=ChIJczTzUUIzLWoR59TwldN3SsM" target="_blank" rel="noopener" style="font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);text-decoration:none;font-weight:500;display:inline-flex;align-items:center;gap:8px;padding-bottom:3px;border-bottom:1px solid rgba(201,169,110,0.25)">
       Voir tous les avis sur Google
       <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
     </a>
@@ -988,20 +993,20 @@ section{padding:4.5rem 4vw !important}
     <h2 class="section-title" style="text-align:center;margin-bottom:3rem">Quand la logistique <em>tient ses promesses</em></h2>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-bottom:2.5rem">
       <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(201,169,110,0.12);padding:1.8rem;border-radius:2px">
-        <div style="font-size:.52rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem">SUV &#233;lectrique &mdash; Corse &mdash; 3 jours</div>
+        <div style="font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem">SUV &#233;lectrique &mdash; Corse &mdash; 3 jours</div>
         <p style="font-size:.82rem;color:var(--ivory-muted);line-height:1.75;font-weight:300">Livraison d&#8217;un SUV &#233;lectrique premium pour une concession premium parisienne, jusqu&#8217;en Corse. Double contrainte&#160;: livrer avec 70&#37; de charge minimum, tout en respectant l&#8217;obligation r&#233;glementaire de moins de 50&#37; &#224; l&#8217;embarquement du ferry. Charge g&#233;r&#233;e &#224; la minute pr&#232;s sur 1&#160;200&#160;km, v&#233;hicule livr&#233; &#224; l&#8217;heure et client form&#233; &#224; la recharge d&#232;s le premier jour.</p>
       </div>
       <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(201,169,110,0.12);padding:1.8rem;border-radius:2px">
-        <div style="font-size:.52rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem">Mise en main &mdash; près de Cassis</div>
+        <div style="font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem">Mise en main &mdash; près de Cassis</div>
         <p style="font-size:.82rem;color:var(--ivory-muted);line-height:1.75;font-weight:300">Livraison et mise en main compl&#232;te d&#8217;un v&#233;hicule neuf chez des particuliers, pr&#232;s de Cassis. V&#233;hicule lav&#233; et pr&#233;sent&#233; &#224; 8h&#160;: prise en main des fonctionnalit&#233;s, essai et remise des documents dans les r&#232;gles. L&#8217;apr&#232;s-midi m&#234;me, encha&#238;nement vers Lyon pour une livraison le lendemain &#224; 9h &#8212; &#224; l&#8217;heure malgr&#233; la distance.</p>
       </div>
       <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(201,169,110,0.12);padding:1.8rem;border-radius:2px">
-        <div style="font-size:.52rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem">D&#233;saccord &#224; la livraison &mdash; Carcassonne</div>
+        <div style="font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem">D&#233;saccord &#224; la livraison &mdash; Carcassonne</div>
         <p style="font-size:.82rem;color:var(--ivory-muted);line-height:1.75;font-weight:300">R&#233;ception tendue d&#8217;un v&#233;hicule de fonction&#160;: le client conteste un &#233;quipement de s&#233;rie, &#233;tranger &#224; la concession. Plut&#244;t que de repartir sur un refus de livraison en plein mois d&#8217;ao&#251;t, nous prenons le temps d&#8217;&#233;couter, de d&#233;samorcer et de replacer le sujet. V&#233;hicule finalement accept&#233;, concession et relation commerciale pr&#233;serv&#233;es.</p>
       </div>
     </div>
     <div style="text-align:center">
-      <a href="/etudes-de-cas" style="font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);text-decoration:none;font-weight:500;display:inline-flex;align-items:center;gap:8px;padding-bottom:3px;border-bottom:1px solid rgba(201,169,110,0.25)">
+      <a href="/etudes-de-cas" style="font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);text-decoration:none;font-weight:500;display:inline-flex;align-items:center;gap:8px;padding-bottom:3px;border-bottom:1px solid rgba(201,169,110,0.25)">
         Lire tous les cas clients
         <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
@@ -1026,35 +1031,35 @@ section{padding:4.5rem 4vw !important}
       <!-- Exemple : img src="/photos/vehicules-convoyes.jpg" alt="Véhicule convoyé" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0" -->
       <div style="position:relative;aspect-ratio:4/3;background:linear-gradient(135deg,var(--black-2),var(--black-3));border:1px solid rgba(201,169,110,0.12);border-radius:2px;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.9rem">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.3" opacity="0.5" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-        <span style="font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:500">V&#233;hicules convoy&#233;s</span>
+        <span style="font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:500">V&#233;hicules convoy&#233;s</span>
       </div>
       <!-- EMPLACEMENT PHOTO : Véhicule premium -->
       <!-- Pour insérer la photo réelle : remplacer UNIQUEMENT les deux lignes svg et span ci-dessous par une balise image. -->
       <!-- Exemple : img src="/photos/vehicule-premium.jpg" alt="Véhicule premium convoyé" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0" -->
       <div style="position:relative;aspect-ratio:4/3;background:linear-gradient(135deg,var(--black-2),var(--black-3));border:1px solid rgba(201,169,110,0.12);border-radius:2px;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.9rem">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.3" opacity="0.5" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-        <span style="font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:500">V&#233;hicule premium</span>
+        <span style="font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:500">V&#233;hicule premium</span>
       </div>
       <!-- EMPLACEMENT PHOTO : Véhicule électrique -->
       <!-- Pour insérer la photo réelle : remplacer UNIQUEMENT les deux lignes svg et span ci-dessous par une balise image. -->
       <!-- Exemple : img src="/photos/vehicule-electrique.jpg" alt="Véhicule électrique convoyé" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0" -->
       <div style="position:relative;aspect-ratio:4/3;background:linear-gradient(135deg,var(--black-2),var(--black-3));border:1px solid rgba(201,169,110,0.12);border-radius:2px;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.9rem">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.3" opacity="0.5" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-        <span style="font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:500">V&#233;hicule électrique</span>
+        <span style="font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:500">V&#233;hicule électrique</span>
       </div>
       <!-- EMPLACEMENT PHOTO : Véhicule sur plateau -->
       <!-- Pour insérer la photo réelle : remplacer UNIQUEMENT les deux lignes svg et span ci-dessous par une balise image. -->
       <!-- Exemple : img src="/photos/vehicule-plateau.jpg" alt="Véhicule sur plateau" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0" -->
       <div style="position:relative;aspect-ratio:4/3;background:linear-gradient(135deg,var(--black-2),var(--black-3));border:1px solid rgba(201,169,110,0.12);border-radius:2px;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.9rem">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.3" opacity="0.5" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-        <span style="font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:500">V&#233;hicule sur plateau</span>
+        <span style="font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:500">V&#233;hicule sur plateau</span>
       </div>
       <!-- EMPLACEMENT PHOTO : Prise en charge -->
       <!-- Pour insérer la photo réelle : remplacer UNIQUEMENT les deux lignes svg et span ci-dessous par une balise image. -->
       <!-- Exemple : img src="/photos/prise-en-charge.jpg" alt="Exemple de prise en charge" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0" -->
       <div style="position:relative;aspect-ratio:4/3;background:linear-gradient(135deg,var(--black-2),var(--black-3));border:1px solid rgba(201,169,110,0.12);border-radius:2px;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.9rem">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.3" opacity="0.5" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-        <span style="font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:500">Prise en charge</span>
+        <span style="font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:500">Prise en charge</span>
       </div>
     </div>
     <p style="text-align:center;font-family:'Cormorant Garamond',serif;font-size:clamp(1.3rem,2.5vw,2rem);font-weight:300;font-style:italic;color:var(--ivory);line-height:1.5;max-width:780px;margin:4.5rem auto 0">Nous ne transportons pas des véhicules. Nous transportons la confiance que leurs propriétaires nous accordent.</p>
@@ -1071,7 +1076,7 @@ section{padding:4.5rem 4vw !important}
       <a href="tel:+33761092626" class="btn-primary">07 61 09 26 26</a>
       <a href="/contact" class="btn-ghost">Formulaire de devis</a>
     </div>
-    <p style="font-size:.68rem;color:var(--ivory-muted);font-weight:300">7j/7 de 7h &#224; 22h &middot; <a href="https://wa.me/33761092626" style="color:var(--gold);text-decoration:none">WhatsApp</a> &middot; <a href="mailto:contact@the-gentleman-driver.com" style="color:var(--gold);text-decoration:none">contact@the-gentleman-driver.com</a></p>
+    <p style="font-size:.75rem;color:var(--ivory-muted);font-weight:300">7j/7 de 7h &#224; 22h &middot; <a href="https://wa.me/33761092626" style="color:var(--gold);text-decoration:none">WhatsApp</a> &middot; <a href="mailto:contact@the-gentleman-driver.com" style="color:var(--gold);text-decoration:none">contact@the-gentleman-driver.com</a></p>
   </div>
   <div class="cta-form-wrap"><form class="tgd-form" id="form-homepage" action="https://formspree.io/f/xwpbaozv" method="POST" novalidate>
   <input type="hidden" name="_subject" value="Demande de devis — Homepage">
@@ -1133,7 +1138,7 @@ section{padding:4.5rem 4vw !important}
     <li><a href="/mentions-legales">Mentions l&#233;gales</a></li>
   </ul>
   <span class="footer-copy">&#169; 2026 The Gentleman Driver &#8212; SASU &#8212; Charenton-le-Pont (94)</span>
-  <span class="footer-legal-mini" style="display:block;margin-top:.7rem;font-size:.55rem;color:rgba(189,181,166,0.22);font-weight:300;letter-spacing:.05em;line-height:1.8">SIRET 985 178 466 00019 &#183; RCS Cr&#233;teil &#183; Assurance RC Pro &#183; Assurance W Garage AXA</span>
+  <span class="footer-legal-mini" style="display:block;margin-top:.7rem;font-size:.75rem;color:rgba(189,181,166,0.22);font-weight:300;letter-spacing:.05em;line-height:1.8">SIRET 985 178 466 00019 &#183; RCS Cr&#233;teil &#183; Assurance RC Pro &#183; Assurance W Garage AXA</span>
 </footer>
 
 

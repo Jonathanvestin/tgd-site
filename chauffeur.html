@@ -21,7 +21,12 @@
   <meta name="twitter:title" content="Chauffeur professionnel avec votre propre véhicule">
   <meta name="twitter:description" content="Un chauffeur conduit votre voiture pour vous : suspension de permis, déplacement professionnel ou longue distance. 7j/7 de 7h à 22h, dès 350 € HT.">
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0A0A'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia%2C serif' font-size='11' fill='%23C9A96E' font-weight='bold' letter-spacing='0.5'%3ETGD%3C/text%3E%3Cline x1='4' y1='22' x2='28' y2='22' stroke='%23C9A96E' stroke-width='0.8' opacity='0.5'/%3E%3C/svg%3E">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a0a0a">
 <title>Chauffeur professionnel avec votre propre véhicule</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,7 +44,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .nav-logo{display:flex;align-items:center;text-decoration:none}
 .nav-logo img{height:46px;width:auto;display:block}
 .nav-links{display:flex;gap:1.4rem;list-style:none}
-.nav-links a{font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:#D3CCBF;text-decoration:none;font-weight:400;transition:color .2s;white-space:nowrap}
+.nav-links a{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:#D3CCBF;text-decoration:none;font-weight:400;transition:color .2s;white-space:nowrap}
 .nav-links a:hover,.nav-links a.active{color:var(--gold)}
 /* ─── DROPDOWN ─── */
 .nav-dropdown{position:relative}
@@ -47,12 +52,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .nav-dropdown-menu::before{content:'';position:absolute;top:-12px;left:0;right:0;height:12px}
 .nav-dropdown:hover .nav-dropdown-menu{display:block}
 .nav-dropdown-menu li{list-style:none}
-.nav-dropdown-menu li a{display:block;padding:.6rem 1.2rem;font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:#D3CCBF;text-decoration:none;transition:color .15s,background .15s;white-space:nowrap}
+.nav-dropdown-menu li a{display:block;padding:.6rem 1.2rem;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:#D3CCBF;text-decoration:none;transition:color .15s,background .15s;white-space:nowrap}
 .nav-dropdown-menu li a:hover{color:var(--gold);background:rgba(201,169,110,0.05)}
 .nav-dropdown-toggle{cursor:pointer}
-.nav-dropdown-section{display:block;padding:.5rem 1.2rem .2rem;font-size:.48rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,169,110,0.5);font-weight:500;cursor:default;border-top:1px solid rgba(201,169,110,0.08);margin-top:.3rem}
+.nav-dropdown-section{display:block;padding:.5rem 1.2rem .2rem;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,169,110,0.5);font-weight:500;cursor:default;border-top:1px solid rgba(201,169,110,0.08);margin-top:.3rem}
 .nav-dropdown-section:first-child{border-top:none;margin-top:0}
-.nav-cta{font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;font-weight:500;color:var(--black);background:var(--gold);border:none;padding:.6rem 1.2rem;cursor:pointer;text-decoration:none;transition:background .2s;font-family:'Montserrat',sans-serif;white-space:nowrap}
+.nav-cta{font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;font-weight:500;color:var(--black);background:var(--gold);border:none;padding:.6rem 1.2rem;cursor:pointer;text-decoration:none;transition:background .2s;font-family:'Montserrat',sans-serif;white-space:nowrap}
 .nav-cta:hover{background:var(--gold-light)}
 .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
 .burger span{display:block;width:22px;height:1px;background:var(--ivory)}
@@ -61,7 +66,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .mobile-menu a{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--ivory);text-decoration:none;font-weight:300}
 .mobile-menu a:hover{color:var(--gold)}
 .mobile-close{position:absolute;top:2rem;right:4vw;background:none;border:none;color:var(--ivory);font-size:1.8rem;cursor:pointer;font-family:'Cormorant Garamond',serif}
-@media(max-width:1100px){.nav-links{gap:.9rem}.nav-links a{font-size:.52rem}}
+@media(max-width:1100px){.nav-links{gap:.9rem}.nav-links a{font-size:.75rem}}
 @media(max-width:900px){.nav-links,.nav-cta{display:none}.burger{display:flex}}
 
 /* HERO SPLIT */
@@ -72,16 +77,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .hero-right img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
 .hero-right-overlay{position:absolute;inset:0;background:linear-gradient(to left,transparent 30%,rgba(10,10,10,0.7) 100%),linear-gradient(to bottom,rgba(10,10,10,0.4) 0%,transparent 25%,transparent 75%,rgba(10,10,10,0.7) 100%)}
 
-.eyebrow{font-size:.6rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);font-weight:500;display:flex;align-items:center;gap:1rem;margin-bottom:1.8rem}
+.eyebrow{font-size:.75rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);font-weight:500;display:flex;align-items:center;gap:1rem;margin-bottom:1.8rem}
 .eyebrow::before{content:'';display:block;width:30px;height:1px;background:var(--gold)}
 h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,5vw,5rem);font-weight:300;line-height:1.05;color:var(--ivory);margin-bottom:2rem}
 h1 em{font-style:italic;color:var(--gold)}
 .hero-desc{font-size:.88rem;color:var(--ivory-muted);line-height:1.85;max-width:480px;margin-bottom:2.5rem;font-weight:300}
 .hero-tags{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:2.5rem}
-.tag{font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ivory-muted);border:1px solid rgba(201,169,110,0.18);padding:.35rem .85rem;font-weight:400}
-.btn-primary{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--black);background:var(--gold);border:none;padding:1rem 2.5rem;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s;font-family:'Montserrat',sans-serif}
+.tag{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ivory-muted);border:1px solid rgba(201,169,110,0.18);padding:.35rem .85rem;font-weight:400}
+.btn-primary{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--black);background:var(--gold);border:none;padding:1rem 2.5rem;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s;font-family:'Montserrat',sans-serif}
 .btn-primary:hover{background:var(--gold-light)}
-.btn-ghost{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--ivory);background:transparent;border:1px solid rgba(245,240,232,.2);padding:1rem 2rem;cursor:pointer;text-decoration:none;display:inline-block;transition:border-color .2s,color .2s;font-family:'Montserrat',sans-serif}
+.btn-ghost{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--ivory);background:transparent;border:1px solid rgba(245,240,232,.2);padding:1rem 2rem;cursor:pointer;text-decoration:none;display:inline-block;transition:border-color .2s,color .2s;font-family:'Montserrat',sans-serif}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
 
 /* BAND */
@@ -89,12 +94,12 @@ h1 em{font-style:italic;color:var(--gold)}
 .band-item{padding:1.5rem 2rem;border-right:1px solid rgba(10,10,10,0.12);display:flex;align-items:center;gap:.9rem}
 .band-item:last-child{border-right:none}
 .band-icon svg{width:16px;height:16px;stroke:var(--black);fill:none;stroke-width:1.8}
-.band-text strong{display:block;font-size:.7rem;font-weight:600;color:var(--black);letter-spacing:.05em}
-.band-text span{font-size:.6rem;color:rgba(10,10,10,.6);font-weight:400}
+.band-text strong{display:block;font-size:.75rem;font-weight:600;color:var(--black);letter-spacing:.05em}
+.band-text span{font-size:.75rem;color:rgba(10,10,10,.6);font-weight:400}
 
 /* SECTIONS */
 section{padding:6rem 4vw}
-.section-eyebrow{font-size:.58rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);font-weight:500;display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem}
+.section-eyebrow{font-size:.75rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);font-weight:500;display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem}
 .section-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--gold)}
 .section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3.2rem);font-weight:300;line-height:1.1;color:var(--ivory);margin-bottom:1.5rem}
 .section-title em{font-style:italic;color:var(--gold)}
@@ -112,7 +117,7 @@ section{padding:6rem 4vw}
 .cas-icon svg{width:19px;height:19px;stroke:var(--gold);fill:none;stroke-width:1.5}
 .cas-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--ivory);margin-bottom:.8rem;line-height:1.2}
 .cas-desc{font-size:.8rem;color:var(--ivory-muted);line-height:1.85;margin-bottom:1.5rem;font-weight:300}
-.cas-detail{font-size:.68rem;color:rgba(201,169,110,.5);font-weight:400;letter-spacing:.05em;border-top:1px solid rgba(201,169,110,0.07);padding-top:1rem}
+.cas-detail{font-size:.75rem;color:rgba(201,169,110,.5);font-weight:400;letter-spacing:.05em;border-top:1px solid rgba(201,169,110,0.07);padding-top:1rem}
 
 /* TARIFS */
 .tarifs-section{background:var(--black)}
@@ -122,13 +127,13 @@ section{padding:6rem 4vw}
 .tarif:hover{background:var(--black-3)}
 .tarif:hover::after{width:100%}
 .tarif.featured{background:var(--black-3);border-top:2px solid var(--gold)}
-.tarif-badge{font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:1.2rem}
+.tarif-badge{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:1.2rem}
 .tarif-name{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--ivory);margin-bottom:.4rem}
 .tarif-price{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:300;color:var(--gold);line-height:1;margin-bottom:.3rem}
-.tarif-unit{font-size:.62rem;color:var(--ivory-muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:1.5rem;font-weight:300}
+.tarif-unit{font-size:.75rem;color:var(--ivory-muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:1.5rem;font-weight:300}
 .tarif-desc{font-size:.78rem;color:var(--ivory-muted);line-height:1.8;margin-bottom:1.5rem;font-weight:300}
 .tarif-list{list-style:none;display:flex;flex-direction:column;gap:0}
-.tarif-list li{font-size:.72rem;color:var(--ivory-muted);padding:.4rem 0;border-top:1px solid rgba(201,169,110,0.06);display:flex;align-items:center;gap:.7rem;font-weight:300}
+.tarif-list li{font-size:.75rem;color:var(--ivory-muted);padding:.4rem 0;border-top:1px solid rgba(201,169,110,0.06);display:flex;align-items:center;gap:.7rem;font-weight:300}
 .tarif-list li::before{content:'';display:block;width:4px;height:4px;background:var(--gold);flex-shrink:0}
 
 /* COMMENT ÇA MARCHE */
@@ -158,15 +163,15 @@ section{padding:6rem 4vw}
 .testi:hover{border-left-color:var(--gold)}
 .testi-stars{color:var(--gold);font-size:.8rem;letter-spacing:2px;margin-bottom:1rem}
 .testi-quote{font-family:'Cormorant Garamond',serif;font-size:1.08rem;font-style:italic;color:var(--ivory);line-height:1.6;margin-bottom:1.2rem;font-weight:300}
-.testi-author{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:500}
-.testi-role{font-size:.68rem;color:var(--ivory-muted);font-weight:300;margin-top:2px}
+.testi-author{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.testi-role{font-size:.75rem;color:var(--ivory-muted);font-weight:300;margin-top:2px}
 
 /* CTA */
 .cta{background:var(--black-2);padding:7rem 4vw;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
 .cta-form-box{background:var(--black-3);padding:2.5rem;border:1px solid rgba(201,169,110,0.08)}
 .cta-form-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;color:var(--ivory);margin-bottom:1.5rem}
 .f-group{margin-bottom:.9rem}
-.f-label{font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ivory-muted);font-weight:400;display:block;margin-bottom:.35rem}
+.f-label{font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ivory-muted);font-weight:400;display:block;margin-bottom:.35rem}
 .f-input,.f-select{width:100%;background:rgba(201,169,110,0.03);border:1px solid rgba(201,169,110,0.12);padding:.8rem 1rem;color:var(--ivory);font-size:.78rem;font-family:'Montserrat',sans-serif;font-weight:300;outline:none;transition:border-color .2s;appearance:none}
 .f-input:focus,.f-select:focus{border-color:rgba(201,169,110,0.4)}
 .f-input::placeholder{color:rgba(189,181,166,0.35)}
@@ -178,7 +183,7 @@ section{padding:6rem 4vw}
 
 
 .footer-links{display:flex;gap:2rem;list-style:none}
-.footer-links a{font-size:.62rem;color:rgba(189,181,166,0.45);text-decoration:none;font-weight:300;transition:color .2s}
+.footer-links a{font-size:.75rem;color:rgba(189,181,166,0.45);text-decoration:none;font-weight:300;transition:color .2s}
 .footer-links a:hover{color:var(--ivory-muted)}
 
 
@@ -206,10 +211,10 @@ section{padding:6rem 4vw}
 /* ─── BARRE STICKY MOBILE ─── */
 .sticky-mobile{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--black);border-top:1px solid rgba(201,169,110,0.15);padding:.8rem 1rem;gap:.6rem}
 @media(max-width:900px){.sticky-mobile{display:flex}}
-.sticky-btn{flex:1;padding:.75rem .5rem;text-align:center;text-decoration:none;font-family:'Montserrat',sans-serif;font-size:.6rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;border:none;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;transition:opacity .2s}
+.sticky-btn{flex:1;padding:.75rem .5rem;text-align:center;text-decoration:none;font-family:'Montserrat',sans-serif;font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;border:none;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;transition:opacity .2s}
 .sticky-btn:hover{opacity:.85}
 .sticky-btn-icon{font-size:1rem;line-height:1}
-.sticky-btn-label{font-size:.52rem;letter-spacing:.08em}
+.sticky-btn-label{font-size:.75rem;letter-spacing:.08em}
 .sticky-btn.call{background:var(--gold);color:var(--black)}
 .sticky-btn.whatsapp{background:#25D366;color:#fff}
 .sticky-btn.devis{background:var(--black-3);color:var(--gold);border:1px solid rgba(201,169,110,0.25)}
@@ -245,14 +250,14 @@ footer.footer-mini{background:var(--black-2);border-top:1px solid rgba(201,169,1
 footer.footer-mini a.footer-logo{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);text-decoration:none}
 footer.footer-mini ul.footer-links-list{display:flex;flex-direction:row;justify-content:center;gap:2rem;list-style:none;flex-wrap:wrap;margin:0;padding:0}
 footer.footer-mini ul.footer-links-list li{margin:0;padding:0;list-style:none}
-footer.footer-mini ul.footer-links-list a{font-size:.62rem;color:rgba(189,181,166,0.45);text-decoration:none;font-weight:300;transition:color .2s}
+footer.footer-mini ul.footer-links-list a{font-size:.75rem;color:rgba(189,181,166,0.45);text-decoration:none;font-weight:300;transition:color .2s}
 footer.footer-mini ul.footer-links-list a:hover{color:var(--ivory-muted)}
-footer.footer-mini span.footer-copy{font-size:.6rem;color:rgba(189,181,166,0.3);font-weight:300}
+footer.footer-mini span.footer-copy{font-size:.75rem;color:rgba(189,181,166,0.3);font-weight:300}
 
 /* lisibilité menu haut */
-.nav-links a{font-size:.7rem !important;letter-spacing:.12em;transition:color .2s}
+.nav-links a{font-size:.75rem !important;letter-spacing:.12em;transition:color .2s}
 .nav-links a:hover{color:var(--gold) !important}
-.nav-cta{font-size:.7rem !important}
+.nav-cta{font-size:.75rem !important}
 /* lisibilité menu bas */
 footer.footer-mini ul.footer-links-list a{color:rgba(189,181,166,0.72) !important}
 footer.footer-mini ul.footer-links-list a:hover{color:var(--ivory) !important}
@@ -272,7 +277,7 @@ section{padding:4.5rem 4vw !important}
 /* ═══ TRUST BAR ═══ */
 .trust-bar{background:rgba(201,169,110,0.07);border-bottom:1px solid rgba(201,169,110,0.12);padding:.55rem 4vw;overflow:hidden}
 .trust-bar-inner{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:.5rem 1.2rem}
-.trust-item{display:inline-flex;align-items:center;gap:.35rem;font-size:.58rem;letter-spacing:.07em;color:rgba(245,240,232,.7);white-space:nowrap}
+.trust-item{display:inline-flex;align-items:center;gap:.35rem;font-size:.75rem;letter-spacing:.07em;color:rgba(245,240,232,.7);white-space:nowrap}
 .trust-item svg{color:var(--gold);flex-shrink:0}
 .trust-sep{color:rgba(201,169,110,0.3);font-size:.8rem}
 @media(max-width:600px){.trust-sep{display:none}}
@@ -451,12 +456,12 @@ section{padding:4.5rem 4vw !important}
 <!-- VS VTC -->
 <section style="padding:80px 4vw;background:var(--black-2)">
   <div style="max-width:1100px;margin:0 auto">
-    <div style="font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:1rem;display:flex;align-items:center;gap:.8rem"><span style="display:block;width:20px;height:1px;background:var(--gold)"></span>La diff&#233;rence fondamentale</div>
+    <div style="font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:1rem;display:flex;align-items:center;gap:.8rem"><span style="display:block;width:20px;height:1px;background:var(--gold)"></span>La diff&#233;rence fondamentale</div>
     <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;margin-bottom:3rem;line-height:1.2">Ce que les autres <em>ne font pas</em></h2>
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px">
 
       <div style="background:var(--black-3);padding:2.5rem 2rem;border-top:2px solid rgba(201,169,110,0.15)">
-        <div style="font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory-muted);margin-bottom:1.5rem;font-weight:500">Taxi / VTC classique</div>
+        <div style="font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory-muted);margin-bottom:1.5rem;font-weight:500">Taxi / VTC classique</div>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:.8rem">
           <li style="font-size:.82rem;color:var(--ivory-muted);display:flex;gap:.8rem;align-items:flex-start"><span style="color:#c0392b;font-size:.9rem;flex-shrink:0">&#x2717;</span>Leur v&#233;hicule, pas le v&#244;tre</li>
           <li style="font-size:.82rem;color:var(--ivory-muted);display:flex;gap:.8rem;align-items:flex-start"><span style="color:#c0392b;font-size:.9rem;flex-shrink:0">&#x2717;</span>Chauffeur anonyme, sans suivi</li>
@@ -467,7 +472,7 @@ section{padding:4.5rem 4vw !important}
       </div>
 
       <div style="background:var(--black-3);padding:2.5rem 2rem;border-top:2px solid rgba(201,169,110,0.15)">
-        <div style="font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory-muted);margin-bottom:1.5rem;font-weight:500">Chauffeur de direction (CDI)</div>
+        <div style="font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory-muted);margin-bottom:1.5rem;font-weight:500">Chauffeur de direction (CDI)</div>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:.8rem">
           <li style="font-size:.82rem;color:var(--ivory-muted);display:flex;gap:.8rem;align-items:flex-start"><span style="color:#c0392b;font-size:.9rem;flex-shrink:0">&#x2717;</span>Co&#251;t fixe m&#234;me sans utilisation</li>
           <li style="font-size:.82rem;color:var(--ivory-muted);display:flex;gap:.8rem;align-items:flex-start"><span style="color:#c0392b;font-size:.9rem;flex-shrink:0">&#x2717;</span>Lien de subordination</li>
@@ -478,7 +483,7 @@ section{padding:4.5rem 4vw !important}
       </div>
 
       <div style="background:var(--black-3);padding:2.5rem 2rem;border-top:2px solid var(--gold)">
-        <div style="font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;font-weight:500">The Gentleman Driver</div>
+        <div style="font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;font-weight:500">The Gentleman Driver</div>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:.8rem">
           <li style="font-size:.82rem;color:var(--ivory);display:flex;gap:.8rem;align-items:flex-start"><span style="color:var(--gold);font-size:.9rem;flex-shrink:0">&#x2713;</span>Votre v&#233;hicule, votre confort</li>
           <li style="font-size:.82rem;color:var(--ivory);display:flex;gap:.8rem;align-items:flex-start"><span style="color:var(--gold);font-size:.9rem;flex-shrink:0">&#x2713;</span>Chauffeur identifi&#233;, joignable</li>
@@ -636,10 +641,10 @@ section{padding:4.5rem 4vw !important}
       </div>
       <div style="display:flex;align-items:center;gap:8px;margin-top:4px">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-        <span style="font-size:.68rem;color:var(--ivory-muted);letter-spacing:.1em;text-transform:uppercase">Avis v&#233;rifi&#233;s Google</span>
+        <span style="font-size:.75rem;color:var(--ivory-muted);letter-spacing:.1em;text-transform:uppercase">Avis v&#233;rifi&#233;s Google</span>
       </div>
     </div>
-    <a href="https://search.google.com/local/reviews?placeid=ChIJczTzUUIzLWoR59TwldN3SsM" target="_blank" rel="noopener" class="btn-ghost" style="font-size:.58rem;padding:.65rem 1.4rem">Voir les avis Google &#x2197;</a>
+    <a href="https://search.google.com/local/reviews?placeid=ChIJczTzUUIzLWoR59TwldN3SsM" target="_blank" rel="noopener" class="btn-ghost" style="font-size:.75rem;padding:.65rem 1.4rem">Voir les avis Google &#x2197;</a>
   </div>
   <div class="testi-grid tgd-reviews-widget" data-max="3">
         <div class="testi">
@@ -663,7 +668,7 @@ section{padding:4.5rem 4vw !important}
 
   </div>
   <div style="text-align:center;margin-top:2.5rem">
-    <a href="https://search.google.com/local/reviews?placeid=ChIJczTzUUIzLWoR59TwldN3SsM" target="_blank" rel="noopener" style="font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);text-decoration:none;font-weight:500;display:inline-flex;align-items:center;gap:8px;padding-bottom:3px;border-bottom:1px solid rgba(201,169,110,0.25)">
+    <a href="https://search.google.com/local/reviews?placeid=ChIJczTzUUIzLWoR59TwldN3SsM" target="_blank" rel="noopener" style="font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);text-decoration:none;font-weight:500;display:inline-flex;align-items:center;gap:8px;padding-bottom:3px;border-bottom:1px solid rgba(201,169,110,0.25)">
       Voir tous les avis sur Google
       <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
     </a>
@@ -680,7 +685,7 @@ section{padding:4.5rem 4vw !important}
       <a href="tel:+33761092626" class="btn-primary">07 61 09 26 26</a>
       <a href="https://wa.me/33761092626" target="_blank" class="btn-ghost">WhatsApp</a>
     </div>
-    <p style="font-size:.68rem;color:var(--ivory-muted);font-weight:300">
+    <p style="font-size:.75rem;color:var(--ivory-muted);font-weight:300">
       <a href="mailto:contact@the-gentleman-driver.com" style="color:var(--gold);text-decoration:none">contact@the-gentleman-driver.com</a>
     </p>
   </div>
@@ -721,7 +726,7 @@ section{padding:4.5rem 4vw !important}
       </select>
     </div>
     <button type="submit" class="btn-primary" style="display:block;text-align:center;width:100%;border:none;cursor:pointer">Envoyer la demande</button>
-    <p style="font-size:.62rem;color:var(--ivory-muted);text-align:center;margin-top:.8rem;font-weight:300">R&#233;ponse garantie sous 2h &middot; Gratuit sans engagement</p>
+    <p style="font-size:.75rem;color:var(--ivory-muted);text-align:center;margin-top:.8rem;font-weight:300">R&#233;ponse garantie sous 2h &middot; Gratuit sans engagement</p>
   
   <div class="form-success-msg"><p>✓ Message reçu — nous vous recontactons sous 2h.</p></div>
   <div class="form-error-msg"><p></p></div>
@@ -753,7 +758,7 @@ section{padding:4.5rem 4vw !important}
     <li><a href="/mentions-legales">Mentions l&#233;gales</a></li>
   </ul>
   <span class="footer-copy">&#169; 2026 The Gentleman Driver &#8212; SASU &#8212; Charenton-le-Pont (94)</span>
-  <span class="footer-legal-mini" style="display:block;margin-top:.7rem;font-size:.55rem;color:rgba(189,181,166,0.22);font-weight:300;letter-spacing:.05em;line-height:1.8">SIRET 985 178 466 00019 &#183; RCS Cr&#233;teil &#183; Assurance RC Pro &#183; Assurance W Garage AXA</span>
+  <span class="footer-legal-mini" style="display:block;margin-top:.7rem;font-size:.75rem;color:rgba(189,181,166,0.22);font-weight:300;letter-spacing:.05em;line-height:1.8">SIRET 985 178 466 00019 &#183; RCS Cr&#233;teil &#183; Assurance RC Pro &#183; Assurance W Garage AXA</span>
 </footer>
 
 

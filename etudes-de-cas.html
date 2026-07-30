@@ -11,7 +11,12 @@
 <meta property="og:description" content="Des missions réellement réalisées : SUV électrique en Corse, mise en main près de Cassis, gestion de tension à Carcassonne, plateau vers la Suisse.">
 <meta property="og:url" content="https://www.thegentlemandriver.fr/etudes-de-cas">
 <meta property="og:locale" content="fr_FR">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0A0A'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia%2C serif' font-size='11' fill='%23C9A96E' font-weight='bold' letter-spacing='0.5'%3ETGD%3C/text%3E%3Cline x1='4' y1='22' x2='28' y2='22' stroke='%23C9A96E' stroke-width='0.8' opacity='0.5'/%3E%3C/svg%3E">
+<link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a0a0a">
 <title>Études de cas : nos missions de convoyage réalisées</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +32,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .nav-logo{display:flex;align-items:center;text-decoration:none}
 .nav-logo img{height:46px;width:auto;display:block}
 .nav-links{display:flex;gap:1.4rem;list-style:none}
-.nav-links a{font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:#D3CCBF;text-decoration:none;font-weight:400;transition:color .2s;white-space:nowrap}
+.nav-links a{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:#D3CCBF;text-decoration:none;font-weight:400;transition:color .2s;white-space:nowrap}
 .nav-links a:hover,.nav-links a.active{color:var(--gold)}
 /* ─── DROPDOWN ─── */
 .nav-dropdown{position:relative}
@@ -35,12 +40,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .nav-dropdown-menu::before{content:'';position:absolute;top:-12px;left:0;right:0;height:12px}
 .nav-dropdown:hover .nav-dropdown-menu{display:block}
 .nav-dropdown-menu li{list-style:none}
-.nav-dropdown-menu li a{display:block;padding:.6rem 1.2rem;font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:#D3CCBF;text-decoration:none;transition:color .15s,background .15s;white-space:nowrap}
+.nav-dropdown-menu li a{display:block;padding:.6rem 1.2rem;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:#D3CCBF;text-decoration:none;transition:color .15s,background .15s;white-space:nowrap}
 .nav-dropdown-menu li a:hover{color:var(--gold);background:rgba(201,169,110,0.05)}
 .nav-dropdown-toggle{cursor:pointer}
-.nav-dropdown-section{display:block;padding:.5rem 1.2rem .2rem;font-size:.48rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,169,110,0.5);font-weight:500;cursor:default;border-top:1px solid rgba(201,169,110,0.08);margin-top:.3rem}
+.nav-dropdown-section{display:block;padding:.5rem 1.2rem .2rem;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,169,110,0.5);font-weight:500;cursor:default;border-top:1px solid rgba(201,169,110,0.08);margin-top:.3rem}
 .nav-dropdown-section:first-child{border-top:none;margin-top:0}
-.nav-cta{font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;font-weight:500;color:var(--black);background:var(--gold);border:none;padding:.6rem 1.2rem;cursor:pointer;text-decoration:none;transition:background .2s;font-family:'Montserrat',sans-serif;white-space:nowrap}
+.nav-cta{font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;font-weight:500;color:var(--black);background:var(--gold);border:none;padding:.6rem 1.2rem;cursor:pointer;text-decoration:none;transition:background .2s;font-family:'Montserrat',sans-serif;white-space:nowrap}
 .nav-cta:hover{background:var(--gold-light)}
 .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
 .burger span{display:block;width:22px;height:1px;background:var(--ivory)}
@@ -49,13 +54,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .mobile-menu a{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--ivory);text-decoration:none;font-weight:300}
 .mobile-menu a:hover{color:var(--gold)}
 .mobile-close{position:absolute;top:2rem;right:4vw;background:none;border:none;color:var(--ivory);font-size:1.8rem;cursor:pointer;font-family:'Cormorant Garamond',serif}
-@media(max-width:1100px){.nav-links{gap:.9rem}.nav-links a{font-size:.52rem}}
+@media(max-width:1100px){.nav-links{gap:.9rem}.nav-links a{font-size:.75rem}}
 @media(max-width:900px){.nav-links,.nav-cta{display:none}.burger{display:flex}}
 
 /* HERO */
 .page-hero{padding:140px 4vw 80px;text-align:center;position:relative}
 .page-hero::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:1px;height:60px;background:linear-gradient(to bottom,var(--gold-dark),transparent)}
-.eyebrow{font-size:.6rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);font-weight:500;display:inline-flex;align-items:center;gap:1rem;margin-bottom:1.8rem}
+.eyebrow{font-size:.75rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);font-weight:500;display:inline-flex;align-items:center;gap:1rem;margin-bottom:1.8rem}
 .eyebrow::before,.eyebrow::after{content:'';display:block;width:30px;height:1px;background:var(--gold)}
 .page-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,4.5vw,4rem);font-weight:300;line-height:1.1;margin-bottom:1.2rem}
 .page-hero h1 em{font-style:italic;color:var(--gold)}
@@ -67,17 +72,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .cas-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 2fr;gap:6rem;align-items:start}
 .cas-meta{position:sticky;top:100px}
 .cas-num{font-family:'Cormorant Garamond',serif;font-size:5rem;color:rgba(201,169,110,0.1);font-weight:300;line-height:1;margin-bottom:1rem}
-.cas-tag{display:inline-block;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,169,110,0.3);padding:.35rem .8rem;margin-bottom:1.5rem}
+.cas-tag{display:inline-block;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,169,110,0.3);padding:.35rem .8rem;margin-bottom:1.5rem}
 .cas-titre{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;line-height:1.25;margin-bottom:1rem;color:var(--ivory)}
 .cas-titre em{font-style:italic;color:var(--gold)}
 .cas-specs{display:flex;flex-direction:column;gap:.5rem;margin-top:1.5rem}
-.cas-spec{font-size:.7rem;color:var(--ivory-muted);display:flex;gap:.6rem;align-items:flex-start}
+.cas-spec{font-size:.75rem;color:var(--ivory-muted);display:flex;gap:.6rem;align-items:flex-start}
 .cas-spec::before{content:'—';color:var(--gold-dark);flex-shrink:0}
 
 .cas-body{}
 .cas-intro{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:300;line-height:1.6;color:var(--ivory);margin-bottom:2.5rem;font-style:italic}
 .cas-section{margin-bottom:2rem}
-.cas-section-label{font-size:.58rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:.8rem;display:flex;align-items:center;gap:.6rem}
+.cas-section-label{font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:.8rem;display:flex;align-items:center;gap:.6rem}
 .cas-section-label::before{content:'';display:block;width:14px;height:1px;background:var(--gold)}
 .cas-section p{font-size:.85rem;color:var(--ivory-muted);line-height:1.9;margin-bottom:.8rem}
 .cas-section p:last-child{margin-bottom:0}
@@ -88,7 +93,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .cas-resultat{margin-top:2.5rem;background:var(--black-3);padding:2rem;display:flex;flex-wrap:wrap;gap:2rem}
 .cas-resultat-item{flex:1;min-width:140px}
 .cas-resultat-num{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--gold);font-weight:300;line-height:1}
-.cas-resultat-label{font-size:.62rem;color:var(--ivory-muted);margin-top:.3rem;text-transform:uppercase;letter-spacing:.1em}
+.cas-resultat-label{font-size:.75rem;color:var(--ivory-muted);margin-top:.3rem;text-transform:uppercase;letter-spacing:.1em}
 
 @media(max-width:800px){
   .cas-inner{grid-template-columns:1fr;gap:2.5rem}
@@ -102,23 +107,23 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .cta-section h2 em{font-style:italic;color:var(--gold)}
 .cta-section p{font-size:.88rem;color:var(--ivory-muted);margin-bottom:2.5rem;max-width:480px;margin-left:auto;margin-right:auto}
 .cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-.btn-primary{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--black);background:var(--gold);border:none;padding:1rem 2.5rem;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s;font-family:'Montserrat',sans-serif}
+.btn-primary{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--black);background:var(--gold);border:none;padding:1rem 2.5rem;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s;font-family:'Montserrat',sans-serif}
 .btn-primary:hover{background:var(--gold-light)}
-.btn-ghost{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--ivory);background:transparent;border:1px solid rgba(245,240,232,.2);padding:1rem 2rem;cursor:pointer;text-decoration:none;display:inline-block;transition:border-color .2s,color .2s;font-family:'Montserrat',sans-serif}
+.btn-ghost{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--ivory);background:transparent;border:1px solid rgba(245,240,232,.2);padding:1rem 2rem;cursor:pointer;text-decoration:none;display:inline-block;transition:border-color .2s,color .2s;font-family:'Montserrat',sans-serif}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
 
 /* FOOTER */
 .footer-mini{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.1);padding:2.5rem 4vw;display:flex;flex-wrap:wrap;align-items:center;gap:2rem;justify-content:space-between}
 .footer-logo{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--gold);text-decoration:none;letter-spacing:.05em}
 .footer-links-list{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;list-style:none}
-.footer-links-list a{font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ivory-muted);text-decoration:none;transition:color .2s}
+.footer-links-list a{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ivory-muted);text-decoration:none;transition:color .2s}
 .footer-links-list a:hover{color:var(--gold)}
-.footer-copy{font-size:.62rem;color:var(--ivory-muted);opacity:.5}
+.footer-copy{font-size:.75rem;color:var(--ivory-muted);opacity:.5}
 
 /* STICKY MOBILE */
 .sticky-mobile{display:none;position:fixed;bottom:0;left:0;right:0;z-index:90;background:var(--black-2);border-top:1px solid rgba(201,169,110,0.15)}
 @media(max-width:900px){.sticky-mobile{display:flex}}
-.sticky-btn{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:.7rem .5rem;text-decoration:none;color:var(--ivory-muted);font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;gap:.3rem;transition:color .2s}
+.sticky-btn{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:.7rem .5rem;text-decoration:none;color:var(--ivory-muted);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;gap:.3rem;transition:color .2s}
 .sticky-btn.call{color:var(--gold)}
 .sticky-btn-icon{font-size:1.1rem;line-height:1}
 .wa-float{position:fixed;bottom:80px;right:1.5rem;z-index:89;width:48px;height:48px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,.4);transition:transform .2s}
@@ -131,7 +136,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 /* ═══ TRUST BAR ═══ */
 .trust-bar{background:rgba(201,169,110,0.07);border-bottom:1px solid rgba(201,169,110,0.12);padding:.55rem 4vw;overflow:hidden}
 .trust-bar-inner{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:.5rem 1.2rem}
-.trust-item{display:inline-flex;align-items:center;gap:.35rem;font-size:.58rem;letter-spacing:.07em;color:rgba(245,240,232,.7);white-space:nowrap}
+.trust-item{display:inline-flex;align-items:center;gap:.35rem;font-size:.75rem;letter-spacing:.07em;color:rgba(245,240,232,.7);white-space:nowrap}
 .trust-item svg{color:var(--gold);flex-shrink:0}
 .trust-sep{color:rgba(201,169,110,0.3);font-size:.8rem}
 @media(max-width:600px){.trust-sep{display:none}}
@@ -476,7 +481,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
     <li><a href="/mentions-legales">Mentions l&#233;gales</a></li>
   </ul>
   <span class="footer-copy">&#169; 2026 The Gentleman Driver &#8212; SASU &#8212; Charenton-le-Pont (94)</span>
-  <span class="footer-legal-mini" style="display:block;margin-top:.7rem;font-size:.55rem;color:rgba(189,181,166,0.22);font-weight:300;letter-spacing:.05em;line-height:1.8">SIRET 985 178 466 00019 &#183; RCS Cr&#233;teil &#183; Assurance RC Pro &#183; Assurance W Garage AXA</span>
+  <span class="footer-legal-mini" style="display:block;margin-top:.7rem;font-size:.75rem;color:rgba(189,181,166,0.22);font-weight:300;letter-spacing:.05em;line-height:1.8">SIRET 985 178 466 00019 &#183; RCS Cr&#233;teil &#183; Assurance RC Pro &#183; Assurance W Garage AXA</span>
 </footer>
 
 <div class="sticky-mobile">
