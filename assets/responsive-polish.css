@@ -1,0 +1,127 @@
+/* Ajustements transversaux de lisibilite et de densite. Charge apres les styles de page. */
+
+@media (min-width: 901px) {
+  section:not(.hero):not(.hero-seo) {
+    padding-top: 4.75rem !important;
+    padding-bottom: 4.75rem !important;
+  }
+
+  .services-grid,
+  .cas-grid,
+  .family-grid,
+  .clients-grid,
+  .testi-grid,
+  .process-grid,
+  .process-steps {
+    margin-top: 3rem !important;
+  }
+}
+
+@media (max-width: 900px) {
+  section:not(.hero):not(.hero-seo) {
+    padding-top: 3.75rem !important;
+    padding-bottom: 3.75rem !important;
+  }
+
+  .hero-left,
+  .hero-content {
+    padding-top: 4rem !important;
+    padding-bottom: 3.25rem !important;
+  }
+
+  .section-eyebrow,
+  .eyebrow,
+  .section-label,
+  .cas-section-label {
+    letter-spacing: .18em !important;
+    line-height: 1.5 !important;
+  }
+
+  .section-sub,
+  .cas-desc,
+  .client-desc,
+  .step-desc,
+  .family-card p,
+  .preuve-text,
+  .field-card p {
+    font-size: .86rem !important;
+    line-height: 1.7 !important;
+  }
+
+  .service-num,
+  .preuve-num,
+  .cas-num,
+  .p-num {
+    color: rgba(201, 169, 110, .78) !important;
+  }
+
+  .service-num {
+    font-size: 2.4rem !important;
+    margin-bottom: .75rem !important;
+  }
+
+  .cas-card::before {
+    top: 1.25rem !important;
+    right: 1.25rem !important;
+    width: 2.15rem;
+    height: 2.15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(201, 169, 110, .45);
+    background: rgba(10, 10, 10, .78);
+    color: #c9a96e !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: .78rem !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+  }
+
+  .services-grid,
+  .cas-grid,
+  .family-grid,
+  .clients-grid,
+  .testi-grid,
+  .process-grid,
+  .process-steps {
+    margin-top: 2.25rem !important;
+  }
+}
+
+@media (max-width: 600px) {
+  section:not(.hero):not(.hero-seo) {
+    padding-top: 3.1rem !important;
+    padding-bottom: 3.1rem !important;
+  }
+
+  .service-card,
+  .cas-card,
+  .family-card,
+  .client-card,
+  .preuve-card,
+  .field-card,
+  .avis-card,
+  .testi-card,
+  .contrat-card {
+    padding: 1.55rem !important;
+  }
+
+  .section-title,
+  section h2 {
+    margin-bottom: 1.35rem;
+  }
+
+  .trust-item,
+  .service-list li,
+  .step-desc,
+  .client-desc,
+  .footer-mini a,
+  .footer-copy {
+    font-size: .8rem !important;
+  }
+
+  .cta-section,
+  .cta {
+    gap: 2.5rem !important;
+  }
+}
