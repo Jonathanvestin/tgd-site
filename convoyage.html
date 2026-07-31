@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Convoyage de véhicules par la route pour concessions, entreprises et particuliers. PV contradictoire, plaques W et assurance tous risques sur chaque mission.">
+<meta name="description" content="Convoyage automobile en France et en Europe pour professionnels et particuliers. Assurance tous risques, PV photographique et devis fixe sous 2 h.">
 <meta name="robots" content="index, follow">
-<title>Convoyage automobile pour concessions et entreprises</title>
+<title>Convoyage automobile France &amp; Europe | The Gentleman Driver</title>
 <link rel="canonical" href="https://www.thegentlemandriver.fr/convoyage">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Gentleman Driver">
-<meta property="og:title" content="Convoyage automobile pour concessions et entreprises">
-<meta property="og:description" content="Convoyage de véhicules par la route pour concessions, entreprises et particuliers. PV contradictoire, plaques W et assurance tous risques sur chaque mission.">
+<meta property="og:title" content="Convoyage automobile France &amp; Europe | The Gentleman Driver">
+<meta property="og:description" content="Convoyage automobile en France et en Europe pour professionnels et particuliers. Assurance tous risques, PV photographique et devis fixe sous 2 h.">
 <meta property="og:url" content="https://www.thegentlemandriver.fr/convoyage">
 <meta property="og:image" content="https://www.thegentlemandriver.fr/og-image.jpg">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Convoyage automobile pour concessions et entreprises">
-<meta name="twitter:description" content="Convoyage de véhicules par la route pour concessions, entreprises et particuliers. PV contradictoire, plaques W et assurance tous risques sur chaque mission.">
+<meta name="twitter:title" content="Convoyage automobile France &amp; Europe | The Gentleman Driver">
+<meta name="twitter:description" content="Convoyage automobile en France et en Europe pour professionnels et particuliers. Assurance tous risques, PV photographique et devis fixe sous 2 h.">
 <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48">
@@ -35,6 +35,7 @@
     "address": {"@type": "PostalAddress", "streetAddress": "4 rue Jean Pigeon", "addressLocality": "Charenton-le-Pont", "postalCode": "94220", "addressCountry": "FR"}
   },
   "description": "Service de convoyage automobile professionnel en France et Europe. Plaques W, assurance tous risques, PV contradictoire photographique.",
+  "url": "https://www.thegentlemandriver.fr/convoyage",
   "areaServed": ["France", "Belgique", "Luxembourg", "Suisse", "Allemagne", "Espagne", "Italie"],
   "serviceType": "Convoyage automobile"
 }
@@ -105,6 +106,18 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .content-inner ul{margin:.8rem 0 1.2rem 1.2rem;display:flex;flex-direction:column;gap:.4rem}
 .content-inner ul li{font-size:.83rem;color:var(--ivory-muted);line-height:1.75;font-weight:300}
 .content-inner ul li::marker{color:var(--gold)}
+.page-note{font-size:.75rem;color:rgba(189,181,166,.72);letter-spacing:.04em;margin:-.4rem 0 1.5rem}
+.page-note strong{color:var(--gold);font-weight:500}
+.field-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,169,110,.1);margin:1.5rem 0 2.5rem}
+.field-card{background:var(--black-3);padding:1.5rem}
+.field-route{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:.7rem}
+.field-card p{font-size:.8rem;margin:0;line-height:1.75}
+.comparison-wrap{overflow-x:auto;margin:1.4rem 0 2rem}
+.comparison-table{width:100%;border-collapse:collapse;min-width:620px}
+.comparison-table th,.comparison-table td{padding:1rem;border-bottom:1px solid rgba(201,169,110,.1);text-align:left;vertical-align:top;font-size:.8rem;line-height:1.65}
+.comparison-table th{color:var(--gold);font-weight:500;background:rgba(201,169,110,.05)}
+.comparison-table td{color:var(--ivory-muted)}
+.comparison-table td:first-child{color:var(--ivory);font-weight:400}
 /* PROOF BAND */
 .proof-band{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(201,169,110,0.07)}
 .proof-item{background:var(--black-2);padding:2rem 1.5rem;text-align:center}
@@ -160,7 +173,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .highlight-box p{font-size:.83rem;color:var(--ivory);line-height:1.8;font-weight:300;margin:0}
 .highlight-box p strong{color:var(--gold)}
 /* RESPONSIVE */
-@media(max-width:900px){.proof-band{grid-template-columns:1fr 1fr}.related-grid{grid-template-columns:1fr}.cta-section{flex-direction:column}}
+@media(max-width:900px){.proof-band{grid-template-columns:1fr 1fr}.related-grid,.field-grid{grid-template-columns:1fr}.cta-section{flex-direction:column}}
 @media(max-width:600px){.proof-band{grid-template-columns:1fr 1fr}}
 
 
@@ -228,6 +241,7 @@ section{padding:4.5rem 4vw !important}
 .trust-sep{color:rgba(201,169,110,0.3);font-size:.8rem}
 @media(max-width:600px){.trust-sep{display:none}}
 </style>
+<link rel="stylesheet" href="/assets/responsive-polish.css">
 </head>
 <body>
 
@@ -300,8 +314,8 @@ section{padding:4.5rem 4vw !important}
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <p class="eyebrow">Convoyage automobile</p>
-    <h1>Le convoyage automobile<br><em>comme il devrait &#234;tre fait.</em></h1>
-    <p class="hero-sub">Transfert de v&#233;hicule entre particuliers, entre professionnels, longue distance ou inter-sites. Une &#233;quipe identifi&#233;e, une assurance incluse, un proc&#232;s-verbal &#224; chaque mission.</p>
+    <h1>Convoyage automobile<br><em>en France et en Europe.</em></h1>
+    <p class="hero-sub">Votre véhicule est conduit de son point de départ à son lieu de livraison par un professionnel identifié. Assurance tous risques, PV photographique et suivi humain à chaque mission.</p>
   </div>
 </div>
 
@@ -312,10 +326,12 @@ section{padding:4.5rem 4vw !important}
 
 <section class="content-section">
   <div class="content-inner">
-    <h2>Le convoyage automobile,<br><em>tel qu&#8217;il devrait &#234;tre</em></h2>
-    <p>Le convoyage automobile consiste &#224; confier la conduite de votre v&#233;hicule &#224; un professionnel — pour un transfert d&#8217;un point A &#224; un point B, une livraison chez un client, un rapatriement depuis une concession ou un d&#233;placement professionnel. Simple sur le papier. Exigeant dans l&#8217;ex&#233;cution.</p>
+    <h2>Un véhicule à déplacer.<br><em>Une mission à maîtriser de bout en bout.</em></h2>
+    <p class="page-note">Contenu vérifié par <strong>Jonathan Vestin</strong>, fondateur de The Gentleman Driver — mis à jour le 31 juillet 2026.</p>
+    <p>Le convoyage automobile consiste à confier la conduite de votre véhicule à un professionnel pour le déplacer d’une adresse à une autre. Cela peut être une livraison chez un client, un transfert entre deux concessions, un rapatriement après achat ou le déplacement ponctuel d’un véhicule d’entreprise.</p>
+    <p>Le principe est simple. La qualité se joue dans les détails : qui prend le volant, comment l’état du véhicule est constaté, quelle assurance intervient, comment le trajet est suivi et ce qui vous est remis après la livraison.</p>
     <p>Depuis 2021, The Gentleman Driver intervient sur toute la France et en Europe pour des concessions, des loueurs, des gestionnaires de flotte et des particuliers. Notre &#233;quipe de cinq collaborateurs stables &#8212; Yvan, Anthony, Diep, Bilal et Jonathan &#8212; a parcouru plus de 1&#160;200&#160;000 kilom&#232;tres sans un seul incident d&#233;clar&#233;.</p>
-    <p>Ce n&#8217;est pas de la chance. C&#8217;est une m&#233;thode.</p>
+    <p>Nous ne sommes pas une plateforme qui attribue votre véhicule au premier profil disponible. Vous connaissez l’identité de la personne qui se présente, et vous pouvez joindre directement Jonathan ou son équipe pendant la mission.</p>
 
     <div class="highlight-box">
       <p><strong>Ce qui nous diff&#233;rencie&#160;:</strong> chaque mission est document&#233;e avec un proc&#232;s-verbal contradictoire photographique, couverte par notre assurance professionnelle tous risques, et r&#233;alis&#233;e avec des plaques W professionnelles. Votre immatriculation ne circule pas. Votre v&#233;hicule est pris en charge de point &#224; point, avec les m&#234;mes standards qu&#8217;il s&#8217;agisse d&#8217;une citadine ou d&#8217;un v&#233;hicule de direction.</p>
@@ -333,11 +349,58 @@ section{padding:4.5rem 4vw !important}
       <li>Rapport de mission transmis dans les 24h</li>
     </ul>
 
-    <h3>Nos types de missions</h3>
+    <h3>Dans quels cas faire appel à un convoyeur automobile ?</h3>
     <p><strong>Transfert simple&#160;:</strong> un v&#233;hicule &#224; acheminer d&#8217;une adresse &#224; une autre. Qu&#8217;il s&#8217;agisse d&#8217;un d&#233;m&#233;nagement, d&#8217;un achat entre particuliers ou d&#8217;un r&#233;approvisionnement de stock, nous g&#233;rons le transport pendant que vous vous occupez d&#8217;autre chose.</p>
     <p><strong>Convoyage inter-sites&#160;:</strong> pour les professionnels qui gèrent plusieurs sites, plusieurs points de vente ou plusieurs d&#233;p&#244;ts. Nous assurons la logistique de d&#233;placement de flotte avec fiabilit&#233; et trac&#231;abilit&#233;.</p>
     <p><strong>Convoyage longue distance&#160;:</strong> Paris-Marseille, Paris-Lyon, Paris-Bordeaux, jusqu&#8217;&#224; la Belgique, la Suisse ou l&#8217;Allemagne. Nous planifions les arr&#234;ts n&#233;cessaires, notamment pour les v&#233;hicules &#233;lectriques, et livrons dans les d&#233;lais annonc&#233;s.</p>
     <p><strong>Rapatriement apr&#232;s achat&#160;:</strong> vous avez achet&#233; un v&#233;hicule &#224; distance ou &#224; l&#8217;autre bout de la France. Nous allons le chercher et vous le livrons &#224; domicile, document&#233; et inspect&#233;.</p>
+
+    <h3>Retrouvez votre voiture sur votre lieu de vacances</h3>
+    <p>Vous voulez partir en avion ou en train sans imposer plusieurs heures de route à toute la famille ? Nous récupérons votre voiture à votre domicile et nous la convoyons jusqu’à votre lieu de vacances. Vous voyagez rapidement, puis vous retrouvez sur place votre propre véhicule, avec vos habitudes, vos sièges enfants et l’espace dont vous avez besoin pendant le séjour.</p>
+    <p>La remise peut être organisée à l’adresse convenue : résidence, hôtel, location saisonnière ou autre point de rendez-vous accessible. Avant le départ, nous réalisons le PV photographique et relevons le kilométrage. À l’arrivée, vous contrôlez le véhicule et signez le PV de réception.</p>
+    <div class="highlight-box">
+      <p><strong>Aller et retour :</strong> nous pouvons livrer votre voiture sur votre lieu de vacances, puis organiser son retour à votre domicile à la fin du séjour. Vous évitez ainsi le long trajet dans les deux sens sans devoir louer un véhicule différent sur place.</p>
+    </div>
+
+    <h3>Combien coûte un convoyage automobile ?</h3>
+    <p>Pour une longue distance, notre prestation démarre à <strong>0,88 € HT par kilomètre</strong>, hors frais de route. Ce tarif de départ ne peut pas être appliqué mécaniquement à toutes les missions : un transfert local, une livraison avec mise en main et un trajet international ne mobilisent pas le même temps ni la même organisation.</p>
+    <p>Le devis tient compte de la distance, des frais de carburant et de péage, de l’accès aux lieux de prise en charge et de livraison, du délai demandé, du type de véhicule et des éventuels services complémentaires. Chaque poste est présenté avant validation. Une fois le devis accepté, le prix convenu ne change pas à cause du trafic ou d’un temps de route plus long que prévu.</p>
+    <div class="highlight-box">
+      <p><strong>Pour obtenir un prix précis :</strong> indiquez les deux adresses, la date souhaitée, la marque et le modèle du véhicule ainsi que toute contrainte particulière. Nous répondons généralement sous 2 h.</p>
+    </div>
+
+    <h3>Convoyage par la route ou transport sur plateau ?</h3>
+    <p>Le convoyage est généralement la solution la plus directe lorsqu’un véhicule est roulant, assuré par notre contrat professionnel et autorisé à circuler. Le <a href="/transport-plateau" style="color:var(--gold)">transport sur plateau</a> devient préférable lorsqu’il ne doit pas prendre la route ou lorsqu’une protection sans kilométrage supplémentaire est prioritaire.</p>
+    <div class="comparison-wrap">
+      <table class="comparison-table">
+        <thead>
+          <tr><th>Situation</th><th>Convoyage par la route</th><th>Transport sur plateau</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Véhicule roulant et immatriculable</td><td>Solution rapide, porte-à-porte et généralement plus économique.</td><td>Possible, mais pas toujours nécessaire.</td></tr>
+          <tr><td>Véhicule en panne ou non roulant</td><td>Non adapté.</td><td>Solution recommandée.</td></tr>
+          <tr><td>Collection, très faible kilométrage ou très haute valeur</td><td>Possible après étude et accord.</td><td>À privilégier si aucun kilomètre ne doit être ajouté.</td></tr>
+          <tr><td>Véhicule électrique</td><td>Trajet et recharges planifiés selon l’autonomie réelle.</td><td>Utile si le véhicule ne peut pas être chargé ou déplacé.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Du terrain, pas de la théorie</h3>
+    <p>Voici trois exemples de missions réellement traitées. Les noms des destinataires sont volontairement masqués.</p>
+    <div class="field-grid">
+      <article class="field-card">
+        <div class="field-route">Paris → Landes</div>
+        <p>Livraison d’un BMW iX1 avec un niveau de batterie élevé demandé à l’arrivée. Recharge rapide planifiée près de la destination, puis kilométrage et pourcentage de charge consignés sur le PV.</p>
+      </article>
+      <article class="field-card">
+        <div class="field-route">Antony → Loire-Atlantique</div>
+        <p>Convoyage d’un véhicule d’entreprise avec remise programmée à 8 h. Prise de rendez-vous directe avec le destinataire et coordination du départ avec le site professionnel.</p>
+      </article>
+      <article class="field-card">
+        <div class="field-route">Concession → Client</div>
+        <p>Livraisons de véhicules neufs et d’occasion pour un partenaire BMW accompagné depuis quatre ans : contrôle au départ, livraison client et retour documentaire complet.</p>
+      </article>
+    </div>
 
     <div class="process-grid">
       <div class="p-step">
@@ -382,7 +445,7 @@ section{padding:4.5rem 4vw !important}
 
 <div class="proof-band">
   <div class="proof-item"><div class="proof-num">1,2M</div><div class="proof-lbl">Km parcourus</div></div>
-  <div class="proof-item"><div class="proof-num">28</div><div class="proof-lbl">Avis 5&#9733; Google</div></div>
+  <div class="proof-item"><div class="proof-num">35</div><div class="proof-lbl">Avis 5&#9733; Google</div></div>
   <div class="proof-item"><div class="proof-num">4+</div><div class="proof-lbl">Ann&#233;es terrain</div></div>
   <div class="proof-item"><div class="proof-num">0*</div><div class="proof-lbl">Incident d&#233;clar&#233;</div></div>
 </div>
@@ -400,10 +463,24 @@ section{padding:4.5rem 4vw !important}
     </div>
     <div class="faq-item">
       <button type="button" class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">Pouvez-vous livrer ma voiture sur mon lieu de vacances ?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a"><p>Oui. Nous pouvons prendre votre voiture à votre domicile pendant que vous voyagez en avion ou en train, puis vous la remettre à l’adresse convenue sur votre lieu de vacances. Le trajet retour peut également être organisé en fin de séjour.</p></div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q" onclick="toggleFaq(this)">
         <span class="faq-q-text">Comment est fix&#233; le tarif d&#8217;un convoyage&#160;?</span>
         <span class="faq-icon">+</span>
       </button>
       <div class="faq-a"><p><strong>&#192; partir de 0,88&#160;&#8364; / km HT</strong> (hors frais de route, sur longues distances) &#8212; devis fixe sous 2h. Le tarif est fix&#233; &#224; la r&#233;servation&#160;: il tient compte de la distance, de la nature de la mission, de l&#8217;accessibilit&#233; et des contraintes sp&#233;cifiques. Une fois confirm&#233;, ce tarif ne change pas. Aucun suppl&#233;ment li&#233; au trafic ou aux conditions de route.</p></div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">Le carburant et les péages sont-ils compris dans le prix ?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a"><p>Ils sont calculés pour le trajet et apparaissent dans le devis. Vous connaissez donc le coût global avant de confirmer la mission. Le tarif au kilomètre annoncé correspond à la prestation de convoyage, hors frais de route.</p></div>
     </div>
     <div class="faq-item">
       <button type="button" class="faq-q" onclick="toggleFaq(this)">
@@ -425,6 +502,20 @@ section{padding:4.5rem 4vw !important}
         <span class="faq-icon">+</span>
       </button>
       <div class="faq-a"><p>Oui, 7j/7 de 7h &#224; 22h. Les week-ends et jours f&#233;ri&#233;s sont possibles, sans majoration syst&#233;matique.</p></div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">Combien de temps faut-il pour livrer un véhicule ?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a"><p>Le délai dépend du point de départ, de la destination et des disponibilités aux deux adresses. Une longue distance réalisable dans la journée peut être livrée le jour même. Le créneau convenu figure dans la confirmation de mission.</p></div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">Quand faut-il préférer un transport sur plateau ?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a"><p>Le plateau est recommandé pour un véhicule non roulant, non autorisé à circuler ou lorsqu’aucun kilomètre ne doit être ajouté. Pour un véhicule roulant, le convoyage par la route est généralement plus direct et plus économique.</p></div>
     </div>
     <div class="faq-item">
       <button type="button" class="faq-q" onclick="toggleFaq(this)">

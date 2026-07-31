@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Un chauffeur conduit votre voiture pour vous : suspension de permis, déplacement professionnel ou longue distance. 7j/7 de 7h à 22h, dès 350 € HT.">
+<meta name="description" content="Un chauffeur conduit votre voiture : dirigeants, famille, vacances et longue distance. Relais familial pour enfants sur réservation. Devis sous 2 h.">
 
   <!-- SEO -->
   <meta name="robots" content="index, follow">
@@ -12,14 +12,14 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="The Gentleman Driver">
   <meta property="og:title" content="Chauffeur professionnel avec votre propre véhicule">
-  <meta property="og:description" content="Un chauffeur conduit votre voiture pour vous : suspension de permis, déplacement professionnel ou longue distance. 7j/7 de 7h à 22h, dès 350 € HT.">
+  <meta property="og:description" content="Un chauffeur conduit votre voiture : dirigeants, famille, vacances et longue distance. Relais familial pour enfants sur réservation. Devis sous 2 h.">
   <meta property="og:url" content="https://www.thegentlemandriver.fr/chauffeur">
   <meta property="og:image" content="https://www.thegentlemandriver.fr/og-image.jpg">
   <meta property="og:locale" content="fr_FR">
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Chauffeur professionnel avec votre propre véhicule">
-  <meta name="twitter:description" content="Un chauffeur conduit votre voiture pour vous : suspension de permis, déplacement professionnel ou longue distance. 7j/7 de 7h à 22h, dès 350 € HT.">
+  <meta name="twitter:description" content="Un chauffeur conduit votre voiture : dirigeants, famille, vacances et longue distance. Relais familial pour enfants sur réservation. Devis sous 2 h.">
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -34,8 +34,8 @@
 <style>
 :root{--black:#0A0A0A;--black-2:#111111;--black-3:#1A1A1A;--gold:#C9A96E;--gold-light:#E8D5B0;--gold-dark:#9A7A47;--ivory:#F5F0E8;--ivory-muted:#BDB5A6;--green:#5A8A64}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--black);color:var(--ivory);font-family:'Montserrat',sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden}
+html{scroll-behavior:smooth;max-width:100%;overflow-x:clip}
+body{background:var(--black);color:var(--ivory);font-family:'Montserrat',sans-serif;font-weight:300;line-height:1.7;max-width:100%;overflow-x:clip}
 ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:var(--black-2)}::-webkit-scrollbar-thumb{background:var(--gold-dark)}
 
 /* NAV */
@@ -118,6 +118,18 @@ section{padding:6rem 4vw}
 .cas-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--ivory);margin-bottom:.8rem;line-height:1.2}
 .cas-desc{font-size:.8rem;color:var(--ivory-muted);line-height:1.85;margin-bottom:1.5rem;font-weight:300}
 .cas-detail{font-size:.75rem;color:rgba(201,169,110,.5);font-weight:400;letter-spacing:.05em;border-top:1px solid rgba(201,169,110,0.07);padding-top:1rem}
+.family-section{padding:7rem 4vw;background:var(--black-2)}
+.family-inner{max-width:1180px;margin:0 auto}
+.family-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,169,110,.1);margin-top:3rem}
+.family-card{background:var(--black-3);padding:2.6rem}
+.family-card h3{font-family:'Cormorant Garamond',serif;font-size:1.65rem;font-weight:400;color:var(--ivory);margin-bottom:1rem}
+.family-card p{font-size:.83rem;line-height:1.85;color:var(--ivory-muted);font-weight:300;margin-bottom:1rem}
+.family-list{list-style:none;display:flex;flex-direction:column;gap:.75rem;margin-top:1.4rem}
+.family-list li{font-size:.8rem;line-height:1.6;color:var(--ivory);display:flex;gap:.75rem;align-items:flex-start}
+.family-list li::before{content:'\2713';color:var(--gold);font-weight:600;flex-shrink:0}
+.family-note{margin-top:2rem;padding:1.3rem 1.5rem;border-left:2px solid var(--gold);background:rgba(201,169,110,.05);font-size:.76rem;line-height:1.75;color:var(--ivory-muted)}
+.vs-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px}
+.tarif-contact-actions{display:flex;gap:1rem;flex-wrap:wrap}
 
 /* TARIFS */
 .tarifs-section{background:var(--black)}
@@ -189,8 +201,8 @@ section{padding:6rem 4vw}
 
 /* RESPONSIVE */
 @media(max-width:1024px){.split{grid-template-columns:1fr}.split-photo{min-height:280px}.split-photo-overlay{display:none}.cta{grid-template-columns:1fr;gap:3rem}}
-@media(max-width:900px){.hero{grid-template-columns:1fr;min-height:auto}.hero-left::after{display:none}.hero-right{min-height:320px}.band{grid-template-columns:1fr 1fr}.cas-grid{grid-template-columns:1fr}.tarifs-grid{grid-template-columns:1fr}.testi-grid{grid-template-columns:1fr}.nav-links,.nav-cta{display:none}.burger{display:flex}}
-@media(max-width:600px){.band{grid-template-columns:1fr}.f-row{grid-template-columns:1fr}}
+@media(max-width:900px){.hero{grid-template-columns:1fr;min-height:auto}.hero-left::after{display:none}.hero-right{min-height:320px}.band{grid-template-columns:1fr 1fr}.cas-grid,.family-grid,.vs-grid{grid-template-columns:1fr}.tarifs-grid{grid-template-columns:1fr}.testi-grid{grid-template-columns:1fr}.nav-links,.nav-cta{display:none}.burger{display:flex}}
+@media(max-width:600px){.band{grid-template-columns:1fr}.f-row{grid-template-columns:1fr}.tarif-contact-actions{width:100%}.tarif-contact-actions a{width:100%;text-align:center}}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 .fu{opacity:0;animation:fadeUp .7s ease forwards}
@@ -275,12 +287,18 @@ section{padding:4.5rem 4vw !important}
 
 
 /* ═══ TRUST BAR ═══ */
-.trust-bar{background:rgba(201,169,110,0.07);border-bottom:1px solid rgba(201,169,110,0.12);padding:.55rem 4vw;overflow:hidden}
+.trust-bar{margin-top:80px;background:rgba(201,169,110,0.07);border-bottom:1px solid rgba(201,169,110,0.12);padding:.55rem 4vw;overflow:hidden}
 .trust-bar-inner{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:.5rem 1.2rem}
 .trust-item{display:inline-flex;align-items:center;gap:.35rem;font-size:.75rem;letter-spacing:.07em;color:rgba(245,240,232,.7);white-space:nowrap}
 .trust-item svg{color:var(--gold);flex-shrink:0}
 .trust-sep{color:rgba(201,169,110,0.3);font-size:.8rem}
-@media(max-width:600px){.trust-sep{display:none}}
+.hero{padding-top:0}
+@media(max-width:600px){
+  .trust-bar-inner{display:grid;grid-template-columns:1fr 1fr;gap:.45rem .75rem}
+  .trust-sep,.trust-item:nth-child(7),.trust-item:nth-child(9){display:none}
+  .trust-item{white-space:normal;min-width:0;justify-content:center;text-align:center;font-size:.7rem;line-height:1.35}
+  .trust-item:first-child{grid-column:1/-1}
+}
 </style>
 
 <script type="application/ld+json">
@@ -289,10 +307,14 @@ section{padding:4.5rem 4vw !important}
   "@type": "Service",
   "name": "Chauffeur avec votre propre véhicule",
   "provider": {"@type": "LocalBusiness", "name": "The Gentleman Driver", "telephone": "+33761092626"},
-  "description": "Un chauffeur professionnel conduit votre véhicule. Idéal suspension de permis, voyages longue distance, déplacements professionnels.",
+  "url": "https://www.thegentlemandriver.fr/chauffeur",
+  "serviceType": ["Chauffeur avec le véhicule du client", "Chauffeur familial longue distance", "Relais familial accompagné"],
+  "areaServed": ["France", "Belgique", "Luxembourg", "Suisse", "Allemagne", "Espagne", "Italie"],
+  "description": "Un chauffeur professionnel conduit le véhicule du client pour les dirigeants, les familles, les départs en vacances et les longues distances. Relais familial accompagné sur réservation.",
   "offers": {"@type": "Offer", "priceCurrency": "EUR", "price": "350", "unitText": "demi-journée HT"}
 }
 </script>
+<link rel="stylesheet" href="/assets/responsive-polish.css">
 </head>
 <body>
 
@@ -373,6 +395,7 @@ section{padding:4.5rem 4vw !important}
       <span class="tag">Votre v&#233;hicule, pas le n&#244;tre</span>
       <span class="tag">Suspension de permis</span>
       <span class="tag">Voyage d&#8217;affaires</span>
+      <span class="tag">Famille &amp; vacances</span>
       <span class="tag">Longue distance</span>
       <span class="tag">7j/7 de 7h &#224; 22h</span>
     </div>
@@ -382,7 +405,7 @@ section{padding:4.5rem 4vw !important}
     </div>
   </div>
   <div class="hero-right">
-    <img src="/assets/images/votre-chauffeur-personnel-votre-voiture-votre-confor.webp" alt="Chauffeur avec votre véhicule" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%" width="1400" height="1050">
+    <img src="/assets/images/chauffeur-avec-votre-vehicule-premium.webp" alt="Chauffeur professionnel au volant de la voiture du client" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%" width="1400" height="1050">
     <div class="hero-right-overlay"></div>
   </div>
 </section>
@@ -452,13 +475,46 @@ section{padding:4.5rem 4vw !important}
   </div>
 </section>
 
+<!-- FAMILLES ET RELAIS PARENTAL -->
+<section class="family-section" id="famille">
+  <div class="family-inner">
+    <div class="section-eyebrow">Famille &amp; vacances</div>
+    <h2 class="section-title">Votre voiture familiale.<br><em>La conduite en moins.</em></h2>
+    <p class="section-sub">Vous gardez les sièges enfants, les bagages, le confort et les habitudes de votre propre voiture. Notre chauffeur prend le volant pour le trajet complet ou pour une étape précise.</p>
+    <div class="family-grid">
+      <article class="family-card">
+        <h3>Partir en vacances sans conduire</h3>
+        <p>Toute la famille voyage dans sa voiture, mais aucun parent ne subit seul les heures de route. Vous pouvez vous occuper des enfants, vous reposer ou travailler pendant que le chauffeur gère l’itinéraire et les pauses.</p>
+        <ul class="family-list">
+          <li>Départ du domicile vers une résidence, un hôtel ou une location</li>
+          <li>Trajet longue distance, aller simple ou aller-retour</li>
+          <li>Transfert vers une gare ou un aéroport avec vos bagages</li>
+          <li>Accompagnement de grands-parents dans leur propre véhicule</li>
+        </ul>
+      </article>
+      <article class="family-card">
+        <h3>Relais familial pour parents séparés</h3>
+        <p>Sur réservation, un chauffeur identifié peut accompagner un enfant entre les domiciles de ses parents ou jusqu’au domicile de ses grands-parents. La mission est préparée avec les représentants légaux et ne se termine qu’après une remise en main propre à l’adulte désigné.</p>
+        <ul class="family-list">
+          <li>Prise en charge auprès de l’adulte autorisé</li>
+          <li>Chauffeur et véhicule connus avant le départ</li>
+          <li>Confirmations au départ et à l’arrivée</li>
+          <li>Aucune remise à une personne non désignée</li>
+          <li>Consignes, pauses et contacts d’urgence convenus par écrit</li>
+        </ul>
+        <div class="family-note"><strong>Service étudié au cas par cas :</strong> âge de l’enfant, autorisations parentales, dispositif de retenue, trajet et conditions d’assurance sont vérifiés avant toute confirmation.</div>
+      </article>
+    </div>
+  </div>
+</section>
+
 
 <!-- VS VTC -->
 <section style="padding:80px 4vw;background:var(--black-2)">
   <div style="max-width:1100px;margin:0 auto">
     <div style="font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:1rem;display:flex;align-items:center;gap:.8rem"><span style="display:block;width:20px;height:1px;background:var(--gold)"></span>La diff&#233;rence fondamentale</div>
     <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;margin-bottom:3rem;line-height:1.2">Ce que les autres <em>ne font pas</em></h2>
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px">
+    <div class="vs-grid">
 
       <div style="background:var(--black-3);padding:2.5rem 2rem;border-top:2px solid rgba(201,169,110,0.15)">
         <div style="font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory-muted);margin-bottom:1.5rem;font-weight:500">Taxi / VTC classique</div>
@@ -552,7 +608,7 @@ section{padding:4.5rem 4vw !important}
       <div style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--ivory);margin-bottom:.4rem">Vous avez une situation sp&#233;cifique&#160;?</div>
       <div style="font-size:.8rem;color:var(--ivory-muted)">Appelez directement &mdash; Jonathan vous r&#233;pond et vous donne un tarif en quelques minutes.</div>
     </div>
-    <div style="display:flex;gap:1rem;flex-wrap:wrap;flex-shrink:0">
+    <div class="tarif-contact-actions">
       <a href="/contact" class="btn-primary">Demander un devis</a>
       <a href="tel:+33761092626" class="btn-ghost">07 61 09 26 26</a>
     </div>
