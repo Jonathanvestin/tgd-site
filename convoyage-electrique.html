@@ -233,24 +233,10 @@ section{padding:4.5rem 4vw !important}
   </a>
   <ul class="nav-links">
     <li><a href="/">Accueil</a></li>
-    <li class="nav-dropdown">
-      <a href="/convoyage" class="nav-dropdown-toggle">Convoyage &#9662;</a>
-      <ul class="nav-dropdown-menu">
-        <li class="nav-dropdown-section">Convoyage &#8212; le v&#233;hicule roule</li>
-        <li><a href="/convoyage">Convoyage automobile</a></li>
-        <li><a href="/convoyage-electrique" style="color:var(--gold)">&#201;lectrique &amp; hybride</a></li>
-        <li><a href="/convoyage-premium">Premium &amp; prestige</a></li>
-        <li><a href="/convoyage-paris">Paris &amp; &#206;le-de-France</a></li>
-        <li><a href="/convoyage-concession">Concessions auto</a></li>
-        <li class="nav-dropdown-section">Livraison 0&#160;km &#8212; sur plateau</li>
-        <li><a href="/transport-plateau">V&#233;hicules neufs &amp; occasions</a></li>
-      </ul>
-    </li>
+    <li><a href="/convoyage">Convoyage</a></li>
     <li><a href="/chauffeur">Chauffeur</a></li>
     <li><a href="/mise-en-main">Mise en main</a></li>
     <li><a href="/entreprises">Entreprises</a></li>
-    <li><a href="/a-propos">Notre ADN</a></li>
-    <li><a href="/blog">Blog</a></li>
     <li><a href="/contact">Contact</a></li>
   </ul>
   <a href="/contact" class="nav-cta">Devis gratuit</a>
@@ -272,20 +258,13 @@ section{padding:4.5rem 4vw !important}
 </div>
 
 <div class="mobile-menu" id="mm">
-  <button type="button" class="mobile-close" onclick="document.getElementById('mm').classList.remove('open')">&#x2715;</button>
+  <button type="button" class="mobile-close" onclick="document.getElementById('mm').classList.remove('open')" aria-label="Fermer le menu">&#x2715;</button>
   <a href="/" onclick="document.getElementById('mm').classList.remove('open')">Accueil</a>
   <a href="/convoyage" onclick="document.getElementById('mm').classList.remove('open')">Convoyage</a>
   <a href="/chauffeur" onclick="document.getElementById('mm').classList.remove('open')">Chauffeur</a>
   <a href="/mise-en-main" onclick="document.getElementById('mm').classList.remove('open')">Mise en main</a>
   <a href="/entreprises" onclick="document.getElementById('mm').classList.remove('open')">Entreprises</a>
-  <a href="/transport-plateau" onclick="document.getElementById('mm').classList.remove('open')">Plateau</a>
-  <a href="/pourquoi-nous" onclick="document.getElementById('mm').classList.remove('open')">Pourquoi nous</a>
-  <a href="/etudes-de-cas" onclick="document.getElementById('mm').classList.remove('open')">Études de cas</a>
-  <a href="/a-propos" onclick="document.getElementById('mm').classList.remove('open')">Notre ADN</a>
-  <a href="/faq" onclick="document.getElementById('mm').classList.remove('open')">FAQ</a>
-  <a href="/blog" onclick="document.getElementById('mm').classList.remove('open')">Blog</a>
-  <a href="/contact" onclick="document.getElementById('mm').classList.remove('open')">Contact</a>
-  <a href="/contact" class="btn-primary" onclick="document.getElementById('mm').classList.remove('open')">Devis gratuit</a>
+  <a href="/contact" class="btn-primary" onclick="document.getElementById('mm').classList.remove('open')">Demander un devis</a>
 </div>
 
 
@@ -334,7 +313,7 @@ section{padding:4.5rem 4vw !important}
     <p>Les hybrides rechargeables pr&#233;sentent une complexit&#233; suppl&#233;mentaire&#160;: la gestion du mode de conduite (&#233;lectrique vs thermique), l&#8217;&#233;tat de charge de la batterie &#224; la livraison, et les sp&#233;cificit&#233;s de chaque marque. Nous les traitons avec le m&#234;me protocole rigoureux que les 100% &#233;lectriques.</p>
 
     <h3>Mise en main des v&#233;hicules &#233;lectriques</h3>
-    <p>Si vous souhaitez que la livraison s&#8217;accompagne d&#8217;une explication compl&#232;te des fonctionnalit&#233;s &#8212; recharge, modes de conduite, r&#233;cup&#233;ration d&#8217;&#233;nergie, pompe &#224; chaleur, planification de charge &#8212; nous proposons le service de <a href="/mise-en-main" style="color:var(--gold)">mise en main d&#233;di&#233;e aux &#233;lectriques</a>. Yvan est notre r&#233;f&#233;rent sur ce sujet.</p>
+    <p>Si vous souhaitez que la livraison s&#8217;accompagne d&#8217;une explication compl&#232;te des fonctionnalit&#233;s &#8212; recharge, modes de conduite, r&#233;cup&#233;ration d&#8217;&#233;nergie, pompe &#224; chaleur, planification de charge &#8212; nous proposons le service de <a href="/mise-en-main" style="color:var(--gold)">mise en main d&#233;di&#233;e aux &#233;lectriques</a>, assur&#233; par un r&#233;f&#233;rent form&#233;.</p>
 
     <h3>Pour les concessions et loueurs &#233;lectriques</h3>
     <p>Votre flotte ou vos v&#233;hicules en stock &#233;voluent vers l&#8217;&#233;lectrique&#160;? Nous sommes pr&#234;ts. <a href="/entreprises" style="color:var(--gold)">Nos contrats cadres</a> peuvent inclure une clause sp&#233;cifique pour la gestion des v&#233;hicules &#233;lectriques, avec protocoles adapt&#233;s et collaborateurs d&#233;di&#233;s form&#233;s.</p>
@@ -376,7 +355,7 @@ section{padding:4.5rem 4vw !important}
     <p>Pourtant le calcul est en leur faveur&#160;: <strong>abattement de 70&#160;% sur l&#8217;avantage en nature jusqu&#8217;en 2027, &#233;lectricit&#233; de recharge non int&#233;gr&#233;e dans le calcul</strong>, borne au domicile prise en charge par l&#8217;entreprise sans avantage en nature si restitution pr&#233;vue. Un thermique &#233;quivalent leur co&#251;te 3 &#224; 4 fois plus en cotisations. La voiture &#233;lectrique de fonction, c&#8217;est potentiellement le meilleur deal de leur bulletin de paie &#8212; encore faut-il qu&#8217;on leur explique.</p>
 
     <h4 style="font-size:.8rem;letter-spacing:.05em;color:var(--gold);font-weight:500;margin:2rem 0 .8rem">Les erreurs terrain que nous identifions</h4>
-    <p>En 4 ans et plus de 1&#160;200&#160;000&#160;km sur des thermiques et des &#233;lectriques, voici ce qu&#8217;on constate chez les conducteurs non form&#233;s. Elles co&#251;tent cher &#8212; en temps, en batterie, en image client.</p>
+    <p>En plus de 5 ans et plus de 1&#160;200&#160;000&#160;km sur des thermiques et des &#233;lectriques, voici ce qu&#8217;on constate chez les conducteurs non form&#233;s. Ces erreurs co&#251;tent cher &#8212; en temps, en batterie et en image client.</p>
 
     <ul style="margin-bottom:2.5rem">
       <li><strong>Surestimation de l&#8217;autonomie affich&#233;e.</strong> Le chiffre au tableau de bord ne tient compte ni du froid, ni de l&#8217;autoroute, ni de la climatisation. Un convoyeur non form&#233; peut se retrouver en panne s&#232;che &#224; 40&#160;km de destination.</li>

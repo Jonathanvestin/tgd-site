@@ -2,8 +2,8 @@
 
 @media (min-width: 901px) {
   section:not(.hero):not(.hero-seo) {
-    padding-top: 4.75rem !important;
-    padding-bottom: 4.75rem !important;
+    padding-top: 3.5rem !important;
+    padding-bottom: 3.5rem !important;
   }
 
   .services-grid,
@@ -13,14 +13,14 @@
   .testi-grid,
   .process-grid,
   .process-steps {
-    margin-top: 3rem !important;
+    margin-top: 2.25rem !important;
   }
 }
 
 @media (max-width: 900px) {
   section:not(.hero):not(.hero-seo) {
-    padding-top: 3.75rem !important;
-    padding-bottom: 3.75rem !important;
+    padding-top: 2.75rem !important;
+    padding-bottom: 2.75rem !important;
   }
 
   .hero-left,
@@ -84,14 +84,14 @@
   .testi-grid,
   .process-grid,
   .process-steps {
-    margin-top: 2.25rem !important;
+    margin-top: 1.75rem !important;
   }
 }
 
 @media (max-width: 600px) {
   section:not(.hero):not(.hero-seo) {
-    padding-top: 3.1rem !important;
-    padding-bottom: 3.1rem !important;
+    padding-top: 2.15rem !important;
+    padding-bottom: 2.15rem !important;
   }
 
   .service-card,
@@ -103,7 +103,7 @@
   .avis-card,
   .testi-card,
   .contrat-card {
-    padding: 1.55rem !important;
+    padding: 1.25rem !important;
   }
 
   .section-title,
@@ -123,5 +123,84 @@
   .cta-section,
   .cta {
     gap: 2.5rem !important;
+  }
+}
+
+/* Navigation courte et orientee services. */
+.mobile-menu {
+  gap: 1.35rem !important;
+  padding: 5.5rem 1.5rem 2rem !important;
+  overflow-y: auto;
+}
+
+.mobile-menu > a:not(.btn-primary) {
+  font-size: 1.45rem !important;
+  line-height: 1.1 !important;
+}
+
+.mobile-menu > .btn-primary {
+  margin-top: .35rem;
+}
+
+/* La page d'accueil presente l'essentiel; les pages metier portent le detail SEO. */
+.site-home .services .service-list,
+.site-home .services .service-card > p[style] {
+  display: none;
+}
+
+.site-home .services .service-card {
+  min-height: 0 !important;
+}
+
+.site-home #galerie {
+  display: none !important;
+}
+
+@media (max-width: 900px) {
+  .site-home .ticker,
+  .site-home .home-cases,
+  .site-home .founder {
+    display: none !important;
+  }
+
+  .site-home .adn-visual,
+  .site-home .coverage-map-editorial {
+    display: none !important;
+  }
+
+  .site-home .services-grid .service-card:nth-child(n+4) {
+    display: none !important;
+  }
+
+  .trust-bar-inner {
+    justify-content: center !important;
+  }
+
+  .trust-bar .trust-item:nth-of-type(n+3),
+  .trust-bar .trust-sep {
+    display: none !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero,
+  .hero-seo {
+    min-height: auto !important;
+  }
+
+  .hero-left,
+  .hero-content {
+    padding-top: 2.75rem !important;
+    padding-bottom: 2.25rem !important;
+  }
+
+  .section-sub,
+  .service-desc,
+  .cas-desc,
+  .family-card p,
+  .client-desc,
+  .step-desc,
+  .p-desc {
+    line-height: 1.6 !important;
   }
 }
