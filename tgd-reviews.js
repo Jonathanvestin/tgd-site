@@ -38,10 +38,10 @@
       el.textContent = rating ? rating.toFixed(1) : '5,0';
     });
     document.querySelectorAll('.tgd-rating-total').forEach(el => {
-      el.textContent = total ? `${total} avis` : '35 avis';
+      el.textContent = total ? `${total} avis` : '36 avis';
     });
     document.querySelectorAll('.tgd-rating-number').forEach(el => {
-      el.textContent = total ? String(total) : '35';
+      el.textContent = total ? String(total) : '36';
     });
   }
 

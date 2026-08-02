@@ -58,5 +58,15 @@
       '<a href="tel:+33761092626" class="conversion-dock-phone">07 61 09 26 26</a>' +
       '<a href="' + quoteHref + '" class="conversion-dock-quote" data-cta="quote">Devis express</a>';
     document.body.appendChild(dock);
+
+    if (!document.querySelector('.sticky-mobile')) {
+      var mobileDock = document.createElement('nav');
+      mobileDock.className = 'conversion-mobile';
+      mobileDock.setAttribute('aria-label', 'Contact rapide');
+      mobileDock.innerHTML = '<a href="tel:+33761092626" class="conversion-mobile-call">Appeler</a>' +
+        '<a href="https://wa.me/33761092626" class="conversion-mobile-whatsapp">WhatsApp</a>' +
+        '<a href="' + quoteHref + '" class="conversion-mobile-quote" data-cta="quote">Devis</a>';
+      document.body.appendChild(mobileDock);
+    }
   });
 })();
