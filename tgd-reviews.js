@@ -38,13 +38,17 @@
       el.textContent = rating ? rating.toFixed(1) : '5,0';
     });
     document.querySelectorAll('.tgd-rating-total').forEach(el => {
-      el.textContent = total ? `${total} avis` : '28 avis';
+      el.textContent = total ? `${total} avis` : '35 avis';
+    });
+    document.querySelectorAll('.tgd-rating-number').forEach(el => {
+      el.textContent = total ? String(total) : '35';
     });
   }
 
   async function load() {
     const widgets = document.querySelectorAll('.tgd-reviews-widget');
-    if (!widgets.length) return;
+    const dynamicTotals = document.querySelectorAll('.tgd-rating-total, .tgd-rating-number, .tgd-rating-score');
+    if (!widgets.length && !dynamicTotals.length) return;
 
     try {
       const res = await fetch('/api/reviews');
@@ -53,11 +57,11 @@
       if (data.reviews && data.reviews.length) {
         render(widgets, data.reviews, data.rating, data.total);
       } else {
-        render(widgets, FALLBACK, 5.0, 28);
+        render(widgets, FALLBACK, 5.0, 35);
       }
     } catch {
       // Fallback silencieux si l'API ne répond pas
-      render(widgets, FALLBACK, 5.0, 28);
+      render(widgets, FALLBACK, 5.0, 35);
     }
   }
 
