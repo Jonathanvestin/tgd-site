@@ -560,7 +560,31 @@ footer.footer-mini ul.footer-links-list a:hover{color:var(--ivory) !important}
 footer.footer-mini span.footer-copy{color:rgba(189,181,166,0.55) !important}
 
 /* rythme espacements validé */
-.hero{min-height:88vh !important;height:auto !important}
+.hero{min-height:72vh !important;height:auto !important}
+
+/* parcours conversion */
+.hero-left{padding-top:4.5rem;padding-bottom:4rem}
+.hero h1{font-size:clamp(2.7rem,4.6vw,4.8rem);margin-bottom:1.3rem}
+.hero-desc{margin-bottom:1.8rem;max-width:570px;font-size:.94rem;line-height:1.75}
+.hero-actions{display:flex;gap:.8rem;flex-wrap:wrap;align-items:center}
+.hero-phone{display:inline-flex;align-items:center;gap:.55rem}
+.audience-router{padding:1.5rem 4vw !important;background:var(--black-2);border-top:1px solid rgba(201,169,110,.1);border-bottom:1px solid rgba(201,169,110,.1)}
+.audience-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:auto 1fr 1fr;gap:1rem;align-items:stretch}
+.audience-intro{display:flex;flex-direction:column;justify-content:center;padding-right:1rem;min-width:220px}
+.audience-intro strong{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:400;color:var(--ivory)}
+.audience-intro span{font-size:.75rem;color:var(--ivory-muted)}
+.audience-card{border:1px solid rgba(201,169,110,.16);background:rgba(201,169,110,.035);padding:1rem 1.2rem;text-decoration:none;display:flex;justify-content:space-between;gap:1rem;align-items:center;transition:.2s}
+.audience-card:hover{border-color:var(--gold);background:rgba(201,169,110,.08)}
+.audience-card strong{display:block;color:var(--ivory);font-size:.84rem;margin-bottom:.15rem}
+.audience-card span{display:block;color:var(--ivory-muted);font-size:.72rem;line-height:1.5}
+.audience-arrow{color:var(--gold);font-size:1.2rem;flex-shrink:0}
+.service-card{padding:2.2rem 2rem}
+.service-num{font-size:3.1rem;margin-bottom:1rem}
+@media(max-width:900px){
+  .hero{min-height:auto !important}.hero-left{padding:3.5rem 5vw 3rem}.hero-right{min-height:auto;padding:1rem 5vw}.hero-right-inner{padding:1.5rem 0}.hero-stats-list{display:grid;grid-template-columns:1fr 1fr}.hstat{padding:1rem .6rem}.hstat-num{font-size:2rem;width:auto}.hstat-text{font-size:.68rem}
+  .audience-inner{grid-template-columns:1fr}.audience-intro{min-width:0;padding:0 0 .3rem}.audience-card{padding:.9rem 1rem}
+  .coverage,.founder,#galerie{display:none}
+}
 
 /* ═══ TRUST BAR ═══ */
 .trust-bar{background:rgba(201,169,110,0.07);border-bottom:1px solid rgba(201,169,110,0.12);padding:.6rem 4vw;overflow:hidden}
@@ -569,12 +593,15 @@ footer.footer-mini span.footer-copy{color:rgba(189,181,166,0.55) !important}
 .trust-item svg{color:var(--gold);flex-shrink:0}
 .trust-sep{color:rgba(201,169,110,0.35);font-size:.8rem}
 @media(max-width:600px){.trust-bar-inner{justify-content:flex-start}.trust-sep{display:none}}
-section{padding:4.5rem 4vw !important}
-.cta-section{padding:5rem 4vw !important}
+section{padding:3.5rem 4vw !important}
+.cta-section{padding:4rem 4vw !important}
 .adn{gap:4rem !important}
 .coverage-inner{gap:4rem !important}
 .cta-section{gap:4rem !important}
 .founder{padding:4.5rem 4vw !important}
+.site-home #galerie{display:none!important}
+.site-home .service-list li:nth-child(n+4){display:none}
+@media(max-width:600px){section{padding:2.8rem 5vw !important}.cta-section{padding:3.2rem 5vw !important}}
 
 
 </style>
@@ -628,16 +655,13 @@ section{padding:4.5rem 4vw !important}
 <section class="hero">
   <div class="hero-left">
     <p class="eyebrow fu d1">Concessions, entreprises et particuliers depuis 2021 &mdash; plus de 5 ans d&#8217;exp&#233;rience terrain</p>
-    <h1 class="fu d2">
-      Votre v&#233;hicule vaut trop<br>
-      pour finir entre <em>n&#8217;importe quelles mains</em>
-    </h1>
+    <h1 class="fu d2">Convoyage automobile,<br><em>mise en main et chauffeur</em></h1>
     <p class="hero-desc fu d3">
-      Depuis 2021, concessions, loueurs et gestionnaires de flotte savent qui conduit leur v&#233;hicule, avec quels documents et quelle assurance. Pas un prestataire anonyme &#8212; une &#233;quipe identifi&#233;e.
+      Votre v&#233;hicule vaut trop pour finir entre n&#8217;importe quelles mains. Une &#233;quipe identifi&#233;e prend en charge les v&#233;hicules des concessions, entreprises et particuliers, partout en France et en Europe.
     </p>
-    <div class="fu d4" style="display:flex;gap:1rem;flex-wrap:wrap">
-      <a href="/contact" class="btn-primary">Devis gratuit sous 2h</a>
-      <a href="#services" class="btn-ghost">D&#233;couvrir nos services</a>
+    <div class="fu d4 hero-actions">
+      <a href="#devis-express" class="btn-primary" data-cta="quote">Obtenir mon devis</a>
+      <a href="tel:+33761092626" class="btn-ghost hero-phone">Appeler le 07 61 09 26 26</a>
     </div>
   </div>
   <div class="hero-right">
@@ -662,6 +686,14 @@ section{padding:4.5rem 4vw !important}
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="audience-router" aria-label="Choisir votre parcours">
+  <div class="audience-inner">
+    <div class="audience-intro"><strong>Quel est votre besoin&nbsp;?</strong><span>Acc&#233;dez directement &#224; la bonne solution.</span></div>
+    <a href="/entreprises" class="audience-card" data-audience="professionnel"><span><strong>Je suis un professionnel</strong><span>Concession, loueur, flotte, transfert inter-sites et livraison client.</span></span><span class="audience-arrow">&#8594;</span></a>
+    <a href="/chauffeur" class="audience-card" data-audience="particulier"><span><strong>Je suis un particulier</strong><span>Convoyage, chauffeur, vacances, famille ou transport sur plateau.</span></span><span class="audience-arrow">&#8594;</span></a>
   </div>
 </section>
 
@@ -1040,7 +1072,7 @@ section{padding:4.5rem 4vw !important}
 </section>
 
 <!-- CTA -->
-<section class="cta-section" id="contact">
+<section class="cta-section" id="devis-express">
   <div>
     <div class="section-eyebrow">Passons &#224; l&#8217;action</div>
     <h2 class="section-title">Un v&#233;hicule &#224; convoyer.<br><em>On s&#8217;en occupe.</em></h2>
@@ -1056,13 +1088,13 @@ section{padding:4.5rem 4vw !important}
   <input type="hidden" name="_language" value="fr">
   <input type="hidden" name="_next" value="">
   
-    <div class="cta-form-title">Devis rapide</div>
+    <div class="cta-form-title">Votre devis express</div>
     <div class="f-row">
       <input name="prenom" type="text" class="f-input" placeholder="Pr&#233;nom *" required aria-label="Pr&#233;nom">
       <input name="nom" type="text" class="f-input" placeholder="Nom *" required aria-label="Nom">
     </div>
     <input name="societe" type="text" class="f-input" placeholder="Soci&#233;t&#233; (optionnel)" aria-label="Soci&#233;t&#233;" style="margin-bottom:.9rem">
-    <select name="type_mission_1" class="f-select" aria-label="Type mission 1">
+    <select name="type_mission_1" class="f-select" aria-label="Type de mission" required>
       <option value="">Type de mission&#8230;</option>
       <option>Convoyage automobile</option>
       <option>Mise en main &amp; livraison</option>
@@ -1072,10 +1104,11 @@ section{padding:4.5rem 4vw !important}
       <option>Solutions entreprises</option>
     </select>
     <div class="f-row">
-      <input name="d_233_part" id="hp_depart" type="text" class="f-input" placeholder="D&#233;part" aria-label="D&#233;part" autocomplete="off">
+      <input name="d_233_part" id="hp_depart" type="text" class="f-input" placeholder="D&#233;part *" required aria-label="D&#233;part" autocomplete="street-address">
       <input name="destination" id="hp_destination" type="text" class="f-input" placeholder="Destination" required aria-label="Destination" autocomplete="off">
     </div>
-    <input name="t_233_l_233_phone_ou_e_mail" type="text" class="f-input" placeholder="T&#233;l&#233;phone ou e-mail" aria-label="T&#233;l&#233;phone ou e-mail">
+    <input name="date_souhaitee" type="date" class="f-input" aria-label="Date souhait&#233;e">
+    <input name="t_233_l_233_phone_ou_e_mail" type="text" class="f-input" placeholder="T&#233;l&#233;phone ou e-mail *" required aria-label="T&#233;l&#233;phone ou e-mail" autocomplete="tel">
     <button type="submit" class="btn-primary" style="display:block;text-align:center;width:100%;border:none;cursor:pointer">Envoyer la demande</button>
     <p class="f-note">Prise de contact sous 2h * &middot; Gratuit sans engagement</p>
     <p class="f-note" style="margin-top:.4rem">* Selon disponibilit&#233; &#8212; si Jonathan ou l&#8217;&#233;quipe est en mission, le retour peut prendre un peu plus de temps. Mais on rappelle toujours.</p>
@@ -1116,6 +1149,8 @@ section{padding:4.5rem 4vw !important}
 
 
 <script src="tgd-reviews.js"></script>
+<script defer src="/_vercel/insights/script.js"></script>
+<script src="tgd-conversions.js"></script>
 <script>
 (function(){
   document.querySelectorAll('.tgd-form').forEach(function(form){
@@ -1163,6 +1198,7 @@ section{padding:4.5rem 4vw !important}
           form.querySelectorAll('[required]').forEach(function(f){ f.style.borderColor = ''; });
           var ok = form.querySelector('.form-success-msg');
           if(ok){ ok.classList.add('show'); ok.scrollIntoView({behavior:'smooth',block:'center'}); }
+          document.dispatchEvent(new CustomEvent('tgd:form-success', {detail:{formId:form.id || 'homepage'}}));
           var err = form.querySelector('.form-error-msg');
           if(err) err.classList.remove('show');
         } else { throw new Error('server'); }
@@ -1172,7 +1208,7 @@ section{padding:4.5rem 4vw !important}
         if(err){
           err.classList.add('show');
           var p = err.querySelector('p');
-          if(p) p.textContent = 'Erreur. Appelez le <a href="tel:+33761092626">07 61 09 26 26</a>.';
+          if(p) p.innerHTML = 'Erreur. Appelez le <a href="tel:+33761092626">07 61 09 26 26</a>.';
         }
       })
       .finally(function(){

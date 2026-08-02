@@ -358,7 +358,7 @@ section{padding:4.5rem 4vw !important}
 <div class="stats-band">
   <div class="stat-item"><div class="stat-num">1,2M</div><div class="stat-lbl">Km parcourus</div></div>
   <div class="stat-item"><div class="stat-num tgd-rating-number">35</div><div class="stat-lbl">Avis 5&#9733; Google</div></div>
-  <div class="stat-item"><div class="stat-num">4+</div><div class="stat-lbl">Ann&#233;es d&#8217;expertise</div></div>
+  <div class="stat-item"><div class="stat-num">5+</div><div class="stat-lbl">Ann&#233;es d&#8217;expertise</div></div>
   <div class="stat-item"><div class="stat-num">5</div><div class="stat-lbl">Collaborateurs d&#233;di&#233;s</div></div>
 </div>
 
@@ -601,8 +601,8 @@ section{padding:4.5rem 4vw !important}
   
     <div class="cta-form-title">Demande de partenariat</div>
     <div class="f-row">
-      <div class="f-group"><label class="f-label">Soci&#233;t&#233;</label><input name="nom_de_l_8217_entreprise" type="text" class="f-input" placeholder="Nom de l&#8217;entreprise" aria-label="Nom de l&#8217;entreprise"></div>
-      <div class="f-group"><label class="f-label">Interlocuteur</label><input name="pr_233_nom_amp_nom" type="text" class="f-input" placeholder="Pr&#233;nom &amp; Nom" aria-label="Pr&#233;nom &amp; Nom"></div>
+      <div class="f-group"><label class="f-label">Soci&#233;t&#233;</label><input name="nom_de_l_8217_entreprise" type="text" class="f-input" placeholder="Nom de l&#8217;entreprise" required aria-label="Nom de l&#8217;entreprise"></div>
+      <div class="f-group"><label class="f-label">Interlocuteur</label><input name="pr_233_nom_amp_nom" type="text" class="f-input" placeholder="Pr&#233;nom &amp; Nom" required aria-label="Pr&#233;nom &amp; Nom"></div>
     </div>
     <div class="f-group"><label class="f-label">Profil</label>
       <select name="type_mission_1" class="f-select" aria-label="Type mission 1">
@@ -666,6 +666,8 @@ section{padding:4.5rem 4vw !important}
 
 
 <script src="tgd-reviews.js"></script>
+<script defer src="/_vercel/insights/script.js"></script>
+<script src="tgd-conversions.js"></script>
 <script>
 (function(){
   document.querySelectorAll('.tgd-form').forEach(function(form){
@@ -713,6 +715,7 @@ section{padding:4.5rem 4vw !important}
           form.querySelectorAll('[required]').forEach(function(f){ f.style.borderColor = ''; });
           var ok = form.querySelector('.form-success-msg');
           if(ok){ ok.classList.add('show'); ok.scrollIntoView({behavior:'smooth',block:'center'}); }
+          document.dispatchEvent(new CustomEvent('tgd:form-success', {detail:{formId:form.id || 'entreprises'}}));
           var err = form.querySelector('.form-error-msg');
           if(err) err.classList.remove('show');
         } else { throw new Error('server'); }

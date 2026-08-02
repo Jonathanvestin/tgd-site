@@ -798,6 +798,8 @@ section{padding:4.5rem 4vw !important}
 
 
 <script src="tgd-reviews.js"></script>
+<script defer src="/_vercel/insights/script.js"></script>
+<script src="tgd-conversions.js"></script>
 <script>
 (function(){
   document.querySelectorAll('.tgd-form').forEach(function(form){
@@ -845,6 +847,7 @@ section{padding:4.5rem 4vw !important}
           form.querySelectorAll('[required]').forEach(function(f){ f.style.borderColor = ''; });
           var ok = form.querySelector('.form-success-msg');
           if(ok){ ok.classList.add('show'); ok.scrollIntoView({behavior:'smooth',block:'center'}); }
+          document.dispatchEvent(new CustomEvent('tgd:form-success', {detail:{formId:form.id || 'chauffeur'}}));
           var err = form.querySelector('.form-error-msg');
           if(err) err.classList.remove('show');
         } else { throw new Error('server'); }
