@@ -225,3 +225,21 @@
   .conversion-mobile-quote{color:#c9a96e}
   body{padding-bottom:3.2rem}
 }
+
+/* Audit lisibilite 2026 : le contenu commercial reste confortable a lire. */
+p, li, label, input, select, textarea, .service-desc, .section-sub,
+.faq-a, .privacy-note, .audience-card span:not(.audience-arrow) {
+  font-size: max(0.9rem, 14px);
+}
+@media (min-width: 901px) {
+  body { font-size: 16px; }
+  .audience-card span:not(.audience-arrow), .service-list li,
+  .service-desc, .section-sub { font-size: 0.9rem; }
+}
+@media (max-width: 900px) {
+  p, li, label, input, select, textarea, .service-desc, .section-sub,
+  .faq-a, .privacy-note, .audience-card span:not(.audience-arrow) {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+}
