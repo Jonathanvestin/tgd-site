@@ -336,9 +336,9 @@ section{padding:4.5rem 4vw !important}
 <!-- TRUST BAR AXA -->
 <div class="trust-bar" aria-label="Garanties">
   <div class="trust-bar-inner">
-    <span class="trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Assurance W Garage AXA · Tous risques</span>
+    <span class="trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Assurance RC Pro · Couverture vérifiée</span>
     <span class="trust-sep" aria-hidden="true">·</span>
-    <span class="trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Franchise zéro</span>
+    <span class="trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Couverture validée avant mission</span>
     <span class="trust-sep" aria-hidden="true">·</span>
     <span class="trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>PV contradictoire signé</span>
     <span class="trust-sep" aria-hidden="true">·</span>
@@ -525,7 +525,7 @@ section{padding:4.5rem 4vw !important}
           <li style="font-size:.82rem;color:var(--ivory);display:flex;gap:.8rem;align-items:flex-start"><span style="color:var(--gold);font-size:.9rem;flex-shrink:0">&#x2713;</span>Forfait fix&#233; &#224; l&rsquo;avance</li>
           <li style="font-size:.82rem;color:var(--ivory);display:flex;gap:.8rem;align-items:flex-start"><span style="color:var(--gold);font-size:.9rem;flex-shrink:0">&#x2713;</span>Longue distance France &amp; Europe</li>
           <li style="font-size:.82rem;color:var(--ivory);display:flex;gap:.8rem;align-items:flex-start"><span style="color:var(--gold);font-size:.9rem;flex-shrink:0">&#x2713;</span>Sans engagement, &#224; la mission</li>
-          <li style="font-size:.82rem;color:var(--ivory);display:flex;gap:.8rem;align-items:flex-start"><span style="color:var(--gold);font-size:.9rem;flex-shrink:0">&#x2713;</span>Assurance tous risques incluse</li>
+          <li style="font-size:.82rem;color:var(--ivory);display:flex;gap:.8rem;align-items:flex-start"><span style="color:var(--gold);font-size:.9rem;flex-shrink:0">&#x2713;</span>Couverture du v&#233;hicule v&#233;rifi&#233;e avant mission</li>
         </ul>
       </div>
 
@@ -562,7 +562,7 @@ section{padding:4.5rem 4vw !important}
       <ul class="tarif-list">
         <li>Pauses et attentes incluses</li>
         <li>Retour conducteur inclus</li>
-        <li>Assurance tous risques</li>
+        <li>Couverture automobile vérifiée</li>
         <li>Rapport de mission sous 24h</li>
         <li>Tarif fix&#233;, z&#233;ro surprise</li>
       </ul>
@@ -763,6 +763,7 @@ section{padding:4.5rem 4vw !important}
     <button type="submit" class="btn-primary" style="display:block;text-align:center;width:100%;border:none;cursor:pointer">Envoyer la demande</button>
     <p style="font-size:.75rem;color:var(--ivory-muted);text-align:center;margin-top:.8rem;font-weight:300">R&#233;ponse garantie sous 2h &middot; Gratuit sans engagement</p>
   
+  <p class="privacy-note">Les informations transmises sont utilis&#233;es uniquement pour traiter votre demande et pr&#233;parer votre devis. <a href="/mentions-legales#donnees-personnelles">Donn&#233;es personnelles</a>.</p>
   <div class="form-success-msg"><p>✓ Message reçu — nous vous recontactons sous 2h.</p></div>
   <div class="form-error-msg"><p></p></div>
 </form></div>
@@ -793,11 +794,13 @@ section{padding:4.5rem 4vw !important}
     <li><a href="/mentions-legales">Mentions l&#233;gales</a></li>
   </ul>
   <span class="footer-copy">&#169; 2026 The Gentleman Driver &#8212; SASU &#8212; Charenton-le-Pont (94)</span>
-  <span class="footer-legal-mini" style="display:block;margin-top:.7rem;font-size:.75rem;color:rgba(189,181,166,0.22);font-weight:300;letter-spacing:.05em;line-height:1.8">SIRET 985 178 466 00019 &#183; RCS Cr&#233;teil &#183; Assurance RC Pro &#183; Assurance W Garage AXA</span>
+  <span class="footer-legal-mini" style="display:block;margin-top:.7rem;font-size:.75rem;color:rgba(189,181,166,0.22);font-weight:300;letter-spacing:.05em;line-height:1.8">SIRET 985 178 466 00019 &#183; RCS Cr&#233;teil &#183; Assurance RC Pro</span>
 </footer>
 
 
 <script src="tgd-reviews.js"></script>
+<script defer src="/_vercel/insights/script.js"></script>
+<script src="tgd-conversions.js"></script>
 <script>
 (function(){
   document.querySelectorAll('.tgd-form').forEach(function(form){
@@ -845,6 +848,7 @@ section{padding:4.5rem 4vw !important}
           form.querySelectorAll('[required]').forEach(function(f){ f.style.borderColor = ''; });
           var ok = form.querySelector('.form-success-msg');
           if(ok){ ok.classList.add('show'); ok.scrollIntoView({behavior:'smooth',block:'center'}); }
+          document.dispatchEvent(new CustomEvent('tgd:form-success', {detail:{formId:form.id || 'chauffeur'}}));
           var err = form.querySelector('.form-error-msg');
           if(err) err.classList.remove('show');
         } else { throw new Error('server'); }

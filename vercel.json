@@ -133,6 +133,11 @@
       "permanent": true
     },
     {
+      "source": "/particuliers.html",
+      "destination": "/particuliers",
+      "permanent": true
+    },
+    {
       "source": "/mise-en-main.html",
       "destination": "/mise-en-main",
       "permanent": true
@@ -203,6 +208,10 @@
     {
       "source": "/contact",
       "destination": "/contact.html"
+    },
+    {
+      "source": "/particuliers",
+      "destination": "/particuliers.html"
     },
     {
       "source": "/convoyage",
