@@ -42,22 +42,61 @@
         });
       }
     }
-    if (document.body.classList.contains('site-home')) return;
+
+    var path = location.pathname.replace(/\/+$/, '') || '/';
+
+    /* Pas de dock sur l'accueil (ses CTA sont deja visibles) ni sur la page devis/contact. */
+    if (document.body.classList.contains('site-home') || path === '/contact') return;
+
     var form = document.querySelector('.tgd-form');
-    var quoteHref = '/contact?service=' + encodeURIComponent(location.pathname.replace(/^\//, '') || 'accueil');
+    var quoteHref = '/contact?service=' + encodeURIComponent(path.replace(/^\//, '') || 'accueil');
+    var formSection = null;
     if (form) {
-      var section = form.closest('section') || form.parentElement;
-      section.id = section.id || 'devis-express';
-      quoteHref = '#' + section.id;
+      formSection = form.closest('section') || form.parentElement;
+      formSection.id = formSection.id || 'devis-express';
+      quoteHref = '#' + formSection.id;
     }
 
     var dock = document.createElement('aside');
     dock.className = 'conversion-dock';
     dock.setAttribute('aria-label', 'Contact rapide');
+    dock.setAttribute('aria-hidden', 'true');
     dock.innerHTML = '<span><strong>Un trajet &#224; organiser&nbsp;?</strong><small>R&#233;ponse directe, sans call center</small></span>' +
       '<a href="tel:+33761092626" class="conversion-dock-phone">07 61 09 26 26</a>' +
       '<a href="' + quoteHref + '" class="conversion-dock-quote" data-cta="quote">Devis express</a>';
     document.body.appendChild(dock);
+
+    var dockBlocked = false;
+    var scrollThreshold = Math.max(360, Math.round(window.innerHeight * 0.55));
+
+    function updateDockVisibility() {
+      var shouldShow = window.scrollY > scrollThreshold && !dockBlocked;
+      dock.classList.toggle('is-visible', shouldShow);
+      dock.setAttribute('aria-hidden', shouldShow ? 'false' : 'true');
+    }
+
+    window.addEventListener('scroll', updateDockVisibility, { passive: true });
+    window.addEventListener('resize', function () {
+      scrollThreshold = Math.max(360, Math.round(window.innerHeight * 0.55));
+      updateDockVisibility();
+    });
+
+    /* Ne jamais recouvrir la zone de devis ou un gros bloc d'appel a l'action. */
+    var blockers = [];
+    if (formSection) blockers.push(formSection);
+    document.querySelectorAll('.cta-section, .contact-section, #contact, #devis-express').forEach(function (el) {
+      if (blockers.indexOf(el) === -1) blockers.push(el);
+    });
+
+    if ('IntersectionObserver' in window && blockers.length) {
+      var observer = new IntersectionObserver(function (entries) {
+        dockBlocked = entries.some(function (entry) { return entry.isIntersecting; });
+        updateDockVisibility();
+      }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+      blockers.forEach(function (el) { observer.observe(el); });
+    }
+
+    updateDockVisibility();
 
     if (!document.querySelector('.sticky-mobile')) {
       var mobileDock = document.createElement('nav');
