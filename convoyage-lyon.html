@@ -131,333 +131,4 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .cta-text{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,3vw,2.5rem);font-weight:300;color:var(--black);line-height:1.3}
 .cta-text em{font-style:italic}
 .cta-actions{display:flex;gap:1rem;flex-wrap:wrap}
-.btn-dark{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--ivory);background:var(--black);border:none;padding:1rem 2rem;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s;font-family:'Montserrat',sans-serif}
-.btn-dark:hover{background:var(--black-3)}
-.btn-gold{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--black);background:transparent;border:2px solid var(--black);padding:1rem 2rem;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s;font-family:'Montserrat',sans-serif}
-.btn-gold:hover{background:var(--black);color:var(--ivory)}
-/* FOOTER */
-
-
-
-
-
-
-/* HIGHLIGHT BOX */
-.highlight-box{background:rgba(201,169,110,0.06);border-left:3px solid var(--gold);padding:1.5rem 2rem;margin:1.5rem 0}
-.highlight-box p{font-size:.83rem;color:var(--ivory);line-height:1.8;font-weight:300;margin:0}
-.highlight-box p strong{color:var(--gold)}
-/* RESPONSIVE */
-@media(max-width:900px){.proof-band{grid-template-columns:1fr 1fr}.related-grid{grid-template-columns:1fr}.cta-section{flex-direction:column}}
-@media(max-width:600px){.proof-band{grid-template-columns:1fr 1fr}}
-
-
-/* â”€â”€â”€ BARRE STICKY MOBILE â”€â”€â”€ */
-.sticky-mobile{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--black);border-top:1px solid rgba(201,169,110,0.15);padding:.8rem 1rem;gap:.6rem}
-@media(max-width:900px){.sticky-mobile{display:flex}}
-.sticky-btn{flex:1;padding:.75rem .5rem;text-align:center;text-decoration:none;font-family:'Montserrat',sans-serif;font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;border:none;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;transition:opacity .2s}
-.sticky-btn:hover{opacity:.85}
-.sticky-btn-icon{font-size:1rem;line-height:1}
-.sticky-btn-label{font-size:.75rem;letter-spacing:.08em}
-.sticky-btn.call{background:var(--gold);color:var(--black)}
-.sticky-btn.whatsapp{background:#25D366;color:#fff}
-.sticky-btn.devis{background:var(--black-3);color:var(--gold);border:1px solid rgba(201,169,110,0.25)}
-
-
-/* â”€â”€â”€ WHATSAPP FLOTTANT â”€â”€â”€ */
-.wa-float{position:fixed;bottom:90px;right:24px;z-index:199;width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);text-decoration:none;transition:transform .2s,box-shadow .2s}
-.wa-float:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,0.55)}
-.wa-float svg{width:26px;height:26px;fill:#fff}
-@media(max-width:900px){.wa-float{bottom:80px;right:16px;width:46px;height:46px}}
-
-
-
-
-
-
-
-
-
-
-
-
-/* â•â•â• FOOTER TGD (centrÃ©) â•â•â• */
-footer.footer-mini{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.06);padding:2.5rem 4vw;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1.4rem;text-align:center}
-footer.footer-mini a.footer-logo{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);text-decoration:none}
-footer.footer-mini ul.footer-links-list{display:flex;flex-direction:row;justify-content:center;gap:2rem;list-style:none;flex-wrap:wrap;margin:0;padding:0}
-footer.footer-mini ul.footer-links-list li{margin:0;padding:0;list-style:none}
-footer.footer-mini ul.footer-links-list a{font-size:.75rem;color:rgba(189,181,166,0.45);text-decoration:none;font-weight:300;transition:color .2s}
-footer.footer-mini ul.footer-links-list a:hover{color:var(--ivory-muted)}
-footer.footer-mini span.footer-copy{font-size:.75rem;color:rgba(189,181,166,0.3);font-weight:300}
-
-/* lisibilitÃ© menu haut */
-.nav-links a{font-size:.75rem !important;letter-spacing:.12em;transition:color .2s}
-.nav-links a:hover{color:var(--gold) !important}
-.nav-cta{font-size:.75rem !important}
-/* lisibilitÃ© menu bas */
-footer.footer-mini ul.footer-links-list a{color:rgba(189,181,166,0.72) !important}
-footer.footer-mini ul.footer-links-list a:hover{color:var(--ivory) !important}
-footer.footer-mini span.footer-copy{color:rgba(189,181,166,0.55) !important}
-
-/* rythme espacements validÃ© */
-.hero{min-height:88vh !important;height:auto !important}
-section{padding:4.5rem 4vw !important}
-.cta-section{padding:5rem 4vw !important}
-.adn{gap:4rem !important}
-.coverage-inner{gap:4rem !important}
-.cta-section{gap:4rem !important}
-.founder{padding:4.5rem 4vw !important}
-
-/* â•â•â• TRUST BAR â•â•â• */
-.trust-bar{background:rgba(201,169,110,0.07);border-bottom:1px solid rgba(201,169,110,0.12);padding:.55rem 4vw;overflow:hidden}
-.trust-bar-inner{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:.5rem 1.2rem}
-.trust-item{display:inline-flex;align-items:center;gap:.35rem;font-size:.75rem;letter-spacing:.07em;color:rgba(245,240,232,.7);white-space:nowrap}
-.trust-item svg{color:var(--gold);flex-shrink:0}
-.trust-sep{color:rgba(201,169,110,0.3);font-size:.8rem}
-@media(max-width:600px){.trust-sep{display:none}}
-</style>
-<link rel="stylesheet" href="/assets/responsive-polish.css">
-</head>
-<body>
-
-<nav>
-  <a href="/" class="nav-logo">
-    <img src="/assets/images/logo-the-gentleman-driver.png" alt="The Gentleman Driver" style="height:46px;width:auto;display:block" width="800" height="213">
-  </a>
-  <ul class="nav-links">
-    <li><a href="/">Accueil</a></li>
-    <li><a href="/convoyage">Convoyage</a></li>
-    <li><a href="/chauffeur">Chauffeur</a></li>
-    <li><a href="/mise-en-main">Mise en main</a></li>
-    <li><a href="/entreprises">Entreprises</a></li>
-    <li><a href="/contact">Contact</a></li>
-  </ul>
-  <a href="/contact" class="nav-cta">Devis gratuit</a>
-  <button type="button" class="burger" onclick="document.getElementById('mm').classList.add('open')" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
-<!-- TRUST BAR AXA -->
-<div class="trust-bar" aria-label="Garanties">
-  <div class="trust-bar-inner">
-    <span class="trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Assurance RC Pro Â· Couverture vÃ©rifiÃ©e</span>
-    <span class="trust-sep" aria-hidden="true">Â·</span>
-    <span class="trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Couverture validÃ©e avant mission</span>
-    <span class="trust-sep" aria-hidden="true">Â·</span>
-    <span class="trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>PV contradictoire signÃ©</span>
-    <span class="trust-sep" aria-hidden="true">Â·</span>
-    <span class="trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Devis 2h â€” 7j/7</span>
-    <span class="trust-sep" aria-hidden="true">Â·</span>
-    <span class="trust-item">&#9733; 5/5 Google</span>
-  </div>
-</div>
-
-<div class="mobile-menu" id="mm">
-  <button type="button" class="mobile-close" onclick="document.getElementById('mm').classList.remove('open')" aria-label="Fermer le menu">&#x2715;</button>
-  <a href="/" onclick="document.getElementById('mm').classList.remove('open')">Accueil</a>
-  <a href="/convoyage" onclick="document.getElementById('mm').classList.remove('open')">Convoyage</a>
-  <a href="/chauffeur" onclick="document.getElementById('mm').classList.remove('open')">Chauffeur</a>
-  <a href="/mise-en-main" onclick="document.getElementById('mm').classList.remove('open')">Mise en main</a>
-  <a href="/entreprises" onclick="document.getElementById('mm').classList.remove('open')">Entreprises</a>
-  <a href="/contact" class="btn-primary" onclick="document.getElementById('mm').classList.remove('open')">Demander un devis</a>
-</div>
-
-
-<div class="hero-seo">
-  <div class="hero-bg">
-    <img src="/assets/images/convoyage-automobile-hero.webp" alt="Convoyage automobile &#224; Lyon" width="1400" height="1050">
-  </div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <p class="eyebrow">Convoyage Lyon</p>
-    <h1>Convoyage automobile &#224; Lyon</h1>
-    <p class="hero-sub">Intervention en r&#233;gion Auvergne-RhÃ´ne-Alpes sous 24&#160;&#224;&#160;48h. PV photographique, couverture automobile vÃ©rifiÃ©e, plaques W professionnelles. Devis fixe transmis sous 2h.</p>
-  </div>
-</div>
-
-<div class="breadcrumb">
-  <div class="breadcrumb-inner"><a href="/">Accueil</a><span>/</span><a href="/convoyage">Convoyage automobile</a><span>/</span><span style="color:var(--ivory)">Lyon</span></div>
-</div>
-
-
-<section class="content-section">
-  <div class="content-inner">
-    <h2>Convoyage automobile &#224; Lyon<br><em>et dans la r&#233;gion Auvergne-RhÃ´ne-Alpes</em></h2>
-    <p>The Gentleman Driver intervient r&#233;guli&#232;rement &#224; Lyon et dans toute la r&#233;gion Auvergne-RhÃ´ne-Alpes. Depuis notre base de Charenton-le-Pont (94), nous couvrons Lyon et l'ensemble de l'axe Paris-Lyon, ainsi que les villes de la m&#233;tropole lyonnaise avec la m&#234;me rigueur que sur nos missions en &#206;le-de-France.</p>
-    <p>Que vous soyez une concession qui livrait ses v&#233;hicules uniquement en local, un particulier qui a achet&#233; un v&#233;hicule &#224; distance, ou un gestionnaire de flotte qui a besoin d&#8217;un partenaire r&#233;gional&#160;: nous intervenons sur Lyon et ses environs avec nos standards habituels.</p>
-
-    <div class="highlight-box">
-      <p><strong>Intervention &#224; Lyon&#160;:</strong> d&#233;lai standard de 24 &#224; 48h apr&#232;s confirmation. PV photographique, couverture automobile vÃ©rifiÃ©e, plaques W. <strong>Devis fixe transmis sous 2h.</strong> Appelez-nous au 07 61 09 26 26.</p>
-    </div>
-
-    <h3>Ce que nous r&#233;alisons &#224; Lyon</h3>
-    <ul>
-      <li>Convoyage automobile depuis ou vers Lyon</li>
-      <li>Livraison VN/VO &#224; domicile pour les concessions de la r&#233;gion Auvergne-RhÃ´ne-Alpes</li>
-      <li>Rapatriement depuis Lyon vers Paris ou toute autre destination</li>
-      <li>Transfert inter-sites en r&#233;gion Auvergne-RhÃ´ne-Alpes</li>
-      <li>Mise en main &#224; domicile pour les acheteurs de Lyon</li>
-      <li>Chauffeur avec votre v&#233;hicule sur Lyon et longue distance</li>
-    </ul>
-
-    <h3>Sp&#233;cificit&#233;s de la zone Lyon</h3>
-    <p>Lyon est une place forte de l'automobile en France, avec de nombreuses concessions de prestige et des acheteurs exigeants. Nous connaissons les sp&#233;cificit&#233;s logistiques de la m&#233;tropole lyonnaise&#160;: acc&#232;s au Confluence, aux p&#233;riph&#233;ries, aux zones industrielles et parc automobiles du secteur.</p>
-
-    <h3>Pour les concessions et professionnels &#224; Lyon</h3>
-    <p>Si vous &#234;tes concessionnaire ou gestionnaire de flotte dans la r&#233;gion Auvergne-RhÃ´ne-Alpes, nous proposons des partenariats adapt&#233;s &#224; votre volume. Facturation mensuelle, &#233;quipe d&#233;di&#233;e&#160;: <a href="/entreprises" style="color:var(--gold)">d&#233;couvrez nos solutions entreprises</a>.</p>
-
-    <h3>Liaison Lyon-Paris et grande distance</h3>
-    <p>Le trajet Lyon-Paris est l&#8217;une de nos liaisons r&#233;guli&#232;res. Nous assurons &#233;galement les connexions vers Lyon, Marseille, Bordeaux, Lille et les principales villes fran&#231;aises, ainsi que vers la Belgique, la Suisse et l&#8217;Allemagne.</p>
-    <p>Pour les v&#233;hicules &#233;lectriques, nos convoyeurs planifient les arr&#234;ts de recharge adapt&#233;s &#224; chaque trajet. <a href="/convoyage-electrique" style="color:var(--gold)">En savoir plus sur le convoyage &#233;lectrique</a>.</p>
-  </div>
-</section>
-
-<div class="proof-band">
-  <div class="proof-item"><div class="proof-num">1,2M</div><div class="proof-lbl">Km parcourus</div></div>
-  <div class="proof-item"><div class="proof-num tgd-rating-number">36</div><div class="proof-lbl">Avis 5&#9733; Google</div></div>
-  <div class="proof-item"><div class="proof-num">5+</div><div class="proof-lbl">Ann&#233;es terrain</div></div>
-  <div class="proof-item"><div class="proof-num">0*</div><div class="proof-lbl">Incident d&#233;clar&#233;</div></div>
-</div>
-
-<section class="content-section alt">
-  <div class="content-inner">
-    <h2>Questions fr&#233;quentes</h2>
-    <div style="margin-top:2rem">
-    <div class="faq-item">
-      <button type="button" class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">Dans quel d&#233;lai pouvez-vous intervenir &#224; Lyon&#160;?</span>
-        <span class="faq-icon">+</span>
-      </button>
-      <div class="faq-a"><p>D&#233;lai standard de 24 &#224; 48h apr&#232;s confirmation. En cas d'urgence, appelez-nous directement au 07 61 09 26 26 et nous &#233;valuons les possibilit&#233;s.</p></div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">Couvrez-vous toute la r&#233;gion Auvergne-RhÃ´ne-Alpes&#160;?</span>
-        <span class="faq-icon">+</span>
-      </button>
-      <div class="faq-a"><p>Oui, Lyon et l'ensemble de la r&#233;gion Auvergne-RhÃ´ne-Alpes. Pour les zones tr&#232;s &#233;loign&#233;es, un l&#233;ger suppl&#233;ment de d&#233;placement peut s'appliquer &#8212; toujours pr&#233;cis&#233; dans le devis.</p></div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">Quel est le tarif pour un convoyage depuis ou vers Paris&#160;?</span>
-        <span class="faq-icon">+</span>
-      </button>
-      <div class="faq-a"><p>Le tarif est &#233;tabli sur devis fixe. Transmis sous 2h apr&#232;s votre demande. Aucun suppl&#233;ment li&#233; aux conditions de route ou de trafic.</p></div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">Travaillez-vous avec les concessions de la r&#233;gion&#160;?</span>
-        <span class="faq-icon">+</span>
-      </button>
-      <div class="faq-a"><p>Oui. Si vous &#234;tes concessionnaire ou professionnel de l'automobile, contactez-nous pour discuter d'un partenariat.</p></div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">Mon v&#233;hicule est-il assur&#233; pendant le convoyage&#160;?</span>
-        <span class="faq-icon">+</span>
-      </button>
-      <div class="faq-a"><p>Avant la mission, le propri&#233;taire confirme que son contrat autorise la conduite par un tiers et couvre le trajet. Notre RC Pro couvre notre responsabilit&#233; professionnelle.</p></div>
-    </div></div>
-  </div>
-</section>
-
-<section class="content-section">
-  <div class="content-inner">
-    <h2>Nos autres <em>services</em></h2>
-    <p style="margin-bottom:2rem;font-size:.85rem;color:var(--ivory-muted)">D&#233;couvrez l&#8217;ensemble de nos prestations de convoyage et de mobilit&#233; automobile.</p>
-    <div class="related-grid">
-      
-    <a href="/convoyage" class="related-card">
-      <div class="related-card-label">Service</div>
-      <div class="related-card-title">Convoyage automobile</div>
-      <p class="related-card-desc">Notre service de convoyage en France et Europe.</p>
-      <span class="related-card-arrow">D&#233;couvrir &#8594;</span>
-    </a>
-    <a href="/convoyage-paris" class="related-card">
-      <div class="related-card-label">Service</div>
-      <div class="related-card-title">Convoyage Paris</div>
-      <p class="related-card-desc">Notre zone principale d'intervention.</p>
-      <span class="related-card-arrow">D&#233;couvrir &#8594;</span>
-    </a>
-    <a href="/contact" class="related-card">
-      <div class="related-card-label">Service</div>
-      <div class="related-card-title">Contact & Devis</div>
-      <p class="related-card-desc">Demandez votre devis sous 2h.</p>
-      <span class="related-card-arrow">D&#233;couvrir &#8594;</span>
-    </a>
-    </div>
-  </div>
-</section>
-
-<div class="cta-section">
-  <div class="cta-text">Une mission &#224; confier&#160;?<br><em>On vous rappelle sous 2h.</em></div>
-  <div class="cta-actions">
-    <a href="/contact" class="btn-dark">Demander un devis</a>
-    <a href="tel:+33761092626" class="btn-gold">07 61 09 26 26</a>
-  </div>
-</div>
-
-<footer class="footer-mini">
-  <a href="/" class="footer-logo"><img src="/assets/images/logo-the-gentleman-driver-2.png" alt="The Gentleman Driver" style="height:32px;width:auto;display:block;opacity:0.75" width="800" height="213" loading="lazy" decoding="async"></a>
-  <ul class="footer-links-list">
-    <li class="footer-group-label">Convoyage</li>
-    <li><a href="/convoyage">Automobile</a></li>
-    <li><a href="/convoyage-electrique">&#201;lectrique</a></li>
-    <li><a href="/convoyage-premium">Premium</a></li>
-    <li><a href="/convoyage-paris">Paris</a></li>
-    <li><a href="/convoyage-concession">Concessions</a></li>
-    <li><a href="/transport-plateau">Plateau</a></li>
-    <li class="footer-sep">&#183;</li>
-    <li class="footer-group-label">Services</li>
-    <li><a href="/chauffeur">Chauffeur</a></li>
-    <li><a href="/mise-en-main">Mise en main</a></li>
-    <li><a href="/entreprises">Entreprises</a></li>
-    <li class="footer-sep">&#183;</li>
-    <li class="footer-group-label">&#192; propos</li>
-    <li><a href="/pourquoi-nous">Pourquoi nous</a></li>
-    <li><a href="/a-propos">L&#8217;&#233;quipe</a></li>
-    <li><a href="/blog">Blog</a></li>
-    <li><a href="/faq">FAQ</a></li>
-    <li><a href="/contact">Contact</a></li>
-    <li><a href="/mentions-legales">Mentions l&#233;gales</a></li>
-  </ul>
-  <span class="footer-copy">&#169; 2026 The Gentleman Driver &#8212; SASU &#8212; Charenton-le-Pont (94)</span>
-  <span class="footer-legal-mini" style="display:block;margin-top:.7rem;font-size:.75rem;color:rgba(189,181,166,0.22);font-weight:300;letter-spacing:.05em;line-height:1.8">SIRET 985 178 466 00019 &#183; RCS Cr&#233;teil &#183; Assurance RC Pro</span>
-</footer>
-
-<script>
-function toggleFaq(btn) {
-  var item = btn.parentElement;
-  var isOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(function(el) {
-    el.classList.remove('open');
-    el.querySelector('.faq-icon').textContent = '+';
-  });
-  if (!isOpen) {
-    item.classList.add('open');
-    btn.querySelector('.faq-icon').textContent = '-';
-  }
-}
-</script>
-<!-- BARRE STICKY MOBILE -->
-<div class="sticky-mobile">
-  <a href="tel:+33761092626" class="sticky-btn call">
-    <span class="sticky-btn-icon">&#128222;</span>
-    <span class="sticky-btn-label">Appeler</span>
-  </a>
-  <a href="https://wa.me/33761092626" target="_blank" rel="noopener" class="sticky-btn whatsapp">
-    <span class="sticky-btn-icon">&#128172;</span>
-    <span class="sticky-btn-label">WhatsApp</span>
-  </a>
-  <a href="/contact" class="sticky-btn devis">
-    <span class="sticky-btn-icon">&#9993;</span>
-    <span class="sticky-btn-label">Devis</span>
-  </a>
-</div>
-
-<!-- WHATSAPP FLOTTANT -->
-<a href="https://wa.me/33761092626" target="_blank" rel="noopener" class="wa-float" aria-label="Nous contacter sur WhatsApp">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
-  </svg>
-</a>
-<script src="/tgd-reviews.js"></script>
-</body>
-</html>
+.btn-dark{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--ivory);background:var(--black);border:none;padding:1rem 2remwïí¢G§²ÚîÆ­yÔ…ÕÑ½µ½‰¥±”Û¥É¥™§¥”°Á±…ÅÕ•Ì\ÁÉ½™•ÍÍ¥½¹¹•±±•Ì¸•Ù¥Ì™¥á”ÑÉ…¹Íµ¥ÌÍ½ÕÌ€É ¸ğ½Àø(€€ğ½‘¥Øø(ğ½‘¥Øø((ñ‘¥Ø±…ÍÌô‰‰É•…‘ÉÕµˆˆø(€€ñ‘¥Ø±…ÍÌô‰‰É•…‘ÉÕµˆµ¥¹¹•Èˆøñ„¡É•˜ôˆ¼ˆùÕ•¥°ğ½„øñÍÁ…¸ø¼ğ½ÍÁ…¸øñ„¡É•˜ôˆ½½¹Ù½å…”ˆù½¹Ù½å…”…ÕÑ½µ½‰¥±”ğ½„øñÍÁ…¸ø¼ğ½ÍÁ…¸øñÍÁ…¸ÍÑå±”ô‰½±½ÈéÙ…È ´µ¥Ù½Éä¤ˆù5…ÉÍ•¥±±”ğ½ÍÁ…¸øğ½‘¥Øø(ğ½‘¥Øø(((ñÍ•Ñ¥½¸±…ÍÌô‰½¹Ñ•¹ĞµÍ•Ñ¥½¸ˆø(€€ñ‘¥Ø±…ÍÌô‰½¹Ñ•¹Ğµ¥¹¹•Èˆø(€€€€ñ Èù½¹Ù½å…”…ÕÑ½µ½‰¥±”€˜ŒÈÈĞì5…ÉÍ•¥±±”ñ‰Èøñ•´ù•Ğ‘…¹Ì±„È˜ŒÈÌÌí¥½¸Ağ½•´øğ½ Èø(€€€€ñÀùQ¡”•¹Ñ±•µ…¸É¥Ù•È¥¹Ñ•ÉÙ¥•¹ĞÈ˜ŒÈÌÌíÕ±¤˜ŒÈÌÈíÉ•µ•¹Ğ€˜ŒÈÈĞì5…ÉÍ•¥±±”•Ğ‘…¹ÌÑ½ÕÑ”±„È˜ŒÈÌÌí¥½¸A¸•ÁÕ¥Ì¹½ÑÉ”‰…Í”‘”¡…É•¹Ñ½¸µ±”µA½¹Ğ€ äĞ¤°¹½ÕÌ½ÕÙÉ½¹Ì5…ÉÍ•¥±±”°¥àµ•¸µAÉ½Ù•¹”°±„Œ˜ŒÈĞĞíÑ”Ù…É½¥Í”•Ğ°•¹Í•µ‰±”‘”±„È˜ŒÈÌÌí¥½¸A…Ù•Œ±„´˜ŒÈÌĞíµ”É¥Õ•ÕÈÅÕ”ÍÕÈ¹½Ìµ¥ÍÍ¥½¹Ì•¸€˜ŒÈÀØí±”µ‘”µÉ…¹”¸ğ½Àø(€€€€ñÀùEÕ”Ù½ÕÌÍ½å•èÕ¹”½¹•ÍÍ¥½¸ÅÕ¤±¥ÙÉ…¥ĞÍ•ÌØ˜ŒÈÌÌí¡¥Õ±•ÌÕ¹¥ÅÕ•µ•¹Ğ•¸±½…°°Õ¸Á…ÉÑ¥Õ±¥•ÈÅÕ¤„…¡•Ğ˜ŒÈÌÌìÕ¸Ø˜ŒÈÌÌí¡¥Õ±”€˜ŒÈÈĞì‘¥ÍÑ…¹”°½ÔÕ¸•ÍÑ¥½¹¹…¥É”‘”™±½ÑÑ”ÅÕ¤„‰•Í½¥¸˜ŒàÈÄÜíÕ¸Á…ÉÑ•¹…¥É”È˜ŒÈÌÌí¥½¹…°˜ŒÄØÀìè¹½ÕÌ¥¹Ñ•ÉÙ•¹½¹ÌÍÕÈ5…ÉÍ•¥±±”•ĞÍ•Ì•¹Ù¥É½¹Ì…Ù•Œ¹½ÌÍÑ…¹‘…É‘Ì¡…‰¥ÑÕ•±Ì¸ğ½Àø((€€€€ñ‘¥Ø±…ÍÌô‰¡¥¡±¥¡Ğµ‰½àˆø(€€€€€€ñÀøñÍÑÉ½¹œù%¹Ñ•ÉÙ•¹Ñ¥½¸€˜ŒÈÈĞì5…ÉÍ•¥±±”˜ŒÄØÀìèğ½ÍÑÉ½¹œø˜ŒÈÌÌí±…¤ÍÑ…¹‘…É‘”€ÈĞ€˜ŒÈÈĞì€Ğá …ÁÈ˜ŒÈÌÈíÌ½¹™¥Éµ…Ñ¥½¸¸AXÁ¡½Ñ½É…Á¡¥ÅÕ”°½ÕÙ•ÉÑÕÉ”…ÕÑ½µ½‰¥±”Û¥É¥™§¥”°Á±…ÅÕ•Ì\¸€ñÍÑÉ½¹œù•Ù¥Ì™¥á”ÑÉ…¹Íµ¥ÌÍ½ÕÌ€É ¸ğ½ÍÑÉ½¹œøÁÁ•±•èµ¹½ÕÌ…Ô€ÀÜ€ØÄ€Àä€ÈØ€ÈØ¸ğ½Àø(€€€€ğ½‘¥Øø((€€€€ñ Ìù”ÅÕ”¹½ÕÌÈ˜ŒÈÌÌí…±¥Í½¹Ì€˜ŒÈÈĞì5…ÉÍ•¥±±”ğ½ Ìø(€€€€ñÕ°ø(€€€€€€ñ±¤ù½¹Ù½å…”…ÕÑ½µ½‰¥±”‘•ÁÕ¥Ì½ÔÙ•ÉÌ5…ÉÍ•¥±±”ğ½±¤ø(€€€€€€ñ±¤ù1¥ÙÉ…¥Í½¸Y8½Y<€˜ŒÈÈĞì‘½µ¥¥±”Á½ÕÈ±•Ì½¹•ÍÍ¥½¹Ì‘”±„È˜ŒÈÌÌí¥½¸Ağ½±¤ø(€€€€€€ñ±¤ùI…Á…ÑÉ¥•µ•¹Ğ‘•ÁÕ¥Ì5…ÉÍ•¥±±”Ù•ÉÌA…É¥Ì½ÔÑ½ÕÑ”…ÕÑÉ”‘•ÍÑ¥¹…Ñ¥½¸ğ½±¤ø(€€€€€€ñ±¤ùQÉ…¹Í™•ÉĞ¥¹Ñ•ÈµÍ¥Ñ•Ì•¸È˜ŒÈÌÌí¥½¸Ağ½±¤ø(€€€€€€ñ±¤ù5¥Í”•¸µ…¥¸€˜ŒÈÈĞì‘½µ¥¥±”Á½ÕÈ±•Ì…¡•Ñ•ÕÉÌ‘”5…ÉÍ•¥±±”ğ½±¤ø(€€€€€€ñ±¤ù¡…Õ™™•ÕÈ…Ù•ŒÙ½ÑÉ”Ø˜ŒÈÌÌí¡¥Õ±”ÍÕÈ5…ÉÍ•¥±±”•Ğ±½¹Õ”‘¥ÍÑ…¹”ğ½±¤ø(€€€€ğ½Õ°ø((€€€€ñ ÌùMÀ˜ŒÈÌÌí¥™¥¥Ğ˜ŒÈÌÌíÌ‘”±„é½¹”5…ÉÍ•¥±±”ğ½ Ìø(€€€€ñÀø˜ŒÄäÈì5…ÉÍ•¥±±”°Õ¹”µ¥ÍÍ¥½¸Á•ÕĞ½µµ•¹•È…ÔÁ½ÉĞ°€˜ŒÈÈĞì±„…É”M…¥¹Ğµ¡…É±•Ì°€˜ŒÈÈĞì°„˜ŒÈÌÌíÉ½Á½ÉĞ5…ÉÍ•¥±±”µAÉ½Ù•¹”°•¸½¹•ÍÍ¥½¸½Ô…Ô‘½µ¥¥±”‘Ô±¥•¹Ğ¸9½ÕÌ½ÕÙÉ½¹Ì€˜ŒÈÌÌí…±•µ•¹Ğ¥àµ•¸µAÉ½Ù•¹”°Õ‰…¹”•Ğ±•Ì±¥…¥Í½¹ÌÙ•ÉÌQ½Õ±½¸¸1•Ì…á•ÌÜ°ÔÀ•ĞÔÄÍÑÉÕÑÕÉ•¹Ğ±•Ì˜ŒÈÌÌíÁ…ÉÑÌÙ•ÉÌ±„Ù…±°˜ŒÈÌÌí”‘ÔI ˜ŒÈĞĞí¹”°±”Y…È•Ğ±•Ì±Á•Ì¸A½ÕÈÕ¹”ÑÉ…Ù•ÉÌ˜ŒÈÌÌí”µ…É¥Ñ¥µ”°±•Ì¡½É…¥É•Ì•Ğ½¹‘¥Ñ¥½¹Ì‘”É•µ¥Í”Í½¹Ğ¥¹Ğ˜ŒÈÌÌíÈ˜ŒÈÌÌíÌ…ÔÁ±…¹¹¥¹œ¸ğ½Àø((€€€€ñ ÌùA½ÕÈ±•Ì½¹•ÍÍ¥½¹Ì•ĞÁÉ½™•ÍÍ¥½¹¹•±Ì€˜ŒÈÈĞì5…ÉÍ•¥±±”ğ½ Ìø(€€€€ñÀùM¤Ù½ÕÌ€˜ŒÈÌĞíÑ•Ì½¹•ÍÍ¥½¹¹…¥É”½Ô•ÍÑ¥½¹¹…¥É”‘”™±½ÑÑ”‘…¹Ì±„È˜ŒÈÌÌí¥½¸A°¹½ÕÌÁÉ½Á½Í½¹Ì‘•ÌÁ…ÉÑ•¹…É¥…ÑÌ…‘…ÁĞ˜ŒÈÌÌíÌ€˜ŒÈÈĞìÙ½ÑÉ”Ù½±Õµ”¸…ÑÕÉ…Ñ¥½¸µ•¹ÍÕ•±±”°€˜ŒÈÌÌíÅÕ¥Á”˜ŒÈÌÌí‘¤˜ŒÈÌÌí”˜ŒÄØÀìè€ñ„¡É•˜ôˆ½•¹ÑÉ•ÁÉ¥Í•ÌˆÍÑå±”ô‰½±½ÈéÙ…È ´µ½±¤ˆù˜ŒÈÌÌí½ÕÙÉ•è¹½ÌÍ½±ÕÑ¥½¹Ì•¹ÑÉ•ÁÉ¥Í•Ìğ½„ø¸ğ½Àø((€€€€ñ Ìù1¥…¥Í½¸5…ÉÍ•¥±±”µA…É¥Ì•ĞÉ…¹‘”‘¥ÍÑ…¹”ğ½ Ìø(€€€€ñÀù•ÁÕ¥Ì5…ÉÍ•¥±±”°¹½ÕÌ€˜ŒÈÌÌíÑÕ‘¥½¹Ì¹½Ñ…µµ•¹Ğ±•Ì±¥…¥Í½¹ÌÙ•ÉÌA…É¥Ì°1å½¸°9¥”°5½¹ÑÁ•±±¥•È°±”Y…È•Ğ±•ÌÁ½ÉÑÌ‘•ÍÍ•ÉÙ…¹Ğ±„½ÉÍ”¸1”‘•Ù¥ÌÁÈ˜ŒÈÌÌí¥Í”Ì˜ŒÈÌÌíÁ…È˜ŒÈÌÌíµ•¹Ğ±•Ì™É…¥Ì‘”É½ÕÑ”½Ô‘”ÑÉ…Ù•ÉÌ˜ŒÈÌÌí”±½ÉÍÅÔ¥±ÌÌ…ÁÁ±¥ÅÕ•¹Ğ¸ğ½Àø(€€€€ñÀùA½ÕÈ±•ÌØ˜ŒÈÌÌí¡¥Õ±•Ì€˜ŒÈÌÌí±•ÑÉ¥ÅÕ•Ì°¹½Ì½¹Ù½å•ÕÉÌÁ±…¹¥™¥•¹Ğ±•Ì…ÉÈ˜ŒÈÌĞíÑÌ‘”É•¡…É”…‘…ÁĞ˜ŒÈÌÌíÌ€˜ŒÈÈĞì¡…ÅÕ”ÑÉ…©•Ğ¸€ñ„¡É•˜ôˆ½½¹Ù½å…”µ•±•ÑÉ¥ÅÕ”ˆÍÑå±”ô‰½±½ÈéÙ…È ´µ½±¤ˆù¸Í…Ù½¥ÈÁ±ÕÌÍÕÈ±”½¹Ù½å…”€˜ŒÈÌÌí±•ÑÉ¥ÅÕ”ğ½„ø¸ğ½Àø(€€ğ½‘¥Øø(ğ½Í•Ñ¥½¸ø((ñ‘¥Ø±…ÍÌô‰ÁÉ½½˜µ‰…¹ˆø(€€ñ‘¥Ø±…ÍÌô‰ÁÉ½½˜µ¥Ñ•´ˆøñ‘¥Ø±…ÍÌô‰ÁÉ½½˜µ¹Õ´ˆøÄ°É4ğ½‘¥Øøñ‘¥Ø±…ÍÌô‰ÁÉ½½˜µ±‰°ˆù-´Á…É½ÕÉÕÌğ½‘¥Øøğ½‘¥Øø(€€ñ‘¥Ø±…ÍÌô‰ÁÉ½½˜µ¥Ñ•´ˆøñ‘¥Ø±…ÍÌô‰ÁÉ½½˜µ¹Õ´ÑµÉ…Ñ¥¹œµ¹Õµ‰•ÈˆøÌØğ½‘¥Øøñ‘¥Ø±…ÍÌô‰ÁÉ½½˜µ±‰°ˆùÙ¥Ì€Ô˜ŒäÜÌÌì½½±”ğ½‘¥Øøğ½‘¥Øø(€€ñ‘¥Ø±…ÍÌô‰ÁÉ½½˜µ¥Ñ•´ˆøñ‘¥Ø±…ÍÌô‰ÁÉ½½˜µ¹Õ´ˆøÔ¬ğ½‘¥Øøñ‘¥Ø±…ÍÌô‰ÁÉ½½˜µ±‰°ˆù¹¸˜ŒÈÌÌí•ÌÑ•ÉÉ…¥¸ğ½‘¥Øøğ½‘¥Øø(€€ñ‘¥Ø±…ÍÌô‰ÁÉ½½˜µ¥Ñ•´ˆøñ‘¥Ø±…ÍÌô‰ÁÉ½½˜µ¹Õ´ˆøÀ¨ğ½‘¥Øøñ‘¥Ø±…ÍÌô‰ÁÉ½½˜µ±‰°ˆù%¹¥‘•¹Ğ˜ŒÈÌÌí±…È˜ŒÈÌÌìğ½‘¥Øøğ½‘¥Øø(ğ½‘¥Øø((ñÍ•Ñ¥½¸±…ÍÌô‰½¹Ñ•¹ĞµÍ•Ñ¥½¸…±Ğˆø(€€ñ‘¥Ø±…ÍÌô‰½¹Ñ•¹Ğµ¥¹¹•Èˆø(€€€€ñ ÈùEÕ•ÍÑ¥½¹Ì™È˜ŒÈÌÌíÅÕ•¹Ñ•Ìğ½ Èø(€€€€ñ‘¥ØÍÑå±”ô‰µ…É¥¸µÑ½ÀèÉÉ•´ˆø(€€€€ñ‘¥Ø±…ÍÌô‰™…Äµ¥Ñ•´ˆø(€€€€€€ñ‰ÕÑÑ½¸ÑåÁ”ô‰‰ÕÑÑ½¸ˆ±…ÍÌô‰™…ÄµÄˆ½¹±¥¬ô‰Ñ½±•…Ä¡Ñ¡¥Ì¤ˆø(€€€€€€€€ñÍÁ…¸±…ÍÌô‰™…ÄµÄµÑ•áĞˆù…¹ÌÅÕ•°˜ŒÈÌÌí±…¤Á½ÕÙ•èµÙ½ÕÌ¥¹Ñ•ÉÙ•¹¥È€˜ŒÈÈĞì5…ÉÍ•¥±±”˜ŒÄØÀìüğ½ÍÁ…¸ø(€€€€€€€€ñÍÁ…¸±…ÍÌô‰™…Äµ¥½¸ˆø¬ğ½ÍÁ…¸ø(€€€€€€ğ½‰ÕÑÑ½¸ø(€€€€€€ñ‘¥Ø±…ÍÌô‰™…Äµ„ˆøñÀù˜ŒÈÌÌí±…¤ÍÑ…¹‘…É‘”€ÈĞ€˜ŒÈÈĞì€Ğá …ÁÈ˜ŒÈÌÈíÌ½¹™¥Éµ…Ñ¥½¸¸¸…ÌÕÉ•¹”°…ÁÁ•±•èµ¹½ÕÌ‘¥É•Ñ•µ•¹Ğ…Ô€ÀÜ€ØÄ€Àä€ÈØ€ÈØ•Ğ¹½ÕÌ€˜ŒÈÌÌíÙ…±Õ½¹Ì±•ÌÁ½ÍÍ¥‰¥±¥Ğ˜ŒÈÌÌíÌ¸ğ½Àøğ½‘¥Øø(€€€€ğ½‘¥Øø(€€€€ñ‘¥Ø±…ÍÌô‰™…Äµ¥Ñ•´ˆø(€€€€€€ñ‰ÕÑÑ½¸ÑåÁ”ô‰‰ÕÑÑ½¸ˆ±…ÍÌô‰™…ÄµÄˆ½¹±¥¬ô‰Ñ½±•…Ä¡Ñ¡¥Ì¤ˆø(€€€€€€€€ñÍÁ…¸±…ÍÌô‰™…ÄµÄµÑ•áĞˆù½ÕÙÉ•èµÙ½ÕÌÑ½ÕÑ”±„È˜ŒÈÌÌí¥½¸A˜ŒÄØÀìüğ½ÍÁ…¸ø(€€€€€€€€ñÍÁ…¸±…ÍÌô‰™…Äµ¥½¸ˆø¬ğ½ÍÁ…¸ø(€€€€€€ğ½‰ÕÑÑ½¸ø(€€€€€€ñ‘¥Ø±…ÍÌô‰™…Äµ„ˆøñÀù=Õ¤°5…ÉÍ•¥±±”•Ğ°•¹Í•µ‰±”‘”±„È˜ŒÈÌÌí¥½¸A¸A½ÕÈ±•Ìé½¹•ÌÑÈ˜ŒÈÌÈíÌ€˜ŒÈÌÌí±½¥¸˜ŒÈÌÌí•Ì°Õ¸°˜ŒÈÌÌí•ÈÍÕÁÁ°˜ŒÈÌÌíµ•¹Ğ‘”˜ŒÈÌÌíÁ±…•µ•¹ĞÁ•ÕĞÌ…ÁÁ±¥ÅÕ•È€˜ŒàÈÄÈìÑ½Õ©½ÕÉÌÁÈ˜ŒÈÌÌí¥Ì˜ŒÈÌÌì‘…¹Ì±”‘•Ù¥Ì¸ğ½Àøğ½‘¥Øø(€€€€ğ½‘¥Øø(€€€€ñ‘¥Ø±…ÍÌô‰™…Äµ¥Ñ•´ˆø(€€€€€€ñ‰ÕÑÑ½¸ÑåÁ”ô‰‰ÕÑÑ½¸ˆ±…ÍÌô‰™…ÄµÄˆ½¹±¥¬ô‰Ñ½±•…Ä¡Ñ¡¥Ì¤ˆø(€€€€€€€€ñÍÁ…¸±…ÍÌô‰™…ÄµÄµÑ•áĞˆùEÕ•°•ÍĞ±”Ñ…É¥˜Á½ÕÈÕ¸½¹Ù½å…”‘•ÁÕ¥Ì½ÔÙ•ÉÌA…É¥Ì˜ŒÄØÀìüğ½ÍÁ…¸ø(€€€€€€€€ñÍÁ…¸±…ÍÌô‰™…Äµ¥½¸ˆø¬ğ½ÍÁ…¸ø(€€€€€€ğ½‰ÕÑÑ½¸ø(€€€€€€ñ‘¥Ø±…ÍÌô‰™…Äµ„ˆøñÀù1”Ñ…É¥˜•ÍĞ€˜ŒÈÌÌíÑ…‰±¤ÍÕÈ‘•Ù¥Ì™¥á”¸QÉ…¹Íµ¥ÌÍ½ÕÌ€É …ÁÈ˜ŒÈÌÈíÌÙ½ÑÉ”‘•µ…¹‘”¸ÕÕ¸ÍÕÁÁ°˜ŒÈÌÌíµ•¹Ğ±¤˜ŒÈÌÌì…Õà½¹‘¥Ñ¥½¹Ì‘”É½ÕÑ”½Ô‘”ÑÉ…™¥Œ¸ğ½Àøğ½‘¥Øø(€€€€ğ½‘¥Øø(€€€€ñ‘¥Ø±…ÍÌô‰™…Äµ¥Ñ•´ˆø(€€€€€€ñ‰ÕÑÑ½¸ÑåÁ”ô‰‰ÕÑÑ½¸ˆ±…ÍÌô‰™…ÄµÄˆ½¹±¥¬ô‰Ñ½±•…Ä¡Ñ¡¥Ì¤ˆø(€€€€€€€€ñÍÁ…¸±…ÍÌô‰™…ÄµÄµÑ•áĞˆùQÉ…Ù…¥±±•èµÙ½ÕÌ…Ù•Œ±•Ì½¹•ÍÍ¥½¹Ì‘”±„È˜ŒÈÌÌí¥½¸˜ŒÄØÀìüğ½ÍÁ…¸ø(€€€€€€€€ñÍÁ…¸±…ÍÌô‰™…Äµ¥½¸ˆø¬ğ½ÍÁ…¸ø(€€€€€€ğ½‰ÕÑÑ½¸ø(€€€€€€ñ‘¥Ø±…ÍÌô‰™…Äµ„ˆøñÀù=Õ¤¸M¤Ù½ÕÌ€˜ŒÈÌĞíÑ•Ì½¹•ÍÍ¥½¹¹…¥É”½ÔÁÉ½™•ÍÍ¥½¹¹•°‘”°…ÕÑ½µ½‰¥±”°½¹Ñ…Ñ•èµ¹½ÕÌÁ½ÕÈ‘¥ÍÕÑ•ÈÕ¸Á…ÉÑ•¹…É¥…Ğ¸ğ½Àøğ½‘¥Øø(€€€€ğ½‘¥Øø(€€€€ñ‘¥Ø±…ÍÌô‰™…Äµ¥Ñ•´ˆø(€€€€€€ñ‰ÕÑÑ½¸ÑåÁ”ô‰‰ÕÑÑ½¸ˆ±…ÍÌô‰™…ÄµÄˆ½¹±¥¬ô‰Ñ½±•…Ä¡Ñ¡¥Ì¤ˆø(€€€€€€€€ñÍÁ…¸±…ÍÌô‰™…ÄµÄµÑ•áĞˆù5½¸Ø˜ŒÈÌÌí¡¥Õ±”•ÍĞµ¥°…ÍÍÕÈ˜ŒÈÌÌìÁ•¹‘…¹Ğ±”½¹Ù½å…”˜ŒÄØÀìüğ½ÍÁ…¸ø(€€€€€€€€ñÍÁ…¸±…ÍÌô‰™…Äµ¥½¸ˆø¬ğ½ÍÁ…¸ø(€€€€€€ğ½‰ÕÑÑ½¸ø(€€€€€€ñ‘¥Ø±…ÍÌô‰™…Äµ„ˆøñÀùÙ…¹Ğ±„µ¥ÍÍ¥½¸°±”ÁÉ½ÁÉ¤˜ŒÈÌÌíÑ…¥É”½¹™¥Éµ”ÅÕ”Í½¸½¹ÑÉ…Ğ…ÕÑ½É¥Í”±„½¹‘Õ¥Ñ”Á…ÈÕ¸Ñ¥•ÉÌ•Ğ½ÕÙÉ”±”ÑÉ…©•Ğ¸9½ÑÉ”IAÉ¼½ÕÙÉ”¹½ÑÉ”É•ÍÁ½¹Í…‰¥±¥Ğ˜ŒÈÌÌìÁÉ½™•ÍÍ¥½¹¹•±±”¸ğ½Àøğ½‘¥Øø(€€€€ğ½‘¥Øøğ½‘¥Øø(€€ğ½‘¥Øø(ğ½Í•Ñ¥½¸ø((ñÍ•Ñ¥½¸±…ÍÌô‰½¹Ñ•¹ĞµÍ•Ñ¥½¸ˆø(€€ñ‘¥Ø±…ÍÌô‰½¹Ñ•¹Ğµ¥¹¹•Èˆø(€€€€ñ Èù9½Ì…ÕÑÉ•Ì€ñ•´ùÍ•ÉÙ¥•Ìğ½•´øğ½ Èø(€€€€ñÀÍÑå±”ô‰µ…É¥¸µ‰½ÑÑ½´èÉÉ•´í™½¹ĞµÍ¥é”è¸àÕÉ•´í½±½ÈéÙ…È ´µ¥Ù½ÉäµµÕÑ•¤ˆù˜ŒÈÌÌí½ÕÙÉ•è°˜ŒàÈÄÜí•¹Í•µ‰±”‘”¹½ÌÁÉ•ÍÑ…Ñ¥½¹Ì‘”½¹Ù½å…”•Ğ‘”µ½‰¥±¥Ğ˜ŒÈÌÌì…ÕÑ½µ½‰¥±”¸ğ½Àø(€€€€ñ‘¥Ø±…ÍÌô‰É•±…Ñ•µÉ¥ˆø(€€€€€€(€€€€ñ„¡É•˜ôˆ½½¹Ù½å…”ˆ±…ÍÌô‰É•±…Ñ•µ…Éˆø(€€€€€€ñ‘¥Ø±…ÍÌô‰É•±…Ñ•µ…Éµ±…‰•°ˆùM•ÉÙ¥”ğ½‘¥Øø(€€€€€€ñ‘¥Ø±…ÍÌô‰É•±…Ñ•µ…ÉµÑ¥Ñ±”ˆù½¹Ù½å…”…ÕÑ½µ½‰¥±”ğ½‘¥Øø(€€€€€€ñÀ±…ÍÌô‰É•±…Ñ•µ…Éµ‘•ÍŒˆù9½ÑÉ”Í•ÉÙ¥”‘”½¹Ù½å…”•¸É…¹”•ĞÕÉ½Á”¸ğ½Àø(€€€€€€ñÍÁ…¸±…ÍÌô‰É•±…Ñ•µ…Éµ…ÉÉ½Üˆù˜ŒÈÌÌí½ÕÙÉ¥È€˜ŒàÔäĞìğ½ÍÁ…¸ø(€€€€ğ½„ø(€€€€ñ„¡É•˜ôˆ½½¹Ù½å…”µÁ…É¥Ìˆ±…ÍÌô‰É•±…Ñ•µ…Éˆø(€€€€€€ñ‘¥Ø±…ÍÌô‰É•±…Ñ•µ…Éµ±…‰•°ˆùM•ÉÙ¥”ğ½‘¥Øø(€€€€€€ñ‘¥Ø±…ÍÌô‰É•±…Ñ•µ…ÉµÑ¥Ñ±”ˆù½¹Ù½å…”A…É¥Ìğ½‘¥Øø(€€€€€€ñÀ±…ÍÌô‰É•±…Ñ•µ…Éµ‘•ÍŒˆù9½ÑÉ”é½¹”ÁÉ¥¹¥Á…±”¥¹Ñ•ÉÙ•¹Ñ¥½¸¸ğ½Àø(€€€€€€ñÍÁ…¸±…ÍÌô‰É•±…Ñ•µ…Éµ…ÉÉ½Üˆù˜ŒÈÌÌí½ÕÙÉ¥È€˜ŒàÔäĞìğ½ÍÁ…¸ø(€€€€ğ½„ø(€€€€ñ„¡É•˜ôˆ½½¹Ñ…Ğˆ±…ÍÌô‰É•±…Ñ•µ…Éˆø(€€€€€€ñ‘¥Ø±…ÍÌô‰É•±…Ñ•µ…Éµ±…‰•°ˆùM•ÉÙ¥”ğ½‘¥Øø(€€€€€€ñ‘¥Ø±…ÍÌô‰É•±…Ñ•µ…ÉµÑ¥Ñ±”ˆù½¹Ñ…Ğ€˜•Ù¥Ìğ½‘¥Øø(€€€€€€ñÀ±…ÍÌô‰É•±…Ñ•µ…Éµ‘•ÍŒˆù•µ…¹‘•èÙ½ÑÉ”‘•Ù¥ÌÍ½ÕÌ€É ¸ğ½Àø(€€€€€€ñÍÁ…¸±…ÍÌô‰É•±…Ñ•µ…Éµ…ÉÉ½Üˆù˜ŒÈÌÌí½ÕÙÉ¥È€˜ŒàÔäĞìğ½ÍÁ…¸ø(€€€€ğ½„ø(€€€€ğ½‘¥Øø(€€ğ½‘¥Øø(ğ½Í•Ñ¥½¸ø((ñ‘¥Ø±…ÍÌô‰Ñ„µÍ•Ñ¥½¸ˆø(€€ñ‘¥Ø±…ÍÌô‰Ñ„µÑ•áĞˆùU¹”µ¥ÍÍ¥½¸€˜ŒÈÈĞì½¹™¥•È˜ŒÄØÀìüñ‰Èøñ•´ù=¸Ù½ÕÌÉ…ÁÁ•±±”Í½ÕÌ€É ¸ğ½•´øğ½‘¥Øø(€€ñ‘¥Ø±…ÍÌô‰Ñ„µ…Ñ¥½¹Ìˆø(€€€€ñ„¡É•˜ôˆ½½¹Ñ…Ğˆ±…ÍÌô‰‰Ñ¸µ‘…É¬ˆù•µ…¹‘•ÈÕ¸‘•Ù¥Ìğ½„ø(€€€€ñ„¡É•˜ô‰Ñ•°è¬ÌÌÜØÄÀäÈØÈØˆ±…ÍÌô‰‰Ñ¸µ½±ˆøÀÜ€ØÄ€Àä€ÈØ€ÈØğ½„ø(€€ğ½‘¥Øø(ğ½‘¥Øø((ñ™½½Ñ•È±…ÍÌô‰™½½Ñ•Èµµ¥¹¤ˆø(€€ñ„¡É•˜ôˆ¼ˆ±…ÍÌô‰™½½Ñ•Èµ±½¼ˆøñ¥µœÍÉŒôˆ½…ÍÍ•ÑÌ½¥µ…•Ì½±½¼µÑ¡”µ•¹Ñ±•µ…¸µ‘É¥Ù•È´È¹Á¹œˆ…±Ğô‰Q¡”•¹Ñ±•µ…¸É¥Ù•ÈˆÍÑå±”ô‰¡•¥¡ĞèÌÉÁàíİ¥‘Ñ é…ÕÑ¼í‘¥ÍÁ±…äé‰±½¬í½Á…¥ÑäèÀ¸ÜÔˆİ¥‘Ñ ôˆàÀÀˆ¡•¥¡ĞôˆÈÄÌˆ±½…‘¥¹œô‰±…éäˆ‘•½‘¥¹œô‰…Íå¹Œˆøğ½„ø(€€ñÕ°±…ÍÌô‰™½½Ñ•Èµ±¥¹­Ìµ±¥ÍĞˆø(€€€€ñ±¤±…ÍÌô‰™½½Ñ•ÈµÉ½ÕÀµ±…‰•°ˆù½¹Ù½å…”ğ½±¤ø(€€€€ñ±¤øñ„¡É•˜ôˆ½½¹Ù½å…”ˆùÕÑ½µ½‰¥±”ğ½„øğ½±¤ø(€€€€ñ±¤øñ„¡É•˜ôˆ½½¹Ù½å…”µ•±•ÑÉ¥ÅÕ”ˆø˜ŒÈÀÄí±•ÑÉ¥ÅÕ”ğ½„øğ½±¤ø(€€€€ñ±¤øñ„¡É•˜ôˆ½½¹Ù½å…”µÁÉ•µ¥Õ´ˆùAÉ•µ¥Õ´ğ½„øğ½±¤ø(€€€€ñ±¤øñ„¡É•˜ôˆ½½¹Ù½å…”µÁ…É¥ÌˆùA…É¥Ìğ½„øğ½±¤ø(€€€€ñ±¤øñ„¡É•˜ôˆ½½¹Ù½å…”µ½¹•ÍÍ¥½¸ˆù½¹•ÍÍ¥½¹Ìğ½„øğ½±¤ø(€€€€ñ±¤øñ„¡É•˜ôˆ½ÑÉ…¹ÍÁ½ÉĞµÁ±…Ñ•…ÔˆùA±…Ñ•…Ôğ½„øğ½±¤ø(€€€€ñ±¤±…ÍÌô‰™½½Ñ•ÈµÍ•Àˆø˜ŒÄàÌìğ½±¤ø(€€€€ñ±¤±…ÍÌô‰™½½Ñ•ÈµÉ½ÕÀµ±…‰•°ˆùM•ÉÙ¥•Ìğ½±¤ø(€€€€ñ±¤øñ„¡É•˜ôˆ½¡…Õ™™•ÕÈˆù¡…Õ™™•ÕÈğ½„øğ½±¤ø(€€€€ñ±¤øñ„¡É•˜ôˆ½µ¥Í”µ•¸µµ…¥¸ˆù5¥Í”•¸µ…¥¸ğ½„øğ½±¤ø(€€€€ñ±¤øñ„¡É•˜ôˆ½•¹ÑÉ•ÁÉ¥Í•Ìˆù¹ÑÉ•ÁÉ¥Í•Ìğ½„øğ½±¤ø(€€€€ñ±¤±…ÍÌô‰™½½Ñ•ÈµÍ•Àˆø˜ŒÄàÌìğ½±¤ø(€€€€ñ±¤±…ÍÌô‰™½½Ñ•ÈµÉ½ÕÀµ±…‰•°ˆø˜ŒÄäÈìÁÉ½Á½Ìğ½±¤ø(€€€€ñ±¤øñ„¡É•˜ôˆ½Á½ÕÉÅÕ½¤µ¹½ÕÌˆùA½ÕÉÅÕ½¤¹½ÕÌğ½„øğ½±¤ø(€€€€ñ±¤øñ„¡É•˜ôˆ½„µÁÉ½Á½Ìˆù0˜ŒàÈÄÜì˜ŒÈÌÌíÅÕ¥Á”ğ½„øğ½±¤ø(€€€€ñ±¤øñ„¡É•˜ôˆ½‰±½œˆù	±½œğ½„øğ½±¤ø(€€€€ñ±¤øñ„¡É•˜ôˆ½™…ÄˆùDğ½„øğ½±¤ø(€€€€ñ±¤øñ„¡É•˜ôˆ½½¹Ñ…Ğˆù½¹Ñ…Ğğ½„øğ½±¤ø(€€€€ñ±¤øñ„¡É•˜ôˆ½µ•¹Ñ¥½¹Ìµ±•…±•Ìˆù5•¹Ñ¥½¹Ì°˜ŒÈÌÌí…±•Ìğ½„øğ½±¤ø(€€ğ½Õ°ø(€€ñÍÁ…¸±…ÍÌô‰™½½Ñ•Èµ½Áäˆø˜ŒÄØäì€ÈÀÈØQ¡”•¹Ñ±•µ…¸É¥Ù•È€˜ŒàÈÄÈìMMT€˜ŒàÈÄÈì¡…É•¹Ñ½¸µ±”µA½¹Ğ€ äĞ¤ğ½ÍÁ…¸ø(€€ñÍÁ…¸±…ÍÌô‰™½½Ñ•Èµ±•…°µµ¥¹¤ˆÍÑå±”ô‰‘¥ÍÁ±…äé‰±½¬íµ…É¥¸µÑ½Àè¸İÉ•´í™½¹ĞµÍ¥é”è¸ÜÕÉ•´í½±½ÈéÉ‰„ Äàä°ÄàÄ°ÄØØ°À¸ÈÈ¤í™½¹Ğµİ•¥¡ĞèÌÀÀí±•ÑÑ•ÈµÍÁ…¥¹œè¸ÀÕ•´í±¥¹”µ¡•¥¡ĞèÄ¸àˆùM%IP€äàÔ€ÄÜà€ĞØØ€ÀÀÀÄä€˜ŒÄàÌìILÈ˜ŒÈÌÌíÑ•¥°€˜ŒÄàÌìÍÍÕÉ…¹”IAÉ¼ğ½ÍÁ…¸ø(ğ½™½½Ñ•Èø((ñÍÉ¥ÁĞø)™Õ¹Ñ¥½¸Ñ½±•…Ä¡‰Ñ¸¤ì(€Ù…È¥Ñ•´€ô‰Ñ¸¹Á…É•¹Ñ±•µ•¹Ğì(€Ù…È¥Í=Á•¸€ô¥Ñ•´¹±…ÍÍ1¥ÍĞ¹½¹Ñ…¥¹Ì ½Á•¸œ¤ì(€‘½Õµ•¹Ğ¹ÅÕ•ÉåM•±•Ñ½É±° œ¹™…Äµ¥Ñ•´¹½Á•¸œ¤¹™½É… ¡™Õ¹Ñ¥½¸¡•°¤ì(€€€•°¹±…ÍÍ1¥ÍĞ¹É•µ½Ù” ½Á•¸œ¤ì(€€€•°¹ÅÕ•ÉåM•±•Ñ½È œ¹™…Äµ¥½¸œ¤¹Ñ•áÑ½¹Ñ•¹Ğ€ô€œ¬œì(€ô¤ì(€¥˜€ …¥Í=Á•¸¤ì(€€€¥Ñ•´¹±…ÍÍ1¥ÍĞ¹…‘ ½Á•¸œ¤ì(€€€‰Ñ¸¹ÅÕ•ÉåM•±•Ñ½È œ¹™…Äµ¥½¸œ¤¹Ñ•áÑ½¹Ñ•¹Ğ€ô€œ´œì(€ô)ô(ğ½ÍÉ¥ÁĞø(ğ„´´	IIMQ%-d5=	%1€´´ø(ñ‘¥Ø±…ÍÌô‰ÍÑ¥­äµµ½‰¥±”ˆø(€€ñ„¡É•˜ô‰Ñ•°è¬ÌÌÜØÄÀäÈØÈØˆ±…ÍÌô‰ÍÑ¥­äµ‰Ñ¸…±°ˆø(€€€€ñÍÁ…¸±…ÍÌô‰ÍÑ¥­äµ‰Ñ¸µ¥½¸ˆø˜ŒÄÈàÈÈÈìğ½ÍÁ…¸ø(€€€€ñÍÁ…¸±…ÍÌô‰ÍÑ¥­äµ‰Ñ¸µ±…‰•°ˆùÁÁ•±•Èğ½ÍÁ…¸ø(€€ğ½„ø(€€ñ„¡É•˜ô‰¡ÑÑÁÌè¼½İ„¹µ”¼ÌÌÜØÄÀäÈØÈØˆÑ…É•Ğô‰}‰±…¹¬ˆÉ•°ô‰¹½½Á•¹•Èˆ±…ÍÌô‰ÍÑ¥­äµ‰Ñ¸İ¡…ÑÍ…ÁÀˆø(€€€€ñÍÁ…¸±…ÍÌô‰ÍÑ¥­äµ‰Ñ¸µ¥½¸ˆø˜ŒÄÈàÄÜÈìğ½ÍÁ…¸ø(€€€€ñÍÁ…¸±…ÍÌô‰ÍÑ¥­äµ‰Ñ¸µ±…‰•°ˆù]¡…ÑÍÁÀğ½ÍÁ…¸ø(€€ğ½„ø(€€ñ„¡É•˜ôˆ½½¹Ñ…Ğˆ±…ÍÌô‰ÍÑ¥­äµ‰Ñ¸‘•Ù¥Ìˆø(€€€€ñÍÁ…¸±…ÍÌô‰ÍÑ¥­äµ‰Ñ¸µ¥½¸ˆø˜ŒäääÌìğ½ÍÁ…¸ø(€€€€ñÍÁ…¸±…ÍÌô‰ÍÑ¥­äµ‰Ñ¸µ±…‰•°ˆù•Ù¥Ìğ½ÍÁ…¸ø(€€ğ½„ø(ğ½‘¥Øø((ğ„´´]!QMA@1=QQ9P€´´ø(ñ„¡É•˜ô‰¡ÑÑÁÌè¼½İ„¹µ”¼ÌÌÜØÄÀäÈØÈØˆÑ…É•Ğô‰}‰±…¹¬ˆÉ•°ô‰¹½½Á•¹•Èˆ±…ÍÌô‰İ„µ™±½…Ğˆ…É¥„µ±…‰•°ô‰9½ÕÌ½¹Ñ…Ñ•ÈÍÕÈ]¡…ÑÍÁÀˆø(€€ñÍÙœÙ¥•İ	½àôˆÀ€À€ÈĞ€ÈĞˆáµ±¹Ìô‰¡ÑÑÀè¼½İİÜ¹ÜÌ¹½Éœ¼ÈÀÀÀ½ÍÙœˆø(€€€€ñÁ…Ñ ô‰4ÄÜ¸ĞÜÈ€ÄĞ¸ÌàÉŒ´¸ÈäÜ´¸ÄĞä´Ä¸ÜÔà´¸àØÜ´È¸ÀÌ´¸äØÜ´¸ÈÜÌ´¸Àää´¸ĞÜÄ´¸ÄĞà´¸ØÜ¸ÄÔ´¸ÄäÜ¸ÈäÜ´¸ÜØÜ¸äØØ´¸äĞ€Ä¸ÄØĞ´¸ÄÜÌ¸Äää´¸ÌĞÜ¸ÈÈÌ´¸ØĞĞ¸ÀÜÔ´¸ÈäÜ´¸ÄÔ´Ä¸ÈÔÔ´¸ĞØÌ´È¸Ìä´Ä¸ĞÜÔ´¸ààÌ´¸Üàà´Ä¸Ğà´Ä¸ÜØÄ´Ä¸ØÔÌ´È¸ÀÔä´¸ÄÜÌ´¸ÈäÜ´¸ÀÄà´¸ĞÔà¸ÄÌ´¸ØÀØ¸ÄÌĞ´¸ÄÌÌ¸Èäà´¸ÌĞÜ¸ĞĞØ´¸ÔÈ¸ÄĞä´¸ÄÜĞ¸Ääà´¸Èäà¸Èäà´¸ĞäÜ¸Àää´¸Ääà¸ÀÔ´¸ÌÜÄ´¸ÀÈÔ´¸ÔÈ´¸ÀÜÔ´¸ÄĞä´¸ØØä´Ä¸ØÄÈ´¸äÄØ´È¸ÈÀÜ´¸ÈĞÈ´¸ÔÜä´¸ĞàÜ´¸Ô´¸ØØä´¸ÔÄ´¸ÄÜÌ´¸ÀÀà´¸ÌÜÄ´¸ÀÄ´¸ÔÜ´¸ÀÄ´¸Ääà€À´¸ÔÈ¸ÀÜĞ´¸ÜäÈ¸ÌÜÈ´¸ÈÜÈ¸ÈäÜ´Ä¸ÀĞ€Ä¸ÀÄØ´Ä¸ÀĞ€È¸ĞÜä€À€Ä¸ĞØÈ€Ä¸ÀØÔ€È¸àÜÔ€Ä¸ÈÄÌ€Ì¸ÀÜĞ¸ÄĞä¸Ääà€È¸ÀäØ€Ì¸È€Ô¸ÀÜÜ€Ğ¸ĞàÜ¸ÜÀä¸ÌÀØ€Ä¸ÈØÈ¸Ğàä€Ä¸ØäĞ¸ØÈÔ¸ÜÄÈ¸ÈÈÜ€Ä¸ÌØ¸ÄäÔ€Ä¸àÜÄ¸ÄÄà¸ÔÜÄ´¸ÀàÔ€Ä¸ÜÔà´¸ÜÄä€È¸ÀÀØ´Ä¸ĞÄÌ¸ÈĞà´¸ØäĞ¸ÈĞà´Ä¸Èàä¸ÄÜÌ´Ä¸ĞÄÌ´¸ÀÜĞ´¸ÄÈĞ´¸ÈÜÈ´¸Ääà´¸ÔÜ´¸ÌĞİ´´Ô¸ĞÈÄ€Ü¸ĞÀÍ ´¸ÀÀÑ„ä¸àÜ€ä¸àÜ€À€À€Ä´Ô¸ÀÌÄ´Ä¸ÌÜá°´¸ÌØÄ´¸ÈÄĞ´Ì¸ÜĞÄ¸äàÈ¸ääà´Ì¸ØĞà´¸ÈÌÔ´¸ÌÜÑ„ä¸àØ€ä¸àØ€À€À€Ä´Ä¸ÔÄ´Ô¸ÈÙŒ¸ÀÀÄ´Ô¸ĞÔ€Ğ¸ĞÌØ´ä¸ààĞ€ä¸ààà´ä¸ààĞ€È¸ØĞ€À€Ô¸ÄÈÈ€Ä¸ÀÌ€Ø¸äàà€È¸àäá„ä¸àÈÔ€ä¸àÈÔ€À€À€Ä€È¸àäÌ€Ø¸ääÑŒ´¸ÀÀÌ€Ô¸ĞÔ´Ğ¸ĞÌÜ€ä¸ààĞ´ä¸ààÔ€ä¸ààÑ´à¸ĞÄÌ´Äà¸ÈäİÄÄ¸àÄÔ€ÄÄ¸àÄÔ€À€À€À€ÄÈ¸ÀÔ€ÁÔ¸ĞäÔ€À€¸ÄØ€Ô¸ÌÌÔ¸ÄÔÜ€ÄÄ¸àäÉŒÀ€È¸ÀäØ¸ÔĞÜ€Ğ¸ÄĞÈ€Ä¸Ôàà€Ô¸äĞÕ0¸ÀÔÜ€ÈÑ°Ø¸ÌÀÔ´Ä¸ØÔÑ„ÄÄ¸ààÈ€ÄÄ¸ààÈ€À€À€À€Ô¸ØàÌ€Ä¸ĞĞá ¸ÀÀÕŒØ¸ÔÔĞ€À€ÄÄ¸àä´Ô¸ÌÌÔ€ÄÄ¸àäÌ´ÄÄ¸àäÍ„ÄÄ¸àÈÄ€ÄÄ¸àÈÄ€À€À€À´Ì¸Ğà´à¸ĞÄÍèˆ¼ø(€€ğ½ÍÙœø(ğ½„ø(ñÍÉ¥ÁĞÍÉŒôˆ½ÑµÉ•Ù¥•İÌ¹©Ìˆøğ½ÍÉ¥ÁĞø(ğ½‰½‘äø(ğ½¡Ñµ°ø
