@@ -45,8 +45,15 @@
 
     var path = location.pathname.replace(/\/+$/, '') || '/';
 
-    /* Pas de dock sur l'accueil (ses CTA sont deja visibles) ni sur la page devis/contact. */
-    if (document.body.classList.contains('site-home') || path === '/contact') return;
+    /* Aucun bandeau de conversion sur la page devis/contact : le formulaire est deja l'action principale. */
+    if (path === '/contact') {
+      var existingMobileDock = document.querySelector('.sticky-mobile, .conversion-mobile');
+      if (existingMobileDock) existingMobileDock.remove();
+      return;
+    }
+
+    /* L'accueil possede deja ses CTA et son devis express dans le contenu. */
+    if (document.body.classList.contains('site-home')) return;
 
     var form = document.querySelector('.tgd-form');
     var quoteHref = '/contact?service=' + encodeURIComponent(path.replace(/^\//, '') || 'accueil');
