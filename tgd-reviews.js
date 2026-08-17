@@ -5,11 +5,11 @@
   'use strict';
 
   const FALLBACK = [
-    { author: 'Florent Vial', rating: 5, text: "Yvan a été d'un grand professionnalisme lors de la livraison de mon véhicule ! Très agréable, disponible et soucieux de m'expliquer les choses en prenant le temps !", publishedAt: '2026-05-19T00:00:00Z' },
-    { author: 'Cédric Niçoise', rating: 5, text: "Livraison du véhicule parfaite : une entreprise sérieuse, ponctuelle et d'un professionnalisme irréprochable.", publishedAt: '2026-04-15T00:00:00Z' },
-    { author: 'Frédéric Bazin', rating: 5, text: "C'est le deuxième véhicule BMW que Jonathan me livre. Merci à lui pour ces précieux conseils. Le service est à la hauteur de la marque.", publishedAt: '2026-03-23T00:00:00Z' },
-    { author: 'Isabelle NDOYE Maddio', rating: 5, text: 'Avis client Google vérifié.', publishedAt: '2026-03-18T00:00:00Z' },
-    { author: 'Jonathan Gaignon', rating: 5, text: 'Avis client Google vérifié.', publishedAt: '2026-02-18T00:00:00Z' }
+    { author: 'Théo Launay', rating: 5, text: "Mon véhicule m’a été livré par Jonathan. Très sympathique et professionnel, tout s’est parfaitement déroulé, je recommande à 100% !", publishedAt: '2026-06-30T13:06:46Z' },
+    { author: 'Florent Vial', rating: 5, text: "Yvan a été d'un grand professionnalisme lors de la livraison de mon véhicule ! Très agréable, disponible et soucieux de m'expliquer les choses en prenant le temps !", publishedAt: '2026-05-19T20:01:25Z' },
+    { author: 'Frédéric Bazin', rating: 5, text: "C'est le deuxième véhicule BMW que Jonathan me livre. Merci à lui pour ces précieux conseils. Le service est à la hauteur de la marque.", publishedAt: '2026-03-23T15:56:18Z' },
+    { author: 'Isabelle NDOYE Maddio', rating: 5, text: 'Super moment passé avec Jonathan ! La livraison de mon nouveau véhicule a été impeccable et soignée.', publishedAt: '2026-03-18T16:15:46Z' },
+    { author: 'Katia Pariente', rating: 5, text: 'Service de convoyage automobile impeccable entre Paris et Marseille. Prise en charge simple, échanges fluides et respect des délais.', publishedAt: '2026-02-09T18:51:21Z' }
   ];
 
   function escapeHtml(value) {
@@ -72,7 +72,7 @@
     });
 
     const safeRating = Number(rating) || 5;
-    const safeTotal = Number(total) || 38;
+    const safeTotal = Number(total) || 40;
 
     document.querySelectorAll('.tgd-rating-score').forEach(el => {
       el.textContent = safeRating.toFixed(1).replace('.', ',');
@@ -97,7 +97,7 @@
       const reviews = Array.isArray(data.reviews) && data.reviews.length ? data.reviews : FALLBACK;
       render(widgets, reviews, data.rating, data.total);
     } catch (error) {
-      render(widgets, FALLBACK, 5.0, 38);
+      render(widgets, FALLBACK, 5.0, 40);
     }
   }
 
