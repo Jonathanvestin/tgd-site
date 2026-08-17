@@ -1,47 +1,87 @@
 // tgd-reviews.js — Widget avis Google en live
-// À inclure sur toutes les pages avec : <script src="tgd-reviews.js"></script>
-// Remplace automatiquement le contenu des éléments .tgd-reviews-widget
+// Affiche en priorité les avis renvoyés par /api/reviews, triés du plus récent au plus ancien.
 
 (function () {
+  'use strict';
+
   const FALLBACK = [
-    { author: 'Clément Le Chatelier', rating: 5, text: "Pour livraison véhicule de société. Ponctuel, prend le temps de tout expliquer et très sympa !", time: 'il y a 7 jours' },
-    { author: 'Florent Vial', rating: 5, text: "Yvan a été d'un grand professionnalisme lors de la livraison de mon véhicule ! Très agréable, disponible et soucieux de m'expliquer les choses en prenant le temps !", time: 'il y a 3 semaines' },
-    { author: 'Frédéric Bazin', rating: 5, text: "C'est le deuxième véhicule BMW que Jonathan me livre. Merci à lui pour ces précieux conseils. Le service est à la hauteur de la marque.", time: 'il y a 11 semaines' },
-    { author: 'Cédric Niçoise', rating: 5, text: "Livraison du véhicule parfaite : une entreprise sérieuse, ponctuelle et d'un professionnalisme irréprochable.", time: 'il y a 8 semaines' },
-    { author: 'Aurore Laitu', rating: 5, text: "Personnel très professionnel et pédagogue ! Surtout pour une 1ère voiture électrique. Un service de qualité.", time: 'il y a 10 semaines' },
-    { author: 'Katia Pariente', rating: 5, text: "Service de convoyage automobile impeccable entre Paris et Marseille. Prise en charge simple, échanges fluides.", time: 'il y a 17 semaines' },
+    { author: 'Florent Vial', rating: 5, text: "Yvan a été d'un grand professionnalisme lors de la livraison de mon véhicule ! Très agréable, disponible et soucieux de m'expliquer les choses en prenant le temps !", publishedAt: '2026-05-19T00:00:00Z' },
+    { author: 'Cédric Niçoise', rating: 5, text: "Livraison du véhicule parfaite : une entreprise sérieuse, ponctuelle et d'un professionnalisme irréprochable.", publishedAt: '2026-04-15T00:00:00Z' },
+    { author: 'Frédéric Bazin', rating: 5, text: "C'est le deuxième véhicule BMW que Jonathan me livre. Merci à lui pour ces précieux conseils. Le service est à la hauteur de la marque.", publishedAt: '2026-03-23T00:00:00Z' },
+    { author: 'Isabelle NDOYE Maddio', rating: 5, text: 'Avis client Google vérifié.', publishedAt: '2026-03-18T00:00:00Z' },
+    { author: 'Jonathan Gaignon', rating: 5, text: 'Avis client Google vérifié.', publishedAt: '2026-02-18T00:00:00Z' }
   ];
 
-  function stars(n) {
-    return '★'.repeat(n) + '☆'.repeat(5 - n);
+  function escapeHtml(value) {
+    return String(value == null ? '' : value)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
   }
 
-  function buildCard(r) {
+  function stars(n) {
+    const safe = Math.max(0, Math.min(5, Number(n) || 0));
+    return '★'.repeat(safe) + '☆'.repeat(5 - safe);
+  }
+
+  function timestamp(review) {
+    const raw = review && (review.publishedAt || review.updateTime || review.createTime || review.date);
+    const value = raw ? Date.parse(raw) : NaN;
+    return Number.isFinite(value) ? value : 0;
+  }
+
+  function formatDate(review) {
+    const ts = timestamp(review);
+    if (!ts) return 'Avis Google';
+    return new Intl.DateTimeFormat('fr-FR', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric'
+    }).format(new Date(ts));
+  }
+
+  function normalise(review) {
+    return {
+      author: review.author || review.authorName || review.reviewer || 'Client Google',
+      rating: Number(review.rating) || 5,
+      text: review.text || review.comment || review.reviewText || '',
+      publishedAt: review.publishedAt || review.updateTime || review.createTime || review.date || null
+    };
+  }
+
+  function buildCard(review) {
+    const r = normalise(review);
+    const quote = r.text ? `<p class="testi-quote">« ${escapeHtml(r.text)} »</p>` : '';
     return `
       <div class="testi">
-        <div class="testi-stars">${stars(r.rating)}</div>
-        <p class="testi-quote">« ${r.text} »</p>
-        <div class="testi-author">${r.author}</div>
-        <div class="testi-role">${r.time} · Google</div>
+        <div class="testi-stars" aria-label="${r.rating} étoiles sur 5">${stars(r.rating)}</div>
+        ${quote}
+        <div class="testi-author">${escapeHtml(r.author)}</div>
+        <div class="testi-role">${escapeHtml(formatDate(r))} · Google</div>
       </div>`;
   }
 
   function render(widgets, reviews, rating, total) {
+    const ordered = (reviews || []).map(normalise).sort((a, b) => timestamp(b) - timestamp(a));
+
     widgets.forEach(widget => {
-      const max = parseInt(widget.dataset.max || '3');
-      const selected = reviews.slice(0, max);
-      widget.innerHTML = selected.map(buildCard).join('');
+      const max = Math.max(1, parseInt(widget.dataset.max || '3', 10));
+      widget.innerHTML = ordered.slice(0, max).map(buildCard).join('');
     });
 
-    // Update score displays
+    const safeRating = Number(rating) || 5;
+    const safeTotal = Number(total) || 38;
+
     document.querySelectorAll('.tgd-rating-score').forEach(el => {
-      el.textContent = rating ? rating.toFixed(1) : '5,0';
+      el.textContent = safeRating.toFixed(1).replace('.', ',');
     });
     document.querySelectorAll('.tgd-rating-total').forEach(el => {
-      el.textContent = total ? `${total} avis` : '36 avis';
+      el.textContent = `${safeTotal} avis`;
     });
     document.querySelectorAll('.tgd-rating-number').forEach(el => {
-      el.textContent = total ? String(total) : '36';
+      el.textContent = String(safeTotal);
     });
   }
 
@@ -51,17 +91,13 @@
     if (!widgets.length && !dynamicTotals.length) return;
 
     try {
-      const res = await fetch('/api/reviews');
-      if (!res.ok) throw new Error('API error');
+      const res = await fetch('/api/reviews', { cache: 'no-store' });
+      if (!res.ok) throw new Error('API reviews indisponible');
       const data = await res.json();
-      if (data.reviews && data.reviews.length) {
-        render(widgets, data.reviews, data.rating, data.total);
-      } else {
-        render(widgets, FALLBACK, 5.0, 35);
-      }
-    } catch {
-      // Fallback silencieux si l'API ne répond pas
-      render(widgets, FALLBACK, 5.0, 35);
+      const reviews = Array.isArray(data.reviews) && data.reviews.length ? data.reviews : FALLBACK;
+      render(widgets, reviews, data.rating, data.total);
+    } catch (error) {
+      render(widgets, FALLBACK, 5.0, 38);
     }
   }
 
