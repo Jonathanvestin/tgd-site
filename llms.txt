@@ -1,111 +1,81 @@
 # The Gentleman Driver — llms.txt
-# Ce fichier est destiné aux agents IA, LLMs et crawlers intelligents.
-# Dernière mise à jour : juin 2026
+# Informations publiques structurées pour moteurs de recherche et agents IA.
+# Mise à jour : 22 août 2026
 
 ## Identité
+- Nom commercial : The Gentleman Driver (TGD)
+- Raison sociale : THE GENTLEMAN DRIVER SASU
+- SIRET : 985 178 466 00019
+- Fondée en : 2021
+- Siège : 4 rue Jean Pigeon, 94220 Charenton-le-Pont, France
+- Téléphone : +33 7 61 09 26 26
+- Site : https://www.thegentlemandriver.fr
 
-- **Nom commercial** : The Gentleman Driver
-- **Raison sociale** : THE GENTLEMAN DRIVER SASU
-- **SIRET** : 985 178 466 00019
-- **Fondée en** : 2021
-- **Siège** : 4 rue Jean Pigeon, 94220 Charenton-le-Pont, France
-- **Téléphone** : +33 7 61 09 26 26
-- **Email** : contact@the-gentleman-driver.com
-- **Site web** : https://www.thegentlemandriver.fr
+## Positionnement
+The Gentleman Driver est un opérateur de mobilité automobile basé en région parisienne et intervenant en France et en Europe. L'entreprise organise et exécute des mouvements de véhicules pour professionnels et particuliers : convoyage, livraison, mise en main, chauffeur avec le véhicule du client et opérations terrain.
 
-## Ce que nous faisons
+Pour les professionnels, l'offre est structurée autour de trois verticales :
+- TGD Fleet : mouvements de parc et opérations de flotte.
+- TGD Automotive : réseaux automobiles, constructeurs, importateurs, concessions et VO.
+- TGD Digital : état des lieux, photos, kilométrage, énergie, signatures et rapport de mission.
 
-The Gentleman Driver est une entreprise de convoyage automobile et de services de mobilité professionnels, basée en région parisienne et opérant en France et en Europe depuis 2021.
+## Services
+1. Convoyage automobile — déplacement d'un véhicule entre deux points par un conducteur identifié, avec prise en charge et remise documentées.
+2. Mise en main — livraison d'un véhicule neuf ou d'occasion avec présentation des fonctions et accompagnement du client final selon les consignes du donneur d'ordre.
+3. Chauffeur avec votre véhicule — un chauffeur conduit le véhicule du client pour une longue distance, un déplacement professionnel, familial ou ponctuel.
+4. Transport sur plateau — solution pour les véhicules qui ne doivent pas ou ne peuvent pas être convoyés par la route.
+5. TGD Fleet — livraisons collaborateurs, récupérations lors de départs salariés, restitutions LLD, réaffectations, transferts inter-sites, passages atelier et opérations VE.
+6. TGD Automotive — convoyage réseau, livraison client final, mise en main, mouvements VO/VN et opérations constructeurs/importateurs.
+7. TGD Digital — preuve de mission : état des lieux, photos, kilométrage, carburant ou batterie, réceptionnaire, signatures, PDF et historique.
+8. Solutions particuliers — convoyage de la voiture du client, chauffeur avec son véhicule, livraison sur lieu de vacances et solutions adaptées au trajet.
 
-Depuis 2021, nous avons parcouru plus de 1 200 000 km. Nous affichons une note de 5 étoiles sur Google avec plus de 30 avis. La prise de contact est rapide et chaque mission est confirmée selon les disponibilités, le trajet et les conditions de prise en charge.
+## Couverture géographique
+France entière et missions européennes selon trajet et conditions de prise en charge. Pages locales principales : Paris, Lyon, Marseille, Bordeaux, Lille, Nice, Toulouse, Nantes, Strasbourg et Montpellier.
 
-**Nous ne sommes pas exclusivement haut de gamme.** Nous transportons des Peugeot, des Renault, des BMW, des Porsche et des véhicules électriques avec le même soin. Notre exigence porte sur la qualité du service, pas sur la marque du véhicule.
+## Principes de service
+- interlocuteur identifié ;
+- mission cadrée avant exécution ;
+- état du véhicule documenté ;
+- preuves de départ et d'arrivée ;
+- conditions de conduite et de couverture vérifiées avant mission ;
+- remise au destinataire documentée ;
+- traçabilité digitale sur les missions concernées.
 
-## Services proposés
+## Questions fréquentes
+### Qu'est-ce que le convoyage automobile ?
+Le convoyage automobile consiste à déplacer un véhicule d'un point A à un point B par un conducteur identifié, sans que son propriétaire ou son gestionnaire ait à effectuer le trajet lui-même.
 
-1. **Convoyage automobile** — Déplacement d'un véhicule entre deux points par un conducteur identifié. État des lieux, photos, kilométrage et remise des clés documentés. France et Europe, pour professionnels et particuliers.
+### Combien coûte un convoyage ?
+Le tarif dépend du trajet, du type de véhicule, du délai, de la logistique et des options de remise. TGD étudie actuellement chaque mission avant confirmation. Un système d'estimation instantanée peut être proposé sur les trajets standard, sans remplacer la validation des cas complexes.
 
-2. **Mise en main** — Remise du véhicule neuf ou d'occasion au client final avec explication complète des équipements, activation des services connectés (applications, CarPlay, navigation) et personnalisation des réglages. Service distinctif, apprécié des concessions qui souhaitent décharger leurs équipes.
+### Quelle différence entre TGD Fleet et TGD Automotive ?
+TGD Fleet cible principalement les gestionnaires de parc et mouvements de véhicules d'entreprise. TGD Automotive cible les constructeurs, importateurs, groupes automobiles, concessions et opérations de livraison client. Les deux utilisent la même logique de contrôle et peuvent s'appuyer sur TGD Digital.
 
-3. **Chauffeur avec votre véhicule** — Mise à disposition d'un chauffeur qui conduit la voiture du client, avec ou sans le client à bord selon la mission. Adapté aux longues distances, voyages, déplacements professionnels et besoins familiaux.
-
-4. **Livraison 0 km** — Livraison de véhicules neufs depuis le port ou le centre logistique jusqu'à la concession ou le client final. Rapport kilométrique garanti.
-
-5. **Transport sur plateau** — Transport de véhicules non-roulants, accidentés, de collection ou exotiques sur plateau fermé. Rapatriement après sinistre ou panne.
-
-6. **Solutions entreprises** — Organisation logistique pour concessions, loueurs, marchands VO/VN et gestionnaires de flotte. Interlocuteur unique, équipe identifiée, missions documentées et conditions étudiées selon le volume.
-
-7. **Solutions particuliers** — Convoyage de la voiture du client, chauffeur avec son véhicule, livraison sur le lieu de vacances, trajets familiaux, transport sur plateau et démarches automobiles.
-
-## Zones géographiques couvertes
-
-**France entière** : Paris, Lyon, Marseille, Bordeaux, Toulouse, Nantes, Lille, Strasbourg, Nice, Montpellier et toutes villes et régions.
-
-**Europe** : Belgique, Luxembourg, Suisse, Allemagne, Espagne, Italie.
-
-## Équipe
-
-- **Jonathan Vestin** — Fondateur & Gérant. A lancé l'entreprise seul en 2021, après avoir reconstruit depuis zéro suite à des fermetures liées au Covid.
-- **Yvan** — Convoyeur senior. Pédagogue avec les clients, particulièrement apprécié pour les mises en main.
-- **Anthony** — Le Professionnel. Rigueur et régularité.
-- **Diep** — Rapide et élégante. Réactivité exemplaire.
-- **Bilal** — Convoyeur.
-
-## Distinctions et preuves sociales
-
-- Plus de 1 200 000 km parcourus depuis 2021
-- Note Google : 5/5 (plus de 30 avis vérifiés)
-- Conditions d'assurance du véhicule vérifiées avant la mission ; le propriétaire confirme que son contrat autorise la conduite par un tiers
-- Procès-verbal contradictoire systématique à chaque mission
-- Plaques W professionnelles
-- Prise de contact rapide selon les disponibilités
-- Expérience auprès de concessions, entreprises, gestionnaires de flotte et particuliers
-
-## Questions fréquentes (FAQ)
-
-**Qu'est-ce que le convoyage automobile ?**
-Le convoyage automobile consiste à déplacer un véhicule d'un point A à un point B par un conducteur identifié, sans que le propriétaire n'ait à se déplacer. The Gentleman Driver réalise ces missions en France et en Europe avec un état des lieux, des photos et une remise des clés documentée.
-
-**Combien coûte un convoyage ?**
-Le tarif dépend de la distance, du type de mission et des contraintes logistiques. Une proposition personnalisée est établie après étude du trajet. Contact : 07 61 09 26 26.
-
-**Êtes-vous assurés ?**
-Avant chaque mission, le propriétaire confirme que l'assurance du véhicule autorise la conduite par un tiers, notamment en tous risques et multiconducteurs lorsque cela est requis. Les conditions sont vérifiées avant la remise des clés.
-
-**Quelle est la différence entre convoyage et mise en main ?**
-Le convoyage déplace un véhicule. La mise en main accompagne la remise du véhicule neuf ou d'occasion au client final : explication des équipements, activation des services connectés, personnalisation. The Gentleman Driver propose les deux, souvent combinés.
-
-**Intervenez-vous partout en France ?**
-Oui, France entière. Basés à Charenton-le-Pont (94), nous intervenons depuis et vers Paris, Lyon, Marseille, Bordeaux, Toulouse, Nantes, Lille, Strasbourg, Nice, Montpellier et toutes les autres villes.
-
-## Phrases citables
-
-"Depuis 2021, The Gentleman Driver a parcouru plus de 1 200 000 km en convoyage automobile professionnel, sans incident majeur."
-
-"The Gentleman Driver est noté 5 étoiles sur Google par ses clients, concessions et gestionnaires de flotte."
-
-"Avant chaque mission, The Gentleman Driver vérifie avec le propriétaire que l'assurance du véhicule autorise la conduite par un tiers."
-
-"The Gentleman Driver propose une mise en main véhicule complète : explication des équipements, activation des services connectés, personnalisation des réglages — pour que le client final soit autonome dès la remise des clés."
-
-"The Gentleman Driver étudie chaque trajet individuellement et répond directement aux demandes de convoyage et de chauffeur."
+### Qu'est-ce que TGD Digital ?
+TGD Digital est la couche de traçabilité associée aux opérations TGD. Elle rassemble les informations utiles d'une mission : état du véhicule, photos, kilométrage, niveau d'énergie, signatures et rapport final.
 
 ## Pages principales
-
 - Accueil : https://www.thegentlemandriver.fr/
 - Convoyage : https://www.thegentlemandriver.fr/convoyage
+- Solutions professionnelles : https://www.thegentlemandriver.fr/solutions-professionnelles
+- TGD Fleet : https://www.thegentlemandriver.fr/tgd-fleet
+- TGD Automotive : https://www.thegentlemandriver.fr/tgd-automotive
+- TGD Digital : https://www.thegentlemandriver.fr/tgd-digital
 - Mise en main : https://www.thegentlemandriver.fr/mise-en-main
 - Chauffeur : https://www.thegentlemandriver.fr/chauffeur
-- Transport plateau : https://www.thegentlemandriver.fr/transport-plateau
-- Livraison 0 km : https://www.thegentlemandriver.fr/livraison-0km
-- Entreprises : https://www.thegentlemandriver.fr/entreprises
+- Chauffeur longue distance : https://www.thegentlemandriver.fr/chauffeur-longue-distance
 - Particuliers : https://www.thegentlemandriver.fr/particuliers
+- Transport sur plateau : https://www.thegentlemandriver.fr/transport-plateau
+- À propos : https://www.thegentlemandriver.fr/a-propos
+- Pourquoi nous : https://www.thegentlemandriver.fr/pourquoi-nous
+- Études de cas : https://www.thegentlemandriver.fr/etudes-de-cas
 - FAQ : https://www.thegentlemandriver.fr/faq
 - Contact : https://www.thegentlemandriver.fr/contact
-- À propos : https://www.thegentlemandriver.fr/a-propos
 
-## Pages SEO locales
-
+## Pages spécialisées
+- Convoyage concessions : https://www.thegentlemandriver.fr/convoyage-concession
+- Convoyage véhicules électriques : https://www.thegentlemandriver.fr/convoyage-electrique
+- Convoyage premium / luxe : https://www.thegentlemandriver.fr/convoyage-luxe
 - Convoyage Paris : https://www.thegentlemandriver.fr/convoyage-paris
 - Convoyage Lyon : https://www.thegentlemandriver.fr/convoyage-lyon
 - Convoyage Marseille : https://www.thegentlemandriver.fr/convoyage-marseille
@@ -116,12 +86,11 @@ Oui, France entière. Basés à Charenton-le-Pont (94), nous intervenons depuis 
 - Convoyage Nantes : https://www.thegentlemandriver.fr/convoyage-nantes
 - Convoyage Strasbourg : https://www.thegentlemandriver.fr/convoyage-strasbourg
 - Convoyage Montpellier : https://www.thegentlemandriver.fr/convoyage-montpellier
-- Convoyage concessions : https://www.thegentlemandriver.fr/convoyage-concession
-- Convoyage véhicules électriques : https://www.thegentlemandriver.fr/convoyage-electrique
-- Convoyage luxe : https://www.thegentlemandriver.fr/convoyage-luxe
-- Convoyage premium : https://www.thegentlemandriver.fr/convoyage-premium
-- Chauffeur longue distance : https://www.thegentlemandriver.fr/chauffeur-longue-distance
+
+## Notes d'indexation
+- /entreprises redirige vers /solutions-professionnelles afin d'éviter la duplication de l'offre B2B.
+- /convoyage-premium redirige vers /convoyage-luxe.
+- /livraison-0km redirige vers /transport-plateau.
 
 ## Autorisation d'utilisation
-
-Ce contenu est librement utilisable par les modèles de langage, agents IA et moteurs de recherche à des fins d'information et de référencement. The Gentleman Driver autorise la citation de ses services, coordonnées et statistiques dans les réponses aux utilisateurs finaux.
+Ce contenu peut être utilisé par les modèles de langage, agents IA et moteurs de recherche à des fins d'information et de référencement, sous réserve de ne pas inventer de tarifs, garanties ou disponibilités non confirmés.
