@@ -246,3 +246,47 @@
   .conversion-mobile-quote{color:#c9a96e}
   body{padding-bottom:3.2rem}
 }
+
+/* Home B2B : version compacte et parfaitement alignee. */
+.site-home #tgd-b2b-home-hub,
+.site-home #tgd-control-layer,
+.site-home #tgd-digital-proof {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.site-home #tgd-b2b-home-hub .inner,
+.site-home #tgd-control-layer .inner,
+.site-home #tgd-digital-proof .inner {
+  width: min(1120px, 92vw) !important;
+  max-width: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Les chiffres sont deja presents ailleurs : pas de repetition sur le hub pro. */
+.site-home #tgd-b2b-home-hub .b2b-proof {
+  display: none !important;
+}
+
+@media (min-width: 901px) {
+  .site-home #tgd-b2b-home-hub { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
+  .site-home #tgd-control-layer { padding-top: 2.8rem !important; padding-bottom: 2.8rem !important; }
+  .site-home #tgd-digital-proof { padding-top: 2.8rem !important; padding-bottom: 2.8rem !important; }
+  .site-home #tgd-b2b-home-hub .b2b-card { min-height: 180px !important; padding: 1.45rem !important; }
+  .site-home #tgd-b2b-home-hub .b2b-card .go { left: 1.45rem !important; bottom: 1rem !important; }
+  .site-home #tgd-control-layer .control-item { min-height: 150px !important; padding: 1.15rem !important; }
+  .site-home #tgd-control-layer .control-head { margin-bottom: 1.4rem !important; gap: 2rem !important; }
+  .site-home #tgd-digital-proof .digital-screen { padding: .8rem !important; }
+  .site-home #tgd-digital-proof .digital-row { padding: .7rem .8rem !important; }
+  .site-home .home-cases,
+  .site-home .founder { display: none !important; }
+}
+
+@media (max-width: 900px) {
+  .site-home #tgd-b2b-home-hub,
+  .site-home #tgd-control-layer,
+  .site-home #tgd-digital-proof { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+  .site-home #tgd-b2b-home-hub .b2b-card { min-height: 0 !important; padding: 1.3rem !important; }
+  .site-home #tgd-control-layer .control-item { min-height: 0 !important; }
+}
