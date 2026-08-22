@@ -1,176 +1,48 @@
-// tgd-reviews.js — Widget avis Google en live + intégration B2B homepage
-// Affiche en priorité les avis renvoyés par /api/reviews, triés du plus récent au plus ancien.
-
-(function () {
-  'use strict';
-
-  const FALLBACK = [
-    { author: 'Florent Vial', rating: 5, text: "Yvan a été d'un grand professionnalisme lors de la livraison de mon véhicule ! Très agréable, disponible et soucieux de m'expliquer les choses en prenant le temps !", publishedAt: '2026-05-19T00:00:00Z' },
-    { author: 'Cédric Niçoise', rating: 5, text: "Livraison du véhicule parfaite : une entreprise sérieuse, ponctuelle et d'un professionnalisme irréprochable.", publishedAt: '2026-04-15T00:00:00Z' },
-    { author: 'Frédéric Bazin', rating: 5, text: "C'est le deuxième véhicule BMW que Jonathan me livre. Merci à lui pour ces précieux conseils. Le service est à la hauteur de la marque.", publishedAt: '2026-03-23T00:00:00Z' },
-    { author: 'Isabelle NDOYE Maddio', rating: 5, text: 'Avis client Google vérifié.', publishedAt: '2026-03-18T00:00:00Z' },
-    { author: 'Jonathan Gaignon', rating: 5, text: 'Avis client Google vérifié.', publishedAt: '2026-02-18T00:00:00Z' }
-  ];
-
-  function escapeHtml(value) {
-    return String(value == null ? '' : value)
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#039;');
-  }
-
-  function stars(n) {
-    const safe = Math.max(0, Math.min(5, Number(n) || 0));
-    return '★'.repeat(safe) + '☆'.repeat(5 - safe);
-  }
-
-  function timestamp(review) {
-    const raw = review && (review.publishedAt || review.updateTime || review.createTime || review.date);
-    const value = raw ? Date.parse(raw) : NaN;
-    return Number.isFinite(value) ? value : 0;
-  }
-
-  function formatDate(review) {
-    const ts = timestamp(review);
-    if (!ts) return 'Avis Google';
-    return new Intl.DateTimeFormat('fr-FR', {
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric'
-    }).format(new Date(ts));
-  }
-
-  function normalise(review) {
-    return {
-      author: review.author || review.authorName || review.reviewer || 'Client Google',
-      rating: Number(review.rating) || 5,
-      text: review.text || review.comment || review.reviewText || '',
-      publishedAt: review.publishedAt || review.updateTime || review.createTime || review.date || null
-    };
-  }
-
-  function buildCard(review) {
-    const r = normalise(review);
-    const quote = r.text ? `<p class="testi-quote">« ${escapeHtml(r.text)} »</p>` : '';
-    return `
-      <div class="testi">
-        <div class="testi-stars" aria-label="${r.rating} étoiles sur 5">${stars(r.rating)}</div>
-        ${quote}
-        <div class="testi-author">${escapeHtml(r.author)}</div>
-        <div class="testi-role">${escapeHtml(formatDate(r))} · Google</div>
-      </div>`;
-  }
-
-  function render(widgets, reviews, rating, total) {
-    const ordered = (reviews || []).map(normalise).sort((a, b) => timestamp(b) - timestamp(a));
-
-    widgets.forEach(widget => {
-      const max = Math.max(1, parseInt(widget.dataset.max || '3', 10));
-      widget.innerHTML = ordered.slice(0, max).map(buildCard).join('');
-    });
-
-    const safeRating = Number(rating) || 5;
-    const safeTotal = Number(total) || 38;
-
-    document.querySelectorAll('.tgd-rating-score').forEach(el => {
-      el.textContent = safeRating.toFixed(1).replace('.', ',');
-    });
-    document.querySelectorAll('.tgd-rating-total').forEach(el => {
-      el.textContent = `${safeTotal} avis`;
-    });
-    document.querySelectorAll('.tgd-rating-number').forEach(el => {
-      el.textContent = String(safeTotal);
-    });
-  }
-
-  function upgradeHomeB2B() {
-    if (!document.body.classList.contains('site-home')) return;
-
-    // 1) Navigation desktop : Entreprises -> Solutions Pro
-    document.querySelectorAll('.nav-links a[href="/entreprises"]').forEach(link => {
-      link.href = '/solutions-professionnelles';
-      link.textContent = 'Solutions Pro';
-    });
-
-    // 2) Navigation mobile
-    document.querySelectorAll('.mobile-menu a[href="/entreprises"]').forEach(link => {
-      link.href = '/solutions-professionnelles';
-      link.textContent = 'Solutions Pro';
-    });
-
-    // 3) Routeur d'audience : la porte professionnelle devient le hub B2B
-    const proCard = document.querySelector('.audience-card[data-audience="professionnel"]');
-    if (proCard) {
-      proCard.href = '/solutions-professionnelles';
-      const strong = proCard.querySelector('strong');
-      const copy = proCard.querySelector('strong + span');
-      if (strong) strong.textContent = 'Je gère des véhicules professionnels';
-      if (copy) copy.textContent = 'Flottes, constructeurs, groupes automobiles, concessions et opérations digitales.';
-    }
-
-    // 4) Mini-hub B2B visible immédiatement après le routeur, sans alourdir le hero
-    const router = document.querySelector('.audience-router');
-    if (!router || document.getElementById('tgd-b2b-home-hub')) return;
-
-    const style = document.createElement('style');
-    style.textContent = `
-      #tgd-b2b-home-hub{padding:2.2rem 4vw!important;background:#0d1014;border-bottom:1px solid rgba(201,169,110,.12)}
-      #tgd-b2b-home-hub .b2b-home-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:280px repeat(3,1fr);gap:1px;background:rgba(159,169,179,.14)}
-      #tgd-b2b-home-hub .b2b-home-intro,#tgd-b2b-home-hub .b2b-home-card{background:#11151a;padding:1.35rem 1.4rem}
-      #tgd-b2b-home-hub .b2b-home-intro{display:flex;flex-direction:column;justify-content:center}
-      #tgd-b2b-home-hub .b2b-home-kicker{font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:#c9a96e;font-weight:600;margin-bottom:.45rem}
-      #tgd-b2b-home-hub .b2b-home-intro strong{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:400;color:#f5f0e8;line-height:1.15}
-      #tgd-b2b-home-hub .b2b-home-intro span{font-size:.7rem;color:#9fa8b1;margin-top:.45rem;line-height:1.5}
-      #tgd-b2b-home-hub .b2b-home-card{text-decoration:none;transition:.2s;position:relative}
-      #tgd-b2b-home-hub .b2b-home-card:hover{background:#171c22}
-      #tgd-b2b-home-hub .b2b-home-card strong{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;color:#f5f0e8;display:block;margin-bottom:.35rem}
-      #tgd-b2b-home-hub .b2b-home-card strong em{font-style:italic;color:#c9a96e}
-      #tgd-b2b-home-hub .b2b-home-card span{font-size:.69rem;color:#aeb6bd;line-height:1.5;display:block;padding-right:1.5rem}
-      #tgd-b2b-home-hub .b2b-home-card::after{content:'→';position:absolute;right:1rem;top:50%;transform:translateY(-50%);color:#c9a96e}
-      @media(max-width:900px){#tgd-b2b-home-hub{padding:1rem 5vw!important}#tgd-b2b-home-hub .b2b-home-inner{grid-template-columns:1fr}#tgd-b2b-home-hub .b2b-home-intro{padding-bottom:1rem}}
-    `;
-    document.head.appendChild(style);
-
-    const hub = document.createElement('section');
-    hub.id = 'tgd-b2b-home-hub';
-    hub.setAttribute('aria-label', 'Solutions professionnelles TGD');
-    hub.innerHTML = `
-      <div class="b2b-home-inner">
-        <div class="b2b-home-intro">
-          <div class="b2b-home-kicker">Solutions professionnelles</div>
-          <strong>Un opérateur.<br>Trois expertises.</strong>
-          <span>De l'exécution terrain à la traçabilité digitale.</span>
-        </div>
-        <a class="b2b-home-card" href="/tgd-fleet"><strong>TGD <em>Fleet</em></strong><span>Mouvements de parc, collaborateurs, restitutions LLD et transferts inter-sites.</span></a>
-        <a class="b2b-home-card" href="/tgd-automotive"><strong>TGD <em>Automotive</em></strong><span>Constructeurs, importateurs, groupes automobiles, livraison client et mise en main.</span></a>
-        <a class="b2b-home-card" href="/tgd-digital"><strong>TGD <em>Digital</em></strong><span>EDL, photos, kilométrage, énergie, signatures, rapports et historique.</span></a>
-      </div>`;
-    router.insertAdjacentElement('afterend', hub);
-  }
-
-  async function load() {
-    upgradeHomeB2B();
-
-    const widgets = document.querySelectorAll('.tgd-reviews-widget');
-    const dynamicTotals = document.querySelectorAll('.tgd-rating-total, .tgd-rating-number, .tgd-rating-score');
-    if (!widgets.length && !dynamicTotals.length) return;
-
-    try {
-      const res = await fetch('/api/reviews', { cache: 'no-store' });
-      if (!res.ok) throw new Error('API reviews indisponible');
-      const data = await res.json();
-      const reviews = Array.isArray(data.reviews) && data.reviews.length ? data.reviews : FALLBACK;
-      render(widgets, reviews, data.rating, data.total);
-    } catch (error) {
-      render(widgets, FALLBACK, 5.0, 38);
-    }
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', load);
-  } else {
-    load();
-  }
+// tgd-reviews.js — Avis Google live + transformation B2B homepage
+(function(){
+'use strict';
+const FALLBACK=[
+{author:'Florent Vial',rating:5,text:"Yvan a été d'un grand professionnalisme lors de la livraison de mon véhicule ! Très agréable, disponible et soucieux de m'expliquer les choses en prenant le temps !",publishedAt:'2026-05-19T00:00:00Z'},
+{author:'Cédric Niçoise',rating:5,text:"Livraison du véhicule parfaite : une entreprise sérieuse, ponctuelle et d'un professionnalisme irréprochable.",publishedAt:'2026-04-15T00:00:00Z'},
+{author:'Frédéric Bazin',rating:5,text:"C'est le deuxième véhicule BMW que Jonathan me livre. Merci à lui pour ces précieux conseils. Le service est à la hauteur de la marque.",publishedAt:'2026-03-23T00:00:00Z'}
+];
+const esc=v=>String(v==null?'':v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#039;');
+const ts=r=>{const v=Date.parse(r?.publishedAt||r?.updateTime||r?.createTime||r?.date||'');return Number.isFinite(v)?v:0};
+const norm=r=>({author:r.author||r.authorName||r.reviewer||'Client Google',rating:Number(r.rating)||5,text:r.text||r.comment||r.reviewText||'',publishedAt:r.publishedAt||r.updateTime||r.createTime||r.date||null});
+const stars=n=>'★'.repeat(Math.max(0,Math.min(5,Number(n)||0)))+'☆'.repeat(5-Math.max(0,Math.min(5,Number(n)||0)));
+function date(r){const v=ts(r);return v?new Intl.DateTimeFormat('fr-FR',{day:'numeric',month:'long',year:'numeric'}).format(new Date(v)):'Avis Google'}
+function card(r){r=norm(r);return `<div class="testi"><div class="testi-stars">${stars(r.rating)}</div>${r.text?`<p class="testi-quote">« ${esc(r.text)} »</p>`:''}<div class="testi-author">${esc(r.author)}</div><div class="testi-role">${esc(date(r))} · Google</div></div>`}
+function render(w,reviews,rating,total){const ordered=(reviews||[]).map(norm).sort((a,b)=>ts(b)-ts(a));w.forEach(x=>{const m=Math.max(1,parseInt(x.dataset.max||'3',10));x.innerHTML=ordered.slice(0,m).map(card).join('')});const sr=Number(rating)||5,st=Number(total)||38;document.querySelectorAll('.tgd-rating-score').forEach(e=>e.textContent=sr.toFixed(1).replace('.',','));document.querySelectorAll('.tgd-rating-total').forEach(e=>e.textContent=`${st} avis`);document.querySelectorAll('.tgd-rating-number').forEach(e=>e.textContent=String(st))}
+function upgradeHome(){
+ if(!document.body.classList.contains('site-home'))return;
+ document.querySelectorAll('.nav-links a[href="/entreprises"],.mobile-menu a[href="/entreprises"]').forEach(a=>{a.href='/solutions-professionnelles';a.textContent='Solutions Pro'});
+ const hero=document.querySelector('.hero');
+ if(hero){
+   const eyebrow=hero.querySelector('.eyebrow'); if(eyebrow)eyebrow.textContent='Automotive Mobility Operations · France & Europe';
+   const h1=hero.querySelector('h1'); if(h1)h1.innerHTML='Vos véhicules doivent bouger.<br><em>Nous orchestrons le reste.</em>';
+   const desc=hero.querySelector('.hero-desc'); if(desc)desc.innerHTML='Convoyage, livraison client, mise en main, mouvements de flotte et traçabilité digitale. <strong style="color:#f5f0e8;font-weight:500">Un interlocuteur. Une exécution terrain. Un dossier complet.</strong>';
+   const actions=hero.querySelector('.hero-actions'); if(actions)actions.innerHTML='<a href="/solutions-professionnelles" class="btn-primary">Découvrir les solutions pro</a><a href="#devis-express" class="btn-ghost">Demander un devis</a>';
+ }
+ const pro=document.querySelector('.audience-card[data-audience="professionnel"]'); if(pro){pro.href='/solutions-professionnelles';const s=pro.querySelector('strong');if(s)s.textContent='Je gère des véhicules professionnels';const c=pro.querySelector('strong + span');if(c)c.textContent='Flottes, constructeurs, groupes automobiles, concessions et opérations digitales.'}
+ if(!document.getElementById('tgd-home-machine-style')){
+  const st=document.createElement('style');st.id='tgd-home-machine-style';st.textContent=`
+  .site-home .hero{background:radial-gradient(circle at 72% 32%,rgba(143,156,169,.12),transparent 32%),linear-gradient(135deg,#08090b 0%,#0c0f13 55%,#111820 100%)!important;border-bottom:1px solid rgba(201,169,110,.16)}
+  .site-home .hero-left::after{background:linear-gradient(to bottom,transparent,rgba(201,169,110,.5),transparent)!important}
+  .site-home .hero-right{background:linear-gradient(145deg,#151b22,#0b0e12)!important}
+  .site-home .hero h1{font-size:clamp(3.2rem,5.3vw,5.7rem)!important;max-width:760px}
+  .site-home .hero-desc{font-size:1rem!important;max-width:650px!important}
+  #tgd-b2b-home-hub{padding:3.3rem 4vw!important;background:#0b0e12;border-bottom:1px solid rgba(201,169,110,.15)}
+  #tgd-b2b-home-hub .inner{max-width:1180px;margin:auto}.b2b-head{display:flex;justify-content:space-between;gap:2rem;align-items:end;margin-bottom:1.6rem}.b2b-head h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2.2rem,4vw,3.8rem);line-height:1.05;margin:0}.b2b-head h2 em{color:#c9a96e}.b2b-head p{max-width:500px;color:#9fa8b1;font-size:.78rem;margin:0}.b2b-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.b2b-card{background:linear-gradient(145deg,#151a20,#0f1318);border:1px solid rgba(157,169,180,.16);padding:1.8rem;text-decoration:none;min-height:220px;position:relative;transition:.25s}.b2b-card:hover{transform:translateY(-3px);border-color:rgba(201,169,110,.55)}.b2b-card .code{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#8f9aa4}.b2b-card h3{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:400;margin:.8rem 0;color:#f5f0e8}.b2b-card h3 em{color:#c9a96e}.b2b-card p{font-size:.75rem;color:#aeb6bd;line-height:1.7;margin:0 0 1rem}.b2b-card .go{position:absolute;bottom:1.35rem;left:1.8rem;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:#c9a96e}.b2b-proof{display:grid;grid-template-columns:repeat(4,1fr);margin-top:1rem;gap:1px;background:rgba(201,169,110,.12)}.b2b-proof div{background:#101419;padding:1rem 1.2rem}.b2b-proof strong{display:block;font-family:'Cormorant Garamond',serif;font-size:1.55rem;color:#f5f0e8;font-weight:400}.b2b-proof span{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:#8f9aa4}
+  #tgd-digital-proof{padding:3rem 4vw!important;background:#101419;border-bottom:1px solid rgba(201,169,110,.12)}#tgd-digital-proof .inner{max-width:1180px;margin:auto;display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;align-items:center}.digital-copy h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4vw,3.6rem);font-weight:300;line-height:1.08;margin:.4rem 0 1rem}.digital-copy h2 em{color:#c9a96e}.digital-copy p{color:#aeb6bd;font-size:.8rem;line-height:1.8}.digital-screen{border:1px solid rgba(159,169,179,.2);background:#0b0e12;padding:1rem}.digital-row{display:flex;justify-content:space-between;gap:1rem;padding:.9rem;border-bottom:1px solid rgba(159,169,179,.12)}.digital-row:last-child{border:0}.digital-row strong{font-size:.75rem;color:#f5f0e8}.digital-row span{font-size:.65rem;color:#c9a96e;text-transform:uppercase;letter-spacing:.08em}
+  @media(max-width:900px){.b2b-head{display:block}.b2b-head p{margin-top:1rem}.b2b-grid{grid-template-columns:1fr}.b2b-proof{grid-template-columns:1fr 1fr}#tgd-digital-proof .inner{grid-template-columns:1fr}.site-home .hero h1{font-size:clamp(2.6rem,12vw,4.2rem)!important}}
+  `;document.head.appendChild(st)
+ }
+ const router=document.querySelector('.audience-router');
+ if(router&&!document.getElementById('tgd-b2b-home-hub')){
+  const hub=document.createElement('section');hub.id='tgd-b2b-home-hub';hub.innerHTML=`<div class="inner"><div class="b2b-head"><div><div class="section-eyebrow">Solutions professionnelles</div><h2>Un opérateur.<br><em>Trois expertises.</em></h2></div><p>Pour les entreprises, flottes, constructeurs, importateurs, groupes automobiles et concessions qui veulent une exécution terrain premium avec une traçabilité exploitable.</p></div><div class="b2b-grid"><a class="b2b-card" href="/tgd-fleet"><div class="code">TGD / 01</div><h3>TGD <em>Fleet</em></h3><p>Mouvements de parc, livraison collaborateurs, départs salariés, restitutions LLD et transferts inter-sites.</p><span class="go">Découvrir Fleet →</span></a><a class="b2b-card" href="/tgd-automotive"><div class="code">TGD / 02</div><h3>TGD <em>Automotive</em></h3><p>Convoyage réseau, livraison client final, mise en main, VE et opérations constructeurs.</p><span class="go">Découvrir Automotive →</span></a><a class="b2b-card" href="/tgd-digital"><div class="code">TGD / 03</div><h3>TGD <em>Digital</em></h3><p>EDL, photos, kilométrage, batterie ou carburant, signatures, rapport PDF et historique.</p><span class="go">Découvrir Digital →</span></a></div><div class="b2b-proof"><div><strong>1,2M+</strong><span>km parcourus</span></div><div><strong>5★</strong><span>Google</span></div><div><strong>7j/7</strong><span>opérations</span></div><div><strong>FR + EU</strong><span>couverture</span></div></div></div>`;router.insertAdjacentElement('afterend',hub)
+  const dig=document.createElement('section');dig.id='tgd-digital-proof';dig.innerHTML=`<div class="inner"><div class="digital-copy"><div class="section-eyebrow">TGD Digital</div><h2>La qualité terrain devient <em>visible.</em></h2><p>Chaque mission produit un dossier exploitable : état du véhicule, photos, kilométrage, niveau d'énergie, signatures et rapport final. Pour un Fleet Manager ou un directeur réseau, la prestation ne repose plus seulement sur une promesse.</p><a href="/tgd-digital" class="btn-ghost" style="margin-top:1rem">Voir TGD Digital</a></div><div class="digital-screen"><div class="digital-row"><strong>Mission #TGD-02641 · Paris → Lyon</strong><span>Livrée</span></div><div class="digital-row"><strong>État des lieux départ · photos · km</strong><span>Validé</span></div><div class="digital-row"><strong>Niveau carburant / batterie</strong><span>Contrôlé</span></div><div class="digital-row"><strong>Réceptionnaire · signature</strong><span>Signé</span></div><div class="digital-row"><strong>Rapport PDF</strong><span>Disponible</span></div></div></div>`;hub.insertAdjacentElement('afterend',dig)
+ }
+}
+async function load(){upgradeHome();const w=document.querySelectorAll('.tgd-reviews-widget'),d=document.querySelectorAll('.tgd-rating-total,.tgd-rating-number,.tgd-rating-score');if(!w.length&&!d.length)return;try{const r=await fetch('/api/reviews',{cache:'no-store'});if(!r.ok)throw 0;const x=await r.json();render(w,Array.isArray(x.reviews)&&x.reviews.length?x.reviews:FALLBACK,x.rating,x.total)}catch(e){render(w,FALLBACK,5,38)}}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',load);else load();
 })();
