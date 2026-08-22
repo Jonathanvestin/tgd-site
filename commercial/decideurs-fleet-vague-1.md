@@ -22,6 +22,24 @@ Objectif : approches très ciblées, pas de mailing de masse. Chaque contact doi
 - Accroche : « Avec l’électrification des parcs, nous voyons apparaître un besoin très concret : déplacer un véhicule, le livrer au bon collaborateur et documenter correctement batterie, kilométrage et état. »
 - Offre d’entrée : pilote 3 missions
 
+### Orange — Alexandre Nepveu
+- Fonction publiquement citée dans l’écosystème Agora : Directeur Flotte Auto d’Orange
+- Angle TGD : mouvements nationaux, collaborateurs, réaffectations, restitutions et exécution terrain reliée au reporting de flotte
+- Accroche : « Votre pilotage flotte est déjà très structuré ; notre sujet est plus terre-à-terre : qui prend physiquement le véhicule, documente son état et le remet au bon endroit sans mobiliser vos équipes ? »
+- Offre d’entrée : pilote 3 missions sur des cas pénibles ou inter-régions
+
+### Verisure — Laurent Jolivet
+- Profil public très actif dans l’écosystème flotte et mobilité ; contenu récent autour d’une flotte électrique Verisure
+- Angle TGD : mouvements d’une flotte terrain dense, livraison de VE, transferts collaborateurs, remise avec niveau de batterie documenté
+- Accroche : « Sur une flotte terrain très distribuée, les petits mouvements deviennent vite chronophages. TGD peut prendre en charge la chaîne physique complète et vous rendre le dossier de preuve. »
+- Offre d’entrée : pilote 3 missions
+
+### Securitas France — Jérôme Argueyrolles
+- Profil public se présentant comme responsable flotte automobile et mobilité
+- Angle TGD : véhicules d’agents et de managers dispersés, transferts entre agences, entrées/sorties collaborateurs, restitution
+- Accroche : « Quand un véhicule doit changer d’agence ou de conducteur, est-ce que vos équipes locales gèrent encore elles-mêmes le mouvement ? »
+- Offre d’entrée : pilote 3 missions
+
 ## Priorité B
 
 ### Veolia — équipe VEGA / gestion automobile
@@ -32,6 +50,11 @@ Objectif : approches très ciblées, pas de mailing de masse. Chaque contact doi
 ### SUEZ — relais Fleet / achats / mobilité
 - Identifier en parallèle les responsables opérationnels régionaux et achats flotte
 - Chercher un sponsor national + un utilisateur opérationnel terrain
+
+### Radio France — Direction de l’Environnement de Travail / Parc automobile
+- Recrutement récent d’un responsable du parc automobile national, ce qui confirme un sujet flotte structuré et une organisation dédiée
+- Angle TGD : mouvements nationaux, multi-usages VP/VU, restitution, maintenance et logistique ponctuelle
+- Action : identifier le/la titulaire une fois la prise de poste publique
 
 ## Prescripteurs à travailler
 
