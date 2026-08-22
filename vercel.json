@@ -7,6 +7,8 @@
       "destination": "https://www.thegentlemandriver.fr/:path*",
       "permanent": true
     },
+    {"source":"/entreprises","destination":"/solutions-professionnelles","permanent":true},
+    {"source":"/entreprises.html","destination":"/solutions-professionnelles","permanent":true},
     {"source":"/convoyage-premium","destination":"/convoyage-luxe","permanent":true},
     {"source":"/convoyage-premium.html","destination":"/convoyage-luxe","permanent":true},
     {"source":"/convoyage-longue-distance","destination":"/chauffeur-longue-distance","permanent":true},
@@ -28,7 +30,6 @@
     {"source":"/convoyage-paris.html","destination":"/convoyage-paris","permanent":true},
     {"source":"/convoyage-strasbourg.html","destination":"/convoyage-strasbourg","permanent":true},
     {"source":"/convoyage-toulouse.html","destination":"/convoyage-toulouse","permanent":true},
-    {"source":"/entreprises.html","destination":"/entreprises","permanent":true},
     {"source":"/faq.html","destination":"/faq","permanent":true},
     {"source":"/livraison-0km","destination":"/transport-plateau","permanent":true},
     {"source":"/livraison-0km.html","destination":"/transport-plateau","permanent":true},
@@ -39,7 +40,11 @@
     {"source":"/pourquoi-nous.html","destination":"/pourquoi-nous","permanent":true},
     {"source":"/jonathan","destination":"/a-propos","permanent":true},
     {"source":"/jonathan.html","destination":"/a-propos","permanent":true},
-    {"source":"/etudes-de-cas.html","destination":"/etudes-de-cas","permanent":true}
+    {"source":"/etudes-de-cas.html","destination":"/etudes-de-cas","permanent":true},
+    {"source":"/solutions-professionnelles.html","destination":"/solutions-professionnelles","permanent":true},
+    {"source":"/tgd-fleet.html","destination":"/tgd-fleet","permanent":true},
+    {"source":"/tgd-automotive.html","destination":"/tgd-automotive","permanent":true},
+    {"source":"/tgd-digital.html","destination":"/tgd-digital","permanent":true}
   ],
   "rewrites": [
     {"source":"/blog","destination":"/blog.html"},
@@ -48,6 +53,10 @@
     {"source":"/blog/mise-en-main-vehicule-neuf-ce-qui-fait-la-difference","destination":"/blog/mise-en-main-vehicule-neuf-ce-qui-fait-la-difference.html"},
     {"source":"/blog/comprendre-vehicule-electrique-sans-baratin","destination":"/blog/comprendre-vehicule-electrique-sans-baratin.html"},
     {"source":"/api/reviews","destination":"/api/reviews.js"},
+    {"source":"/solutions-professionnelles","destination":"/solutions-professionnelles.html"},
+    {"source":"/tgd-fleet","destination":"/tgd-fleet.html"},
+    {"source":"/tgd-automotive","destination":"/tgd-automotive.html"},
+    {"source":"/tgd-digital","destination":"/tgd-digital.html"},
     {"source":"/a-propos","destination":"/a-propos.html"},
     {"source":"/chauffeur","destination":"/chauffeur.html"},
     {"source":"/chauffeur-longue-distance","destination":"/chauffeur-longue-distance.html"},
@@ -67,7 +76,6 @@
     {"source":"/convoyage-paris","destination":"/convoyage-paris.html"},
     {"source":"/convoyage-strasbourg","destination":"/convoyage-strasbourg.html"},
     {"source":"/convoyage-toulouse","destination":"/convoyage-toulouse.html"},
-    {"source":"/entreprises","destination":"/entreprises.html"},
     {"source":"/faq","destination":"/faq.html"},
     {"source":"/mentions-legales","destination":"/mentions-legales.html"},
     {"source":"/mise-en-main","destination":"/mise-en-main.html"},
