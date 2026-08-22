@@ -1,0 +1,31 @@
+account,sector,target_function,priority,angle,status
+Veolia,Environnement / services,Fleet Manager / Responsable parc,A,"Mouvements multi-sites, réaffectations, restitutions et véhicules techniques",À prospecter
+SUEZ,Environnement / services,Fleet Manager / Responsable mobilité,A,"Parc multi-sites, mouvements terrain et restitution LLD",À prospecter
+ENGIE,Énergie,Fleet Manager / Achats mobilité,A,"Collaborateurs itinérants, transferts inter-sites, VE",À prospecter
+Orange,Télécoms,Responsable parc / Mobility Manager,A,"Grand parc national, mouvements collaborateurs et réaffectations",À prospecter
+Enedis,Énergie / réseau,Responsable parc automobile,A,"Véhicules d’intervention, transferts et logistique réseau",À prospecter
+GRDF,Énergie / réseau,Responsable parc automobile,A,"Mouvements de véhicules techniques et multi-sites",À prospecter
+VINCI Energies,BTP / maintenance,Fleet Manager,A,"Parc d’itinérants, agences multiples, transferts et restitution",À prospecter
+Bouygues Construction,BTP,Fleet Manager / Services généraux,A,"Réaffectation collaborateurs, transferts régionaux, LLD",À prospecter
+Eiffage Énergie Systèmes,BTP / énergie,Fleet Manager,A,"Parc technique multi-sites et mouvements récurrents",À prospecter
+Equans,Services techniques,Fleet Manager / Responsable mobilité,A,"Techniciens itinérants, livraisons collaborateurs, transferts",À prospecter
+SPIE,Services techniques,Fleet Manager,A,"Parc national technique, réaffectations et atelier",À prospecter
+Verisure,Sécurité,Fleet Manager / Responsable parc,A,"Force terrain importante, entrées/sorties collaborateurs",À prospecter
+APAVE,Inspection / services,Fleet Manager,A,"Collaborateurs itinérants, multi-sites, réaffectations",À prospecter
+Bureau Veritas,Inspection / services,Fleet Manager,A,"Réseau national, véhicules collaborateurs, restitution",À prospecter
+KONE,Ascenseurs / maintenance,Responsable parc,A,"Techniciens itinérants, véhicules de service et mouvements",À prospecter
+Otis,Ascenseurs / maintenance,Responsable parc,A,"Parc technique, changements d’affectation et maintenance",À prospecter
+Schindler,Ascenseurs / maintenance,Responsable parc,A,"Mouvements de véhicules de techniciens multi-sites",À prospecter
+Elis,Services B2B,Fleet Manager,B,"Réseau d’agences et parc opérationnel",À prospecter
+Rentokil Initial,Services B2B,Fleet Manager,B,"Techniciens itinérants et transferts de véhicules",À prospecter
+Rexel,Distribution B2B,Fleet Manager / Services généraux,B,"Réseau national d’agences et équipes commerciales",À prospecter
+Sonepar,Distribution B2B,Fleet Manager / Achats,B,"Multi-sites, commerciaux et mouvements de parc",À prospecter
+Saint-Gobain Distribution Bâtiment France,Distribution BTP,Fleet Manager,B,"Réseau dense, véhicules collaborateurs et transferts",À prospecter
+Colas,BTP / routes,Fleet Manager,B,"Parc multi-sites, déplacements régionaux et réaffectations",À prospecter
+GEODIS,Logistique,Fleet Manager / Achats,B,"Organisation multi-sites et besoin de transferts de véhicules légers",À prospecter
+DHL Express France,Logistique,Fleet Manager / Responsable parc,B,"Mouvements inter-sites et gestion de véhicules de service",À prospecter
+Sanofi,Pharma,Fleet Manager / Achats mobilité,B,"Force commerciale, restitution et livraison collaborateurs",À prospecter
+Servier,Pharma,Fleet Manager / Services généraux,B,"Véhicules commerciaux, affectations et restitutions",À prospecter
+Pierre Fabre,Pharma,Fleet Manager,B,"Force terrain et réaffectations nationales",À prospecter
+Securitas France,Sécurité,Fleet Manager / Responsable parc,B,"Parc opérationnel et mouvements collaborateurs",À prospecter
+Dalkia,Énergie / maintenance,Fleet Manager,A,"Techniciens, agences, transferts et VE",À prospecter
