@@ -678,8 +678,8 @@ section{padding:3.5rem 4vw !important}
   <div class="hero-right" id="devis-rapide">
     <div class="hero-right-inner">
       <form class="tgd-form hero-quote" id="form-hero" action="https://formspree.io/f/xwpbaozv" method="POST" novalidate>
-        <input type="hidden" name="_subject" value="Demande express — Hero homepage">
-        <input type="hidden" name="source" value="homepage_hero">
+        <input type="hidden" name="_subject" value="TGD — Demande mini-formulaire homepage">
+        <input type="hidden" name="source_formulaire" value="mini_homepage">
         <div class="hero-quote-kicker">Devis express gratuit</div>
         <div class="hero-quote-title">O&#249; doit aller le v&#233;hicule&nbsp;?</div>
         <p class="hero-quote-sub">3 informations suffisent. Nous vous rappelons avec un tarif pr&#233;cis.</p>
@@ -688,10 +688,10 @@ section{padding:3.5rem 4vw !important}
           <input name="destination" type="text" class="f-input" placeholder="Ville d&#8217;arriv&#233;e *" required aria-label="Ville d&#8217;arriv&#233;e" autocomplete="address-level2">
           <input name="telephone_ou_email" type="text" class="f-input hero-quote-contact" placeholder="T&#233;l&#233;phone ou e-mail *" required aria-label="T&#233;l&#233;phone ou e-mail" autocomplete="tel">
           <button type="submit" class="btn-primary hero-quote-submit">Recevoir mon devis sous 2h</button>
-          <p class="hero-quote-note">Gratuit, sans engagement. Vos coordonn&#233;es servent uniquement &#224; traiter votre demande.</p>
+          <p class="hero-quote-note">Gratuit, sans engagement. Vos coordonn&#233;es servent uniquement &#224; traiter votre demande. <a href="/mentions-legales#donnees-personnelles">Donn&#233;es personnelles</a>.</p>
         </div>
         <div class="hero-mini-proof"><span>1,2&nbsp;M km parcourus</span><span>5/5 Google</span><span>PV photo sign&#233;</span><span>7j/7</span></div>
-        <div class="form-success-msg"><p>&#10003; Demande re&#231;ue. Nous vous rappelons sous 2h.</p></div>
+        <div class="form-success-msg"><p>&#10003; Demande bien envoy&#233;e. Nous vous recontactons habituellement sous 2h.</p></div>
         <div class="form-error-msg"><p></p></div>
       </form>
     </div>
@@ -1093,9 +1093,9 @@ section{padding:3.5rem 4vw !important}
     <p style="font-size:.75rem;color:var(--ivory-muted);font-weight:300">7j/7 de 7h &#224; 22h &middot; <a href="https://wa.me/33761092626" style="color:var(--gold);text-decoration:none">WhatsApp</a> &middot; <a href="mailto:contact@the-gentleman-driver.com" style="color:var(--gold);text-decoration:none">contact@the-gentleman-driver.com</a></p>
   </div>
   <div class="cta-form-wrap"><form class="tgd-form" id="form-homepage" action="https://formspree.io/f/xwpbaozv" method="POST" novalidate>
-  <input type="hidden" name="_subject" value="Demande de devis — Homepage">
+  <input type="hidden" name="_subject" value="TGD — Demande formulaire détaillé homepage">\n  <input type="hidden" name="source_formulaire" value="homepage_detaille">
   <input type="hidden" name="_language" value="fr">
-  <input type="hidden" name="_next" value="">
+  
   
     <div class="cta-form-title">Votre devis express</div>
     <div class="f-row">
@@ -1113,17 +1113,17 @@ section{padding:3.5rem 4vw !important}
       <option>Solutions entreprises</option>
     </select>
     <div class="f-row">
-      <input name="d_233_part" id="hp_depart" type="text" class="f-input" placeholder="D&#233;part *" required aria-label="D&#233;part" autocomplete="street-address">
+      <input name="adresse_depart" id="hp_depart" type="text" class="f-input" placeholder="D&#233;part *" required aria-label="D&#233;part" autocomplete="street-address">
       <input name="destination" id="hp_destination" type="text" class="f-input" placeholder="Destination" required aria-label="Destination" autocomplete="off">
     </div>
     <input name="date_souhaitee" type="date" class="f-input" aria-label="Date souhait&#233;e">
-    <input name="t_233_l_233_phone_ou_e_mail" type="text" class="f-input" placeholder="T&#233;l&#233;phone ou e-mail *" required aria-label="T&#233;l&#233;phone ou e-mail" autocomplete="tel">
+    <input name="telephone_ou_email" type="text" class="f-input" placeholder="T&#233;l&#233;phone ou e-mail *" required aria-label="T&#233;l&#233;phone ou e-mail" autocomplete="tel">
     <button type="submit" class="btn-primary" style="display:block;text-align:center;width:100%;border:none;cursor:pointer">Envoyer la demande</button>
     <p class="f-note">Prise de contact sous 2h * &middot; Gratuit sans engagement</p>
     <p class="f-note" style="margin-top:.4rem">* Selon disponibilit&#233; &#8212; si Jonathan ou l&#8217;&#233;quipe est en mission, le retour peut prendre un peu plus de temps. Mais on rappelle toujours.</p>
   
   <p class="privacy-note">Les informations transmises sont utilis&#233;es uniquement pour traiter votre demande et pr&#233;parer votre devis. <a href="/mentions-legales#donnees-personnelles">Donn&#233;es personnelles</a>.</p>
-  <div class="form-success-msg"><p>✓ Message reçu — nous vous recontactons sous 2h.</p></div>
+  <div class="form-success-msg"><p>✓ Demande bien envoyée. Nous vous recontactons habituellement sous 2h.</p></div>
   <div class="form-error-msg"><p></p></div>
 </form></div>
 </section>
@@ -1163,6 +1163,18 @@ section{padding:3.5rem 4vw !important}
 <script src="tgd-conversions.js"></script>
 <script>
 (function(){
+  function isValidLeadField(field){
+    var value = field.value.trim();
+    if(!value) return false;
+    if(field.type === 'email') return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+    if(field.type === 'tel') { var digits = value.replace(/\D/g, ''); return digits.length >= 10 && digits.length <= 15; }
+    if(field.name === 'telephone_ou_email') {
+      if(value.indexOf('@') !== -1) return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+      var contactDigits = value.replace(/\D/g, '');
+      return contactDigits.length >= 10 && contactDigits.length <= 15;
+    }
+    return true;
+  }
   document.querySelectorAll('.tgd-form').forEach(function(form){
     if(form.id === 'form-contact') return;
     form.addEventListener('submit', function(e){
@@ -1174,7 +1186,7 @@ section{padding:3.5rem 4vw !important}
       form.querySelectorAll('[required]').forEach(function(field){
         field.classList.remove('error');
         field.style.borderColor = '';
-        if(!field.value.trim()){
+        if(!isValidLeadField(field)){
           field.style.borderColor = 'rgba(192,80,77,0.6)';
           field.classList.add('error');
           valid = false;
@@ -1188,7 +1200,7 @@ section{padding:3.5rem 4vw !important}
         if(err){ 
           err.classList.add('show');
           var p = err.querySelector('p');
-          if(p) p.textContent = 'Merci de remplir les champs obligatoires.';
+          if(p) p.textContent = 'Merci de renseigner les champs obligatoires et de vérifier vos coordonnées.';
         }
         return;
       }
@@ -1218,7 +1230,7 @@ section{padding:3.5rem 4vw !important}
         if(err){
           err.classList.add('show');
           var p = err.querySelector('p');
-          if(p) p.innerHTML = 'Erreur. Appelez le <a href="tel:+33761092626">07 61 09 26 26</a>.';
+          if(p) p.innerHTML = 'Une erreur est survenue. Réessayez ou appelez le <a href="tel:+33761092626">07 61 09 26 26</a>.';
         }
       })
       .finally(function(){
