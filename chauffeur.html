@@ -725,18 +725,18 @@ section{padding:4.5rem 4vw !important}
     </p>
   </div>
   <div class="cta-form-box"><form class="tgd-form" id="form-chauffeur" action="https://formspree.io/f/xwpbaozv" method="POST" novalidate>
-  <input type="hidden" name="_subject" value="Demande de réservation — Chauffeur">
+  <input type="hidden" name="_subject" value="TGD — Demande formulaire Chauffeur">\n  <input type="hidden" name="source_formulaire" value="chauffeur">
   <input type="hidden" name="_language" value="fr">
-  <input type="hidden" name="_next" value="">
+  
   
     <div class="cta-form-title">Demande de r&#233;servation</div>
     <div class="f-row">
-      <div class="f-group"><label class="f-label">Pr&#233;nom</label><input name="votre_pr_233_nom" type="text" class="f-input" placeholder="Votre pr&#233;nom" required aria-label="Votre pr&#233;nom"></div>
-      <div class="f-group"><label class="f-label">T&#233;l&#233;phone</label><input name="06_xx_xx_xx_xx" type="tel" class="f-input" placeholder="06 XX XX XX XX" required aria-label="06 XX XX XX XX"></div>
+      <div class="f-group"><label class="f-label">Pr&#233;nom</label><input name="prenom" type="text" class="f-input" placeholder="Votre pr&#233;nom" required aria-label="Votre pr&#233;nom"></div>
+      <div class="f-group"><label class="f-label">T&#233;l&#233;phone</label><input name="telephone" type="tel" class="f-input" placeholder="06 XX XX XX XX" required aria-label="06 XX XX XX XX"></div>
     </div>
     <div class="f-group">
       <label class="f-label">Situation</label>
-      <select name="type_mission_1" class="f-select" aria-label="Type mission 1">
+      <select name="motif_chauffeur" class="f-select" aria-label="Type mission 1">
         <option>S&#233;lectionner&#8230;</option>
         <option>Suspension / retrait de permis</option>
         <option>Voyage d&#8217;affaires</option>
@@ -748,12 +748,12 @@ section{padding:4.5rem 4vw !important}
       </select>
     </div>
     <div class="f-row">
-      <div class="f-group"><label class="f-label">D&#233;part</label><input name="adresse_ou_ville" id="ch_depart" type="text" class="f-input" autocomplete="off" placeholder="Adresse ou ville" required aria-label="Adresse ou ville"></div>
-      <div class="f-group"><label class="f-label">Destination</label><input name="adresse_ou_ville" id="ch_destination" type="text" class="f-input" autocomplete="off" placeholder="Adresse ou ville" required aria-label="Adresse ou ville"></div>
+      <div class="f-group"><label class="f-label">D&#233;part</label><input name="adresse_depart" id="ch_depart" type="text" class="f-input" autocomplete="off" placeholder="Adresse ou ville" required aria-label="Adresse ou ville"></div>
+      <div class="f-group"><label class="f-label">Destination</label><input name="adresse_destination" id="ch_destination" type="text" class="f-input" autocomplete="off" placeholder="Adresse ou ville" required aria-label="Adresse ou ville"></div>
     </div>
     <div class="f-group">
       <label class="f-label">Forfait souhait&#233;</label>
-      <select name="type_mission_2" class="f-select" aria-label="Type mission 2">
+      <select name="formule_chauffeur" class="f-select" aria-label="Type mission 2">
         <option>Demi-journ&#233;e &mdash; 350&#160;&#8364; HT</option>
         <option>Journ&#233;e &mdash; 650&#160;&#8364; HT</option>
         <option>Abonnement / long terme</option>
@@ -764,7 +764,7 @@ section{padding:4.5rem 4vw !important}
     <p style="font-size:.75rem;color:var(--ivory-muted);text-align:center;margin-top:.8rem;font-weight:300">R&#233;ponse garantie sous 2h &middot; Gratuit sans engagement</p>
   
   <p class="privacy-note">Les informations transmises sont utilis&#233;es uniquement pour traiter votre demande et pr&#233;parer votre devis. <a href="/mentions-legales#donnees-personnelles">Donn&#233;es personnelles</a>.</p>
-  <div class="form-success-msg"><p>✓ Message reçu — nous vous recontactons sous 2h.</p></div>
+  <div class="form-success-msg"><p>✓ Demande bien envoyée. Nous vous recontactons habituellement sous 2h.</p></div>
   <div class="form-error-msg"><p></p></div>
 </form></div>
 </section>
@@ -803,6 +803,13 @@ section{padding:4.5rem 4vw !important}
 <script src="tgd-conversions.js"></script>
 <script>
 (function(){
+  function isValidLeadField(field){
+    var value = field.value.trim();
+    if(!value) return false;
+    if(field.type === 'email') return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+    if(field.type === 'tel') { var digits = value.replace(/\D/g, ''); return digits.length >= 10 && digits.length <= 15; }
+    return true;
+  }
   document.querySelectorAll('.tgd-form').forEach(function(form){
     if(form.id === 'form-contact') return;
     form.addEventListener('submit', function(e){
@@ -814,7 +821,7 @@ section{padding:4.5rem 4vw !important}
       form.querySelectorAll('[required]').forEach(function(field){
         field.classList.remove('error');
         field.style.borderColor = '';
-        if(!field.value.trim()){
+        if(!isValidLeadField(field)){
           field.style.borderColor = 'rgba(192,80,77,0.6)';
           field.classList.add('error');
           valid = false;
@@ -828,7 +835,7 @@ section{padding:4.5rem 4vw !important}
         if(err){ 
           err.classList.add('show');
           var p = err.querySelector('p');
-          if(p) p.textContent = 'Merci de remplir les champs obligatoires.';
+          if(p) p.textContent = 'Merci de renseigner les champs obligatoires et de vérifier vos coordonnées.';
         }
         return;
       }
@@ -858,7 +865,7 @@ section{padding:4.5rem 4vw !important}
         if(err){
           err.classList.add('show');
           var p = err.querySelector('p');
-          if(p) p.textContent = 'Erreur. Appelez le 07 61 09 26 26.';
+          if(p) p.textContent = 'Une erreur est survenue. Réessayez ou appelez le 07 61 09 26 26.';
         }
       })
       .finally(function(){
