@@ -331,7 +331,7 @@ section{padding:4.5rem 4vw !important}
     <div class="form-progress"><div class="progress-bar" id="progressBar"></div></div>
 
     <form id="form-contact" action="https://formspree.io/f/xwpbaozv" method="POST" novalidate>
-      <input type="hidden" name="_subject" value="Demande de devis — Contact">
+      <input type="hidden" name="_subject" value="TGD — Demande formulaire Contact">\n      <input type="hidden" name="source_formulaire" value="contact">
       <input type="hidden" name="_language" value="fr">
 
       <!-- PANEL 1 -->
@@ -345,7 +345,7 @@ section{padding:4.5rem 4vw !important}
           <button type="button" class="type-btn" onclick="selectType(this)" data-value="Convoyage Europe">Convoyage<br>Europe</button>
           <button type="button" class="type-btn" onclick="selectType(this)" data-value="Autre / Sur mesure">Autre /<br>Sur mesure</button>
         </div>
-        <input type="hidden" name="type_mission" id="type_mission_hidden">
+        <input type="hidden" name="type_mission" id="type_mission_hidden" required>\n        <p id="type-mission-error" style="display:none;margin:.65rem 0 0;color:#c0504d;font-size:.75rem">Sélectionnez un type de mission.</p>
         <div class="f-row">
           <div class="f-group">
             <label class="f-label" for="vous_etes">Vous &#234;tes *</label>
@@ -464,7 +464,7 @@ section{padding:4.5rem 4vw !important}
     <div class="form-success" id="formSuccess">
       <div class="form-success-icon">&#10003;</div>
       <h3>Message re&#231;u !</h3>
-      <p>Nous vous recontactons sous 2h.<br>Pour une urgence&#160;: <a href="tel:+33761092626" style="color:var(--gold)">07 61 09 26 26</a></p>
+      <p>Nous vous recontactons habituellement sous 2h.<br>Pour une urgence&#160;: <a href="tel:+33761092626" style="color:var(--gold)">07 61 09 26 26</a></p>
     </div>
   </div>
 
@@ -609,12 +609,24 @@ section{padding:4.5rem 4vw !important}
 <script>
 var currentStep = 1;
 
+function isValidContactField(field) {
+  var value = field.value.trim();
+  if (!value) return false;
+  if (field.type === 'email') return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  if (field.type === 'tel') { var digits = value.replace(/\D/g, ''); return digits.length >= 10 && digits.length <= 15; }
+  return true;
+}
+
 function validateStep(step) {
   var panel = document.getElementById('panel-' + step);
   var valid = true;
   panel.querySelectorAll('[required]').forEach(function(f) {
     f.classList.remove('error');
-    if (!f.value.trim()) { f.classList.add('error'); valid = false; }
+    if (!isValidContactField(f)) { f.classList.add('error'); valid = false; }
+    if (f.id === 'type_mission_hidden') {
+      var typeError = document.getElementById('type-mission-error');
+      if (typeError) typeError.style.display = isValidContactField(f) ? 'none' : 'block';
+    }
   });
   return valid;
 }
@@ -640,6 +652,8 @@ function selectType(btn) {
   btn.classList.add('selected');
   var hidden = document.getElementById('type_mission_hidden');
   if (hidden) hidden.value = btn.getAttribute('data-value') || btn.textContent.trim();
+  var typeError = document.getElementById('type-mission-error');
+  if (typeError) typeError.style.display = 'none';
 }
 
 document.getElementById('form-contact').addEventListener('submit', function(e) {
@@ -651,11 +665,11 @@ document.getElementById('form-contact').addEventListener('submit', function(e) {
   var scope = activePanel || form;
   scope.querySelectorAll('[required]').forEach(function(f) {
     f.classList.remove('error');
-    if (!f.value.trim()) { f.classList.add('error'); valid = false; }
+    if (!isValidContactField(f)) { f.classList.add('error'); valid = false; }
   });
   if (!valid) {
     var band = document.getElementById('form-error-band');
-    band.textContent = 'Merci de remplir les champs obligatoires.';
+    band.textContent = 'Merci de renseigner les champs obligatoires et de vérifier vos coordonnées.';
     band.classList.add('show');
     return;
   }
@@ -675,7 +689,7 @@ document.getElementById('form-contact').addEventListener('submit', function(e) {
   })
   .catch(function() {
     var band = document.getElementById('form-error-band');
-    band.innerHTML = 'Erreur. Appelez le <a href="tel:+33761092626">07 61 09 26 26</a>.';
+    band.innerHTML = 'Une erreur est survenue. Réessayez ou appelez le <a href="tel:+33761092626">07 61 09 26 26</a>.';
     band.classList.add('show');
     btn.innerHTML = 'Envoyer la demande';
     btn.disabled = false;
