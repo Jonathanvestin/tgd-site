@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Partenaire logistique des concessions : livraison de véhicules neufs à domicile, rapatriement VO et transferts inter-sites, avec contrat cadre possible.">
+<meta name="description" content="Livraison VN/VO, transferts inter-sites, restitutions et mise en main client. Missions documentées en France et Europe sur devis.">
 <meta name="robots" content="index, follow">
-<title>Convoyage concession : livraison VN et rapatriement VO</title>
+<title>Convoyage automobile pour concessions | TGD</title>
 <link rel="canonical" href="https://www.thegentlemandriver.fr/convoyage-concession">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Gentleman Driver">
-<meta property="og:title" content="Convoyage concession : livraison VN et rapatriement VO">
-<meta property="og:description" content="Partenaire logistique des concessions : livraison de véhicules neufs à domicile, rapatriement VO et transferts inter-sites, avec contrat cadre possible.">
+<meta property="og:title" content="Convoyage automobile pour concessions | TGD">
+<meta property="og:description" content="Livraison VN/VO, transferts inter-sites, restitutions et mise en main client. Missions documentées en France et Europe sur devis.">
 <meta property="og:url" content="https://www.thegentlemandriver.fr/convoyage-concession">
 <meta property="og:image" content="https://www.thegentlemandriver.fr/og-image.jpg">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Convoyage concession : livraison VN et rapatriement VO">
-<meta name="twitter:description" content="Partenaire logistique des concessions : livraison de véhicules neufs à domicile, rapatriement VO et transferts inter-sites, avec contrat cadre possible.">
+<meta name="twitter:title" content="Convoyage automobile pour concessions | TGD">
+<meta name="twitter:description" content="Livraison VN/VO, transferts inter-sites, restitutions et mise en main client. Missions documentées en France et Europe sur devis.">
 <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48">
@@ -26,17 +26,77 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Convoyage automobile pour concessions",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "The Gentleman Driver",
-    "telephone": "+33761092626",
-    "address": {"@type": "PostalAddress", "streetAddress": "4 rue Jean Pigeon", "addressLocality": "Charenton-le-Pont", "postalCode": "94220", "addressCountry": "FR"}
-  },
-  "description": "Service de convoyage automobile dédié aux concessions. Livraison VN/VO, mise en main, transferts inter-sites, contrat cadre.",
-  "areaServed": "France",
-  "serviceType": "Convoyage concession automobile"
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://www.thegentlemandriver.fr/convoyage-concession#service",
+      "name": "Convoyage automobile pour concessions",
+      "url": "https://www.thegentlemandriver.fr/convoyage-concession",
+      "description": "Livraison de véhicules neufs et d'occasion, transferts inter-sites, restitutions, livraison au client final et mise en main pour les concessions automobiles.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "@id": "https://www.thegentlemandriver.fr/#organization",
+        "name": "The Gentleman Driver",
+        "telephone": "+33761092626",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "4 rue Jean Pigeon",
+          "addressLocality": "Charenton-le-Pont",
+          "postalCode": "94220",
+          "addressCountry": "FR"
+        }
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "France"
+      },
+      "serviceType": [
+        "Convoyage automobile pour concessions",
+        "Livraison de véhicules neufs et d'occasion",
+        "Transfert automobile inter-sites",
+        "Restitution de véhicule",
+        "Mise en main de véhicule"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.thegentlemandriver.fr/convoyage-concession#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Comment se déroule un convoyage automobile pour une concession ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TGD qualifie le besoin, confirme le devis et l'organisation, prend en charge le véhicule selon le protocole prévu, suit la mission puis réalise la remise et transmet les éléments convenus."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pouvez-vous livrer directement un véhicule au client final ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. TGD peut livrer un véhicule neuf ou d'occasion au client final. Une mise en main peut être intégrée lorsqu'elle est prévue au devis."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pouvez-vous prendre en charge plusieurs véhicules ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TGD peut étudier la prise en charge de plusieurs véhicules. L'organisation est confirmée selon le volume, les trajets, le calendrier et les convoyeurs disponibles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Intervenez-vous en Europe ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TGD intervient en France et étudie les missions européennes sur devis, selon le trajet, les disponibilités, la réglementation, les documents du véhicule et la faisabilité opérationnelle."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -227,6 +287,28 @@ section{padding:4.5rem 4vw !important}
 .trust-item svg{color:var(--gold);flex-shrink:0}
 .trust-sep{color:rgba(201,169,110,0.3);font-size:.8rem}
 @media(max-width:600px){.trust-sep{display:none}}
+
+/* P1-A — page concessions */
+.hero-content{max-width:980px}
+.hero-content h1{max-width:900px}
+.hero-tagline{font-family:'Cormorant Garamond',serif;font-size:clamp(1.45rem,2.5vw,2rem);font-style:italic;color:var(--gold-light);margin:-.2rem 0 1rem;line-height:1.25}
+.hero-actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.7rem}
+.hero-primary,.hero-secondary{display:inline-flex;align-items:center;justify-content:center;padding:.9rem 1.25rem;text-decoration:none;font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;font-weight:500}
+.hero-primary{background:var(--gold);color:var(--black)}
+.hero-secondary{border:1px solid rgba(245,240,232,.45);color:var(--ivory);background:rgba(10,10,10,.28)}
+.hero-note{font-size:.72rem;color:rgba(245,240,232,.62);margin-top:.9rem}
+.p1-reperes{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(201,169,110,.12)}
+.p1-repere{background:var(--black-2);padding:1.4rem 1rem;display:flex;align-items:center;justify-content:center;text-align:center;min-height:92px;font-size:.72rem;line-height:1.5;letter-spacing:.09em;text-transform:uppercase;color:var(--ivory)}
+.p1-repere::before{content:'✓';color:var(--gold);margin-right:.55rem}
+.p1-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(201,169,110,.1);margin:2rem 0}
+.p1-card{background:var(--black-2);padding:1.6rem}
+.p1-card h3{margin:0 0 .55rem}
+.p1-card p{margin:0}
+.p1-links{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.25rem}
+.p1-link{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,169,110,.35);font-size:.78rem}
+.p1-contact-box{background:rgba(201,169,110,.06);border:1px solid rgba(201,169,110,.18);padding:2rem;margin-top:2rem}
+@media(max-width:900px){.p1-reperes{grid-template-columns:1fr 1fr}.hero-seo{min-height:72vh}.hero-content{padding-bottom:3.25rem}}
+@media(max-width:600px){.p1-grid{grid-template-columns:1fr}.p1-reperes{grid-template-columns:1fr 1fr}.p1-repere{min-height:82px;padding:1rem .75rem;font-size:.65rem}.hero-actions{flex-direction:column;align-items:stretch}.hero-primary,.hero-secondary{width:100%}.hero-content h1{font-size:clamp(2.15rem,11vw,3rem)}}
 </style>
 <link rel="stylesheet" href="/assets/responsive-polish.css">
 </head>
@@ -275,13 +357,19 @@ section{padding:4.5rem 4vw !important}
 
 <div class="hero-seo">
   <div class="hero-bg">
-    <img src="/assets/images/convoyage-automobile-pour-les-concessions.webp" alt="Convoyage automobile pour les concessions." width="1400" height="1050">
+    <img src="/assets/images/convoyage-automobile-pour-les-concessions.webp" alt="Convoyage automobile pour les concessions" width="1400" height="1050">
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <p class="eyebrow">Concessions & professionnels</p>
-    <h1>Convoyage automobile<br><em>pour les concessions.</em></h1>
-    <p class="hero-sub">Livraison VN &#224; domicile, rapatriement VO, transferts inter-sites. Une &#233;quipe stable qui conna&#238;t vos standards et repr&#233;sente votre marque &#224; la hauteur de ce que vos clients ont achet&#233;.</p>
+    <p class="eyebrow">Concessions &amp; professionnels de l’automobile</p>
+    <h1>Convoyage automobile pour concessions,<br><em>sans perdre la maîtrise de la livraison</em></h1>
+    <p class="hero-tagline">Vos véhicules arrivent au bon endroit. Votre image aussi.</p>
+    <p class="hero-sub">Livraisons VN/VO, transferts inter-sites, restitutions et remises aux clients finaux. TGD organise chaque mission selon votre besoin, en France et en Europe sur devis.</p>
+    <div class="hero-actions">
+      <a href="/contact?service=convoyage-concession" class="hero-primary" data-cta="quote" data-audience="concession">Confier une mission</a>
+      <a href="/contact?service=besoin-concession-recurrent" class="hero-secondary" data-cta="quote" data-audience="concession">Échanger sur un besoin récurrent</a>
+    </div>
+    <p class="hero-note">Réponse habituelle sous 2 heures, 7j/7 de 7h à 22h, selon disponibilité.</p>
   </div>
 </div>
 
@@ -289,120 +377,109 @@ section{padding:4.5rem 4vw !important}
   <div class="breadcrumb-inner"><a href="/">Accueil</a><span>/</span><a href="/convoyage">Convoyage automobile</a><span>/</span><span style="color:var(--ivory)">Concessions</span></div>
 </div>
 
+<div class="p1-reperes" aria-label="Repères de service">
+  <div class="p1-repere">Interlocuteur TGD identifié</div>
+  <div class="p1-repere">Convoyeur sélectionné selon la mission</div>
+  <div class="p1-repere">État du véhicule documenté</div>
+  <div class="p1-repere">Remise tracée</div>
+</div>
 
 <section class="content-section">
   <div class="content-inner">
-    <h2>Le partenaire logistique<br><em>des concessions automobiles</em></h2>
-    <p>Une concession automobile a des besoins logistiques constants et imprévisibles&#160;: livraisons VN chez les clients, rapatriements VO depuis des particuliers, transferts inter-sites, renfort lors des pics d&#8217;immatriculation, préparation avant livraison. Ces missions exigent des intervenants fiables, discrets, bien pr&#233;sent&#233;s &#8212; qui repr&#233;sentent votre marque autant que la leur.</p>
-    <p>Depuis 2021, The Gentleman Driver travaille avec des concessions premium en France. Nous ne sommes pas un prestataire anonyme&#160;: nous connaissons vos standards, vos clients, vos protocoles.</p>
+    <h2>Une extension opérationnelle<br><em>de votre concession</em></h2>
+    <p>Un véhicule à déplacer mobilise souvent plusieurs fonctions : commerce, préparation, logistique et relation client. TGD prend en charge la mission dans un cadre défini avec votre équipe afin de fluidifier l’exécution et de conserver des éléments de remise exploitables.</p>
+    <p>Nous intervenons pour un déplacement ponctuel comme pour un besoin récurrent. Le calendrier, le trajet, le véhicule, les documents attendus et les conditions de remise sont précisés au devis.</p>
 
     <div class="highlight-box">
-      <p><strong>Notre engagement envers les concessions&#160;:</strong> nos collaborateurs arrivent en tenue, respectent les proc&#233;dures de mise en main, documentent chaque &#233;tape avec photos et PV. Vos clients re&#231;oivent un service &#224; la hauteur de ce qu&#8217;ils ont achet&#233;. <strong>Votre r&#233;putation ne souffre pas d&#8217;une livraison bâcl&#233;e.</strong></p>
+      <p><strong>Un interlocuteur identifié.</strong> Jonathan Vestin pilote l’activité et reste directement impliqué dans la qualification et le suivi des missions. TGD mobilise des convoyeurs et partenaires sélectionnés selon les besoins de chaque mission.</p>
     </div>
 
-    <h3>Nos services pour les concessions</h3>
-    <ul>
-      <li><strong>Livraison VN &#224; domicile&#160;:</strong> pr&#233;sentation du v&#233;hicule, remise des cl&#233;s, explication des fonctionnalit&#233;s selon votre brief</li>
-      <li><strong>Rapatriement VO&#160;:</strong> r&#233;cup&#233;ration chez les particuliers ou entre professionnels, &#233;tat des lieux &#224; l&#8217;enl&#232;vement</li>
-      <li><strong>Transferts inter-sites&#160;:</strong> entre vos &#233;tablissements, entre vos d&#233;p&#244;ts, vers les pr&#233;parateurs</li>
-      <li><strong>Convoyage sur plateau&#160;:</strong> pour les v&#233;hicules non-roulants ou tr&#232;s haute valeur, via notre r&#233;seau de transporteurs s&#233;lectionn&#233;s</li>
-      <li><strong>Renfort saisonnier&#160;:</strong> fin de trimestre, fin d&#8217;ann&#233;e, pics d&#8217;immatriculation &#8212; nous absorbons les volumes suppl&#233;mentaires</li>
-    </ul>
+    <h2 style="margin-top:3.5rem">Les mouvements que nous pouvons organiser</h2>
+    <div class="p1-grid">
+      <article class="p1-card"><h3>Livraison VN et VO</h3><p>Prise en charge du véhicule au point convenu puis remise à une autre concession, à un site professionnel ou au client final, selon les conditions définies au devis.</p></article>
+      <article class="p1-card"><h3>Transfert inter-sites</h3><p>Déplacement de véhicules de stock, de démonstration, d’occasion ou en préparation entre les concessions, agences et ateliers désignés.</p></article>
+      <article class="p1-card"><h3>Restitution et rapatriement</h3><p>Récupération puis remise auprès du site ou du prestataire convenu, sous réserve de la conformité du véhicule, de ses documents et de sa capacité à circuler.</p></article>
+      <article class="p1-card"><h3>Livraison client et mise en main</h3><p>La mise en main peut constituer une prestation dédiée ou être intégrée à certaines livraisons lorsqu’elle est prévue au devis.</p></article>
+    </div>
 
-    <h3>Comment fonctionne le partenariat concession</h3>
-    <p>Nous proposons deux modes de fonctionnement selon votre volume&#160;:</p>
-    <p><strong>&#192; la mission&#160;:</strong> vous nous envoyez les informations &#224; chaque besoin. Réponse habituelle sous 2h, selon disponibilité, confirmation, ex&#233;cution. Id&#233;al pour les concessions qui ont des besoins irr&#233;guliers ou veulent tester notre service.</p>
-    <p><strong>Contrat cadre&#160;:</strong> pour les partenaires r&#233;guliers (d&#232;s 5 &#224; 10 missions par mois), nous &#233;tablissons une tarification n&#233;goci&#233;e, une facturation mensuelle consolid&#233;e et une r&#233;activit&#233; prioritaire. <a href="/solutions-professionnelles" style="color:var(--gold)">En savoir plus sur nos contrats entreprises</a>.</p>
-
-    <h3>Ce que vos clients vivent avec nous</h3>
-    <p>Un client qui attend la livraison de sa nouvelle voiture est dans un &#233;tat d&#8217;anticipation. Il a fait une photo mentale du moment de r&#233;ception. Notre mission est de ne pas d&#233;cevoir cette attente.</p>
-    <p>Nos collaborateurs arrivent &#224; l&#8217;heure, en tenue correcte, avec le v&#233;hicule propre et document&#233;. Ils expliquent les fonctionnalit&#233;s avec p&#233;dagogie, notamment sur les v&#233;hicules &#233;lectriques, et ne partent pas avant que le client soit &#224; l&#8217;aise.</p>
-    <p>Vos avis client s&#8217;am&#233;liorent. Votre taux de satisfaction aussi. Ce n&#8217;est pas une co&#239;ncidence.</p>
+    <h3>Plusieurs véhicules ou un besoin récurrent</h3>
+    <p>TGD peut étudier la prise en charge de plusieurs véhicules. L’organisation est confirmée selon le volume, les trajets, le calendrier et les convoyeurs disponibles.</p>
   </div>
 </section>
-
-
-<div class="proof-band">
-  <div class="proof-item"><div class="proof-num">2021</div><div class="proof-lbl">Activité de convoyage</div></div>
-  <div class="proof-item"><div class="proof-num tgd-rating-number">—</div><div class="proof-lbl">Avis 5&#9733; Google</div></div>
-  <div class="proof-item"><div class="proof-num">France</div><div class="proof-lbl">&amp; Europe sur devis</div></div>
-  <div class="proof-item"><div class="proof-num">PV</div><div class="proof-lbl">Mission document&#233;e</div></div>
-</div>
 
 <section class="content-section alt">
   <div class="content-inner">
-    <h2>Questions fr&#233;quentes</h2>
-    <div style="margin-top:2rem">
-    <div class="faq-item">
-      <button type="button" class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">Pouvez-vous respecter nos proc&#233;dures de livraison internes&#160;?</span>
-        <span class="faq-icon">+</span>
-      </button>
-      <div class="faq-a"><p>Oui. Avant le d&#233;marrage d'un partenariat, nous &#233;tudions vos proc&#233;dures et les int&#233;grons dans notre briefing d'&#233;quipe. Votre charte de livraison devient la n&#244;tre.</p></div>
+    <h2>Une mission cadrée<br><em>en cinq étapes</em></h2>
+    <div class="process-grid">
+      <div class="p-step"><div class="p-num">01</div><div><div class="p-title">Qualification</div><p class="p-text">Vous transmettez les informations utiles : véhicule, départ, destination, créneau souhaité, interlocuteurs et particularités de la remise.</p></div></div>
+      <div class="p-step"><div class="p-num">02</div><div><div class="p-title">Validation</div><p class="p-text">TGD confirme la faisabilité, le prix, les frais éventuels, les documents nécessaires et le délai de mobilisation. Celui-ci dépend du trajet, du véhicule et des disponibilités.</p></div></div>
+      <div class="p-step"><div class="p-num">03</div><div><div class="p-title">Prise en charge</div><p class="p-text">Pour les convoyages routiers, un état des lieux du véhicule est réalisé selon le protocole prévu pour la mission, au départ et à la remise. Le PV et les éléments de remise relèvent du protocole applicable aux convoyages concernés.</p></div></div>
+      <div class="p-step"><div class="p-num">04</div><div><div class="p-title">Acheminement</div><p class="p-text">La mission est suivie par un interlocuteur identifié. Toute situation susceptible de modifier le déroulement ou la remise est signalée à la concession.</p></div></div>
+      <div class="p-step"><div class="p-num">05</div><div><div class="p-title">Remise et clôture</div><p class="p-text">Le véhicule est remis au destinataire convenu. Les éléments prévus sont enregistrés puis transmis selon la prestation.</p></div></div>
     </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">Que se passe-t-il si un client n'est pas disponible &#224; l'heure pr&#233;vue&#160;?</span>
-        <span class="faq-icon">+</span>
-      </button>
-      <div class="faq-a"><p>Notre convoyeur attendra dans des limites raisonnables. En cas d'absence, il vous contacte et nous replanifions la livraison sans frais suppl&#233;mentaires sur les contrats cadres.</p></div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">Pouvez-vous g&#233;rer les immatriculations et documents du v&#233;hicule&#160;?</span>
-        <span class="faq-icon">+</span>
-      </button>
-      <div class="faq-a"><p>Nous transportons les documents fournis par la concession. La gestion administrative (carte grise, etc.) reste de votre ressort, mais nous pouvons remettre une enveloppe scell&#233;e au client lors de la livraison.</p></div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">Travaillez-vous avec toutes les marques&#160;?</span>
-        <span class="faq-icon">+</span>
-      </button>
-      <div class="faq-a"><p>Oui, sans distinction de marque, du g&#233;n&#233;raliste au premium. Nos collaborateurs s'adaptent &#224; tous les v&#233;hicules.</p></div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">Comment g&#233;rez-vous la facturation pour une concession avec plusieurs sites&#160;?</span>
-        <span class="faq-icon">+</span>
-      </button>
-      <div class="faq-a"><p>Sur contrat cadre, nous &#233;mettons une facture mensuelle consolid&#233;e avec le d&#233;tail par mission, par site et par v&#233;hicule. Format adapt&#233; &#224; votre syst&#232;me comptable sur demande.</p></div>
-    </div></div>
   </div>
 </section>
 
 <section class="content-section">
   <div class="content-inner">
-    <h2>Nos autres <em>services</em></h2>
-    <p style="margin-bottom:2rem;font-size:.85rem;color:var(--ivory-muted)">D&#233;couvrez l&#8217;ensemble de nos prestations de convoyage et de mobilit&#233; automobile.</p>
-    <div class="related-grid">
-      
-    <a href="/mise-en-main" class="related-card">
-      <div class="related-card-label">Service</div>
-      <div class="related-card-title">Mise en main v&#233;hicule</div>
-      <p class="related-card-desc">Livraison et présentation complète du v&#233;hicule à votre client.</p>
-      <span class="related-card-arrow">D&#233;couvrir &#8594;</span>
-    </a>
-    <a href="/transport-plateau" class="related-card">
-      <div class="related-card-label">Service</div>
-      <div class="related-card-title">Livraison 0&#160;km</div>
-      <p class="related-card-desc">Livraison de v&#233;hicules neufs depuis les parcs et les ports.</p>
-      <span class="related-card-arrow">D&#233;couvrir &#8594;</span>
-    </a>
-    <a href="/solutions-professionnelles" class="related-card">
-      <div class="related-card-label">Service</div>
-      <div class="related-card-title">Solutions entreprises</div>
-      <p class="related-card-desc">Contrats cadres et partenariats pour professionnels.</p>
-      <span class="related-card-arrow">D&#233;couvrir &#8594;</span>
-    </a>
+    <h2>La livraison fait partie<br><em>de l’expérience client</em></h2>
+    <p>Lors d’une livraison au client final, la qualité de l’intervention du convoyeur participe directement à l’expérience de remise du véhicule. La présentation, la clarté des explications et la qualité de l’échange comptent autant que la bonne exécution du trajet.</p>
+    <p>Lorsque la mise en main est prévue, elle peut comprendre les réglages utiles, la connexion du téléphone et des applications, la présentation des systèmes de sécurité et d’aide à la conduite, un essai accompagné et, pour un véhicule électrique, une première mise en situation de recharge. Le contenu exact est défini au devis.</p>
+    <div class="p1-links"><a class="p1-link" href="/mise-en-main">Découvrir la mise en main →</a></div>
+
+    <h3>Des convoyeurs sélectionnés selon la mission</h3>
+    <p>La sélection tient notamment compte de l’expérience de conduite, de la validité du permis adapté, du sérieux, de la fiabilité, de la présentation, du respect des procédures TGD et de la capacité à réaliser un état des lieux rigoureux. La connaissance des véhicules électriques est également prise en compte lorsque la mission le nécessite.</p>
+  </div>
+</section>
+
+<section class="content-section alt">
+  <div class="content-inner">
+    <h2>TGD Digital<br><em>Une mission documentée</em></h2>
+    <p>Pour les missions traitées avec TGD Digital, les informations utiles sont regroupées dans un même suivi : création et identification de la mission, affectation, état des lieux, photographies, kilométrage, niveau de carburant ou de batterie, signatures et traçabilité de la remise.</p>
+    <p>Le rapport PDF est généralement transmis sous 24 heures après la mission, selon le type de prestation. Les missions restent consultables dans l’historique TGD Digital.</p>
+    <p>Les éléments remis dépendent de la prestation convenue : état des lieux, photographies, kilométrage, niveau de carburant ou de batterie, signatures, réserves et rapport PDF lorsque la mission est traitée avec TGD Digital.</p>
+    <div class="p1-links"><a class="p1-link" href="/tgd-digital">Découvrir TGD Digital →</a></div>
+
+    <h3>Véhicules électriques : anticiper le trajet et la remise</h3>
+    <p>Le convoyage d’un véhicule électrique demande de tenir compte de l’autonomie disponible, des possibilités de recharge, des moyens de paiement et du niveau de batterie attendu à l’arrivée. Ces paramètres sont définis avant la mission.</p>
+    <p>Lorsque la mise en main le prévoit, le convoyeur peut présenter les principes de recharge et accompagner le client dans une première mise en situation.</p>
+    <div class="p1-links"><a class="p1-link" href="/convoyage-electrique">Notre approche du convoyage électrique →</a></div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="content-inner">
+    <h2>Un cadre adapté<br><em>au véhicule et à la mission</em></h2>
+    <h3>Assurance automobile professionnelle et RC Pro</h3>
+    <p>TGD dispose d’une assurance automobile professionnelle liée à son activité et d’une RC Pro. Les conditions, garanties et éventuelles exclusions applicables sont vérifiées selon le véhicule et la mission.</p>
+    <h3>Certificat W garage</h3>
+    <p>Un certificat W garage peut être utilisé lorsque le cadre réglementaire et les conditions de la mission le permettent.</p>
+    <h3>France et missions européennes sur devis</h3>
+    <p>TGD intervient en France et étudie les missions européennes sur devis, selon le trajet, les disponibilités, la réglementation, les documents du véhicule et la faisabilité opérationnelle.</p>
+    <p>Les frais de carburant ou de recharge, de péage, de billets et de retour sont présentés séparément, sauf lorsqu’un devis tout compris est convenu.</p>
+    <div class="p1-links"><a class="p1-link" href="/convoyage">Voir le service de convoyage automobile →</a><a class="p1-link" href="/transport-plateau">Quand choisir le transport sur plateau ? →</a></div>
+  </div>
+</section>
+
+<section class="content-section alt">
+  <div class="content-inner">
+    <h2>Questions fréquentes</h2>
+    <div style="margin-top:2rem">
+      <div class="faq-item"><button type="button" class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Comment se déroule un convoyage automobile pour une concession ?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>TGD qualifie le besoin, confirme le devis et l’organisation, prend en charge le véhicule selon le protocole prévu, suit la mission puis réalise la remise et transmet les éléments convenus.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Pouvez-vous livrer directement un véhicule au client final ?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>Oui. TGD peut livrer un véhicule neuf ou d’occasion au client final. Une mise en main peut être intégrée lorsqu’elle est prévue au devis.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Pouvez-vous prendre en charge plusieurs véhicules ?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>TGD peut étudier la prise en charge de plusieurs véhicules. L’organisation est confirmée selon le volume, les trajets, le calendrier et les convoyeurs disponibles.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Quel est le délai de réponse ?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>La réponse au devis intervient habituellement sous deux heures, 7j/7 de 7h à 22h, selon disponibilité. Ce délai concerne la réponse commerciale, pas nécessairement la mobilisation ni la durée du trajet.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Quels éléments sont remis après la mission ?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>Les éléments remis dépendent de la prestation convenue : état des lieux, photographies, kilométrage, niveau de carburant ou de batterie, signatures, réserves et rapport PDF lorsque la mission est traitée avec TGD Digital.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Intervenez-vous en Europe ?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>TGD étudie les missions européennes sur devis. La faisabilité dépend notamment du trajet, des disponibilités, de la réglementation et des documents du véhicule.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Comment sont traités l’assurance et le certificat W garage ?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>TGD dispose d’une assurance automobile professionnelle liée à son activité et d’une RC Pro. Les conditions, garanties et éventuelles exclusions applicables sont vérifiées selon le véhicule et la mission. Un certificat W garage peut être utilisé lorsque le cadre réglementaire et les conditions de la mission le permettent.</p></div></div>
     </div>
   </div>
 </section>
 
 <div class="cta-section">
-  <div class="cta-text">Une mission &#224; confier&#160;?<br><em>Réponse habituelle sous 2h, selon disponibilité.</em></div>
+  <div class="cta-text">Un véhicule à livrer<br><em>ou plusieurs mouvements à organiser ?</em></div>
   <div class="cta-actions">
-    <a href="/contact" class="btn-dark">Demander un devis</a>
+    <a href="/contact?service=convoyage-concession" class="btn-dark" data-cta="quote" data-audience="concession">Confier une mission</a>
     <a href="tel:+33761092626" class="btn-gold">07 61 09 26 26</a>
   </div>
 </div>
@@ -472,5 +549,7 @@ function toggleFaq(btn) {
   </svg>
 </a>
 <script src="/tgd-reviews.js"></script>
+<script defer src="/_vercel/insights/script.js"></script>
+<script src="/tgd-conversions.js"></script>
 </body>
 </html>
