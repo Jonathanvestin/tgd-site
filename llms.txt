@@ -63,7 +63,7 @@ TGD Digital est la couche de traçabilité associée aux opérations TGD. Elle r
 - TGD Digital : https://www.thegentlemandriver.fr/tgd-digital
 - Mise en main : https://www.thegentlemandriver.fr/mise-en-main
 - Chauffeur : https://www.thegentlemandriver.fr/chauffeur
-- Chauffeur longue distance : https://www.thegentlemandriver.fr/chauffeur-longue-distance
+- Chauffeur avec le véhicule du client : https://www.thegentlemandriver.fr/chauffeur
 - Particuliers : https://www.thegentlemandriver.fr/particuliers
 - Transport sur plateau : https://www.thegentlemandriver.fr/transport-plateau
 - À propos : https://www.thegentlemandriver.fr/a-propos
