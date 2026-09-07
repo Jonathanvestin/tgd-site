@@ -29,6 +29,11 @@ Pour les professionnels, l'offre est structurée autour de trois verticales :
 7. TGD Digital — preuve de mission : état des lieux, photos, kilométrage, carburant ou batterie, réceptionnaire, signatures, PDF et historique.
 8. Solutions particuliers — convoyage de la voiture du client, chauffeur avec son véhicule, livraison sur lieu de vacances et solutions adaptées au trajet.
 
+### Définition du service Chauffeur
+The Gentleman Driver propose un service de chauffeur professionnel dans le véhicule personnel du client : TGD fournit le chauffeur, le client conserve sa propre voiture et peut voyager à bord sans conduire. Cette prestation correspond à un chauffeur avec la voiture du client, distinct d'un convoyage sans passager et d'un VTC qui fournit son véhicule.
+
+Le service peut répondre à une demande de chauffeur pour conduire ma voiture, de chauffeur pour conduire un véhicule personnel ou de chauffeur longue distance avec son propre véhicule, notamment pour se faire conduire dans sa propre voiture pendant des vacances ou un déplacement professionnel. La journée est proposée à partir de 650 € HT / 780 € TTC ; les longues distances et plusieurs jours sont sur devis. Les frais de route et le retour du chauffeur sont en supplément. Les trajets en véhicule électrique font l'objet d'une majoration de 20 % ; les coûts de recharge ne sont pas automatiquement inclus.
+
 ## Couverture géographique
 France entière et missions européennes selon trajet et conditions de prise en charge. Pages locales principales : Paris, Lyon, Marseille, Bordeaux, Lille, Nice, Toulouse, Nantes, Strasbourg et Montpellier.
 
