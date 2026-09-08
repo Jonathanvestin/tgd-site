@@ -706,6 +706,53 @@ section{padding:3.5rem 4vw !important}
   </div>
 </section>
 
+<style>
+/* Homepage compacte : les détails restent disponibles sur les pages métier. */
+.services,.adn,.process,.coverage,.clients,.home-cases,#galerie,section.hero + img{display:none!important}
+.compact-home{padding:4.5rem 4vw;background:var(--black)}
+.compact-home-inner{max-width:1100px;margin:0 auto}
+.compact-home h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.4rem);font-weight:300;line-height:1.1;color:var(--ivory);margin-bottom:1.5rem}
+.compact-home h2 em{color:var(--gold);font-style:italic}
+.compact-home p{color:var(--ivory-muted);font-size:.86rem;line-height:1.8;max-width:760px}
+.compact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(201,169,110,.14)}
+.compact-card{background:var(--black-2);padding:1.7rem;text-decoration:none;color:inherit;display:block}
+.compact-card h3{font-family:'Cormorant Garamond',serif;font-size:1.65rem;font-weight:300;color:var(--ivory);margin-bottom:.5rem}
+.compact-card p{font-size:.78rem;line-height:1.65}
+.compact-card span{display:inline-block;margin-top:1rem;color:var(--gold);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase}
+.compact-process{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin:2rem 0}
+.compact-step{border-top:1px solid rgba(201,169,110,.35);padding-top:1rem}.compact-step strong{display:block;color:var(--gold);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.45rem}.compact-step span{font-size:.76rem;color:var(--ivory-muted);line-height:1.55}
+.compact-proof{border-left:2px solid var(--gold);padding:1rem 1.25rem;margin-top:1.5rem}
+.compact-proof img{display:block;width:100%;height:auto;aspect-ratio:16/7;object-fit:cover;object-position:center;border-radius:2px;margin-bottom:1.3rem}
+@media(max-width:760px){.compact-grid{grid-template-columns:1fr}.compact-process{grid-template-columns:1fr 1fr}.compact-home{padding:3.5rem 5vw}}
+@media(max-width:420px){.compact-process{grid-template-columns:1fr}.compact-card{padding:1.35rem}}
+</style>
+
+<section class="compact-home" aria-label="Parcours TGD">
+  <div class="compact-home-inner">
+    <div class="section-eyebrow">Quel est votre besoin ?</div>
+    <h2>Un service adapté à <em>votre situation.</em></h2>
+    <div class="compact-grid">
+      <a class="compact-card" href="/convoyage"><h3>Convoyage automobile</h3><p>Déplacer votre véhicule entre deux points, avec une mission préparée et une remise documentée selon la prestation.</p><span>Découvrir le convoyage →</span></a>
+      <a class="compact-card" href="/tgd-fleet"><h3>Fleet / Entreprises</h3><p>Externaliser les mouvements de parc, livraisons collaborateurs, restitutions et transferts inter-sites.</p><span>Découvrir Fleet →</span></a>
+      <a class="compact-card" href="/convoyage-concession"><h3>Concessions / Automotive</h3><p>Livraisons VN/VO, mouvements entre sites, remise au client final et mise en main selon le devis.</p><span>Voir les solutions concessions →</span></a>
+      <a class="compact-card" href="/chauffeur"><h3>Chauffeur avec votre véhicule</h3><p>Un chauffeur conduit votre propre voiture pendant que vous voyagez à bord, pour un trajet personnel ou professionnel.</p><span>Découvrir le service Chauffeur →</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="compact-home" aria-label="Mission cadrée" style="background:var(--black-2)">
+  <div class="compact-home-inner">
+    <div class="section-eyebrow">Une mission cadrée de bout en bout</div>
+    <h2>Du premier échange à la <em>remise du véhicule.</em></h2>
+    <div class="compact-process"><div class="compact-step"><strong>01 · Qualification</strong><span>Véhicule, trajet, calendrier et consignes utiles.</span></div><div class="compact-step"><strong>02 · Prise en charge</strong><span>Interlocuteur identifié et protocole prévu.</span></div><div class="compact-step"><strong>03 · État des lieux</strong><span>Photos, kilométrage et énergie lorsque prévus.</span></div><div class="compact-step"><strong>04 · Remise</strong><span>Destinataire convenu et éléments transmis.</span></div><div class="compact-step"><strong>05 · TGD Digital</strong><span>Rapport PDF lorsque la mission est traitée avec TGD Digital.</span></div></div>
+    <div class="compact-proof"><img src="/assets/images/tgd-home-01.webp" alt="Véhicule premium accompagné par The Gentleman Driver" width="1200" height="800"><p>TGD Digital regroupe les informations utiles de la mission : identification du véhicule, état des lieux, photos, kilométrage, carburant ou batterie, signatures et réserves.</p><a class="p1-link" href="/tgd-digital">Découvrir TGD Digital →</a></div>
+  </div>
+</section>
+
+<section class="compact-home" aria-label="Pourquoi TGD"><div class="compact-home-inner"><div class="section-eyebrow">Pourquoi The Gentleman Driver</div><h2>Un interlocuteur identifié, <em>sur le terrain.</em></h2><div class="compact-grid"><div class="compact-card"><h3>Depuis 2021</h3><p>Une activité de convoyage pilotée par TGD, avec des convoyeurs et partenaires mobilisables selon la mission.</p></div><div class="compact-card"><h3>France & Europe</h3><p>Les missions européennes sont étudiées sur devis, selon trajet, disponibilité, réglementation et faisabilité.</p></div></div></div></section>
+
+<section class="compact-home" aria-label="Avis Google et preuve B2B" style="background:var(--black-2)"><div class="compact-home-inner"><div class="section-eyebrow">Avis et preuve</div><h2>Ce que nos clients <em>retiennent.</em></h2><div class="compact-proof"><p>Pour les entreprises, TGD organise les mouvements de véhicules définis et restitue les éléments de remise prévus selon la prestation convenue.</p></div><div class="testi-grid tgd-reviews-widget" data-max="3" style="margin-top:1.5rem"></div><a class="p1-link" href="https://search.google.com/local/reviews?placeid=ChIJczTzUUIzLWoR59TwldN3SsM" target="_blank" rel="noopener">Voir tous les avis Google →</a></div></section>
+
 <!-- TICKER -->
 <div class="ticker" aria-hidden="true">
   <span class="ticker-inner">
