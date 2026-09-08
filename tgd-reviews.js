@@ -25,6 +25,7 @@ function installShell(){
 }
 function upgradeHome(){
  if(!document.body.classList.contains('site-home'))return;
+ if(document.body.classList.contains('site-home'))return;
  document.querySelectorAll('.services,.adn,.process,.coverage,.clients,.home-cases,#galerie').forEach(function(el){el.remove();});
  setTimeout(function(){var seo=document.getElementById('tgd-seo-link-hub');if(seo)seo.remove();},150);
  // Le contenu du hero reste piloté par le HTML pour garantir un message SEO et commercial cohérent dès le premier rendu.
