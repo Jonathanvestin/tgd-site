@@ -178,13 +178,18 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .proof-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--gold);line-height:1;margin-bottom:.4rem}
 .proof-lbl{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ivory-muted);font-weight:400}
 /* PROCESS */
-.process-grid{display:flex;flex-direction:column;gap:0;margin-top:1.7rem}
-.p-step{display:grid;grid-template-columns:60px 1fr;gap:1.5rem;padding-bottom:2.5rem;position:relative}
-.p-step:not(:last-child)::before{content:'';position:absolute;left:29px;top:60px;bottom:0;width:1px;background:linear-gradient(to bottom,rgba(201,169,110,0.25),transparent)}
-.p-num{width:60px;height:60px;border:1px solid rgba(201,169,110,0.2);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--gold);flex-shrink:0;transition:background .3s}
+.process-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1.7rem}
+.p-step{display:grid;grid-template-columns:44px 1fr;gap:1rem;padding:1.1rem;background:rgba(201,169,110,.04);border:1px solid rgba(201,169,110,.12);position:relative}
+.p-step:not(:last-child)::before{display:none}
+.p-num{width:44px;height:44px;border:1px solid rgba(201,169,110,0.2);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold);flex-shrink:0;transition:background .3s}
 .p-step:hover .p-num{background:var(--gold);color:var(--black)}
 .p-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--ivory);margin-bottom:.4rem;margin-top:.6rem}
-.p-text{font-size:.8rem;color:var(--ivory-muted);line-height:1.8;font-weight:300}
+.p-text{font-size:.78rem;color:var(--ivory-muted);line-height:1.6;font-weight:300}
+.proof-columns{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start}
+.frame-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem}
+.frame-card{padding:1.2rem;background:rgba(201,169,110,.04);border:1px solid rgba(201,169,110,.12)}
+.frame-card h3{font-size:1.15rem;margin:0 0 .5rem}
+.frame-card p{font-size:.8rem;line-height:1.65;margin:0}
 /* FAQ */
 .faq-item{border-bottom:1px solid rgba(201,169,110,0.08)}
 .faq-item:first-child{border-top:1px solid rgba(201,169,110,0.08)}
@@ -230,7 +235,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .highlight-box p{font-size:.83rem;color:var(--ivory);line-height:1.8;font-weight:300;margin:0}
 .highlight-box p strong{color:var(--gold)}
 /* RESPONSIVE */
-@media(max-width:900px){.proof-band{grid-template-columns:1fr 1fr}.related-grid{grid-template-columns:1fr}.cta-section{flex-direction:column}}
+@media(max-width:900px){.proof-band{grid-template-columns:1fr 1fr}.related-grid{grid-template-columns:1fr}.cta-section{flex-direction:column}.proof-columns{grid-template-columns:1fr}.frame-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.process-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.p1-inline-cta{flex-direction:column;align-items:stretch;text-align:center;padding:1.6rem 1rem}.p1-inline-cta .cta-actions{display:grid;grid-template-columns:1fr 1fr}.p1-inline-cta .btn-dark,.p1-inline-cta .btn-gold{width:100%;text-align:center}.content-section{padding:3rem 1.1rem}}
 @media(max-width:600px){.proof-band{grid-template-columns:1fr 1fr}}
 
@@ -435,40 +441,31 @@ section{padding:3.6rem 4vw !important}
   </div>
 </section>
 
-<section class="content-section">
+<section class="content-section alt">
   <div class="content-inner">
     <h2>Remise client<br><em>et preuve de mission</em></h2>
+    <div class="proof-columns">
+    <div>
     <p>Lors d’une livraison au client final, la qualité de l’intervention du convoyeur participe directement à l’expérience de remise du véhicule. La présentation, la clarté des explications et la qualité de l’échange comptent autant que la bonne exécution du trajet.</p>
     <p>Lorsque la mise en main est prévue, elle peut comprendre les réglages utiles, la connexion du téléphone et des applications, la présentation des systèmes de sécurité et d’aide à la conduite, un essai accompagné et, pour un véhicule électrique, une première mise en situation de recharge. Le contenu exact est défini au devis.</p>
     <div class="p1-links"><a class="p1-link" href="/mise-en-main">Découvrir la mise en main →</a></div>
 
-    <p>Le convoyeur est sélectionné selon la mission, le véhicule et les conditions de remise. Le cadre convenu peut inclure état des lieux, photos, kilométrage, énergie, signatures et réserves.</p>
-  </div>
-</section>
-
-<section class="content-section alt">
-  <div class="content-inner">
-    <h2>TGD Digital<br><em>La mission documentée</em></h2>
-    <p>Pour les missions traitées avec TGD Digital, les informations utiles sont regroupées dans un même suivi : création et identification de la mission, affectation, état des lieux, photographies, kilométrage, niveau de carburant ou de batterie, signatures et traçabilité de la remise.</p>
-    <p>Le rapport PDF est généralement transmis sous 24 heures après la mission, selon le type de prestation. TGD conserve l’historique des missions traitées dans TGD Digital et peut retrouver les éléments associés.</p>
-    <p>Les éléments remis dépendent de la prestation convenue : état des lieux, photographies, kilométrage, niveau de carburant ou de batterie, signatures, réserves et rapport PDF lorsque la mission est traitée avec TGD Digital.</p>
-    <div class="p1-links"><a class="p1-link" href="/tgd-digital" data-track="concession_digital_click">Découvrir TGD Digital →</a></div>
-
-    <p>Pour un véhicule électrique, l’autonomie, la recharge et le niveau de batterie attendu sont définis avant la mission.</p>
-    <div class="p1-links"><a class="p1-link" href="/convoyage-electrique">Notre approche du convoyage électrique →</a></div>
+    <p>Le convoyeur est sélectionné selon la mission, le véhicule et les conditions de remise. Le cadre convenu peut inclure état des lieux, photos, kilométrage, énergie, signatures et réserves.</p></div>
+    <div><h3>TGD Digital</h3>
+    <p>Pour les missions traitées avec TGD Digital, les informations utiles sont regroupées : mission, véhicule, état des lieux, photographies, kilométrage, carburant ou batterie, signatures et traçabilité de la remise.</p>
+    <p>Le rapport PDF est généralement transmis sous 24 heures après la mission, selon le type de prestation.</p>
+    <div class="p1-links"><a class="p1-link" href="/tgd-digital" data-track="concession_digital_click">Découvrir TGD Digital →</a></div></div></div>
   </div>
 </section>
 
 <section class="content-section">
   <div class="content-inner">
     <h2>Un cadre adapté<br><em>au véhicule et à la mission</em></h2>
-    <h3>Assurance automobile professionnelle et RC Pro</h3>
-    <p>TGD dispose d’une assurance automobile professionnelle liée à son activité et d’une RC Pro. Les conditions, garanties et éventuelles exclusions applicables sont vérifiées selon le véhicule et la mission.</p>
-    <h3>Certificat W garage</h3>
-    <p>Un certificat W garage peut être utilisé lorsque le cadre réglementaire et les conditions de la mission le permettent.</p>
-    <h3>France et missions européennes sur devis</h3>
-    <p>TGD intervient en France et étudie les missions européennes sur devis, selon le trajet, les disponibilités, la réglementation, les documents du véhicule et la faisabilité opérationnelle.</p>
-    <p>Les frais de carburant ou de recharge, de péage, de billets et de retour sont présentés séparément, sauf lorsqu’un devis tout compris est convenu.</p>
+    <div class="frame-grid">
+      <div class="frame-card"><h3>Assurance / RC Pro</h3><p>TGD dispose d’une assurance automobile professionnelle liée à son activité et d’une RC Pro. Les conditions applicables sont vérifiées selon le véhicule et la mission.</p></div>
+      <div class="frame-card"><h3>W garage</h3><p>Un certificat W garage peut être utilisé lorsque le cadre réglementaire et la mission le permettent.</p></div>
+      <div class="frame-card"><h3>France / Europe</h3><p>Les missions européennes sont étudiées sur devis selon trajet, disponibilité, réglementation, documents et faisabilité. Les frais spécifiques sont détaillés séparément.</p></div>
+    </div>
     <div class="p1-links"><a class="p1-link" href="/convoyage">Voir le service de convoyage automobile →</a><a class="p1-link" href="/transport-plateau">Quand choisir le transport sur plateau ? →</a></div>
   </div>
 </section>
