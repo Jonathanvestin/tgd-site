@@ -1,6 +1,7 @@
 {
   "version": 2,
   "redirects": [
+    {"source":"/soumettre-une-mission.html","destination":"/soumettre-une-mission","permanent":true},
     {
       "source": "/:path*",
       "has": [{"type":"host","value":"thegentlemandriver.fr"}],
@@ -50,6 +51,7 @@
     {"source":"/tgd-digital.html","destination":"/tgd-digital","permanent":true}
   ],
   "rewrites": [
+    {"source":"/soumettre-une-mission","destination":"/soumettre-une-mission.html"},
     {"source":"/blog","destination":"/blog.html"},
     {"source":"/blog/assurance-convoyage-automobile","destination":"/blog/assurance-convoyage-automobile.html"},
     {"source":"/blog/convoyage-vehicule-electrique-guide","destination":"/blog/convoyage-vehicule-electrique-guide.html"},
