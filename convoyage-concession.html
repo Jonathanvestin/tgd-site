@@ -45,10 +45,10 @@
           "addressCountry": "FR"
         }
       },
-      "areaServed": {
-        "@type": "Country",
-        "name": "France"
-      },
+      "areaServed": [
+        {"@type":"Country","name":"France"},
+        {"@type":"Continent","name":"Europe"}
+      ],
       "serviceType": [
         "Convoyage automobile pour concessions",
         "Livraison de véhicules neufs et d'occasion",
@@ -87,10 +87,18 @@
         },
         {
           "@type": "Question",
-          "name": "Intervenez-vous en Europe ?",
+          "name": "Quel est le délai de réponse ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "TGD intervient en France et étudie les missions européennes sur devis, selon le trajet, les disponibilités, la réglementation, les documents du véhicule et la faisabilité opérationnelle."
+            "text": "La réponse au devis intervient habituellement sous deux heures, 7j/7 de 7h à 22h, selon disponibilité. Ce délai concerne la réponse commerciale, pas nécessairement la mobilisation ni la durée du trajet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quels éléments sont remis après la mission ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Les éléments remis dépendent de la prestation convenue : état des lieux, photographies, kilométrage, niveau de carburant ou de batterie, signatures, réserves et rapport PDF lorsque la mission est traitée avec TGD Digital."
           }
         }
       ]
@@ -103,7 +111,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 
-:root{--black:#0A0A0A;--black-2:#111111;--black-3:#1A1A1A;--gold:#C9A96E;--gold-light:#E8D5B0;--gold-dark:#9A7A47;--ivory:#F5F0E8;--ivory-muted:#BDB5A6}
+:root{--black:#0A0A0A;--black-2:#111111;--black-3:#1A1A1A;--gold:#C9A96E;--gold-light:#E8D5B0;--gold-dark:#9A7A47;--ivory:#F5F0E8;--ivory-muted:#D6D0C6}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{background:var(--black);color:var(--ivory);font-family:'Montserrat',sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden}
@@ -153,13 +161,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .breadcrumb-inner a:hover{color:var(--gold)}
 .breadcrumb-inner span{color:rgba(189,181,166,.4)}
 /* CONTENT */
-.content-section{padding:5rem 4vw}
+.content-section{padding:3.6rem 4vw}
 .content-section.alt{background:var(--black-2)}
 .content-inner{max-width:860px;margin:0 auto}
 .content-inner h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;color:var(--ivory);margin-bottom:1.2rem;line-height:1.2}
 .content-inner h2 em{font-style:italic;color:var(--gold)}
 .content-inner h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;color:var(--ivory);margin:2rem 0 .8rem}
-.content-inner p{font-size:.85rem;color:var(--ivory-muted);line-height:1.9;margin-bottom:1.2rem;font-weight:300}
+.content-inner p{font-size:.9rem;color:var(--ivory-muted);line-height:1.75;margin-bottom:1rem;font-weight:300}
 .content-inner p strong{color:var(--ivory);font-weight:500}
 .content-inner ul{margin:.8rem 0 1.2rem 1.2rem;display:flex;flex-direction:column;gap:.4rem}
 .content-inner ul li{font-size:.83rem;color:var(--ivory-muted);line-height:1.75;font-weight:300}
@@ -170,7 +178,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .proof-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--gold);line-height:1;margin-bottom:.4rem}
 .proof-lbl{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ivory-muted);font-weight:400}
 /* PROCESS */
-.process-grid{display:flex;flex-direction:column;gap:0;margin-top:2.5rem}
+.process-grid{display:flex;flex-direction:column;gap:0;margin-top:1.7rem}
 .p-step{display:grid;grid-template-columns:60px 1fr;gap:1.5rem;padding-bottom:2.5rem;position:relative}
 .p-step:not(:last-child)::before{content:'';position:absolute;left:29px;top:60px;bottom:0;width:1px;background:linear-gradient(to bottom,rgba(201,169,110,0.25),transparent)}
 .p-num{width:60px;height:60px;border:1px solid rgba(201,169,110,0.2);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--gold);flex-shrink:0;transition:background .3s}
@@ -199,7 +207,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .related-card-desc{font-size:.75rem;color:var(--ivory-muted);line-height:1.7;font-weight:300}
 .related-card-arrow{font-size:.75rem;color:var(--gold);margin-top:.8rem;display:block}
 /* CTA */
-.cta-section{background:var(--gold);padding:5rem 4vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:2rem}
+.p1-inline-cta{max-width:1100px;margin:0 auto;padding:1.8rem 4vw;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;border-top:1px solid rgba(201,169,110,.15);border-bottom:1px solid rgba(201,169,110,.15);color:var(--ivory);font-family:'Cormorant Garamond',serif;font-size:1.35rem}
+.p1-inline-cta .cta-actions{gap:.7rem}
+.p1-inline-cta .btn-dark,.p1-inline-cta .btn-gold{padding:.75rem 1rem;font-size:.65rem}
+.cta-section{background:var(--gold);padding:3.6rem 4vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:2rem}
 .cta-text{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,3vw,2.5rem);font-weight:300;color:var(--black);line-height:1.3}
 .cta-text em{font-style:italic}
 .cta-actions{display:flex;gap:1rem;flex-wrap:wrap}
@@ -220,6 +231,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .highlight-box p strong{color:var(--gold)}
 /* RESPONSIVE */
 @media(max-width:900px){.proof-band{grid-template-columns:1fr 1fr}.related-grid{grid-template-columns:1fr}.cta-section{flex-direction:column}}
+@media(max-width:600px){.p1-inline-cta{flex-direction:column;align-items:stretch;text-align:center;padding:1.6rem 1rem}.p1-inline-cta .cta-actions{display:grid;grid-template-columns:1fr 1fr}.p1-inline-cta .btn-dark,.p1-inline-cta .btn-gold{width:100%;text-align:center}.content-section{padding:3rem 1.1rem}}
 @media(max-width:600px){.proof-band{grid-template-columns:1fr 1fr}}
 
 
@@ -272,8 +284,8 @@ footer.footer-mini span.footer-copy{color:rgba(189,181,166,0.55) !important}
 
 /* rythme espacements validé */
 .hero{min-height:88vh !important;height:auto !important}
-section{padding:4.5rem 4vw !important}
-.cta-section{padding:5rem 4vw !important}
+section{padding:3.6rem 4vw !important}
+.cta-section{padding:3.6rem 4vw !important}
 .adn{gap:4rem !important}
 .coverage-inner{gap:4rem !important}
 .cta-section{gap:4rem !important}
@@ -385,15 +397,14 @@ section{padding:4.5rem 4vw !important}
 
 <section class="content-section">
   <div class="content-inner">
-    <h2>Une extension opérationnelle<br><em>de votre concession</em></h2>
-    <p>Un véhicule à déplacer mobilise souvent plusieurs fonctions : commerce, préparation, logistique et relation client. TGD prend en charge la mission dans un cadre défini avec votre équipe afin de fluidifier l’exécution et de conserver des éléments de remise exploitables.</p>
-    <p>Nous intervenons pour un déplacement ponctuel comme pour un besoin récurrent. Le calendrier, le trajet, le véhicule, les documents attendus et les conditions de remise sont précisés au devis.</p>
+    <h2>Ce que nous organisons<br><em>pour votre concession</em></h2>
+    <p>TGD accompagne les concessions et professionnels de l’automobile pour leurs livraisons VN/VO, transferts inter-sites, restitutions, remises client et mises en main, en France et en Europe sur devis.</p>
 
     <div class="highlight-box">
       <p><strong>Un interlocuteur identifié.</strong> Jonathan Vestin pilote l’activité et reste directement impliqué dans la qualification et le suivi des missions. TGD mobilise des convoyeurs et partenaires sélectionnés selon les besoins de chaque mission.</p>
     </div>
 
-    <h2 style="margin-top:3.5rem">Les mouvements que nous pouvons organiser</h2>
+    <h2 style="margin-top:2.2rem">Les mouvements pris en charge</h2>
     <div class="p1-grid">
       <article class="p1-card"><h3>Livraison VN et VO</h3><p>Prise en charge du véhicule au point convenu puis remise à une autre concession, à un site professionnel ou au client final, selon les conditions définies au devis.</p></article>
       <article class="p1-card"><h3>Transfert inter-sites</h3><p>Déplacement de véhicules de stock, de démonstration, d’occasion ou en préparation entre les concessions, agences et ateliers désignés.</p></article>
@@ -401,47 +412,44 @@ section{padding:4.5rem 4vw !important}
       <article class="p1-card"><h3>Livraison client et mise en main</h3><p>La mise en main peut constituer une prestation dédiée ou être intégrée à certaines livraisons lorsqu’elle est prévue au devis.</p></article>
     </div>
 
-    <h3>Plusieurs véhicules ou un besoin récurrent</h3>
-    <p>TGD peut étudier la prise en charge de plusieurs véhicules. L’organisation est confirmée selon le volume, les trajets, le calendrier et les convoyeurs disponibles.</p>
+    <p><strong>Plusieurs véhicules ou un besoin récurrent :</strong> prise en charge étudiée selon le volume, les trajets, le calendrier et les convoyeurs disponibles.</p>
   </div>
 </section>
 
+<div class="p1-inline-cta"><span>Une mission ponctuelle ou un besoin récurrent ?</span><span class="cta-actions"><a href="/contact?service=convoyage-concession" class="btn-dark">Mission ponctuelle</a><a href="/contact?service=besoin-concession-recurrent" class="btn-gold">Besoin récurrent</a></span></div>
+
 <section class="content-section alt">
   <div class="content-inner">
-    <h2>Une mission cadrée<br><em>en cinq étapes</em></h2>
+    <h2>Une mission cadrée<br><em>en quatre étapes</em></h2>
     <div class="process-grid">
       <div class="p-step"><div class="p-num">01</div><div><div class="p-title">Qualification</div><p class="p-text">Vous transmettez les informations utiles : véhicule, départ, destination, créneau souhaité, interlocuteurs et particularités de la remise.</p></div></div>
-      <div class="p-step"><div class="p-num">02</div><div><div class="p-title">Validation</div><p class="p-text">TGD confirme la faisabilité, le prix, les frais éventuels, les documents nécessaires et le délai de mobilisation. Celui-ci dépend du trajet, du véhicule et des disponibilités.</p></div></div>
-      <div class="p-step"><div class="p-num">03</div><div><div class="p-title">Prise en charge</div><p class="p-text">Pour les convoyages routiers, un état des lieux du véhicule est réalisé selon le protocole prévu pour la mission, au départ et à la remise. Le PV et les éléments de remise relèvent du protocole applicable aux convoyages concernés.</p></div></div>
-      <div class="p-step"><div class="p-num">04</div><div><div class="p-title">Acheminement</div><p class="p-text">La mission est suivie par un interlocuteur identifié. Toute situation susceptible de modifier le déroulement ou la remise est signalée à la concession.</p></div></div>
-      <div class="p-step"><div class="p-num">05</div><div><div class="p-title">Remise et clôture</div><p class="p-text">Le véhicule est remis au destinataire convenu. Les éléments prévus sont enregistrés puis transmis selon la prestation.</p></div></div>
+      <div class="p-step"><div class="p-num">02</div><div><div class="p-title">Organisation</div><p class="p-text">TGD confirme la faisabilité, le devis, les frais éventuels, les documents nécessaires et le délai selon le trajet, le véhicule et les disponibilités.</p></div></div>
+      <div class="p-step"><div class="p-num">03</div><div><div class="p-title">Prise en charge et suivi</div><p class="p-text">Le véhicule est pris en charge selon le protocole prévu, avec état des lieux lorsque la prestation le prévoit. Les évolutions utiles sont signalées à la concession.</p></div></div>
+      <div class="p-step"><div class="p-num">04</div><div><div class="p-title">Remise et documentation</div><p class="p-text">Le véhicule est remis au destinataire convenu. Les éléments prévus sont enregistrés puis transmis selon la prestation.</p></div></div>
     </div>
   </div>
 </section>
 
 <section class="content-section">
   <div class="content-inner">
-    <h2>La livraison fait partie<br><em>de l’expérience client</em></h2>
+    <h2>Remise client<br><em>et preuve de mission</em></h2>
     <p>Lors d’une livraison au client final, la qualité de l’intervention du convoyeur participe directement à l’expérience de remise du véhicule. La présentation, la clarté des explications et la qualité de l’échange comptent autant que la bonne exécution du trajet.</p>
     <p>Lorsque la mise en main est prévue, elle peut comprendre les réglages utiles, la connexion du téléphone et des applications, la présentation des systèmes de sécurité et d’aide à la conduite, un essai accompagné et, pour un véhicule électrique, une première mise en situation de recharge. Le contenu exact est défini au devis.</p>
     <div class="p1-links"><a class="p1-link" href="/mise-en-main">Découvrir la mise en main →</a></div>
 
-    <h3>Des convoyeurs sélectionnés selon la mission</h3>
-    <p>La sélection tient notamment compte de l’expérience de conduite, de la validité du permis adapté, du sérieux, de la fiabilité, de la présentation, du respect des procédures TGD et de la capacité à réaliser un état des lieux rigoureux. La connaissance des véhicules électriques est également prise en compte lorsque la mission le nécessite.</p>
+    <p>Le convoyeur est sélectionné selon la mission, le véhicule et les conditions de remise. Le cadre convenu peut inclure état des lieux, photos, kilométrage, énergie, signatures et réserves.</p>
   </div>
 </section>
 
 <section class="content-section alt">
   <div class="content-inner">
-    <h2>TGD Digital<br><em>Une mission documentée</em></h2>
+    <h2>TGD Digital<br><em>La mission documentée</em></h2>
     <p>Pour les missions traitées avec TGD Digital, les informations utiles sont regroupées dans un même suivi : création et identification de la mission, affectation, état des lieux, photographies, kilométrage, niveau de carburant ou de batterie, signatures et traçabilité de la remise.</p>
     <p>Le rapport PDF est généralement transmis sous 24 heures après la mission, selon le type de prestation. TGD conserve l’historique des missions traitées dans TGD Digital et peut retrouver les éléments associés.</p>
     <p>Les éléments remis dépendent de la prestation convenue : état des lieux, photographies, kilométrage, niveau de carburant ou de batterie, signatures, réserves et rapport PDF lorsque la mission est traitée avec TGD Digital.</p>
     <div class="p1-links"><a class="p1-link" href="/tgd-digital" data-track="concession_digital_click">Découvrir TGD Digital →</a></div>
 
-    <h3>Véhicules électriques : anticiper le trajet et la remise</h3>
-    <p>Le convoyage d’un véhicule électrique demande de tenir compte de l’autonomie disponible, des possibilités de recharge, des moyens de paiement et du niveau de batterie attendu à l’arrivée. Ces paramètres sont définis avant la mission.</p>
-    <p>Lorsque la mise en main le prévoit, le convoyeur peut présenter les principes de recharge et accompagner le client dans une première mise en situation.</p>
+    <p>Pour un véhicule électrique, l’autonomie, la recharge et le niveau de batterie attendu sont définis avant la mission.</p>
     <div class="p1-links"><a class="p1-link" href="/convoyage-electrique">Notre approche du convoyage électrique →</a></div>
   </div>
 </section>
@@ -469,8 +477,6 @@ section{padding:4.5rem 4vw !important}
       <div class="faq-item"><button type="button" class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Pouvez-vous prendre en charge plusieurs véhicules ?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>TGD peut étudier la prise en charge de plusieurs véhicules. L’organisation est confirmée selon le volume, les trajets, le calendrier et les convoyeurs disponibles.</p></div></div>
       <div class="faq-item"><button type="button" class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Quel est le délai de réponse ?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>La réponse au devis intervient habituellement sous deux heures, 7j/7 de 7h à 22h, selon disponibilité. Ce délai concerne la réponse commerciale, pas nécessairement la mobilisation ni la durée du trajet.</p></div></div>
       <div class="faq-item"><button type="button" class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Quels éléments sont remis après la mission ?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>Les éléments remis dépendent de la prestation convenue : état des lieux, photographies, kilométrage, niveau de carburant ou de batterie, signatures, réserves et rapport PDF lorsque la mission est traitée avec TGD Digital.</p></div></div>
-      <div class="faq-item"><button type="button" class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Intervenez-vous en Europe ?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>TGD étudie les missions européennes sur devis. La faisabilité dépend notamment du trajet, des disponibilités, de la réglementation et des documents du véhicule.</p></div></div>
-      <div class="faq-item"><button type="button" class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Comment sont traités l’assurance et le certificat W garage ?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>TGD dispose d’une assurance automobile professionnelle liée à son activité et d’une RC Pro. Les conditions, garanties et éventuelles exclusions applicables sont vérifiées selon le véhicule et la mission. Un certificat W garage peut être utilisé lorsque le cadre réglementaire et les conditions de la mission le permettent.</p></div></div>
     </div>
   </div>
 </section>
