@@ -1,213 +1,173 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Autonomie, bornes, contraintes de ferry et règle des 80 % : ce que doit maîtriser un convoyeur sur un véhicule électrique, de la Tesla à la e-3008.">
-<meta name="robots" content="index, follow">
-<title>Convoyer un véhicule électrique : le guide complet</title>
-<link rel="canonical" href="https://www.thegentlemandriver.fr/blog/convoyage-vehicule-electrique-guide">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Convoyer un véhicule électrique : le guide complet">
-<meta property="og:description" content="Autonomie, bornes, contraintes de ferry et règle des 80 % : ce que doit maîtriser un convoyeur sur un véhicule électrique, de la Tesla à la e-3008.">
-<meta property="og:url" content="https://www.thegentlemandriver.fr/blog/convoyage-vehicule-electrique-guide">
-<meta property="og:image" content="https://www.thegentlemandriver.fr/og-image.jpg">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Convoyer un véhicule électrique : guide complet (y compris pour le ferry)",
-  "datePublished": "2026-06-10",
-  "dateModified": "2026-06-15",
-  "author": {"@type": "Person", "name": "Jonathan Vestin"},
-  "publisher": {"@type": "Organization", "name": "The Gentleman Driver", "url": "https://www.thegentlemandriver.fr"}
-}
-</script>
-<link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Convoyage d’un véhicule électrique : autonomie, recharge et préparation</title>
+  <meta name="description" content="Autonomie, recharge rapide, bornes, courbe de charge et préparation du trajet : les points à anticiper pour convoyer un véhicule électrique.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.thegentlemandriver.fr/blog/convoyage-vehicule-electrique-guide">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="The Gentleman Driver">
+  <meta property="og:title" content="Convoyage d’un véhicule électrique : autonomie, recharge et préparation">
+  <meta property="og:description" content="Autonomie, recharge rapide, bornes, courbe de charge et préparation du trajet : les points à anticiper pour convoyer un véhicule électrique.">
+  <meta property="og:url" content="https://www.thegentlemandriver.fr/blog/convoyage-vehicule-electrique-guide">
+  <meta property="og:image" content="https://www.thegentlemandriver.fr/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Convoyage d’un véhicule électrique : autonomie, recharge et préparation">
+  <meta name="twitter:description" content="Autonomie, recharge rapide, bornes, courbe de charge et préparation du trajet : les points à anticiper pour convoyer un véhicule électrique.">
+  <meta name="twitter:image" content="https://www.thegentlemandriver.fr/og-image.jpg">
   <meta name="theme-color" content="#0a0a0a">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{--black:#0A0A0A;--black-2:#111111;--black-3:#1A1A1A;--gold:#C9A96E;--gold-light:#E8D5B0;--gold-dark:#9A7A47;--ivory:#F5F0E8;--ivory-muted:#BDB5A6}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--black);color:var(--ivory);font-family:'Montserrat',sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden}
-::-webkit-scrollbar{width:3px}::-webkit-scrollbar-thumb{background:var(--gold-dark)}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 4vw;height:80px;background:rgba(10,10,10,0.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,169,110,0.1)}
-.nav-logo{display:flex;align-items:center;text-decoration:none}
-.nav-links{display:flex;gap:1.4rem;list-style:none}
-.nav-links a{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:#D3CCBF;text-decoration:none;transition:color .2s}
-.nav-links a:hover,.nav-links a.active{color:var(--gold)}
-.nav-cta{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--black);background:var(--gold);padding:.55rem 1.4rem;text-decoration:none;font-weight:500}
-.burger{display:none;background:none;border:none;cursor:pointer;padding:.5rem;flex-direction:column;gap:5px}
-.burger span{display:block;width:22px;height:1px;background:var(--ivory)}
-@media(max-width:900px){.nav-links,.nav-cta{display:none}.burger{display:flex}}
-.mobile-menu{position:fixed;inset:0;background:var(--black);z-index:200;display:flex;flex-direction:column;padding:2rem 4vw;gap:1.5rem;transform:translateX(100%);transition:transform .3s}
-.mobile-menu.open{transform:translateX(0)}
-.mobile-menu a{font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ivory-muted);text-decoration:none}
-.mobile-close{background:none;border:none;color:var(--ivory);font-size:1.5rem;cursor:pointer;align-self:flex-end}
-.btn-primary{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--black);background:var(--gold);padding:.65rem 1.8rem;text-decoration:none;font-weight:500;display:inline-block}
-.article-header{padding:140px 4vw 60px;max-width:760px;margin:0 auto}
-.art-cat{font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:1.2rem}
-.art-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;line-height:1.1;color:var(--ivory);margin-bottom:1.2rem}
-.art-meta{font-size:.75rem;color:rgba(189,181,166,0.5);margin-bottom:2rem}
-.art-intro{font-size:.95rem;color:var(--ivory-muted);line-height:1.9;border-left:2px solid var(--gold);padding-left:1.5rem;margin-bottom:3rem}
-.article-body{max-width:760px;margin:0 auto;padding:0 4vw 6rem}
-.article-body h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--ivory);margin:2.5rem 0 1rem}
-.article-body h3{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:500;margin:2rem 0 .8rem}
-.article-body p{font-size:.84rem;color:var(--ivory-muted);line-height:1.9;margin-bottom:1.2rem}
-.article-body strong{color:var(--ivory);font-weight:500}
-.info-box{background:var(--black-2);border-left:2px solid var(--gold);padding:1.5rem 1.8rem;margin:2rem 0}
-.info-box p{margin-bottom:0}
-.checklist{list-style:none;margin:1rem 0 1.5rem}
-.checklist li{font-size:.82rem;color:var(--ivory-muted);padding:.35rem 0 .35rem 1.8rem;position:relative;line-height:1.7}
-.checklist li::before{content:'✓';position:absolute;left:0;color:var(--gold);font-weight:500}
-.article-cta{background:var(--black-2);padding:3rem 1.8rem;margin:3rem 0;text-align:center}
-.article-cta h3{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--ivory);margin-bottom:.8rem}
-.article-cta p{font-size:.82rem;color:var(--ivory-muted);margin-bottom:1.5rem}
-footer.footer-mini{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.06);padding:2.5rem 4vw;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1.4rem;text-align:center}
-footer.footer-mini a.footer-logo{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);text-decoration:none}
-footer.footer-mini ul.footer-links-list{display:flex;flex-direction:row;justify-content:center;align-items:center;gap:2rem;list-style:none;flex-wrap:wrap;margin:0;padding:0}
-footer.footer-mini ul.footer-links-list li{margin:0;padding:0;list-style:none}
-footer.footer-mini ul.footer-links-list a{font-size:.75rem;color:rgba(189,181,166,0.72);text-decoration:none;font-weight:300;transition:color .2s}
-footer.footer-mini ul.footer-links-list a:hover{color:var(--ivory-muted)}
-footer.footer-mini span.footer-copy{font-size:.75rem;color:rgba(189,181,166,0.55);font-weight:300}
-footer.footer-mini .footer-group-label{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500;opacity:.7;cursor:default;display:inline-flex;align-items:center;line-height:1}
-footer.footer-mini .footer-sep{color:rgba(201,169,110,0.2);font-size:1rem;line-height:1;cursor:default;display:inline-flex;align-items:center}
-</style>
-<link rel="stylesheet" href="/assets/responsive-polish.css">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Convoyer un véhicule électrique : autonomie, recharge et préparation",
+    "description": "Autonomie, recharge rapide, bornes, courbe de charge et préparation du trajet : les points à anticiper pour convoyer un véhicule électrique.",
+    "articleSection": "Véhicules électriques",
+    "datePublished": "2026-06-10",
+    "dateModified": "2026-09-14",
+    "author": { "@type": "Person", "name": "Jonathan Vestin" },
+    "publisher": { "@type": "Organization", "name": "The Gentleman Driver", "url": "https://www.thegentlemandriver.fr/" },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.thegentlemandriver.fr/blog/convoyage-vehicule-electrique-guide" }
+  }
+  </script>
+  <style>
+    :root{--black:#0A0A0A;--black-2:#111;--black-3:#1A1A1A;--gold:#C9A96E;--gold-light:#E8D5B0;--gold-dark:#9A7A47;--ivory:#F5F0E8;--ivory-muted:#D6D0C6}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--black);color:var(--ivory);font-family:Montserrat,sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden}
+    nav{position:fixed;inset:0 0 auto;z-index:100;display:flex;align-items:center;justify-content:space-between;height:80px;padding:0 4vw;background:rgba(10,10,10,.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,169,110,.1)}
+    .nav-logo{display:flex;align-items:center;text-decoration:none}.nav-logo img{display:block;width:auto;height:46px}
+    .nav-links{display:flex;gap:1.4rem;list-style:none}.nav-links a{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:#D3CCBF;text-decoration:none;font-weight:400;white-space:nowrap;transition:color .2s}.nav-links a:hover{color:var(--gold)}
+    .nav-cta{padding:.6rem 1.2rem;background:var(--gold);color:var(--black);font-size:.75rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;white-space:nowrap}.nav-cta:hover{background:var(--gold-light)}
+    .burger{display:none;background:none;border:0;padding:8px;color:var(--ivory);font:inherit;font-size:1.6rem;cursor:pointer}
+    .mobile-menu{display:none;position:fixed;inset:0;z-index:99;background:var(--black);flex-direction:column;align-items:center;justify-content:center;gap:1.5rem}.mobile-menu.open{display:flex}.mobile-menu a{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--ivory);text-decoration:none}.mobile-menu a:hover{color:var(--gold)}.mobile-close{position:absolute;top:1.5rem;right:5vw;background:none;border:0;color:var(--ivory);font-size:2rem;cursor:pointer}
+    .container{width:min(780px,100%);margin-inline:auto}.article-header{padding:132px 5vw 42px}.category{display:inline-block;margin-bottom:.8rem;color:var(--gold);font-size:.7rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase}.article-header h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.25rem,4.8vw,3.65rem);font-weight:300;line-height:1.1}.article-meta{margin-top:.8rem;color:rgba(214,208,198,.7);font-size:.74rem}.article-intro{margin-top:1.2rem;padding-left:1rem;border-left:2px solid var(--gold);color:var(--ivory-muted);font-size:.93rem;line-height:1.8}
+    .article-body{width:min(760px,100%);margin:0 auto;padding:0 5vw 3.5rem}.article-body h2{margin:2.25rem 0 .75rem;font-family:'Cormorant Garamond',serif;font-size:clamp(1.65rem,3vw,2.15rem);font-weight:300;line-height:1.2}.article-body p{margin:0 0 .95rem;color:var(--ivory-muted);font-size:.88rem;line-height:1.85}.article-body strong{color:var(--ivory);font-weight:500}.article-body a:not(.btn){color:var(--gold-light);text-decoration-color:rgba(201,169,110,.48);text-underline-offset:3px}.article-body a:not(.btn):hover{color:var(--ivory)}
+    .checklist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.25rem 1.4rem;margin:1rem 0 1.15rem;padding:0;list-style:none}.checklist li{position:relative;padding:.32rem 0 .32rem 1.2rem;color:var(--ivory-muted);font-size:.82rem;line-height:1.6}.checklist li::before{position:absolute;left:0;color:var(--gold);content:'—'}
+    .info-box{margin:1.3rem 0;padding:1.1rem 1.3rem;background:var(--black-2);border-left:2px solid var(--gold)}.info-box p{margin:0;font-size:.84rem}.steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem;margin:1rem 0 1.2rem}.step{padding:.9rem 1rem;border:1px solid rgba(201,169,110,.14);background:rgba(255,255,255,.012)}.step strong{display:block;margin-bottom:.25rem;color:var(--gold-light);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}.step p{margin:0;font-size:.8rem;line-height:1.65}
+    .article-cta{margin:2.8rem 0 1.5rem;padding:1.6rem 1.4rem;text-align:center;background:var(--black-2);border-top:1px solid rgba(201,169,110,.22)}.article-cta h2{margin:0;font-size:clamp(1.7rem,3vw,2.2rem)}.article-cta p{max-width:620px;margin:.65rem auto 1.1rem}.actions{display:flex;justify-content:center;flex-wrap:wrap;gap:.75rem}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:.8rem 1.3rem;border:1px solid var(--gold);font-size:.68rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:background .2s,border-color .2s,color .2s}.btn-primary{background:var(--gold);color:var(--black)}.btn-primary:hover{background:var(--gold-light);border-color:var(--gold-light)}.btn-secondary{color:var(--ivory);background:transparent;border-color:rgba(245,240,232,.28)}.btn-secondary:hover{border-color:var(--gold);color:var(--gold)}.back-link{display:inline-block;margin-top:1.2rem;font-size:.75rem}
+    footer.footer-mini{background:var(--black-2);border-top:1px solid rgba(201,169,110,.06);padding:2.5rem 4vw;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1.4rem;text-align:center}
+    footer.footer-mini a.footer-logo{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);text-decoration:none}
+    footer.footer-mini ul.footer-links-list{display:flex;flex-direction:row;justify-content:center;align-items:center;gap:2rem;list-style:none;flex-wrap:wrap;margin:0;padding:0}
+    footer.footer-mini ul.footer-links-list li{margin:0;padding:0;list-style:none}
+    footer.footer-mini ul.footer-links-list a{font-size:.75rem;color:rgba(189,181,166,.72);text-decoration:none;font-weight:300;transition:color .2s}
+    footer.footer-mini ul.footer-links-list a:hover{color:var(--ivory)}
+    footer.footer-mini span.footer-copy{font-size:.75rem;color:rgba(189,181,166,.55);font-weight:300}
+    footer.footer-mini .footer-group-label{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500;opacity:.7;cursor:default;display:inline-flex;align-items:center;line-height:1}
+    footer.footer-mini .footer-sep{color:rgba(201,169,110,.2);font-size:1rem;line-height:1;cursor:default;display:inline-flex;align-items:center}
+    @media(max-width:1050px){.nav-links{gap:.75rem}.nav-links a{font-size:.67rem}}
+    @media(max-width:900px){.nav-links,.nav-cta{display:none}.burger{display:block}footer.footer-mini ul.footer-links-list{gap:1rem 1.35rem}}
+    @media(max-width:600px){.article-header{padding:110px 5vw 32px}.article-header h1{font-size:clamp(2.15rem,9vw,2.8rem)}.article-intro{font-size:.87rem}.article-body{padding:0 5vw 2.5rem}.article-body h2{margin-top:1.85rem}.article-body p{font-size:.85rem}.checklist,.steps{grid-template-columns:1fr}.step{padding:.8rem .9rem}.article-cta{padding:1.3rem 1rem}.actions{flex-direction:column;align-items:stretch}.actions .btn{width:100%}footer.footer-mini ul.footer-links-list{gap:.8rem 1rem}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+  </style>
 </head>
 <body>
-<nav>
-  <a href="/" class="nav-logo">
-    <img src="/assets/images/logo-the-gentleman-driver.png" alt="The Gentleman Driver" style="height:46px;width:auto;display:block" width="800" height="213">
-  </a>
-  <ul class="nav-links">
-    <li><a href="/">Accueil</a></li>
-    <li><a href="/convoyage">Convoyage</a></li>
-    <li><a href="/chauffeur">Chauffeur</a></li>
-    <li><a href="/mise-en-main">Mise en main</a></li>
-    <li><a href="/solutions-professionnelles">Entreprises</a></li>
-    <li><a href="/contact">Contact</a></li>
-  </ul>
-  <a href="/contact" class="nav-cta">Devis gratuit</a>
-  <button type="button" class="burger" onclick="document.getElementById('mm').classList.add('open')" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
-<div class="mobile-menu" id="mm">
-  <button type="button" class="mobile-close" onclick="document.getElementById('mm').classList.remove('open')" aria-label="Fermer le menu">&#x2715;</button>
-  <a href="/" onclick="document.getElementById('mm').classList.remove('open')">Accueil</a>
-  <a href="/convoyage" onclick="document.getElementById('mm').classList.remove('open')">Convoyage</a>
-  <a href="/chauffeur" onclick="document.getElementById('mm').classList.remove('open')">Chauffeur</a>
-  <a href="/mise-en-main" onclick="document.getElementById('mm').classList.remove('open')">Mise en main</a>
-  <a href="/solutions-professionnelles" onclick="document.getElementById('mm').classList.remove('open')">Entreprises</a>
-  <a href="/contact" class="btn-primary" onclick="document.getElementById('mm').classList.remove('open')">Demander un devis</a>
-</div>
-
-<header class="article-header">
-  <div class="art-cat">V&#233;hicules &#233;lectriques</div>
-  <h1 class="art-title">Convoyer un v&#233;hicule &#233;lectrique&#160;: le guide complet <em>(y compris pour le ferry)</em></h1>
-  <div class="art-meta">Par Jonathan Vestin &#183; Juin 2026 &#183; 7 min de lecture</div>
-  <p class="art-intro">Depuis 2021, nous avons convoy&#233; des centaines de v&#233;hicules &#233;lectriques &#8212; dont une mission Corse qui nous a appris &#224; g&#233;rer la charge &#224; la minute pr&#232;s sur 1&#160;200&#160;km. Ce que nous avons appris, vous le trouverez ici.</p>
-</header>
-
-<div class="article-body">
-
-  <h2>Pourquoi le convoyage &#233;lectrique est diff&#233;rent</h2>
-
-  <p>Convoyer une Porsche Taycan ou une Tesla Model&#160;S, ce n&#8217;est pas conduire une berline thermique avec un cordon dans le coffre. L&#8217;autonomie r&#233;elle, la gestion de l&#8217;&#233;tat de charge, la localisation des bornes compatibles, les contraintes r&#233;glementaires en ferry&#160;: tout cela demande une pr&#233;paration que la plupart des prestataires sous-estiment.</p>
-
-  <h2>La r&#232;gle des 80&#160;%&#160;: comprendre le plateau de recharge</h2>
-
-  <p>Sur un v&#233;hicule &#233;lectrique, la recharge rapide (DC, 50&#160;kW &#224; 350&#160;kW selon le v&#233;hicule) est tr&#232;s efficace jusqu&#8217;&#224; 80&#160;% de la batterie. Au-del&#224;, le chargeur ralentit fortement pour prot&#233;ger la batterie. Charger de 80&#160;% &#224; 100&#160;% peut prendre autant de temps que de 0&#160;% &#224; 80&#160;%.</p>
-
-  <div class="info-box">
-    <p><strong>Strat&#233;gie op&#233;rationnelle&#160;:</strong> sur une mission longue distance, il est plus rapide de s&#8217;arr&#234;ter plusieurs fois &#224; 80&#160;% que de charger &#224; 100&#160;% une seule fois. Un convoyeur exp&#233;riment&#233; le sait et planifie ses arr&#234;ts en cons&#233;quence.</p>
+  <nav aria-label="Navigation principale">
+    <a href="/" class="nav-logo"><img src="/assets/images/logo-the-gentleman-driver.png" alt="The Gentleman Driver" width="800" height="213"></a>
+    <ul class="nav-links"><li><a href="/">Accueil</a></li><li><a href="/convoyage">Convoyage</a></li><li><a href="/chauffeur">Chauffeur</a></li><li><a href="/mise-en-main">Mise en main</a></li><li><a href="/solutions-professionnelles">Entreprises</a></li><li><a href="/contact">Contact</a></li></ul>
+    <a href="/contact" class="nav-cta">Devis gratuit</a>
+    <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" onclick="const m=document.getElementById('mobile-menu');m.classList.add('open');this.setAttribute('aria-expanded','true')">☰</button>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-close" type="button" aria-label="Fermer le menu" onclick="const m=document.getElementById('mobile-menu');m.classList.remove('open');document.querySelector('.burger').setAttribute('aria-expanded','false')">×</button>
+    <a href="/">Accueil</a><a href="/convoyage">Convoyage</a><a href="/chauffeur">Chauffeur</a><a href="/mise-en-main">Mise en main</a><a href="/solutions-professionnelles">Entreprises</a><a href="/contact">Contact</a>
   </div>
 
-  <h2>Le cas ferry Corse&#160;: une contrainte r&#233;glementaire stricte</h2>
+  <header class="article-header container">
+    <p class="category">Véhicules électriques</p>
+    <h1>Convoyer un véhicule électrique : autonomie, recharge et préparation</h1>
+    <p class="article-meta">Par Jonathan Vestin · Mis à jour le 14 septembre 2026</p>
+    <p class="article-intro">Un trajet en véhicule électrique demande un peu plus d’anticipation qu’un trajet thermique. Autonomie réelle, puissance de recharge, bornes disponibles et niveau de batterie à la remise doivent être intégrés à l’organisation de la mission.</p>
+  </header>
 
-  <p>C&#8217;est la situation la plus complexe que nous ayons g&#233;r&#233;e. Les compagnies maritimes (Corsica Ferries, La M&#233;ridionale, SNCM) imposent que les v&#233;hicules &#233;lectriques embarquent avec une charge maximale de 50&#160;% de la batterie &#8212; et certaines descendent &#224; 30&#160;% selon les travers&#233;es. Raison&#160;: risque incendie en salle des machines.</p>
+  <main class="article-body">
+    <h2>L’autonomie se prépare à partir du véhicule réel</h2>
+    <p>L’autonomie affichée est un point de départ, pas une distance assurée sur route. La vitesse, la température, le relief, le chauffage ou la climatisation et le niveau de charge influencent la consommation réelle.</p>
+    <p>Sur une mission longue distance, l’enjeu est de prévoir des arrêts cohérents avec le véhicule et le parcours. Deux modèles électriques peuvent se comporter très différemment : la préparation doit partir de celui qui est réellement confié.</p>
 
-  <p>Sur notre mission Marseille&#8202;&#8594;&#8202;Ajaccio, nous avions une exigence client de livraison avec 70&#160;% de charge &#224; l&#8217;arriv&#233;e. La contrainte ferry &#233;tait &#224; 50&#160;% maximum &#224; l&#8217;embarquement. Il a fallu&#160;:</p>
+    <h2>AC, DC et puissance réellement acceptée</h2>
+    <p>La recharge <strong>AC</strong> concerne surtout les bornes lentes ou accélérées, par exemple à domicile, en entreprise ou sur certains parkings. La recharge <strong>DC</strong> est utilisée sur les bornes rapides et très rapides.</p>
+    <p>La puissance reçue dépend du véhicule, de la borne, de l’état de la batterie et parfois de sa température. Une borne annoncée à 300 kW ne signifie donc pas qu’un véhicule chargera à 300 kW.</p>
+    <div class="info-box"><p><strong>La courbe de charge compte aussi.</strong> Sur beaucoup de véhicules, la puissance baisse progressivement lorsque le niveau de batterie augmente. Sur un long trajet, plusieurs recharges partielles peuvent parfois être plus efficaces qu’une attente prolongée jusqu’à 100 %. Le seuil de baisse varie selon le véhicule, la batterie et les conditions.</p></div>
 
-  <ul class="checklist">
-    <li>Planifier une recharge &#224; Marseille avant l&#8217;embarquement pour tomber &#224; exactement 48&#160;%</li>
-    <li>Identifier une borne disponible &#224; l&#8217;arriv&#233;e &#224; Ajaccio pour recharger avant livraison</li>
-    <li>G&#233;rer l&#8217;incertitude de la dur&#233;e de travers&#233;e (8h &#224; 12h selon conditions)</li>
-    <li>Communiquer en temps r&#233;el avec le client sur chaque &#233;tape</li>
-  </ul>
+    <h2>Choisir les bornes et prévoir un repli</h2>
+    <p>Une étape de recharge se prépare avec les caractéristiques du véhicule et les possibilités réelles sur l’itinéraire. Quelques points méritent d’être vérifiés avant le départ :</p>
+    <ul class="checklist">
+      <li>Le connecteur compatible.</li>
+      <li>La puissance maximale acceptée par le véhicule.</li>
+      <li>La puissance disponible sur la borne.</li>
+      <li>La localisation, les horaires et les conditions d’accès.</li>
+      <li>Le moyen de paiement ou l’application, si nécessaire.</li>
+      <li>Une solution de recharge alternative à proximité.</li>
+      <li>Le niveau de batterie visé à l’arrivée.</li>
+    </ul>
+    <p>Sur les longs trajets, une solution de repli évite de dépendre d’une seule borne.</p>
 
-  <h2>Les bornes&#160;: ne pas improviser</h2>
+    <h2>Quel niveau de batterie à la remise ?</h2>
+    <p>Le niveau de batterie à la livraison dépend du trajet, des possibilités de recharge et de la prestation convenue. Lorsque cela fait partie de la mission, TGD organise une recharge avant la remise afin d’éviter, autant que possible, de livrer un véhicule avec un niveau de batterie trop faible.</p>
 
-  <p>La France compte plus de 185&#160;000 points de recharge ouverts au public en 2026. Mais tous ne sont pas compatibles avec tous les v&#233;hicules. Un convoyeur professionnel v&#233;rifie avant chaque mission&#160;:</p>
+    <h2>Quand le trajet comprend un ferry</h2>
+    <p>Les conditions d’embarquement des véhicules électriques peuvent varier selon la compagnie, la traversée et les règles en vigueur au moment du départ. Tout niveau de charge demandé doit être vérifié directement auprès de l’opérateur concerné avant la mission.</p>
+    <p>TGD a déjà organisé des missions vers la Corse qui nécessitaient de coordonner trajet routier, ferry et recharge à l’arrivée. <a href="/etudes-de-cas">Voir un exemple de mission</a>.</p>
 
-  <ul class="checklist">
-    <li>Le type de connecteur (CCS Combo, CHAdeMO, Type&#160;2, Tesla)</li>
-    <li>La puissance disponible sur la borne (50&#160;kW, 150&#160;kW, 350&#160;kW)</li>
-    <li>La puissance maximale accept&#233;e par le v&#233;hicule</li>
-    <li>La disponibilit&#233; des bornes sur le trac&#233; (Ionity, Tesla Supercharger, Electra, TotalEnergies)</li>
-  </ul>
+    <h2>Connaître le modèle avant de prendre la route</h2>
+    <p>La préparation tient aussi à des détails pratiques : emplacement de la trappe, puissance acceptée, préconditionnement éventuel de la batterie, planificateur intégré, câbles disponibles et fonctionnement de l’application constructeur lorsque celle-ci est nécessaire.</p>
+    <p>Ces repères sont particulièrement utiles lorsque le véhicule doit ensuite être remis à un client qui découvre l’électrique. Une <a href="/mise-en-main">mise en main</a> peut être prévue dans la prestation.</p>
 
-  <h2>L&#8217;autonomie r&#233;elle vs l&#8217;autonomie WLTP</h2>
+    <h2>Les étapes d’une mission électrique</h2>
+    <div class="steps">
+      <div class="step"><strong>Avant le départ</strong><p>Véhicule, autonomie, trajet et possibilités de recharge sont vérifiés.</p></div>
+      <div class="step"><strong>Pendant le trajet</strong><p>Les arrêts sont adaptés à la consommation réelle et aux bornes disponibles.</p></div>
+      <div class="step"><strong>Avant la remise</strong><p>Le niveau de batterie et les éléments prévus dans la prestation sont contrôlés.</p></div>
+      <div class="step"><strong>À la livraison</strong><p>Une mise en main peut être réalisée lorsqu’elle est incluse dans la mission.</p></div>
+    </div>
+    <p>Pour présenter le véhicule et ses contraintes, consultez aussi notre page sur le <a href="/convoyage-electrique">convoyage de véhicules électriques</a>.</p>
 
-  <p>Le WLTP (Worldwide Harmonised Light Vehicle Test Procedure) est le cycle d&#8217;homologation europ&#233;en qui sert de base aux autonomies annonc&#233;es par les constructeurs. Il est mesur&#233; en laboratoire, dans des conditions id&#233;ales&#160;: temp&#233;rature mod&#233;r&#233;e, vitesse mixte ville/route, sans climatisation ni autoroute soutenue. En pratique, sur autoroute &#224; 130&#160;km/h avec le chauffage actif en hiver, l&#8217;autonomie r&#233;elle tombe souvent 30 &#224; 40&#160;% en dessous du chiffre WLTP.</p>
+    <section class="article-cta" aria-labelledby="article-cta-title">
+      <h2 id="article-cta-title">Vous avez un véhicule électrique à convoyer&nbsp;?</h2>
+      <p>Indiquez-nous le modèle, le trajet, la date et les contraintes de remise. TGD étudie l’autonomie, la recharge et l’organisation nécessaire avant de confirmer la mission.</p>
+      <div class="actions"><a class="btn btn-primary" href="/soumettre-une-mission">Soumettre une mission</a><a class="btn btn-secondary" href="/convoyage-electrique">Découvrir le convoyage électrique</a></div>
+    </section>
+    <a class="back-link" href="/blog">← Retour au blog</a>
+  </main>
 
-  <p>Un constructeur annonce 550&#160;km d&#8217;autonomie WLTP&#160;: comptez 350 &#224; 400&#160;km r&#233;els sur autoroute. Un convoyeur qui ne tient pas compte de cet &#233;cart prend le risque de tomber en panne. Ce n&#8217;est jamais arriv&#233; chez The Gentleman Driver&#160;: nous planifions sur les chiffres r&#233;els, pas sur les chiffres constructeur.</p>
-
-  <h2>Les v&#233;hicules &#233;lectriques que nous convoyons r&#233;guli&#232;rement</h2>
-
-  <ul class="checklist">
-    <li>Berlines et SUV &#233;lectriques premium</li>
-    <li>Sportives et grand tourisme &#233;lectriques</li>
-    <li>Berlines et SUV &#233;lectriques haut de gamme</li>
-    <li>Limousines et compactes &#233;lectriques</li>
-    <li>Kia EV6 et EV9</li>
-    <li>SUV familiaux &#233;lectriques</li>
-    <li>Berlines et SUV &#233;lectriques g&#233;n&#233;ralistes</li>
-    <li>Volvo EX40, C40</li>
-  </ul>
-
-  <div class="article-cta">
-    <h3>Un &#233;lectrique &#224; convoyer&#160;?</h3>
-    <p>Nos convoyeurs sont form&#233;s aux sp&#233;cificit&#233;s de chaque mod&#232;le. Planification de charge, gestion du ferry, livraison avec le niveau demand&#233;&#160;: on prend tout en charge.</p>
-    <a href="/convoyage-electrique" class="btn-primary">En savoir plus</a>
-  </div>
-
-  <p style="margin-top:2rem"><a href="/blog" style="color:var(--gold);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase">&#8592; Retour au blog</a></p>
-
-</div>
-
-<footer class="footer-mini">
-  <a href="/" class="footer-logo"><img src="/assets/images/logo-the-gentleman-driver-2.png" alt="The Gentleman Driver" style="height:32px;width:auto;display:block;opacity:0.75" width="800" height="213"></a>
-  <ul class="footer-links-list">
-    <li class="footer-group-label">Convoyage</li>
-    <li><a href="/convoyage">Automobile</a></li>
-    <li><a href="/convoyage-electrique">&#201;lectrique</a></li>
-    <li><a href="/convoyage-luxe">Premium</a></li>
-    <li><a href="/convoyage-paris">Paris</a></li>
-    <li><a href="/convoyage-concession">Concessions</a></li>
-    <li><a href="/transport-plateau">Plateau</a></li>
-    <li class="footer-sep">&#183;</li>
-    <li class="footer-group-label">Services</li>
-    <li><a href="/chauffeur">Chauffeur</a></li>
-    <li><a href="/mise-en-main">Mise en main</a></li>
-    <li><a href="/solutions-professionnelles">Entreprises</a></li>
-    <li class="footer-sep">&#183;</li>
-    <li class="footer-group-label">&#192; propos</li>
-    <li><a href="/pourquoi-nous">Pourquoi nous</a></li>
-    <li><a href="/a-propos">L&#8217;&#233;quipe</a></li>
-    <li><a href="/blog">Blog</a></li>
-    <li><a href="/faq">FAQ</a></li>
-    <li><a href="/contact">Contact</a></li>
-    <li><a href="/mentions-legales">Mentions l&#233;gales</a></li>
-  </ul>
-  <span class="footer-copy">&#169; 2026 The Gentleman Driver &#8212; SASU &#8212; Charenton-le-Pont (94)</span>
-  <span class="footer-legal-mini" style="display:block;margin-top:.7rem;font-size:.75rem;color:rgba(189,181,166,0.22);font-weight:300;letter-spacing:.05em;line-height:1.8">SIRET 985 178 466 00019 &#183; RCS Cr&#233;teil &#183; Assurance RC Pro</span>
-</footer>
-<script defer src="/_vercel/insights/script.js"></script>
-<script src="/tgd-conversions.js"></script>
+  <footer class="footer-mini">
+    <a href="/" class="footer-logo"><img src="/assets/images/logo-the-gentleman-driver-2.png" alt="The Gentleman Driver" style="height:32px;width:auto;display:block;opacity:0.75" width="800" height="213" loading="lazy" decoding="async"></a>
+    <ul class="footer-links-list">
+      <li class="footer-group-label">Convoyage</li>
+      <li><a href="/convoyage">Automobile</a></li>
+      <li><a href="/convoyage-electrique">&#201;lectrique</a></li>
+      <li><a href="/convoyage-luxe">Premium</a></li>
+      <li><a href="/convoyage-paris">Paris</a></li>
+      <li><a href="/convoyage-concession">Concessions</a></li>
+      <li><a href="/transport-plateau">Plateau</a></li>
+      <li class="footer-sep">&#183;</li>
+      <li class="footer-group-label">Services</li>
+      <li><a href="/chauffeur">Chauffeur</a></li>
+      <li><a href="/mise-en-main">Mise en main</a></li>
+      <li><a href="/solutions-professionnelles">Entreprises</a></li>
+      <li class="footer-sep">&#183;</li>
+      <li class="footer-group-label">&#192; propos</li>
+      <li><a href="/pourquoi-nous">Pourquoi nous</a></li>
+      <li><a href="/a-propos">L&#8217;&#233;quipe</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/faq">FAQ</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/mentions-legales">Mentions l&#233;gales</a></li>
+    </ul>
+    <span class="footer-copy">&#169; 2026 The Gentleman Driver &#8212; SASU &#8212; Charenton-le-Pont (94)</span>
+    <span class="footer-legal-mini" style="display:block;margin-top:.7rem;font-size:.75rem;color:rgba(189,181,166,0.22);font-weight:300;letter-spacing:.05em;line-height:1.8">SIRET 985 178 466 00019 &#183; RCS Cr&#233;teil &#183; Assurance RC Pro</span>
+  </footer>
+  <script>
+    document.querySelectorAll('.mobile-menu a').forEach(function(link){link.addEventListener('click',function(){document.getElementById('mobile-menu').classList.remove('open');document.querySelector('.burger').setAttribute('aria-expanded','false')})});
+  </script>
 </body>
 </html>
