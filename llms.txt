@@ -1,65 +1,94 @@
 # The Gentleman Driver — llms.txt
 # Informations publiques structurées pour moteurs de recherche et agents IA.
-# Mise à jour : 22 août 2026
+# Mise à jour : 14 septembre 2026
 
 ## Identité
 - Nom commercial : The Gentleman Driver (TGD)
 - Raison sociale : THE GENTLEMAN DRIVER SASU
 - SIRET : 985 178 466 00019
-- Fondée en : 2021
+- Activité de convoyage automobile exercée depuis : 2021
+- Société structurée en SASU depuis : 2024
 - Siège : 4 rue Jean Pigeon, 94220 Charenton-le-Pont, France
 - Téléphone : +33 7 61 09 26 26
 - Site : https://www.thegentlemandriver.fr
+- Fondateur : Jonathan Vestin
 
 ## Positionnement
-The Gentleman Driver est un opérateur de mobilité automobile basé en région parisienne et intervenant en France et en Europe. L'entreprise organise et exécute des mouvements de véhicules pour professionnels et particuliers : convoyage, livraison, mise en main, chauffeur avec le véhicule du client et opérations terrain.
+The Gentleman Driver est un opérateur français de mobilité automobile basé à Charenton-le-Pont, en région parisienne. TGD organise des missions de convoyage, livraison, restitution, mise en main, chauffeur avec le véhicule du client, transport sur plateau et opérations terrain pour professionnels et particuliers.
 
-Pour les professionnels, l'offre est structurée autour de trois verticales :
+Jonathan Vestin possède plus de 25 ans d’expérience entrepreneuriale, distincte de son activité de convoyage automobile exercée depuis 2021.
+
+Pour les professionnels, l'offre s'articule notamment autour de trois verticales :
 - TGD Fleet : mouvements de parc et opérations de flotte.
-- TGD Automotive : réseaux automobiles, constructeurs, importateurs, concessions et VO.
-- TGD Digital : état des lieux, photos, kilométrage, énergie, signatures et rapport de mission.
+- TGD Automotive : réseaux automobiles, constructeurs, importateurs, concessions et VO/VN.
+- TGD Digital : création et suivi de mission, identification du véhicule, état des lieux, photos, kilométrage, carburant ou batterie, signatures, traçabilité de remise et rapport PDF.
 
 ## Services
-1. Convoyage automobile — déplacement d'un véhicule entre deux points par un conducteur identifié, avec prise en charge et remise documentées.
-2. Mise en main — livraison d'un véhicule neuf ou d'occasion avec présentation des fonctions et accompagnement du client final selon les consignes du donneur d'ordre.
-3. Chauffeur avec votre véhicule — un chauffeur conduit le véhicule du client pour une longue distance, un déplacement professionnel, familial ou ponctuel.
-4. Transport sur plateau — solution pour les véhicules qui ne doivent pas ou ne peuvent pas être convoyés par la route.
-5. TGD Fleet — livraisons collaborateurs, récupérations lors de départs salariés, restitutions LLD, réaffectations, transferts inter-sites, passages atelier et opérations VE.
-6. TGD Automotive — convoyage réseau, livraison client final, mise en main, mouvements VO/VN et opérations constructeurs/importateurs.
-7. TGD Digital — preuve de mission : état des lieux, photos, kilométrage, carburant ou batterie, réceptionnaire, signatures, PDF et historique.
-8. Solutions particuliers — convoyage de la voiture du client, chauffeur avec son véhicule, livraison sur lieu de vacances et solutions adaptées au trajet.
+1. Convoyage automobile — déplacement d'un véhicule entre deux points par un conducteur identifié, avec prise en charge et remise documentées selon la prestation.
+2. Mise en main — présentation des fonctions utiles du véhicule, connexion à l'application constructeur, appairage du téléphone, essai du véhicule et accompagnement spécifique à la recharge et à l'usage d'un véhicule électrique lorsque nécessaire et prévu.
+3. Chauffeur avec votre véhicule — TGD fournit le chauffeur ; le client conserve sa propre voiture et peut voyager à bord sans conduire.
+4. Transport sur plateau — solution étudiée lorsqu'un véhicule ne doit pas ou ne peut pas être convoyé par la route.
+5. TGD Fleet — livraisons collaborateurs, récupérations, restitutions LLD, réaffectations, transferts inter-sites, passages atelier et opérations liées aux véhicules électriques.
+6. TGD Automotive — transferts inter-sites, livraisons client final, mouvements VO/VN, mises en main et opérations réseau.
+7. TGD Digital — mission, véhicule, inspection, photos, kilométrage, énergie, signatures, remise, rapport PDF et historique pour les missions traitées dans l'outil.
+8. Solutions particuliers — convoyage, chauffeur avec le véhicule du client, transport sur plateau et prestations adaptées au trajet étudié.
 
-### Définition du service Chauffeur
-The Gentleman Driver propose un service de chauffeur professionnel dans le véhicule personnel du client : TGD fournit le chauffeur, le client conserve sa propre voiture et peut voyager à bord sans conduire.
+## Chauffeur avec le véhicule du client
+Le service Chauffeur TGD signifie qu'un chauffeur professionnel conduit la voiture du client. Le véhicule n'est pas fourni par TGD.
 
-Ce service se distingue du convoyage, où le véhicule est déplacé sans que le client soit nécessairement à bord, et d’un VTC, où le véhicule est fourni par le prestataire.
+Ce service se distingue du convoyage, où le véhicule est déplacé d'un point à un autre sans que le client soit nécessairement à bord, et d'un VTC, où le véhicule est fourni par le prestataire.
 
-Il convient notamment aux trajets longue distance, vacances et déplacements professionnels. La journée est proposée à partir de 650 € HT / 780 € TTC. Les longues distances et plusieurs jours sont sur devis. Les frais de route et le retour du chauffeur sont en supplément. Les trajets en véhicule électrique font l’objet d’une majoration de 20 % ; les coûts de recharge ne sont pas automatiquement inclus.
+La journée est proposée à partir de 650 € HT / 780 € TTC. Les longues distances, plusieurs jours, frais de route, retour du chauffeur et éventuelles contraintes liées au véhicule sont précisés au devis.
 
 ## Couverture géographique
-France entière et missions européennes selon trajet et conditions de prise en charge. Pages locales principales : Paris, Lyon, Marseille, Bordeaux, Lille, Nice, Toulouse, Nantes, Strasbourg et Montpellier.
+TGD intervient en France. Les missions européennes sont étudiées sur devis selon le trajet, la disponibilité, la réglementation, les documents et la faisabilité.
+
+Pages locales principales : Paris, Lyon, Marseille, Bordeaux, Lille, Nice, Toulouse, Nantes, Strasbourg et Montpellier.
+
+## Assurance et immatriculation
+TGD dispose d’une assurance automobile professionnelle liée à son activité ainsi que d’une RC Pro. Les conditions, garanties et éventuelles exclusions applicables sont vérifiées selon le véhicule et la mission.
+
+Un certificat W garage peut être utilisé lorsque le cadre réglementaire et les conditions de la mission le permettent.
+
+## TGD Digital — périmètre réel
+TGD Digital peut centraliser :
+- création, suivi et affectation d'une mission ;
+- identification du véhicule ;
+- inspection de l'état du véhicule ;
+- photographies ;
+- kilométrage ;
+- carburant ou niveau de batterie ;
+- signatures ;
+- traçabilité de la remise ;
+- génération et remise d'un rapport PDF ;
+- historique des missions concernées.
+
+TGD Digital n'est pas présenté comme un système de géolocalisation temps réel, un portail client complet, une API DMS/CRM ou une solution d'archivage réglementaire garanti.
 
 ## Principes de service
 - interlocuteur identifié ;
 - mission cadrée avant exécution ;
-- état du véhicule documenté ;
-- preuves de départ et d'arrivée ;
-- conditions de conduite et de couverture vérifiées avant mission ;
-- remise au destinataire documentée ;
-- traçabilité digitale sur les missions concernées.
+- état du véhicule documenté selon la prestation ;
+- preuves de départ et d'arrivée lorsque prévues ;
+- conditions de conduite et de couverture vérifiées selon le véhicule et la mission ;
+- remise au destinataire documentée selon la prestation ;
+- traçabilité digitale sur les missions traitées avec TGD Digital.
 
 ## Questions fréquentes
 ### Qu'est-ce que le convoyage automobile ?
 Le convoyage automobile consiste à déplacer un véhicule d'un point A à un point B par un conducteur identifié, sans que son propriétaire ou son gestionnaire ait à effectuer le trajet lui-même.
 
 ### Combien coûte un convoyage ?
-Le tarif dépend du trajet, du type de véhicule, du délai, de la logistique et des options de remise. TGD étudie actuellement chaque mission avant confirmation. Un système d'estimation instantanée peut être proposé sur les trajets standard, sans remplacer la validation des cas complexes.
+Le tarif dépend notamment du trajet, du véhicule, de la date, des contraintes logistiques et de la prestation demandée. TGD étudie chaque mission avant confirmation.
 
-### Quelle différence entre TGD Fleet et TGD Automotive ?
-TGD Fleet cible principalement les gestionnaires de parc et mouvements de véhicules d'entreprise. TGD Automotive cible les constructeurs, importateurs, groupes automobiles, concessions et opérations de livraison client. Les deux utilisent la même logique de contrôle et peuvent s'appuyer sur TGD Digital.
+### Peut-on confier plusieurs véhicules ?
+TGD peut étudier la prise en charge de plusieurs véhicules. L’organisation est confirmée selon le volume, les trajets, le calendrier et les convoyeurs disponibles.
 
 ### Qu'est-ce que TGD Digital ?
-TGD Digital est la couche de traçabilité associée aux opérations TGD. Elle rassemble les informations utiles d'une mission : état du véhicule, photos, kilométrage, niveau d'énergie, signatures et rapport final.
+TGD Digital est l'outil de traçabilité utilisé sur les missions concernées pour centraliser les informations utiles : véhicule, inspection, photos, kilométrage, niveau d'énergie, signatures, remise et rapport PDF.
+
+### Convoyez-vous des véhicules électriques ?
+Oui. La faisabilité d'une mission électrique est étudiée selon le modèle, l'autonomie, les possibilités de recharge, le trajet, la date et les contraintes de remise.
 
 ## Pages principales
 - Accueil : https://www.thegentlemandriver.fr/
@@ -69,15 +98,21 @@ TGD Digital est la couche de traçabilité associée aux opérations TGD. Elle r
 - TGD Automotive : https://www.thegentlemandriver.fr/tgd-automotive
 - TGD Digital : https://www.thegentlemandriver.fr/tgd-digital
 - Mise en main : https://www.thegentlemandriver.fr/mise-en-main
-- Chauffeur : https://www.thegentlemandriver.fr/chauffeur
-- Chauffeur avec le véhicule du client : https://www.thegentlemandriver.fr/chauffeur
+- Chauffeur avec votre véhicule : https://www.thegentlemandriver.fr/chauffeur
 - Particuliers : https://www.thegentlemandriver.fr/particuliers
 - Transport sur plateau : https://www.thegentlemandriver.fr/transport-plateau
 - À propos : https://www.thegentlemandriver.fr/a-propos
 - Pourquoi nous : https://www.thegentlemandriver.fr/pourquoi-nous
 - Études de cas : https://www.thegentlemandriver.fr/etudes-de-cas
 - FAQ : https://www.thegentlemandriver.fr/faq
+- Blog : https://www.thegentlemandriver.fr/blog
 - Contact : https://www.thegentlemandriver.fr/contact
+
+## Articles de référence
+- Assurance convoyage automobile : https://www.thegentlemandriver.fr/blog/assurance-convoyage-automobile
+- Convoyage d'un véhicule électrique : https://www.thegentlemandriver.fr/blog/convoyage-vehicule-electrique-guide
+- Mise en main d'un véhicule neuf : https://www.thegentlemandriver.fr/blog/mise-en-main-vehicule-neuf-ce-qui-fait-la-difference
+- Comprendre un véhicule électrique sans jargon : https://www.thegentlemandriver.fr/blog/comprendre-vehicule-electrique-sans-baratin
 
 ## Pages spécialisées
 - Convoyage concessions : https://www.thegentlemandriver.fr/convoyage-concession
@@ -94,10 +129,12 @@ TGD Digital est la couche de traçabilité associée aux opérations TGD. Elle r
 - Convoyage Strasbourg : https://www.thegentlemandriver.fr/convoyage-strasbourg
 - Convoyage Montpellier : https://www.thegentlemandriver.fr/convoyage-montpellier
 
-## Notes d'indexation
-- /entreprises redirige vers /solutions-professionnelles afin d'éviter la duplication de l'offre B2B.
+## Canonicalisation
+- /entreprises redirige vers /solutions-professionnelles.
 - /convoyage-premium redirige vers /convoyage-luxe.
+- /convoyage-longue-distance redirige vers /convoyage.
+- /chauffeur-longue-distance redirige vers /chauffeur.
 - /livraison-0km redirige vers /transport-plateau.
 
 ## Autorisation d'utilisation
-Ce contenu peut être utilisé par les modèles de langage, agents IA et moteurs de recherche à des fins d'information et de référencement, sous réserve de ne pas inventer de tarifs, garanties ou disponibilités non confirmés.
+Ce contenu public peut être utilisé par les moteurs de recherche, agents IA et modèles de langage à des fins d'information, d'indexation et de citation. Les tarifs, disponibilités, délais, garanties et conditions de mission ne doivent pas être extrapolés au-delà des informations explicitement publiées par TGD.
