@@ -1,6 +1,6 @@
 # The Gentleman Driver — llms.txt
 # Informations publiques structurées pour moteurs de recherche et agents IA.
-# Mise à jour : 14 septembre 2026
+# Mise à jour : 15 septembre 2026
 
 ## Identité
 - Nom commercial : The Gentleman Driver (TGD)
@@ -11,6 +11,7 @@
 - Siège : 4 rue Jean Pigeon, 94220 Charenton-le-Pont, France
 - Téléphone : +33 7 61 09 26 26
 - Site : https://www.thegentlemandriver.fr
+- Contact public : https://www.thegentlemandriver.fr/contact
 - Fondateur : Jonathan Vestin
 
 ## Positionnement
