@@ -31,13 +31,14 @@ function installEntitySchema(){
     '@type':['ProfessionalService','LocalBusiness'],
     '@id':'https://www.thegentlemandriver.fr/#business',
     name:'The Gentleman Driver',
+    alternateName:'TGD',
     legalName:'THE GENTLEMAN DRIVER SASU',
     url:'https://www.thegentlemandriver.fr/',
     telephone:'+33761092626',
     foundingDate:'2021',
     description:'The Gentleman Driver organise des missions de convoyage automobile, mise en main, chauffeur avec le véhicule du client et transport sur plateau en France. Les missions européennes sont étudiées sur devis selon le trajet, la disponibilité, la réglementation, les documents et la faisabilité.',
     address:{'@type':'PostalAddress',streetAddress:'4 rue Jean Pigeon',addressLocality:'Charenton-le-Pont',postalCode:'94220',addressRegion:'Île-de-France',addressCountry:'FR'},
-    founder:{'@id':'https://www.thegentlemandriver.fr/#jonathan-vestin'},
+    founder:{'@id':'https://www.thegentlemandriver.fr/a-propos#jonathan-vestin'},
     areaServed:[{'@type':'Country',name:'France'},{'@type':'Place',name:'Europe'}],
     knowsAbout:['convoyage automobile','mise en main véhicule','chauffeur avec le véhicule du client','convoyage de véhicules électriques','mouvements de flotte automobile','livraisons VN/VO','transport automobile sur plateau'],
     hasOfferCatalog:{'@type':'OfferCatalog',name:'Services The Gentleman Driver',itemListElement:[
@@ -53,7 +54,7 @@ function installEntitySchema(){
    },
    {
     '@type':'Person',
-    '@id':'https://www.thegentlemandriver.fr/#jonathan-vestin',
+    '@id':'https://www.thegentlemandriver.fr/a-propos#jonathan-vestin',
     name:'Jonathan Vestin',
     jobTitle:'Fondateur et gérant',
     url:'https://www.thegentlemandriver.fr/a-propos',
@@ -65,6 +66,7 @@ function installEntitySchema(){
     '@id':'https://www.thegentlemandriver.fr/#website',
     url:'https://www.thegentlemandriver.fr/',
     name:'The Gentleman Driver',
+    alternateName:'TGD',
     publisher:{'@id':'https://www.thegentlemandriver.fr/#business'},
     inLanguage:'fr-FR'
    }
