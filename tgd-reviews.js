@@ -20,7 +20,19 @@ function neutralReviewState(){
  document.querySelectorAll('.tgd-rating-number').forEach(e=>e.textContent='');
 }
 function render(w,reviews,rating,total){const ordered=(reviews||[]).map(norm).sort((a,b)=>ts(b)-ts(a));w.forEach(x=>{const m=Math.max(1,parseInt(x.dataset.max||'3',10));x.innerHTML=ordered.slice(0,m).map(card).join('')});const sr=Number(rating),st=Number(total),hasRating=Number.isFinite(sr)&&sr>0,hasTotal=Number.isFinite(st)&&st>0;if(hasRating&&hasTotal){document.querySelectorAll('.tgd-rating-score').forEach(e=>e.textContent=sr.toFixed(1).replace('.',','));document.querySelectorAll('.tgd-rating-total').forEach(e=>e.textContent=`${st} avis`);document.querySelectorAll('.tgd-rating-number').forEach(e=>e.textContent=String(st))}else neutralReviewState()}
+function normalizeArticleSchemas(){
+ document.querySelectorAll('script[type="application/ld+json"]').forEach(s=>{
+  const raw=s.textContent||'';if(!raw.includes('BlogPosting'))return;
+  try{
+   const data=JSON.parse(raw);
+   const patch=node=>{if(!node||node['@type']!=='BlogPosting')return;node.author={'@type':'Person','@id':'https://www.thegentlemandriver.fr/a-propos#jonathan-vestin',name:'Jonathan Vestin',url:'https://www.thegentlemandriver.fr/a-propos'};node.publisher={'@type':'Organization','@id':'https://www.thegentlemandriver.fr/#business',name:'The Gentleman Driver',url:'https://www.thegentlemandriver.fr/'};};
+   if(Array.isArray(data['@graph']))data['@graph'].forEach(patch);else patch(data);
+   s.textContent=JSON.stringify(data);
+  }catch(e){}
+ });
+}
 function installEntitySchema(){
+ normalizeArticleSchemas();
  if(!document.body.classList.contains('site-home'))return;
  document.querySelectorAll('script[type="application/ld+json"]').forEach(s=>{if((s.textContent||'').includes('thegentlemandriver.fr/#business')||(s.textContent||'').includes('"FAQPage"'))s.remove()});
  if(document.getElementById('tgd-entity-schema'))return;
