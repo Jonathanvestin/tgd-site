@@ -14,7 +14,64 @@ const norm=r=>({author:r.author||r.authorName||r.reviewer||'Client Google',ratin
 const stars=n=>'★'.repeat(Math.max(0,Math.min(5,Number(n)||0)))+'☆'.repeat(5-Math.max(0,Math.min(5,Number(n)||0)));
 function date(r){const v=ts(r);return v?new Intl.DateTimeFormat('fr-FR',{day:'numeric',month:'long',year:'numeric'}).format(new Date(v)):'Avis Google'}
 function card(r){r=norm(r);return `<div class="testi"><div class="testi-stars">${stars(r.rating)}</div>${r.text?`<p class="testi-quote">« ${esc(r.text)} »</p>`:''}<div class="testi-author">${esc(r.author)}</div><div class="testi-role">${esc(date(r))} · Google</div></div>`}
-function render(w,reviews,rating,total){const ordered=(reviews||[]).map(norm).sort((a,b)=>ts(b)-ts(a));w.forEach(x=>{const m=Math.max(1,parseInt(x.dataset.max||'3',10));x.innerHTML=ordered.slice(0,m).map(card).join('')});const sr=Number(rating),st=Number(total),hasRating=Number.isFinite(sr)&&sr>0,hasTotal=Number.isFinite(st)&&st>0;if(hasRating&&hasTotal){document.querySelectorAll('.tgd-rating-score').forEach(e=>e.textContent=sr.toFixed(1).replace('.',','));document.querySelectorAll('.tgd-rating-total').forEach(e=>e.textContent=`${st} avis`);document.querySelectorAll('.tgd-rating-number').forEach(e=>e.textContent=String(st))}else{document.querySelectorAll('.tgd-rating-score').forEach(e=>{const p=e.parentElement;if(p&&p.textContent.includes('/5 Google'))p.textContent='Avis Google';else e.textContent='Avis Google'});document.querySelectorAll('.tgd-rating-total').forEach(e=>{if(e.isConnected)e.textContent='Avis Google'});document.querySelectorAll('.tgd-rating-number').forEach(e=>e.textContent='—')}}
+function neutralReviewState(){
+ document.querySelectorAll('.tgd-rating-score').forEach(e=>{const p=e.parentElement;if(p&&p.textContent.includes('/5 Google'))p.textContent='Avis Google';else e.textContent='Avis Google'});
+ document.querySelectorAll('.tgd-rating-total').forEach(e=>{if(e.isConnected)e.textContent=''});
+ document.querySelectorAll('.tgd-rating-number').forEach(e=>e.textContent='');
+}
+function render(w,reviews,rating,total){const ordered=(reviews||[]).map(norm).sort((a,b)=>ts(b)-ts(a));w.forEach(x=>{const m=Math.max(1,parseInt(x.dataset.max||'3',10));x.innerHTML=ordered.slice(0,m).map(card).join('')});const sr=Number(rating),st=Number(total),hasRating=Number.isFinite(sr)&&sr>0,hasTotal=Number.isFinite(st)&&st>0;if(hasRating&&hasTotal){document.querySelectorAll('.tgd-rating-score').forEach(e=>e.textContent=sr.toFixed(1).replace('.',','));document.querySelectorAll('.tgd-rating-total').forEach(e=>e.textContent=`${st} avis`);document.querySelectorAll('.tgd-rating-number').forEach(e=>e.textContent=String(st))}else neutralReviewState()}
+function installEntitySchema(){
+ if(!document.body.classList.contains('site-home'))return;
+ document.querySelectorAll('script[type="application/ld+json"]').forEach(s=>{if((s.textContent||'').includes('thegentlemandriver.fr/#business')||(s.textContent||'').includes('"FAQPage"'))s.remove()});
+ if(document.getElementById('tgd-entity-schema'))return;
+ const schema={
+  '@context':'https://schema.org',
+  '@graph':[
+   {
+    '@type':['ProfessionalService','LocalBusiness'],
+    '@id':'https://www.thegentlemandriver.fr/#business',
+    name:'The Gentleman Driver',
+    legalName:'THE GENTLEMAN DRIVER SASU',
+    url:'https://www.thegentlemandriver.fr/',
+    telephone:'+33761092626',
+    foundingDate:'2021',
+    description:'The Gentleman Driver organise des missions de convoyage automobile, mise en main, chauffeur avec le véhicule du client et transport sur plateau en France. Les missions européennes sont étudiées sur devis selon le trajet, la disponibilité, la réglementation, les documents et la faisabilité.',
+    address:{'@type':'PostalAddress',streetAddress:'4 rue Jean Pigeon',addressLocality:'Charenton-le-Pont',postalCode:'94220',addressRegion:'Île-de-France',addressCountry:'FR'},
+    founder:{'@id':'https://www.thegentlemandriver.fr/#jonathan-vestin'},
+    areaServed:[{'@type':'Country',name:'France'},{'@type':'Place',name:'Europe'}],
+    knowsAbout:['convoyage automobile','mise en main véhicule','chauffeur avec le véhicule du client','convoyage de véhicules électriques','mouvements de flotte automobile','livraisons VN/VO','transport automobile sur plateau'],
+    hasOfferCatalog:{'@type':'OfferCatalog',name:'Services The Gentleman Driver',itemListElement:[
+     {'@type':'Offer',itemOffered:{'@type':'Service',name:'Convoyage automobile',url:'https://www.thegentlemandriver.fr/convoyage'}},
+     {'@type':'Offer',itemOffered:{'@type':'Service',name:'Mise en main',url:'https://www.thegentlemandriver.fr/mise-en-main'}},
+     {'@type':'Offer',itemOffered:{'@type':'Service',name:'Chauffeur avec votre véhicule',url:'https://www.thegentlemandriver.fr/chauffeur'}},
+     {'@type':'Offer',itemOffered:{'@type':'Service',name:'Solutions professionnelles',url:'https://www.thegentlemandriver.fr/solutions-professionnelles'}},
+     {'@type':'Offer',itemOffered:{'@type':'Service',name:'TGD Fleet',url:'https://www.thegentlemandriver.fr/tgd-fleet'}},
+     {'@type':'Offer',itemOffered:{'@type':'Service',name:'TGD Automotive',url:'https://www.thegentlemandriver.fr/tgd-automotive'}},
+     {'@type':'Offer',itemOffered:{'@type':'Service',name:'TGD Digital',url:'https://www.thegentlemandriver.fr/tgd-digital'}},
+     {'@type':'Offer',itemOffered:{'@type':'Service',name:'Transport sur plateau',url:'https://www.thegentlemandriver.fr/transport-plateau'}}
+    ]}
+   },
+   {
+    '@type':'Person',
+    '@id':'https://www.thegentlemandriver.fr/#jonathan-vestin',
+    name:'Jonathan Vestin',
+    jobTitle:'Fondateur et gérant',
+    url:'https://www.thegentlemandriver.fr/a-propos',
+    worksFor:{'@id':'https://www.thegentlemandriver.fr/#business'},
+    description:'Jonathan Vestin possède plus de 25 ans d’expérience entrepreneuriale, distincte de son activité de convoyage automobile exercée depuis 2021.'
+   },
+   {
+    '@type':'WebSite',
+    '@id':'https://www.thegentlemandriver.fr/#website',
+    url:'https://www.thegentlemandriver.fr/',
+    name:'The Gentleman Driver',
+    publisher:{'@id':'https://www.thegentlemandriver.fr/#business'},
+    inLanguage:'fr-FR'
+   }
+  ]
+ };
+ const s=document.createElement('script');s.type='application/ld+json';s.id='tgd-entity-schema';s.textContent=JSON.stringify(schema);document.head.appendChild(s);
+}
 function installShell(){
  const links=document.querySelector('.nav-links');
  if(links)links.innerHTML='<li><a href="/convoyage">Convoyage</a></li><li class="nav-dropdown"><a href="/solutions-professionnelles" class="nav-dropdown-toggle">Solutions Pro</a><ul class="nav-dropdown-menu"><li><a href="/solutions-professionnelles">Vue d\'ensemble</a></li><li><a href="/tgd-fleet">TGD Fleet</a></li><li><a href="/tgd-automotive">TGD Automotive</a></li><li><a href="/tgd-digital">TGD Digital</a></li><li><a href="/convoyage-concession">Concessions</a></li></ul></li><li><a href="/chauffeur">Chauffeur</a></li><li><a href="/particuliers">Particuliers</a></li><li><a href="/a-propos">À propos</a></li>';
@@ -25,15 +82,8 @@ function installShell(){
 }
 function upgradeHome(){
  if(!document.body.classList.contains('site-home'))return;
- if(document.body.classList.contains('site-home'))return;
- document.querySelectorAll('.services,.adn,.process,.coverage,.clients,.home-cases,#galerie').forEach(function(el){el.remove();});
- setTimeout(function(){var seo=document.getElementById('tgd-seo-link-hub');if(seo)seo.remove();},150);
- // Le contenu du hero reste piloté par le HTML pour garantir un message SEO et commercial cohérent dès le premier rendu.
- const pro=document.querySelector('.audience-card[data-audience="professionnel"]');if(pro){pro.href='/solutions-professionnelles';const a=pro.querySelector('strong');if(a)a.textContent='Je gère des véhicules professionnels'}
- if(!document.getElementById('tgd-home-machine-style')){const st=document.createElement('style');st.id='tgd-home-machine-style';st.textContent='.site-home .hero{background:radial-gradient(circle at 72% 32%,rgba(143,156,169,.12),transparent 32%),linear-gradient(135deg,#08090b 0%,#0c0f13 55%,#111820 100%)!important;border-bottom:1px solid rgba(201,169,110,.16)}.site-home .hero-right{background:linear-gradient(145deg,#151b22,#0b0e12)!important}.site-home .hero h1{font-size:clamp(3rem,5vw,5.4rem)!important;max-width:780px}.site-home .hero-desc{font-size:.95rem!important;max-width:650px!important}#tgd-b2b-home-hub{padding:3.1rem 4vw!important;background:#0b0e12;border-bottom:1px solid rgba(201,169,110,.15)}#tgd-b2b-home-hub .inner{max-width:1180px;margin:auto}.b2b-head{display:flex;justify-content:space-between;gap:2rem;align-items:end;margin-bottom:1.5rem}.b2b-head h2{font-family:Cormorant Garamond,serif;font-weight:300;font-size:clamp(2.2rem,4vw,3.7rem);line-height:1.05;margin:0}.b2b-head h2 em{color:#c9a96e}.b2b-head p{max-width:500px;color:#9fa8b1;font-size:.78rem;margin:0}.b2b-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.b2b-card{background:linear-gradient(145deg,#151a20,#0f1318);border:1px solid rgba(157,169,180,.16);padding:1.65rem;text-decoration:none;min-height:205px;position:relative;transition:.25s}.b2b-card:hover{transform:translateY(-3px);border-color:rgba(201,169,110,.55)}.b2b-card .code{font-size:.61rem;letter-spacing:.2em;text-transform:uppercase;color:#8f9aa4}.b2b-card h3{font-family:Cormorant Garamond,serif;font-size:1.85rem;font-weight:400;margin:.7rem 0;color:#f5f0e8}.b2b-card h3 em{color:#c9a96e}.b2b-card p{font-size:.73rem;color:#aeb6bd;line-height:1.65;margin:0 0 1rem}.b2b-card .go{position:absolute;bottom:1.15rem;left:1.65rem;font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;color:#c9a96e}@media(max-width:900px){.b2b-head{display:block}.b2b-head p{margin-top:1rem}.b2b-grid{grid-template-columns:1fr}.site-home .hero h1{font-size:clamp(2.5rem,11vw,4rem)!important}}';document.head.appendChild(st)}
- const router=document.querySelector('.audience-router');if(router&&!document.getElementById('tgd-b2b-home-hub')){const hub=document.createElement('section');hub.id='tgd-b2b-home-hub';hub.innerHTML='<div class="inner"><div class="b2b-head"><div><div class="section-eyebrow">Solutions professionnelles</div><h2>Un opérateur.<br><em>Trois expertises.</em></h2></div><p>Flottes, constructeurs, groupes automobiles et concessions : TGD organise le mouvement, l\'exécution terrain et la preuve de mission.</p></div><div class="b2b-grid"><a class="b2b-card" href="/tgd-fleet"><div class="code">TGD / 01</div><h3>TGD <em>Fleet</em></h3><p>Mouvements de parc, livraisons collaborateurs, restitutions LLD et transferts inter-sites.</p><span class="go">Découvrir Fleet →</span></a><a class="b2b-card" href="/tgd-automotive"><div class="code">TGD / 02</div><h3>TGD <em>Automotive</em></h3><p>Convoyage réseau, livraison client final, mise en main et opérations constructeurs.</p><span class="go">Découvrir Automotive →</span></a><a class="b2b-card" href="/tgd-digital"><div class="code">TGD / 03</div><h3>TGD <em>Digital</em></h3><p>État des lieux, photos, énergie, signatures, PDF et historique de mission.</p><span class="go">Découvrir Digital →</span></a></div></div>';router.insertAdjacentElement('afterend',hub)}
+ // Le contenu de la Home est désormais piloté directement par le HTML : pas de réécriture éditoriale côté JavaScript.
 }
-async function load(){installShell();upgradeHome();const w=document.querySelectorAll('.tgd-reviews-widget'),d=document.querySelectorAll('.tgd-rating-total,.tgd-rating-number,.tgd-rating-score');if(!w.length&&!d.length)return;try{const r=await fetch('/api/reviews',{cache:'no-store'});if(!r.ok)throw 0;const x=await r.json();render(w,Array.isArray(x.reviews)&&x.reviews.length?x.reviews:FALLBACK,x.rating,x.total)}catch(e){render(w,FALLBACK,null,null)}}
+async function load(){installEntitySchema();installShell();upgradeHome();neutralReviewState();const w=document.querySelectorAll('.tgd-reviews-widget'),d=document.querySelectorAll('.tgd-rating-total,.tgd-rating-number,.tgd-rating-score');if(!w.length&&!d.length)return;try{const r=await fetch('/api/reviews',{cache:'no-store'});if(!r.ok)throw 0;const x=await r.json();render(w,Array.isArray(x.reviews)&&x.reviews.length?x.reviews:FALLBACK,x.rating,x.total)}catch(e){render(w,FALLBACK,null,null)}}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',load);else load();
 })();
-
