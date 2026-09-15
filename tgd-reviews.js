@@ -34,7 +34,6 @@ function normalizeArticleSchemas(){
 function installEntitySchema(){
  normalizeArticleSchemas();
  if(!document.body.classList.contains('site-home'))return;
- document.querySelectorAll('script[type="application/ld+json"]').forEach(s=>{if((s.textContent||'').includes('thegentlemandriver.fr/#business')||(s.textContent||'').includes('"FAQPage"'))s.remove()});
  if(document.getElementById('tgd-entity-schema'))return;
  const schema={
   '@context':'https://schema.org',
