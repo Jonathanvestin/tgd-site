@@ -2,6 +2,11 @@
   "version": 2,
   "redirects": [
     {"source":"/soumettre-une-mission.html","destination":"/soumettre-une-mission","permanent":true},
+    {"source":"/blog.html","destination":"/blog","permanent":true},
+    {"source":"/blog/assurance-convoyage-automobile.html","destination":"/blog/assurance-convoyage-automobile","permanent":true},
+    {"source":"/blog/convoyage-vehicule-electrique-guide.html","destination":"/blog/convoyage-vehicule-electrique-guide","permanent":true},
+    {"source":"/blog/mise-en-main-vehicule-neuf-ce-qui-fait-la-difference.html","destination":"/blog/mise-en-main-vehicule-neuf-ce-qui-fait-la-difference","permanent":true},
+    {"source":"/blog/comprendre-vehicule-electrique-sans-baratin.html","destination":"/blog/comprendre-vehicule-electrique-sans-baratin","permanent":true},
     {
       "source": "/:path*",
       "has": [{"type":"host","value":"thegentlemandriver.fr"}],
@@ -13,6 +18,7 @@
     {"source":"/convoyage-premium","destination":"/convoyage-luxe","permanent":true},
     {"source":"/convoyage-premium.html","destination":"/convoyage-luxe","permanent":true},
     {"source":"/convoyage-longue-distance","destination":"/convoyage","permanent":true},
+    {"source":"/convoyage-longue-distance.html","destination":"/convoyage","permanent":true},
     {"source":"/chauffeur-prive","destination":"/chauffeur","permanent":true},
     {"source":"/chauffeur-prive-automobile-longue-distance","destination":"/chauffeur","permanent":true},
     {"source":"/chauffeur-longue-distance","destination":"/chauffeur","permanent":true},
