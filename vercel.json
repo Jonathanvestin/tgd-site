@@ -1,6 +1,7 @@
 {
   "version": 2,
   "redirects": [
+    {"source":"/index.html","destination":"/","permanent":true},
     {"source":"/soumettre-une-mission.html","destination":"/soumettre-une-mission","permanent":true},
     {"source":"/blog.html","destination":"/blog","permanent":true},
     {"source":"/blog/assurance-convoyage-automobile.html","destination":"/blog/assurance-convoyage-automobile","permanent":true},
