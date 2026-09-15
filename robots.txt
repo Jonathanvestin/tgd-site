@@ -9,13 +9,17 @@ Disallow: /api/
 User-agent: Googlebot
 Allow: /
 
-# Bots IA — tous autorisés à indexer et citer le contenu
-User-agent: GPTBot
+# OpenAI — recherche, navigation utilisateur et entraînement autorisés
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
+User-agent: GPTBot
+Allow: /
+
+# Autres moteurs et assistants IA
 User-agent: ClaudeBot
 Allow: /
 
