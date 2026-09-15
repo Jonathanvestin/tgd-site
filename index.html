@@ -25,7 +25,7 @@
   <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <meta name="theme-color" content="#0a0a0a">
-  <script type="application/ld+json">
+  <script type="application/ld+json" id="tgd-entity-schema">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -33,12 +33,12 @@
       "@type": ["ProfessionalService", "LocalBusiness"],
       "@id": "https://www.thegentlemandriver.fr/#business",
       "name": "The Gentleman Driver",
+      "alternateName": "TGD",
       "legalName": "THE GENTLEMAN DRIVER SASU",
-      "description": "Depuis 2021, The Gentleman Driver assure le convoyage automobile, la mise en main, le service chauffeur avec votre véhicule et le transport sur plateau en France et en Europe. Chaque mission est préparée et documentée ; réponse habituelle sous 2h, selon disponibilité.",
-      "slogan": "Le convoyeur automobile des professionnels et des particuliers exigeants",
-      "url": "https://www.thegentlemandriver.fr",
+      "url": "https://www.thegentlemandriver.fr/",
       "telephone": "+33761092626",
-      "email": "contact@the-gentleman-driver.com",
+      "foundingDate": "2021",
+      "description": "The Gentleman Driver organise des missions de convoyage automobile, mise en main, chauffeur avec le véhicule du client et transport sur plateau en France. Les missions européennes sont étudiées sur devis selon le trajet, la disponibilité, la réglementation, les documents et la faisabilité.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "4 rue Jean Pigeon",
@@ -47,108 +47,50 @@
         "addressRegion": "Île-de-France",
         "addressCountry": "FR"
       },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 48.8194,
-        "longitude": 2.4089
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-        "opens": "07:00",
-        "closes": "22:00"
-      },
-      "priceRange": "€€",
-      "currenciesAccepted": "EUR",
-      "founder": {
-        "@type": "Person",
-        "name": "Jonathan Vestin",
-        "jobTitle": "Fondateur & Gérant"
-      },
-      "foundingDate": "2021",
+      "founder": {"@id": "https://www.thegentlemandriver.fr/a-propos#jonathan-vestin"},
       "areaServed": [
         {"@type": "Country", "name": "France"},
-        {"@type": "Place", "name": "Europe (selon trajet, disponibilité, réglementation et faisabilité)"}
+        {"@type": "Place", "name": "Europe"}
       ],
       "knowsAbout": [
         "convoyage automobile",
-        "transport de véhicule",
         "mise en main véhicule",
-        "chauffeur longue distance",
-        "livraison 0 km",
-        "transport sur plateau",
-        "convoyage véhicule électrique",
-        "convoyage concession automobile",
-        "logistique automobile"
+        "chauffeur avec le véhicule du client",
+        "convoyage de véhicules électriques",
+        "mouvements de flotte automobile",
+        "livraisons VN/VO",
+        "transport automobile sur plateau"
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Services de mobilité automobile",
+        "name": "Services The Gentleman Driver",
         "itemListElement": [
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Convoyage automobile", "description": "Transport de véhicule entre deux points en France et en Europe par un convoyeur professionnel qualifié, avec PV contradictoire, conditions de couverture et d’immatriculation vérifiées avant la mission.", "url": "https://www.thegentlemandriver.fr/convoyage"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mise en main véhicule", "description": "La mise en main peut être proposée seule ou intégrée à une mission lorsqu’elle est prévue au devis.", "url": "https://www.thegentlemandriver.fr/mise-en-main"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Chauffeur avec votre véhicule", "description": "Chauffeur professionnel qui conduit votre propre véhicule pour vos déplacements longue distance, retours après vente ou déménagements.", "url": "https://www.thegentlemandriver.fr/chauffeur"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Livraison 0 km", "description": "Livraison de véhicules neufs depuis le port ou le centre logistique jusqu'à la concession ou au client final, avec kilométrage relevé et reporté.", "url": "https://www.thegentlemandriver.fr/transport-plateau"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Transport sur plateau", "description": "Transport sur plateau lorsqu’il correspond à la prestation étudiée.", "url": "https://www.thegentlemandriver.fr/transport-plateau"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Solutions entreprises", "description": "Partenariat logistique pour concessions, loueurs LLD et gestionnaires de flotte. Interlocuteur unique, équipes dédiées, reporting et tarifs négociés sur volume.", "url": "https://www.thegentlemandriver.fr/entreprises"}}
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Convoyage automobile", "url": "https://www.thegentlemandriver.fr/convoyage"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mise en main", "url": "https://www.thegentlemandriver.fr/mise-en-main"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Chauffeur avec votre véhicule", "url": "https://www.thegentlemandriver.fr/chauffeur"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Solutions professionnelles", "url": "https://www.thegentlemandriver.fr/solutions-professionnelles"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "TGD Fleet", "url": "https://www.thegentlemandriver.fr/tgd-fleet"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "TGD Automotive", "url": "https://www.thegentlemandriver.fr/tgd-automotive"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "TGD Digital", "url": "https://www.thegentlemandriver.fr/tgd-digital"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Transport sur plateau", "url": "https://www.thegentlemandriver.fr/transport-plateau"}}
         ]
-      },
-      "sameAs": [
-        "https://the-gentleman-driver.com"
-      ]
+      }
     },
     {
-      "@type": "FAQPage",
-      "@id": "https://www.thegentlemandriver.fr/#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Qu'est-ce que le convoyage automobile ?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Le convoyage automobile consiste à déplacer un véhicule d'un point A à un point B par un conducteur professionnel qualifié, sans que le propriétaire n'ait à se déplacer. The Gentleman Driver réalise ces missions en France et en Europe avec un PV contradictoire signé à l'enlèvement et à la livraison, une conditions de couverture et d&#8217;immatriculation v&#233;rifi&#233;es avant la mission."}
-        },
-        {
-          "@type": "Question",
-          "name": "Dans quelles villes et régions intervenez-vous ?",
-          "acceptedAnswer": {"@type": "Answer", "text": "The Gentleman Driver intervient en France. Les missions en Europe sont étudiées de manière générique sur devis, selon le trajet, la disponibilité, la réglementation et la faisabilité."}
-        },
-        {
-          "@type": "Question",
-          "name": "Combien coûte un convoyage automobile ?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Le tarif dépend de la distance, du type de mission et des contraintes logistiques. nous répondons habituellement sous 2 heures, 7j/7 de 7h à 22h, selon disponibilité, puis établissons un devis personnalisé. Contactez-nous au 07 61 09 26 26 ou via le formulaire en ligne."}
-        },
-        {
-          "@type": "Question",
-          "name": "Êtes-vous assurés pendant le transport du véhicule ?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Avant chaque mission, le propriétaire confirme que son contrat automobile autorise la conduite par un tiers et couvre le véhicule pour le trajet prévu. The Gentleman Driver dispose par ailleurs d'une responsabilité civile professionnelle. Un procès-verbal contradictoire est signé à l'enlèvement et à la livraison."}
-        },
-        {
-          "@type": "Question",
-          "name": "Quelle est la différence entre convoyage et mise en main ?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Le convoyage déplace un véhicule d'un point à un autre. La mise en main accompagne la remise du véhicule neuf ou d'occasion au client final : explication des équipements, activation des services connectés, personnalisation des réglages. The Gentleman Driver propose les deux, souvent combinés pour les concessions."}
-        },
-        {
-          "@type": "Question",
-          "name": "Proposez-vous des solutions pour les concessions automobiles ?",
-          "acceptedAnswer": {"@type": "Answer", "text": "TGD accompagne des concessions et professionnels de l’automobile pour des livraisons VN/VO, transferts inter-site, restitutions, remises client et mises en main selon la prestation convenue."}
-        },
-        {
-          "@type": "Question",
-          "name": "Convoyez-vous des véhicules électriques ?",
-          "acceptedAnswer": {"@type": "Answer", "text": "TGD prend en charge des véhicules électriques et hybrides rechargeables. Les missions sont préparées selon l’autonomie, la recharge, le trajet et les contraintes du véhicule."}
-        },
-        {
-          "@type": "Question",
-          "name": "Qu'est-ce que la livraison 0 km ?",
-          "acceptedAnswer": {"@type": "Answer", "text": "La livraison 0 km consiste à transporter un véhicule neuf depuis le port ou le centre logistique jusqu'à la concession ou au client final, avec un relevé du kilométrage au départ et à l’arrivée. C'est un service critique pour les concessions soucieuses de la valeur de leurs véhicules neufs."}
-        }
-      ]
+      "@type": "Person",
+      "@id": "https://www.thegentlemandriver.fr/a-propos#jonathan-vestin",
+      "name": "Jonathan Vestin",
+      "jobTitle": "Fondateur et gérant",
+      "url": "https://www.thegentlemandriver.fr/a-propos",
+      "worksFor": {"@id": "https://www.thegentlemandriver.fr/#business"},
+      "description": "Jonathan Vestin possède plus de 25 ans d’expérience entrepreneuriale, distincte de son activité de convoyage automobile exercée depuis 2021."
     },
     {
       "@type": "WebSite",
       "@id": "https://www.thegentlemandriver.fr/#website",
-      "url": "https://www.thegentlemandriver.fr",
+      "url": "https://www.thegentlemandriver.fr/",
       "name": "The Gentleman Driver",
-      "description": "Convoyage automobile professionnel en France et en Europe",
+      "alternateName": "TGD",
       "publisher": {"@id": "https://www.thegentlemandriver.fr/#business"},
       "inLanguage": "fr-FR"
     }
@@ -630,7 +572,7 @@ section{padding:3.5rem 4vw !important}
   <a href="/contact" class="btn-primary" onclick="document.getElementById('mm').classList.remove('open')">Demander un devis</a>
 </div>
 
-<!-- TRUST BAR AXA -->
+<!-- TRUST BAR -->
 <div class="trust-bar" aria-label="Garanties">
   <div class="trust-bar-inner">
     <span class="trust-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Assurance RC Pro · Couverture vérifiée</span>
@@ -641,7 +583,7 @@ section{padding:3.5rem 4vw !important}
     <span class="trust-sep" aria-hidden="true">·</span>
     <span class="trust-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Réponse habituelle sous 2h, selon disponibilité — 7j/7</span>
     <span class="trust-sep" aria-hidden="true">·</span>
-    <span class="trust-item">&#9733; <span class="tgd-rating-score">—</span>/5 Google (<span class="tgd-rating-total">Avis clients</span>)</span>
+    <span class="trust-item">&#9733; <span class="tgd-rating-score">Avis Google</span><span class="tgd-rating-total"></span></span>
   </div>
 </div>
 
@@ -761,8 +703,8 @@ section{padding:3.5rem 4vw !important}
 <!-- TICKER -->
 <div class="ticker" aria-hidden="true">
   <span class="ticker-inner">
-    Assurances professionnelles &#183; Conditions v&#233;rifi&#233;es &nbsp;&#183;&nbsp; Convoyage &nbsp;&#183;&nbsp; Mise en main &nbsp;&#183;&nbsp; Chauffeur avec votre v&#233;hicule &nbsp;&#183;&nbsp; Livraison 0 km &nbsp;&#183;&nbsp; Transport sur plateau &nbsp;&#183;&nbsp; Solutions entreprises &nbsp;&#183;&nbsp; V&#233;hicules thermiques &amp; &#233;lectriques &nbsp;&#183;&nbsp; France &amp; Europe &nbsp;&#183;&nbsp;
-    Assurances professionnelles &#183; Conditions v&#233;rifi&#233;es &nbsp;&#183;&nbsp; Convoyage &nbsp;&#183;&nbsp; Mise en main &nbsp;&#183;&nbsp; Chauffeur avec votre v&#233;hicule &nbsp;&#183;&nbsp; Livraison 0 km &nbsp;&#183;&nbsp; Transport sur plateau &nbsp;&#183;&nbsp; Solutions entreprises &nbsp;&#183;&nbsp; V&#233;hicules thermiques &amp; &#233;lectriques &nbsp;&#183;&nbsp; France &amp; Europe &nbsp;&#183;&nbsp;
+    Assurances professionnelles &#183; Conditions v&#233;rifi&#233;es &nbsp;&#183;&nbsp; Convoyage &nbsp;&#183;&nbsp; Mise en main &nbsp;&#183;&nbsp; Chauffeur avec votre v&#233;hicule &nbsp;&#183;&nbsp; Transport sur plateau &nbsp;&#183;&nbsp; Solutions professionnelles &nbsp;&#183;&nbsp; V&#233;hicules thermiques &amp; &#233;lectriques &nbsp;&#183;&nbsp; France &amp; Europe &nbsp;&#183;&nbsp;
+    Assurances professionnelles &#183; Conditions v&#233;rifi&#233;es &nbsp;&#183;&nbsp; Convoyage &nbsp;&#183;&nbsp; Mise en main &nbsp;&#183;&nbsp; Chauffeur avec votre v&#233;hicule &nbsp;&#183;&nbsp; Transport sur plateau &nbsp;&#183;&nbsp; Solutions professionnelles &nbsp;&#183;&nbsp; V&#233;hicules thermiques &amp; &#233;lectriques &nbsp;&#183;&nbsp; France &amp; Europe &nbsp;&#183;&nbsp;
   </span>
 </div>
 
@@ -976,4 +918,3 @@ section{padding:3.5rem 4vw !important}
 
 </body>
 </html>
-
