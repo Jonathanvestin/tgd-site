@@ -8,6 +8,8 @@
     {"source":"/blog/convoyage-vehicule-electrique-guide.html","destination":"/blog/convoyage-vehicule-electrique-guide","permanent":true},
     {"source":"/blog/mise-en-main-vehicule-neuf-ce-qui-fait-la-difference.html","destination":"/blog/mise-en-main-vehicule-neuf-ce-qui-fait-la-difference","permanent":true},
     {"source":"/blog/comprendre-vehicule-electrique-sans-baratin.html","destination":"/blog/comprendre-vehicule-electrique-sans-baratin","permanent":true},
+    {"source":"/politique-confidentialite","destination":"/mentions-legales#donnees-personnelles","permanent":true},
+    {"source":"/politique-confidentialite.html","destination":"/mentions-legales#donnees-personnelles","permanent":true},
     {
       "source": "/:path*",
       "has": [{"type":"host","value":"thegentlemandriver.fr"}],
