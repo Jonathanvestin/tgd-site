@@ -290,3 +290,47 @@
   .site-home #tgd-b2b-home-hub .b2b-card { min-height: 0 !important; padding: 1.3rem !important; }
   .site-home #tgd-control-layer .control-item { min-height: 0 !important; }
 }
+
+/* Page mentions légales : harmonisation visuelle sans altérer le contenu juridique. */
+.page-wrap{
+  --ivory-muted:#D6D0C6;
+}
+.page-wrap .content{
+  width:min(860px,100%);
+  max-width:none;
+}
+.page-wrap .content-meta,
+.page-wrap .sidebar-updated,
+.page-wrap .legal-section p,
+.page-wrap .legal-section li,
+.page-wrap .sidebar-nav a{
+  color:#D6D0C6 !important;
+}
+.page-wrap .legal-section{
+  margin-bottom:2.6rem !important;
+}
+.page-wrap .legal-section h2{
+  padding-bottom:.7rem !important;
+}
+.page-wrap .info-block{
+  border-color:rgba(201,169,110,.14) !important;
+  padding:1.25rem 1.4rem !important;
+}
+.page-wrap ~ .sticky-mobile,
+.page-wrap ~ .wa-float{
+  display:none !important;
+}
+body:has(.page-wrap){
+  padding-bottom:0 !important;
+}
+body:has(.page-wrap) footer.footer-mini{
+  padding:2.5rem 4vw !important;
+}
+body:has(.page-wrap) footer.footer-mini ul.footer-links-list a,
+body:has(.page-wrap) footer.footer-mini span.footer-copy{
+  color:#D6D0C6 !important;
+}
+@media(max-width:900px){
+  .page-wrap .content{padding:3rem 5vw 4rem !important;}
+  .page-wrap .content-meta{margin-bottom:2.5rem !important;}
+}
