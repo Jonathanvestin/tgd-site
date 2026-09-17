@@ -1,0 +1,23 @@
+name: P1 residual audit
+
+on:
+  push:
+    branches: [p1-seo-final-2026-09-17]
+    paths: ['.github/workflows/p1-residual-audit.yml']
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: p1-seo-final-2026-09-17
+      - name: Residual P1 patterns
+        run: |
+          grep -RniE "petite couronne|grande couronne|l’Provence|l’Hauts|l’Pays|l’Grand|l’Occitanie|l’Alpes|discrétion absolue|discrétion garantie|discrétion totale|Délai standard|Intervention sous 24|Ayvens|Arval|Alphabet|Athlon|BNP Paribas Leasing|intervient régulièrement|nous couvrons|liaisons? régulière|#organization" --include='*.html' . || true
+          echo '--- publishers ---'
+          grep -n 'publisher' tgd-automotive.html tgd-digital.html || true
+          echo '--- Toulouse 24/48/FAQ ---'
+          grep -niE '24|48|Occitanie|réguli' convoyage-toulouse.html || true
+          echo '--- Luxe discretion ---'
+          grep -niE 'discré|confident' convoyage-luxe.html || true
