@@ -19,16 +19,37 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.x'
-      - run: python scripts/apply-p1-seo-fixes.py
-      - name: Validate, commit and push P1
+      - name: Finish residual P1 fixes
         run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          for f in ['tgd-automotive.html','tgd-digital.html']:
+              p=Path(f); s=p.read_text(encoding='utf-8')
+              s2=re.sub(r'"publisher"\s*:\s*\{\s*"@type"\s*:\s*"Organization"\s*,\s*"name"\s*:\s*"The Gentleman Driver"\s*,\s*"url"\s*:\s*"https://www\.thegentlemandriver\.fr/"\s*\}', '"publisher":{"@id":"https://www.thegentlemandriver.fr/#business"}', s)
+              if s2!=s: p.write_text(s2,encoding='utf-8'); print('OK publisher',f)
+          p=Path('convoyage-toulouse.html'); s=p.read_text(encoding='utf-8')
+          s=s.replace('intervient régulièrement à Toulouse et dans toute la région Occitanie','étudie les missions au départ ou à destination de Toulouse et de l’Occitanie')
+          s=s.replace('nous couvrons Toulouse et l’ensemble de l’Occitanie','TGD étudie les missions au départ ou à destination de Toulouse et de l’Occitanie')
+          s=s.replace("nous couvrons Toulouse et l'ensemble de l'Occitanie",'TGD étudie les missions au départ ou à destination de Toulouse et de l’Occitanie')
+          s=s.replace('l’une de nos liaisons régulières','un axe pouvant être étudié selon la mission')
+          s=s.replace("l'une de nos liaisons régulières",'un axe pouvant être étudié selon la mission')
+          p.write_text(s,encoding='utf-8')
+          PY
+      - name: Audit residual patterns
+        run: |
+          echo '--- RESIDUAL PATTERNS ---'
+          grep -RniE "petite couronne|grande couronne|l’Provence|l’Hauts|l’Pays|l’Grand|l’Occitanie|l’Alpes|discrétion absolue|discrétion garantie|discrétion totale|Délai standard|Intervention sous 24|Ayvens|Arval|Alphabet|Athlon|BNP Paribas Leasing|intervient régulièrement|nous couvrons|liaisons? régulière|#organization" convoyage-lille.html convoyage-luxe.html convoyage-lyon.html convoyage-marseille.html convoyage-montpellier.html convoyage-nantes.html convoyage-nice.html convoyage-strasbourg.html convoyage-toulouse.html tgd-fleet.html tgd-automotive.html tgd-digital.html || true
+          echo '--- PUBLISHERS ---'
+          grep -n 'publisher' tgd-automotive.html tgd-digital.html || true
           git diff --check
-          git status --short
           git diff --stat
+      - name: Commit and push P1
+        run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add convoyage-marseille.html convoyage-lille.html convoyage-nantes.html convoyage-strasbourg.html convoyage-montpellier.html convoyage-nice.html convoyage-toulouse.html convoyage-lyon.html convoyage-luxe.html tgd-fleet.html tgd-automotive.html tgd-digital.html sitemap.xml
+          git add convoyage-toulouse.html tgd-automotive.html tgd-digital.html
           if ! git diff --cached --quiet; then
-            git commit -m 'Finaliser les corrections SEO P1'
+            git commit -m 'Compléter les corrections SEO P1'
             git push origin HEAD:p1-seo-final-2026-09-17
           fi
