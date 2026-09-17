@@ -1,0 +1,43 @@
+name: Apply P1 SEO fixes
+
+on:
+  push:
+    branches:
+      - p1-seo-final-2026-09-17
+    paths:
+      - '.github/workflows/apply-p1-seo.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: p1-seo-final-2026-09-17
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Apply targeted P1 fixes
+        run: python scripts/apply-p1-seo-fixes.py
+      - name: Check diff
+        run: |
+          git diff --check
+          git status --short
+          git diff --stat
+      - name: Commit and push
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add convoyage-marseille.html convoyage-lille.html convoyage-nantes.html convoyage-strasbourg.html convoyage-montpellier.html convoyage-nice.html convoyage-toulouse.html convoyage-lyon.html convoyage-luxe.html tgd-fleet.html tgd-automotive.html tgd-digital.html sitemap.xml
+          if git diff --cached --quiet; then
+            echo 'No changes to commit'
+          else
+            git commit -m 'Finaliser les corrections SEO P1'
+            git push origin HEAD:p1-seo-final-2026-09-17
+          fi
