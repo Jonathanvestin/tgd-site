@@ -19,37 +19,48 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.x'
-      - name: Finish residual P1 fixes
+      - name: Clean final residuals
         run: |
           python - <<'PY'
           from pathlib import Path
           import re
+          regions={'lille':'Hauts-de-France','nantes':'Pays de la Loire','strasbourg':'Grand Est','montpellier':'Occitanie','nice':'Alpes-Maritimes'}
+          for city,region in regions.items():
+              p=Path(f'convoyage-{city}.html'); s=p.read_text(encoding='utf-8'); C=city.capitalize()
+              s=s.replace(f'{C} intra-muros, en petite couronne et en grande couronne',f'{C} et dans sa région')
+              s=s.replace('href="/entreprises">Solutions entreprises','href="/solutions-professionnelles">Solutions entreprises')
+              p.write_text(s,encoding='utf-8')
+          p=Path('convoyage-lyon.html'); s=p.read_text(encoding='utf-8')
+          s=re.sub(r'<p>Bas&#233;s &#224; Charenton-le-Pont, en bordure de Lyon,.*?</p>', '<p>TGD est basé à Charenton-le-Pont et étudie les missions au départ ou à destination de Lyon et de la région Auvergne-Rhône-Alpes selon le trajet, le véhicule, la date, les disponibilités et la faisabilité.</p>', s, count=1)
+          s=re.sub(r'<p>Nous couvrons l&#8217;ensemble des arrondissements de Lyon,.*?</p>', '<p>Les missions au départ ou à destination de Lyon et de sa région sont étudiées sur devis selon le trajet, le véhicule, la date, les disponibilités et la faisabilité.</p>', s, count=1)
+          s=s.replace('Couvrez-vous toute la grande couronne&#160;?','Intervenez-vous à Lyon et dans sa région&#160;?')
+          s=s.replace('href="/entreprises">Solutions entreprises','href="/solutions-professionnelles">Solutions entreprises')
+          p.write_text(s,encoding='utf-8')
+          p=Path('convoyage-toulouse.html'); s=p.read_text(encoding='utf-8')
+          s=re.sub(r'<p>The Gentleman Driver intervient r&#233;guli&#232;rement.*?</p>', '<p>TGD est basé à Charenton-le-Pont et étudie les missions au départ ou à destination de Toulouse et de l’Occitanie selon le trajet, le véhicule, la date, les disponibilités et la faisabilité.</p>', s, count=1)
+          s=re.sub(r'<p>Toulouse est une ville dynamique.*?</p>', '<p>Les missions au départ ou à destination de Toulouse, de l’Occitanie et d’autres régions sont étudiées sur devis selon le trajet et les disponibilités.</p>', s, count=1)
+          s=re.sub(r'<p class="hero-sub">Intervention en r&#233;gion Occitanie.*?</p>', '<p class="hero-sub">Mission étudiée selon le trajet, le véhicule, la date et les disponibilités. Les conditions de couverture et d’immatriculation applicables sont vérifiées avant la mission.</p>', s, count=1)
+          s=re.sub(r'<p><strong>Intervention &#224; Toulouse&#160;:</strong>.*?</p>', '<p><strong>Mission à Toulouse :</strong> le délai dépend du trajet, du véhicule, de la date et des disponibilités. Il est précisé avant confirmation de la mission.</p>', s, count=1)
+          s=re.sub(r'<div class="faq-a"><p>D&#233;lai standard de 24 &#224; 48h.*?</p></div>', '<div class="faq-a"><p>Le délai dépend du trajet, du véhicule, de la date et des disponibilités. Il est précisé avant confirmation de la mission.</p></div>', s, count=1)
+          s=re.sub(r'<div class="faq-a"><p>Oui, Toulouse et l\x27ensemble de la r&#233;gion Occitanie.*?</p></div>', '<div class="faq-a"><p>TGD étudie les missions au départ ou à destination de Toulouse et de l’Occitanie selon le trajet, le véhicule, la date, les disponibilités et la faisabilité.</p></div>', s, count=1)
+          p.write_text(s,encoding='utf-8')
           for f in ['tgd-automotive.html','tgd-digital.html']:
               p=Path(f); s=p.read_text(encoding='utf-8')
-              s2=re.sub(r'"publisher"\s*:\s*\{\s*"@type"\s*:\s*"Organization"\s*,\s*"name"\s*:\s*"The Gentleman Driver"\s*,\s*"url"\s*:\s*"https://www\.thegentlemandriver\.fr/"\s*\}', '"publisher":{"@id":"https://www.thegentlemandriver.fr/#business"}', s)
-              if s2!=s: p.write_text(s2,encoding='utf-8'); print('OK publisher',f)
-          p=Path('convoyage-toulouse.html'); s=p.read_text(encoding='utf-8')
-          s=s.replace('intervient régulièrement à Toulouse et dans toute la région Occitanie','étudie les missions au départ ou à destination de Toulouse et de l’Occitanie')
-          s=s.replace('nous couvrons Toulouse et l’ensemble de l’Occitanie','TGD étudie les missions au départ ou à destination de Toulouse et de l’Occitanie')
-          s=s.replace("nous couvrons Toulouse et l'ensemble de l'Occitanie",'TGD étudie les missions au départ ou à destination de Toulouse et de l’Occitanie')
-          s=s.replace('l’une de nos liaisons régulières','un axe pouvant être étudié selon la mission')
-          s=s.replace("l'une de nos liaisons régulières",'un axe pouvant être étudié selon la mission')
-          p.write_text(s,encoding='utf-8')
+              s=re.sub(r'"publisher"\s*:\s*\{\s*"@type"\s*:\s*"Organization"\s*,\s*"name"\s*:\s*"The Gentleman Driver"\s*,\s*"url"\s*:\s*"https://www\.thegentlemandriver\.fr/"\s*\}', '"publisher":{"@id":"https://www.thegentlemandriver.fr/#business"}', s)
+              p.write_text(s,encoding='utf-8')
           PY
-      - name: Audit residual patterns
+      - name: Validate final P1
         run: |
-          echo '--- RESIDUAL PATTERNS ---'
-          grep -RniE "petite couronne|grande couronne|l’Provence|l’Hauts|l’Pays|l’Grand|l’Occitanie|l’Alpes|discrétion absolue|discrétion garantie|discrétion totale|Délai standard|Intervention sous 24|Ayvens|Arval|Alphabet|Athlon|BNP Paribas Leasing|intervient régulièrement|nous couvrons|liaisons? régulière|#organization" convoyage-lille.html convoyage-luxe.html convoyage-lyon.html convoyage-marseille.html convoyage-montpellier.html convoyage-nantes.html convoyage-nice.html convoyage-strasbourg.html convoyage-toulouse.html tgd-fleet.html tgd-automotive.html tgd-digital.html || true
-          echo '--- PUBLISHERS ---'
-          grep -n 'publisher' tgd-automotive.html tgd-digital.html || true
           git diff --check
+          echo '--- TARGETED RESIDUALS ---'
+          grep -niE "petite couronne|grande couronne|intervient r.guli|nous couvrons|24 &#224; 48|D.lai standard|discrétion absolue|discrétion garantie|Ayvens|Arval|Alphabet|Athlon|BNP Paribas Leasing|#organization" convoyage-lille.html convoyage-luxe.html convoyage-lyon.html convoyage-marseille.html convoyage-montpellier.html convoyage-nantes.html convoyage-nice.html convoyage-strasbourg.html convoyage-toulouse.html tgd-fleet.html tgd-automotive.html tgd-digital.html || true
           git diff --stat
       - name: Commit and push P1
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add convoyage-toulouse.html tgd-automotive.html tgd-digital.html
+          git add convoyage-lille.html convoyage-lyon.html convoyage-montpellier.html convoyage-nantes.html convoyage-nice.html convoyage-strasbourg.html convoyage-toulouse.html tgd-automotive.html tgd-digital.html
           if ! git diff --cached --quiet; then
-            git commit -m 'Compléter les corrections SEO P1'
+            git commit -m 'Nettoyer les derniers résidus SEO P1'
             git push origin HEAD:p1-seo-final-2026-09-17
           fi
