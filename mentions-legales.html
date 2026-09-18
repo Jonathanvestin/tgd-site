@@ -21,6 +21,22 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--black:#0A0A0A;--black2:#111;--gold:#C9A96E;--ivory:#F5F0E8;--muted:#D6D0C6}*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--black);color:var(--ivory);font-family:Montserrat,sans-serif;font-weight:300;line-height:1.75}nav{position:fixed;inset:0 0 auto;z-index:30;height:80px;padding:0 4vw;display:flex;align-items:center;justify-content:space-between;background:rgba(10,10,10,.95);border-bottom:1px solid rgba(201,169,110,.1);backdrop-filter:blur(14px)}.nav-logo img{height:46px;width:auto;display:block}.nav-links{display:flex;gap:1.35rem;list-style:none}.nav-links a{color:#D3CCBF;text-decoration:none;text-transform:uppercase;letter-spacing:.1em;font-size:.75rem}.nav-links a:hover{color:var(--gold)}.nav-cta{background:var(--gold);color:#0A0A0A;text-decoration:none;padding:.62rem 1.1rem;text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;font-weight:500}.burger{display:none;background:none;border:0;color:var(--ivory);font-size:1.7rem}.mobile-menu{display:none;position:fixed;inset:0;z-index:40;background:var(--black);align-items:center;justify-content:center;flex-direction:column;gap:1.4rem}.mobile-menu.open{display:flex}.mobile-menu a{color:var(--ivory);text-decoration:none;font-family:'Cormorant Garamond',serif;font-size:1.55rem}.mobile-close{position:absolute;top:1.5rem;right:5vw;background:none;border:0;color:var(--ivory);font-size:2rem}.hero{padding:132px 5vw 34px;border-bottom:1px solid rgba(201,169,110,.08)}.container{width:min(930px,100%);margin:auto}.eyebrow{color:var(--gold);font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;font-weight:500;margin-bottom:.8rem}.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,5vw,4.4rem);font-weight:300;line-height:1.04;margin-bottom:1rem}.hero p{max-width:720px;color:var(--muted);font-size:.86rem}.updated{margin-top:.8rem;font-size:.72rem!important;color:rgba(214,208,198,.68)!important}.layout{width:min(1180px,92vw);margin:auto;padding:3.5rem 0 5rem;display:grid;grid-template-columns:220px minmax(0,1fr);gap:3rem}.toc{position:sticky;top:110px;align-self:start;padding:1.2rem;background:var(--black2);border:1px solid rgba(201,169,110,.08)}.toc strong{display:block;color:var(--gold);font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:.7rem}.toc a{display:block;color:var(--muted);text-decoration:none;font-size:.72rem;padding:.36rem 0}.toc a:hover{color:var(--ivory)}.legal{scroll-margin-top:105px;padding-bottom:2.6rem;margin-bottom:2.6rem;border-bottom:1px solid rgba(201,169,110,.08)}.legal:last-child{border-bottom:0}.legal h2{font-family:'Cormorant Garamond',serif;font-size:1.75rem;font-weight:400;margin-bottom:1rem}.legal h3{font-family:'Cormorant Garamond',serif;font-size:1.17rem;font-weight:400;margin:1.35rem 0 .5rem}.legal p,.legal li{color:var(--muted);font-size:.82rem;line-height:1.85}.legal p{margin-bottom:.75rem}.legal ul{margin:.5rem 0 1rem 1.2rem}.legal a{color:#E8D5B0}.info{display:grid;grid-template-columns:190px 1fr;gap:.45rem 1rem;padding:1.2rem;background:var(--black2);border:1px solid rgba(201,169,110,.08)}.info dt{font-size:.69rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(214,208,198,.65)}.info dd{font-size:.82rem;color:var(--ivory)}.notice{margin-top:1rem;padding:1rem 1.2rem;border-left:2px solid var(--gold);background:rgba(201,169,110,.04);color:var(--muted);font-size:.78rem;line-height:1.7}footer.footer-mini{background:var(--black2);border-top:1px solid rgba(201,169,110,.06);padding:2.5rem 4vw;display:flex;flex-direction:column;align-items:center;gap:1.4rem;text-align:center}footer .footer-logo img{height:32px;width:auto;display:block;opacity:.75}.footer-links-list{display:flex;justify-content:center;align-items:center;gap:2rem;list-style:none;flex-wrap:wrap}.footer-links-list a{font-size:.75rem;color:rgba(214,208,198,.72);text-decoration:none}.footer-links-list a:hover{color:var(--ivory)}.footer-group-label{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500;opacity:.7}.footer-sep{color:rgba(201,169,110,.2)}.footer-copy{font-size:.75rem;color:rgba(214,208,198,.55)}.footer-legal-mini{font-size:.75rem;color:rgba(214,208,198,.32);letter-spacing:.05em}@media(max-width:900px){.nav-links,.nav-cta{display:none}.burger{display:block}.layout{grid-template-columns:1fr}.toc{display:none}}@media(max-width:600px){.hero{padding:110px 5vw 28px}.layout{padding:2.2rem 0 3.5rem}.info{grid-template-columns:1fr}.info dt{margin-top:.4rem}.footer-links-list{gap:.8rem 1rem}}
+
+/* Canonical footer: exact home reference */
+/* ═══ FOOTER TGD (centré) ═══ */
+footer.footer-mini{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.06);padding:2.5rem 4vw;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1.4rem;text-align:center}
+footer.footer-mini a.footer-logo{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);text-decoration:none}
+footer.footer-mini ul.footer-links-list{display:flex;flex-direction:row;justify-content:center;align-items:center;gap:2rem;list-style:none;flex-wrap:wrap;margin:0;padding:0}
+footer.footer-mini ul.footer-links-list li{margin:0;padding:0;list-style:none}
+footer.footer-mini ul.footer-links-list a{font-size:.75rem;color:rgba(189,181,166,0.45);text-decoration:none;font-weight:300;transition:color .2s}
+footer.footer-mini ul.footer-links-list a:hover{color:var(--ivory-muted)}
+footer.footer-mini span.footer-copy{font-size:.75rem;color:rgba(189,181,166,0.3);font-weight:300}
+footer.footer-mini .footer-group-label{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500;opacity:.7;cursor:default;display:inline-flex;align-items:center;line-height:1}
+footer.footer-mini .footer-sep{color:rgba(201,169,110,0.2);font-size:1rem;line-height:1;cursor:default;display:inline-flex;align-items:center}
+
+
+footer.footer-mini a.footer-logo img{height:32px!important;width:auto!important;opacity:1!important}
+@media(max-width:700px){footer.footer-mini{padding:2rem 5vw}footer.footer-mini ul.footer-links-list{gap:.8rem 1.2rem}}
 </style>
 </head>
 <body>
@@ -38,6 +54,32 @@
 <section class="legal" id="litiges"><h2>Réclamations et litiges</h2><p>En cas de difficulté, le client est invité à contacter The Gentleman Driver afin de rechercher une solution amiable.</p><div class="notice"><strong>Médiation de la consommation :</strong> pour les clients consommateurs, les coordonnées du médiateur compétent doivent être publiées ici après désignation ou adhésion effective. Aucune identité de médiateur n’est indiquée tant qu’elle n’a pas été vérifiée.</div></section>
 <section class="legal" id="droit"><h2>Droit applicable</h2><p>Les présentes mentions et conditions sont régies par le droit français. La juridiction compétente est déterminée conformément aux règles légales applicables à la qualité du client et à la nature du litige.</p><p>Pour toute question : <a href="/contact">contacter The Gentleman Driver</a> ou appeler le <a href="tel:+33761092626">07 61 09 26 26</a>.</p></section>
 </main></div>
-<footer class="footer-mini"><a href="/" class="footer-logo"><img src="/assets/images/logo-the-gentleman-driver-2.png" alt="The Gentleman Driver" width="800" height="213" loading="lazy" decoding="async"></a><ul class="footer-links-list"><li class="footer-group-label">Convoyage</li><li><a href="/convoyage">Automobile</a></li><li><a href="/convoyage-electrique">Électrique</a></li><li><a href="/convoyage-luxe">Premium</a></li><li><a href="/convoyage-paris">Paris</a></li><li><a href="/convoyage-concession">Concessions</a></li><li><a href="/transport-plateau">Plateau</a></li><li class="footer-sep">·</li><li class="footer-group-label">Services</li><li><a href="/chauffeur">Chauffeur</a></li><li><a href="/mise-en-main">Mise en main</a></li><li><a href="/solutions-professionnelles">Entreprises</a></li><li class="footer-sep">·</li><li class="footer-group-label">À propos</li><li><a href="/pourquoi-nous">Pourquoi nous</a></li><li><a href="/a-propos">L’équipe</a></li><li><a href="/blog">Blog</a></li><li><a href="/faq">FAQ</a></li><li><a href="/contact">Contact</a></li><li><a href="/mentions-legales">Mentions légales</a></li></ul><span class="footer-copy">© 2026 The Gentleman Driver — SASU — Charenton-le-Pont (94)</span><span class="footer-legal-mini">SIRET 985 178 466 00019 · RCS Créteil · Assurance RC Pro</span></footer>
+<footer class="footer-mini">
+  <a href="/" class="footer-logo"><img src="/assets/images/logo-the-gentleman-driver.png" alt="The Gentleman Driver" style="height:32px;width:auto;display:block;" width="800" height="213" loading="lazy" decoding="async"></a>
+  <ul class="footer-links-list">
+    <li class="footer-group-label">Convoyage</li>
+    <li><a href="/convoyage">Automobile</a></li>
+    <li><a href="/convoyage-electrique">&#201;lectrique</a></li>
+    <li><a href="/convoyage-luxe">Premium</a></li>
+    <li><a href="/convoyage-paris">Paris</a></li>
+    <li><a href="/convoyage-concession">Concessions</a></li>
+    <li><a href="/transport-plateau">Plateau</a></li>
+    <li class="footer-sep">&#183;</li>
+    <li class="footer-group-label">Services</li>
+    <li><a href="/chauffeur">Chauffeur</a></li>
+    <li><a href="/mise-en-main">Mise en main</a></li>
+    <li><a href="/solutions-professionnelles">Entreprises</a></li>
+    <li class="footer-sep">&#183;</li>
+    <li class="footer-group-label">&#192; propos</li>
+    <li><a href="/pourquoi-nous">Pourquoi nous</a></li>
+    <li><a href="/a-propos">L&#8217;&#233;quipe</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/faq">FAQ</a></li>
+    <li><a href="/contact">Contact</a></li>
+    <li><a href="/mentions-legales">Mentions l&#233;gales</a></li>
+  </ul>
+  <span class="footer-copy">&#169; 2026 The Gentleman Driver &#8212; SASU &#8212; Charenton-le-Pont (94)</span>
+  <span class="footer-legal-mini" style="display:block;margin-top:.7rem;font-size:.75rem;color:rgba(189,181,166,0.22);font-weight:300;letter-spacing:.05em;line-height:1.8">SIRET 985 178 466 00019 &#183; RCS Cr&#233;teil &#183; Assurance RC Pro</span>
+</footer>
 </body>
 </html>
