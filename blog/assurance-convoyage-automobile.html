@@ -68,7 +68,23 @@
     @media(max-width:900px){.nav-links,.nav-cta{display:none}.burger{display:block}footer.footer-mini ul.footer-links-list{gap:1rem 1.35rem}}
     @media(max-width:600px){.article-header{padding:110px 5vw 32px}.article-header h1{font-size:clamp(2.15rem,9vw,2.8rem)}.article-intro{font-size:.87rem}.article-body{padding:0 5vw 2.5rem}.article-body h2{margin-top:1.9rem}.article-body p{font-size:.85rem}.checklist{grid-template-columns:1fr;gap:.1rem}.article-cta{padding:1.3rem 1rem}.actions{flex-direction:column;align-items:stretch}.actions .btn{width:100%}footer.footer-mini ul.footer-links-list{gap:.8rem 1rem}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
-  </style>
+  
+/* Canonical footer: exact home reference */
+/* ═══ FOOTER TGD (centré) ═══ */
+footer.footer-mini{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.06);padding:2.5rem 4vw;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1.4rem;text-align:center}
+footer.footer-mini a.footer-logo{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);text-decoration:none}
+footer.footer-mini ul.footer-links-list{display:flex;flex-direction:row;justify-content:center;align-items:center;gap:2rem;list-style:none;flex-wrap:wrap;margin:0;padding:0}
+footer.footer-mini ul.footer-links-list li{margin:0;padding:0;list-style:none}
+footer.footer-mini ul.footer-links-list a{font-size:.75rem;color:rgba(189,181,166,0.45);text-decoration:none;font-weight:300;transition:color .2s}
+footer.footer-mini ul.footer-links-list a:hover{color:var(--ivory-muted)}
+footer.footer-mini span.footer-copy{font-size:.75rem;color:rgba(189,181,166,0.3);font-weight:300}
+footer.footer-mini .footer-group-label{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500;opacity:.7;cursor:default;display:inline-flex;align-items:center;line-height:1}
+footer.footer-mini .footer-sep{color:rgba(201,169,110,0.2);font-size:1rem;line-height:1;cursor:default;display:inline-flex;align-items:center}
+
+
+footer.footer-mini a.footer-logo img{height:32px!important;width:auto!important;opacity:1!important}
+@media(max-width:700px){footer.footer-mini{padding:2rem 5vw}footer.footer-mini ul.footer-links-list{gap:.8rem 1.2rem}}
+</style>
 </head>
 <body>
   <nav aria-label="Navigation principale">
@@ -128,32 +144,32 @@
   </main>
 
   <footer class="footer-mini">
-    <a href="/" class="footer-logo"><img src="/assets/images/logo-the-gentleman-driver-2.png" alt="The Gentleman Driver" style="height:32px;width:auto;display:block;opacity:0.75" width="800" height="213" loading="lazy" decoding="async"></a>
-    <ul class="footer-links-list">
-      <li class="footer-group-label">Convoyage</li>
-      <li><a href="/convoyage">Automobile</a></li>
-      <li><a href="/convoyage-electrique">&#201;lectrique</a></li>
-      <li><a href="/convoyage-luxe">Premium</a></li>
-      <li><a href="/convoyage-paris">Paris</a></li>
-      <li><a href="/convoyage-concession">Concessions</a></li>
-      <li><a href="/transport-plateau">Plateau</a></li>
-      <li class="footer-sep">&#183;</li>
-      <li class="footer-group-label">Services</li>
-      <li><a href="/chauffeur">Chauffeur</a></li>
-      <li><a href="/mise-en-main">Mise en main</a></li>
-      <li><a href="/solutions-professionnelles">Entreprises</a></li>
-      <li class="footer-sep">&#183;</li>
-      <li class="footer-group-label">&#192; propos</li>
-      <li><a href="/pourquoi-nous">Pourquoi nous</a></li>
-      <li><a href="/a-propos">L&#8217;&#233;quipe</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li><a href="/faq">FAQ</a></li>
-      <li><a href="/contact">Contact</a></li>
-      <li><a href="/mentions-legales">Mentions l&#233;gales</a></li>
-    </ul>
-    <span class="footer-copy">&#169; 2026 The Gentleman Driver &#8212; SASU &#8212; Charenton-le-Pont (94)</span>
-    <span class="footer-legal-mini" style="display:block;margin-top:.7rem;font-size:.75rem;color:rgba(189,181,166,0.22);font-weight:300;letter-spacing:.05em;line-height:1.8">SIRET 985 178 466 00019 &#183; RCS Cr&#233;teil &#183; Assurance RC Pro</span>
-  </footer>
+  <a href="/" class="footer-logo"><img src="/assets/images/logo-the-gentleman-driver.png" alt="The Gentleman Driver" style="height:32px;width:auto;display:block;" width="800" height="213" loading="lazy" decoding="async"></a>
+  <ul class="footer-links-list">
+    <li class="footer-group-label">Convoyage</li>
+    <li><a href="/convoyage">Automobile</a></li>
+    <li><a href="/convoyage-electrique">&#201;lectrique</a></li>
+    <li><a href="/convoyage-luxe">Premium</a></li>
+    <li><a href="/convoyage-paris">Paris</a></li>
+    <li><a href="/convoyage-concession">Concessions</a></li>
+    <li><a href="/transport-plateau">Plateau</a></li>
+    <li class="footer-sep">&#183;</li>
+    <li class="footer-group-label">Services</li>
+    <li><a href="/chauffeur">Chauffeur</a></li>
+    <li><a href="/mise-en-main">Mise en main</a></li>
+    <li><a href="/solutions-professionnelles">Entreprises</a></li>
+    <li class="footer-sep">&#183;</li>
+    <li class="footer-group-label">&#192; propos</li>
+    <li><a href="/pourquoi-nous">Pourquoi nous</a></li>
+    <li><a href="/a-propos">L&#8217;&#233;quipe</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/faq">FAQ</a></li>
+    <li><a href="/contact">Contact</a></li>
+    <li><a href="/mentions-legales">Mentions l&#233;gales</a></li>
+  </ul>
+  <span class="footer-copy">&#169; 2026 The Gentleman Driver &#8212; SASU &#8212; Charenton-le-Pont (94)</span>
+  <span class="footer-legal-mini" style="display:block;margin-top:.7rem;font-size:.75rem;color:rgba(189,181,166,0.22);font-weight:300;letter-spacing:.05em;line-height:1.8">SIRET 985 178 466 00019 &#183; RCS Cr&#233;teil &#183; Assurance RC Pro</span>
+</footer>
   <script>
     document.querySelectorAll('.mobile-menu a').forEach(function(link){link.addEventListener('click',function(){document.getElementById('mobile-menu').classList.remove('open');document.querySelector('.burger').setAttribute('aria-expanded','false')})});
   </script>
