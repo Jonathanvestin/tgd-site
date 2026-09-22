@@ -34,7 +34,7 @@
       "description": "Livraison de véhicules neufs et d'occasion, transferts inter-sites, restitutions, livraison au client final et mise en main pour les concessions automobiles.",
       "provider": {
         "@type": "LocalBusiness",
-        "@id": "https://www.thegentlemandriver.fr/#organization",
+        "@id": "https://www.thegentlemandriver.fr/#business",
         "name": "The Gentleman Driver",
         "telephone": "+33761092626",
         "address": {
@@ -337,6 +337,8 @@ footer.footer-mini .footer-sep{color:rgba(201,169,110,0.2);font-size:1rem;line-h
 
 footer.footer-mini a.footer-logo img{height:32px!important;width:auto!important;opacity:1!important}
 @media(max-width:700px){footer.footer-mini{padding:2rem 5vw}footer.footer-mini ul.footer-links-list{gap:.8rem 1.2rem}}
+
+.report-modal[hidden]{display:none}.report-modal{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:24px}.report-modal__backdrop{position:absolute;inset:0;background:rgba(0,0,0,.84);backdrop-filter:blur(8px)}.report-modal__dialog{position:relative;z-index:1;width:min(1100px,96vw);height:min(86vh,900px);display:grid;grid-template-rows:auto minmax(0,1fr) auto;background:#111;border:1px solid rgba(201,169,110,.32);box-shadow:0 24px 80px rgba(0,0,0,.55)}.report-modal__head,.report-modal__foot{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:14px 18px}.report-modal__head{border-bottom:1px solid rgba(201,169,110,.16)}.report-modal__head h2{margin:0;font:400 clamp(1.35rem,2.4vw,2rem)/1.1 'Cormorant Garamond',serif}.report-modal__eyebrow{display:block;color:#C9A96E;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:.2rem}.report-modal__close{width:44px;height:44px;flex:0 0 44px;border:1px solid rgba(245,240,232,.25);background:transparent;color:#F5F0E8;font-size:1.7rem;line-height:1;cursor:pointer}.report-modal__viewer{min-height:0;background:#252525}.report-modal__viewer iframe{display:block;width:100%;height:100%;border:0;background:#fff}.report-modal__foot{border-top:1px solid rgba(201,169,110,.16);font-size:.72rem;color:#D6D0C6}.report-modal__foot a{color:#C9A96E;text-decoration:none}.report-modal-open{overflow:hidden}@media(max-width:650px){.report-modal{padding:10px}.report-modal__dialog{width:100%;height:88vh}.report-modal__head{padding:11px 12px}.report-modal__foot{align-items:flex-start;flex-direction:column;padding:10px 12px;gap:.3rem}}
 </style>
 <link rel="stylesheet" href="/assets/responsive-polish.css">
 </head>
@@ -466,7 +468,7 @@ footer.footer-mini a.footer-logo img{height:32px!important;width:auto!important;
     <p>Pour les missions traitées avec TGD Digital, les informations utiles sont regroupées dans un même suivi : création et identification de la mission, affectation, état des lieux, photographies, kilométrage, niveau de carburant ou de batterie, signatures et traçabilité de la remise.</p>
     <p>Le rapport PDF est transmis après la mission selon le type de prestation et les éléments à consolider. TGD conserve l’historique des missions traitées dans TGD Digital et peut retrouver les éléments associés.</p>
     <p>Les éléments remis dépendent de la prestation convenue : état des lieux, photographies, kilométrage, niveau de carburant ou de batterie, signatures, réserves et rapport PDF lorsque la mission est traitée avec TGD Digital.</p>
-    <div class="p1-links"><a class="p1-link" href="/tgd-digital" data-track="concession_digital_click">Découvrir TGD Digital →</a></div>
+    <div class="p1-links"><a class="p1-link" href="/tgd-digital" data-track="concession_digital_click">Découvrir TGD Digital →</a><a class="p1-link" href="/assets/documents/exemple-rapport-tgd-digital-anonymise.pdf" target="_blank" rel="noopener" data-report-preview>Voir un rapport anonymisé →</a></div>
 
     <h3>Véhicules électriques : anticiper le trajet et la remise</h3>
     <p>Le convoyage d’un véhicule électrique demande de tenir compte de l’autonomie disponible, des possibilités de recharge, des moyens de paiement et du niveau de batterie attendu à l’arrivée. Ces paramètres sont définis avant la mission.</p>
@@ -578,5 +580,8 @@ function toggleFaq(btn) {
 </a>
 <script src="/tgd-reviews.js"></script>
 <script src="/tgd-conversions.js"></script>
+<div class="report-modal" id="report-modal" hidden aria-hidden="true"><div class="report-modal__backdrop" data-report-close></div><section class="report-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="report-modal-title"><div class="report-modal__head"><div><span class="report-modal__eyebrow">TGD Digital</span><h2 id="report-modal-title">Exemple de rapport anonymisé</h2></div><button class="report-modal__close" type="button" data-report-close aria-label="Fermer l’aperçu">×</button></div><div class="report-modal__viewer"><iframe title="Aperçu du rapport TGD Digital anonymisé" data-report-frame></iframe></div><div class="report-modal__foot"><span>Document d’exemple anonymisé.</span><a href="/assets/documents/exemple-rapport-tgd-digital-anonymise.pdf" target="_blank" rel="noopener">Ouvrir le PDF en plein écran →</a></div></section></div><script>
+(function(){const modal=document.getElementById('report-modal');if(!modal)return;const frame=modal.querySelector('[data-report-frame]');const triggers=document.querySelectorAll('[data-report-preview]');let last=null;function open(e){e.preventDefault();last=e.currentTarget;frame.src='/assets/documents/exemple-rapport-tgd-digital-anonymise.pdf#view=FitH';modal.hidden=false;modal.setAttribute('aria-hidden','false');document.body.classList.add('report-modal-open');modal.querySelector('.report-modal__close').focus()}function close(){modal.hidden=true;modal.setAttribute('aria-hidden','true');frame.removeAttribute('src');document.body.classList.remove('report-modal-open');if(last)last.focus()}triggers.forEach(a=>a.addEventListener('click',open));modal.querySelectorAll('[data-report-close]').forEach(el=>el.addEventListener('click',close));document.addEventListener('keydown',e=>{if(modal.hidden)return;if(e.key==='Escape'){close();return}if(e.key==='Tab'){const focusable=[...modal.querySelectorAll('button,a[href]')].filter(el=>!el.hasAttribute('disabled'));if(!focusable.length)return;const first=focusable[0],lastFocus=focusable[focusable.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();lastFocus.focus()}else if(!e.shiftKey&&document.activeElement===lastFocus){e.preventDefault();first.focus()}}})})();
+</script>
 </body>
 </html>
