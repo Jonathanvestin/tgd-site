@@ -120,3 +120,20 @@ a.btn-primary:visited,a.primary:visited,a.btn-gold:visited,a.b2b-primary:visited
 a.btn-ghost:visited,a.secondary:visited,a.btn-outline:visited,a.b2b-secondary:visited{color:#f5f0e8!important}
 a.text-link:visited,a.case-link:visited,a.p1-link:visited,a.canal-link:visited{color:#c9a96e!important}
 a.related-card:visited,a.b2b-card:visited{color:inherit!important}
+
+
+/* Narrow phones / foldable half-screen safety */
+@media(max-width:380px){
+  footer.footer-mini{padding-left:18px!important;padding-right:18px!important}
+  footer.footer-mini .footer-links-list{grid-template-columns:1fr!important;gap:.5rem!important}
+  .hero-actions,.b2b-actions{display:grid!important;grid-template-columns:1fr!important;width:100%!important}
+  .hero-actions a,.b2b-actions a{width:100%!important;min-width:0!important;white-space:normal!important;text-align:center!important}
+  .conversion-mobile a{padding:.78rem .18rem!important;font-size:.64rem!important;letter-spacing:0!important;min-width:0!important}
+  .report-modal{padding:6px!important}
+  .report-modal__head h2{font-size:1.2rem!important}
+  .report-modal__foot{font-size:.65rem!important}
+}
+@media(min-width:381px) and (max-width:720px){
+  footer.footer-mini .footer-links-list{gap:.55rem 1.1rem!important}
+  .hero-actions a,.b2b-actions a{min-width:0!important}
+}
