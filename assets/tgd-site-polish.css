@@ -114,3 +114,9 @@ footer.footer-mini .footer-legal-mini{
   }
   footer.footer-mini .footer-links-list .footer-group-label{margin-top:.55rem!important}
 }
+
+/* Canonical visited states for interactive TGD links */
+a.btn-primary:visited,a.primary:visited,a.btn-gold:visited,a.b2b-primary:visited,a.nav-cta:visited,a.navcta:visited{color:#0b0b0b!important}
+a.btn-ghost:visited,a.secondary:visited,a.btn-outline:visited,a.b2b-secondary:visited{color:#f5f0e8!important}
+a.text-link:visited,a.case-link:visited,a.p1-link:visited,a.canal-link:visited{color:#c9a96e!important}
+a.related-card:visited,a.b2b-card:visited{color:inherit!important}
