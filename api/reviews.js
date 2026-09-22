@@ -129,7 +129,18 @@ export default async function handler(req, res) {
   res.setHeader('Cache-Control', 's-maxage=1800, stale-while-revalidate=86400');
 
   try {
-    const data = await fetchBusinessProfileReviews() || await fetchPlaceReviews();
+    let data = null;
+
+    try {
+      data = await fetchBusinessProfileReviews();
+    } catch (error) {
+      console.error('Google Business Profile reviews sync:', error);
+    }
+
+    if (!data) {
+      data = await fetchPlaceReviews();
+    }
+
     if (!data) {
       return res.status(503).json({
         error: 'Synchronisation Google non configurée',
