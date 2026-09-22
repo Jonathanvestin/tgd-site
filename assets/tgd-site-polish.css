@@ -74,6 +74,12 @@ footer.footer-mini .footer-legal-mini{
 }
 
 /* Prevent browser-default blue/purple links in TGD CTA areas */
+.hero-actions a,.hero-actions a:visited{color:#c9a96e;text-decoration:none}
+.hero-actions .hero-primary,.hero-actions .hero-primary:visited{background:#c9a96e;color:#0b0b0b!important;border-color:#c9a96e}
+.hero-actions .hero-secondary,.hero-actions .hero-secondary:visited{color:#f5f0e8!important;border-color:rgba(201,169,110,.55)}
+.hero-actions .hero-primary:hover,.hero-actions .hero-primary:focus-visible{background:#dfc28b;color:#0b0b0b!important}
+.hero-actions .hero-secondary:hover,.hero-actions .hero-secondary:focus-visible{color:#c9a96e!important;border-color:#c9a96e}
+
 .cta-actions a,.cta-actions a:visited,
 .cta-final-actions a,.cta-final-actions a:visited,
 .inline-cta a,.inline-cta a:visited,
