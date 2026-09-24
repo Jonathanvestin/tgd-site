@@ -199,3 +199,21 @@ footer.footer-mini .footer-copy{margin:0!important}
   .sticky-mobile{padding-bottom:calc(.8rem + env(safe-area-inset-bottom))!important}
 }
 @media(max-width:900px){button.burger{display:flex!important}}
+
+/* Readable content links, including browser visited states. */
+.hero-quote-note a,.hero-quote-note a:visited,
+main p a:not([class]),main p a:not([class]):visited,
+section p a:not([class]),section p a:not([class]):visited,
+article p a:not([class]),article p a:not([class]):visited,
+a.p1-link,a.p1-link:visited{color:#d9b777!important;text-decoration:underline!important;text-underline-offset:3px}
+.related-grid > a.related-card,.related-grid > a.related-card:visited,
+.articles-grid > a.article-card,.articles-grid > a.article-card:visited,
+.service-grid > a.service-card,.service-grid > a.service-card:visited{color:#f5f0e8!important;text-decoration:none!important}
+a.hero-primary,a.hero-primary:visited{background:#c9a96e!important;color:#0b0b0b!important;text-decoration:none!important}
+a.hero-secondary,a.hero-secondary:visited{color:#f5f0e8!important;text-decoration:none!important}
+
+/* Center both lines of each action within its full clickable area. */
+.hero-actions > a,.cta-actions > a,.cta-final-actions > a,
+.actions > a,.p1-links > a.hero-primary,.p1-links > a.hero-secondary,
+.content-inner > a.hero-primary,.content-inner > a.hero-secondary,
+.hero-quote-submit{display:inline-flex!important;align-items:center!important;justify-content:center!important;text-align:center!important;box-sizing:border-box!important}
