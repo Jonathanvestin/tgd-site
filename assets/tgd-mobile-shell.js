@@ -54,8 +54,11 @@
       }
     });
     document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape' && menu.classList.contains('open')) setOpen(false);
-    });
+      if (event.key === 'Escape' && menu.classList.contains('open')) {
+        event.stopImmediatePropagation();
+        setOpen(false);
+      }
+    }, true);
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();
