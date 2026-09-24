@@ -163,6 +163,7 @@ footer.footer-mini .footer-copy{margin:0!important}
 }
 /* Explicit link and button colors on dark content and gold actions. */
 .hero-actions a.btn-primary,.hero-actions a.btn-primary:visited,
+.hero-actions a.btn-gold,.hero-actions a.btn-gold:visited,
 .hero-actions a.hero-primary,.hero-actions a.hero-primary:visited,
 .p1-links a.hero-primary,.p1-links a.hero-primary:visited{background:#c9a96e!important;color:#0b0b0b!important;text-decoration:none!important}
 .hero-actions a.btn-ghost,.hero-actions a.btn-ghost:visited,
