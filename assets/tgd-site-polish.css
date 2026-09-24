@@ -180,3 +180,22 @@ footer.footer-mini .footer-copy{margin:0!important}
   .hero-actions a,.p1-links a{max-width:100%;min-width:0;white-space:normal!important;overflow-wrap:anywhere}
   .hero-actions a.btn-primary,.hero-actions a.btn-ghost{width:100%;text-align:center}
 }
+
+/* A single mobile menu layout and icon on every page. */
+.tgd-created-toggle{display:none}
+@media(max-width:980px){
+  body.tgd-menu-is-open{overflow:hidden!important}
+  button.burger,button.b2b-mobile-toggle{flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:6px!important;width:48px!important;height:48px!important;padding:8px!important;line-height:1!important}
+  button.b2b-mobile-toggle{display:flex!important}
+  button.burger span,button.b2b-mobile-toggle span{display:block!important;flex:none!important;width:26px!important;height:2px!important;margin:0!important;background:#f5f0e8!important;border-radius:1px!important}
+  .tgd-unified-mobile-menu{display:none!important;position:fixed!important;inset:0!important;z-index:400!important;box-sizing:border-box!important;background:#0a0a0a!important;flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;gap:clamp(.75rem,2.3vh,1.45rem)!important;padding:clamp(4.5rem,10vh,6rem) 1.1rem max(2rem,env(safe-area-inset-bottom))!important;overflow-y:auto!important;text-align:center!important}
+  .tgd-unified-mobile-menu.open{display:flex!important}
+  .tgd-unified-mobile-menu>a:not(.tgd-menu-cta){display:block!important;color:#f5f0e8!important;font:300 clamp(1.55rem,5vw,2rem)/1.2 'Cormorant Garamond',serif!important;text-decoration:none!important;min-height:38px!important}
+  .tgd-unified-mobile-menu .tgd-menu-sub{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;gap:.5rem 1.1rem!important;margin:0!important}
+  .tgd-unified-mobile-menu .tgd-menu-sub a{color:#c9a96e!important;font:500 .68rem/1.5 Montserrat,sans-serif!important;text-transform:uppercase!important;letter-spacing:.1em!important;text-decoration:none!important}
+  .tgd-unified-mobile-menu .tgd-menu-cta{display:flex!important;align-items:center!important;justify-content:center!important;width:min(100%,420px)!important;min-height:52px!important;margin:.3rem auto 0!important;padding:.7rem 1rem!important;background:#c9a96e!important;color:#0b0b0b!important;font:500 .74rem/1.35 Montserrat,sans-serif!important;letter-spacing:.12em!important;text-transform:uppercase!important;text-decoration:none!important;box-sizing:border-box!important}
+  .tgd-unified-mobile-menu .tgd-menu-close{position:absolute!important;top:1.2rem!important;right:1.1rem!important;display:flex!important;align-items:center!important;justify-content:center!important;width:48px!important;height:48px!important;background:none!important;border:0!important;color:#f5f0e8!important;font:300 2rem/1 Montserrat,sans-serif!important;cursor:pointer!important}
+  .wa-float{display:none!important}
+  .sticky-mobile{padding-bottom:calc(.8rem + env(safe-area-inset-bottom))!important}
+}
+@media(max-width:900px){button.burger{display:flex!important}}
