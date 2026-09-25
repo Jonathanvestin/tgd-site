@@ -5,6 +5,22 @@
     var toggle = document.querySelector('button.burger, button.b2b-mobile-toggle');
     var nav = document.querySelector('body > nav');
     if (!nav) return;
+    var links = nav.querySelector('.nav-links, .navlinks, .b2b-navlinks');
+    if (!links) {
+      links = document.createElement('div');
+      nav.appendChild(links);
+    }
+    nav.classList.add('tgd-site-nav');
+    links.classList.add('tgd-site-links');
+    links.innerHTML = '<li><a href="/convoyage">Convoyage</a></li>' +
+      '<li class="tgd-site-dropdown"><a href="/solutions-professionnelles" aria-haspopup="true">Solutions Pro</a>' +
+      '<div class="tgd-site-submenu"><a href="/tgd-fleet">TGD Fleet</a><a href="/tgd-automotive">TGD Automotive</a><a href="/tgd-digital">TGD Digital</a><a href="/convoyage-concession">Concessions</a></div></li>' +
+      '<li><a href="/chauffeur">Chauffeur</a></li><li><a href="/particuliers">Particuliers</a></li>' +
+      '<li><a href="/a-propos">À propos</a></li>' +
+      '<li><a class="tgd-site-cta" href="/soumettre-une-mission">Soumettre une mission</a></li>';
+    nav.querySelectorAll('.nav-cta, .navcta, .b2b-navcta').forEach(function (oldCta) {
+      if (!links.contains(oldCta)) oldCta.remove();
+    });
     if (!toggle) {
       toggle = document.createElement('button');
       toggle.type = 'button';
@@ -59,6 +75,21 @@
         setOpen(false);
       }
     }, true);
+    var backToTop = document.createElement('button');
+    backToTop.type = 'button';
+    backToTop.className = 'tgd-back-to-top';
+    backToTop.setAttribute('aria-label', 'Remonter en haut de la page');
+    backToTop.title = 'Remonter en haut';
+    backToTop.textContent = '↑';
+    document.body.appendChild(backToTop);
+    function updateBackToTop() {
+      backToTop.classList.toggle('is-visible', window.scrollY > 600);
+    }
+    window.addEventListener('scroll', updateBackToTop, { passive: true });
+    updateBackToTop();
+    backToTop.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+    });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();
