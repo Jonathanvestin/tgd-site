@@ -1,6 +1,22 @@
 /* One mobile navigation across the main site. */
 (function () {
   function init() {
+    // Replace page-specific mobile contact bars with one consistent action set.
+    document.querySelectorAll('.sticky-mobile, .conversion-mobile, body > .sticky').forEach(function (oldBar) {
+      oldBar.remove();
+    });
+    var contactBar = document.createElement('nav');
+    contactBar.className = 'tgd-contact-mobile';
+    contactBar.setAttribute('aria-label', 'Contact rapide');
+    var path = location.pathname.replace(/\/+$/, '') || '/';
+    var quoteHref = path === '/contact' || path === '/contact.html' ? '#form-contact' :
+      path === '/soumettre-une-mission' ? '#form-mission' :
+      path === '/chauffeur' ? '/contact?service=chauffeur-vehicule-client' : '/contact';
+    contactBar.innerHTML = '<a href="tel:+33761092626" data-cta="phone">Appeler</a>' +
+      '<a href="https://wa.me/33761092626" target="_blank" rel="noopener noreferrer" data-cta="whatsapp">WhatsApp</a>' +
+      '<a href="' + quoteHref + '" data-cta="quote">Devis</a>';
+    document.body.appendChild(contactBar);
+    document.body.classList.add('tgd-has-contact-mobile');
     var menu = document.querySelector('.mobile-menu, .mobile, .b2b-mobile');
     var toggle = document.querySelector('button.burger, button.b2b-mobile-toggle');
     var nav = document.querySelector('body > nav');
