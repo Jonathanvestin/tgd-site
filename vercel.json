@@ -39,6 +39,11 @@
       "permanent": true
     },
     {
+      "source": "/blog/cout-reel-convoyage-automobile.html",
+      "destination": "/blog/cout-reel-convoyage-automobile",
+      "permanent": true
+    },
+    {
       "source": "/blog/assurance-convoyage-automobile.html",
       "destination": "/blog/assurance-convoyage-automobile",
       "permanent": true
@@ -288,6 +293,10 @@
     {
       "source": "/blog",
       "destination": "/blog.html"
+    },
+    {
+      "source": "/blog/cout-reel-convoyage-automobile",
+      "destination": "/blog/cout-reel-convoyage-automobile.html"
     },
     {
       "source": "/blog/assurance-convoyage-automobile",
