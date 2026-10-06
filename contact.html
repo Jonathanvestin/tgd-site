@@ -445,6 +445,48 @@ footer.footer-mini a.footer-logo img{height:32px!important;width:auto!important;
           <label class="f-label" for="marque_modele">Marque &amp; mod&#232;le (optionnel)</label>
           <input type="text" class="f-input" name="marque_modele" id="marque_modele" placeholder="Ex&#160;: SUV, berline, citadine&#8230;" aria-label="Marque et modele">
         </div>
+        <div id="chauffeur-fields" style="display:none">
+          <div class="f-row">
+            <div class="f-group">
+              <label class="f-label" for="chauffeur_duree">Dur&#233;e / amplitude souhait&#233;e</label>
+              <input type="text" class="f-input" name="chauffeur_duree" id="chauffeur_duree" placeholder="Ex : trajet simple, 6 h, journ&#233;e compl&#232;te">
+            </div>
+            <div class="f-group">
+              <label class="f-label" for="chauffeur_passagers">Nombre de passagers</label>
+              <input type="number" min="0" class="f-input" name="chauffeur_passagers" id="chauffeur_passagers" placeholder="Ex : 2">
+            </div>
+          </div>
+          <div class="f-row">
+            <div class="f-group">
+              <label class="f-label" for="chauffeur_aller_retour">Organisation du trajet</label>
+              <select class="f-select" name="chauffeur_aller_retour" id="chauffeur_aller_retour">
+                <option value="">S&#233;lectionner&#8230;</option>
+                <option>Aller simple</option>
+                <option>Aller-retour</option>
+                <option>Plusieurs &#233;tapes</option>
+                <option>Mise &#224; disposition &#224; la journ&#233;e</option>
+                <option>Autre / &#224; d&#233;finir</option>
+              </select>
+            </div>
+            <div class="f-group">
+              <label class="f-label" for="chauffeur_besoin">Votre besoin</label>
+              <select class="f-select" name="chauffeur_besoin" id="chauffeur_besoin">
+                <option value="">S&#233;lectionner&#8230;</option>
+                <option>Vacances / long trajet</option>
+                <option>D&#233;placement professionnel</option>
+                <option>&#201;v&#233;nement / soir&#233;e</option>
+                <option>Permis temporairement suspendu</option>
+                <option>Fatigue / conduite de nuit</option>
+                <option>Je pr&#233;f&#232;re ne pas conduire</option>
+                <option>Autre</option>
+              </select>
+            </div>
+          </div>
+          <div class="f-group">
+            <label class="f-label" for="chauffeur_etapes">Arr&#234;ts, &#233;tapes ou contraintes particuli&#232;res</label>
+            <textarea class="f-textarea" name="chauffeur_etapes" id="chauffeur_etapes" placeholder="Ex : 3 rendez-vous dans la journ&#233;e, si&#232;ge enfant, bagages, horaires &#224; respecter&#8230;"></textarea>
+          </div>
+        </div>
         <div class="form-nav">
           <button type="button" class="btn-back" onclick="goToStep(1)">&#8592; Retour</button>
           <button type="button" class="btn-next" onclick="goToStep(3)">Continuer &#8594;</button>
@@ -668,7 +710,10 @@ function selectType(btn) {
   document.querySelectorAll('.type-btn').forEach(function(b) { b.classList.remove('selected'); });
   btn.classList.add('selected');
   var hidden = document.getElementById('type_mission_hidden');
-  if (hidden) hidden.value = btn.getAttribute('data-value') || btn.textContent.trim();
+  var value = btn.getAttribute('data-value') || btn.textContent.trim();
+  if (hidden) hidden.value = value;
+  var chauffeurFields = document.getElementById('chauffeur-fields');
+  if (chauffeurFields) chauffeurFields.style.display = value === 'Chauffeur avec mon vehicule' ? 'block' : 'none';
   var typeError = document.getElementById('type-mission-error');
   if (typeError) typeError.style.display = 'none';
 }
@@ -812,6 +857,13 @@ document.getElementById('form-contact').addEventListener('submit', function(e) {
   }
 
   document.addEventListener('DOMContentLoaded', function() {
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('service') === 'chauffeur-vehicule-client') {
+      var chauffeurBtn = document.querySelector('.type-btn[data-value="Chauffeur avec mon vehicule"]');
+      if (chauffeurBtn) selectType(chauffeurBtn);
+      var intro = document.querySelector('.form-intro-title');
+      if (intro) intro.textContent = 'Organisons votre trajet avec chauffeur';
+    }
     ['adresse_depart', 'adresse_destination'].forEach(function(id) {
       var el = document.getElementById(id);
       if (el) initACField(el);
