@@ -155,7 +155,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .hero-desc{font-size:.88rem;color:var(--ivory-muted);line-height:1.85;max-width:480px;margin-bottom:2.5rem;font-weight:300}
 
 .btn-primary{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--black);background:var(--gold);border:none;padding:1rem 2.5rem;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s;font-family:'Montserrat',sans-serif}
+.btn-primary:visited,.btn-primary:hover,.btn-primary:focus,.btn-primary:focus-visible,.btn-primary:active{color:var(--black)}
 .btn-primary:hover{background:var(--gold-light)}
+.btn-primary:focus-visible{outline:2px solid var(--ivory);outline-offset:3px}
 .btn-ghost{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--ivory);background:transparent;border:1px solid rgba(245,240,232,.2);padding:1rem 2rem;cursor:pointer;text-decoration:none;display:inline-block;transition:border-color .2s,color .2s;font-family:'Montserrat',sans-serif}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
 
@@ -502,6 +504,11 @@ footer.footer-mini span.footer-copy{color:rgba(189,181,166,0.55) !important}
 .hero-quote-contact{grid-column:1/-1}
 .hero-quote-submit{grid-column:1/-1;width:100%;margin-top:.15rem}
 .hero-quote-note{grid-column:1/-1;font-size:.68rem;color:var(--ivory-muted);text-align:center;line-height:1.45}
+.tgd-ac-wrapper{position:relative;min-width:0}
+.tgd-ac-wrapper .f-input{width:100%}
+.tgd-ac-list{display:none;position:absolute;z-index:20;top:calc(100% + 4px);left:0;right:0;max-height:220px;overflow-y:auto;margin:0;padding:.25rem 0;list-style:none;background:var(--black-2);border:1px solid rgba(201,169,110,.35);box-shadow:0 12px 30px rgba(0,0,0,.35)}
+.tgd-ac-list li{padding:.65rem .8rem;color:var(--ivory-muted);font-size:.75rem;line-height:1.35;cursor:pointer}
+.tgd-ac-list li:hover,.tgd-ac-list li.active{color:var(--ivory);background:rgba(201,169,110,.14)}
 .hero-mini-proof{display:flex;gap:.6rem 1rem;flex-wrap:wrap;margin-top:1rem;color:rgba(245,240,232,.72);font-size:.68rem}
 .hero-mini-proof span::before{content:'✓';color:var(--gold);margin-right:.35rem}
 .audience-router{padding:1.5rem 4vw !important;background:var(--black-2);border-top:1px solid rgba(201,169,110,.1);border-bottom:1px solid rgba(201,169,110,.1)}
@@ -609,8 +616,8 @@ section{padding:3.5rem 4vw !important}
         <div class="hero-quote-title">O&#249; doit aller le v&#233;hicule&nbsp;?</div>
         <p class="hero-quote-sub">3 informations suffisent. Nous vous rappelons avec un tarif pr&#233;cis.</p>
         <div class="hero-quote-grid">
-          <input name="depart" type="text" class="f-input" placeholder="Ville de d&#233;part *" required aria-label="Ville de d&#233;part" autocomplete="address-level2">
-          <input name="destination" type="text" class="f-input" placeholder="Ville d&#8217;arriv&#233;e *" required aria-label="Ville d&#8217;arriv&#233;e" autocomplete="address-level2">
+          <input id="hp_depart" name="depart" type="text" class="f-input" placeholder="Adresse ou ville de d&#233;part *" required aria-label="Adresse ou ville de d&#233;part" autocomplete="street-address" role="combobox" aria-autocomplete="list" aria-expanded="false">
+          <input id="hp_destination" name="destination" type="text" class="f-input" placeholder="Adresse ou ville d&#8217;arriv&#233;e *" required aria-label="Adresse ou ville d&#8217;arriv&#233;e" autocomplete="street-address" role="combobox" aria-autocomplete="list" aria-expanded="false">
           <input name="telephone_ou_email" type="text" class="f-input hero-quote-contact" placeholder="T&#233;l&#233;phone ou e-mail *" required aria-label="T&#233;l&#233;phone ou e-mail" autocomplete="tel">
           <button type="submit" class="btn-primary hero-quote-submit">Recevoir mon devis</button>
           <p class="hero-quote-note">Gratuit, sans engagement. Vos coordonn&#233;es servent uniquement &#224; traiter votre demande. <a href="/mentions-legales#donnees-personnelles">Donn&#233;es personnelles</a>.</p>
@@ -855,6 +862,9 @@ section{padding:3.5rem 4vw !important}
 
     var list = document.createElement('ul');
     list.className = 'tgd-ac-list';
+    list.id = inputEl.id + '-suggestions';
+    list.setAttribute('role', 'listbox');
+    inputEl.setAttribute('aria-controls', list.id);
     wrapper.appendChild(list);
 
     var activeIdx = -1;
@@ -865,8 +875,10 @@ section{padding:3.5rem 4vw !important}
       activeIdx = -1;
       list.innerHTML = '';
       if (!items.length) { list.style.display = 'none'; return; }
-      items.forEach(function(item) {
+      items.forEach(function(item, i) {
         var li = document.createElement('li');
+        li.id = list.id + '-' + i;
+        li.setAttribute('role', 'option');
         li.textContent = item.display_name;
         li.addEventListener('mousedown', function(e) {
           e.preventDefault();
@@ -876,9 +888,10 @@ section{padding:3.5rem 4vw !important}
         list.appendChild(li);
       });
       list.style.display = 'block';
+      inputEl.setAttribute('aria-expanded', 'true');
     }
 
-    function hideList() { list.style.display = 'none'; activeIdx = -1; }
+    function hideList() { list.style.display = 'none'; activeIdx = -1; inputEl.setAttribute('aria-expanded', 'false'); inputEl.removeAttribute('aria-activedescendant'); }
 
     inputEl.addEventListener('input', function() {
       var q = inputEl.value.trim();
@@ -900,7 +913,8 @@ section{padding:3.5rem 4vw !important}
       else if (e.key === 'Enter' && activeIdx >= 0) { e.preventDefault(); inputEl.value = currentResults[activeIdx].display_name; hideList(); return; }
       else if (e.key === 'Escape') { hideList(); return; }
       else { return; }
-      items.forEach(function(li, i) { li.classList.toggle('active', i === activeIdx); });
+      items.forEach(function(li, i) { li.classList.toggle('active', i === activeIdx); li.setAttribute('aria-selected', i === activeIdx ? 'true' : 'false'); });
+      if (activeIdx >= 0) inputEl.setAttribute('aria-activedescendant', list.id + '-' + activeIdx);
       if (activeIdx >= 0) items[activeIdx].scrollIntoView({ block: 'nearest' });
     });
 
@@ -918,3 +932,4 @@ section{padding:3.5rem 4vw !important}
 
 </body>
 </html>
+
