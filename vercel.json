@@ -34,6 +34,11 @@
       "permanent": true
     },
     {
+      "source": "/blog/voiture-fonction-electrique-accompagner-collaborateurs.html",
+      "destination": "/blog/voiture-fonction-electrique-accompagner-collaborateurs",
+      "permanent": true
+    },
+    {
       "source": "/blog.html",
       "destination": "/blog",
       "permanent": true
@@ -293,6 +298,10 @@
     {
       "source": "/blog",
       "destination": "/blog.html"
+    },
+    {
+      "source": "/blog/voiture-fonction-electrique-accompagner-collaborateurs",
+      "destination": "/blog/voiture-fonction-electrique-accompagner-collaborateurs.html"
     },
     {
       "source": "/blog/cout-reel-convoyage-automobile",
