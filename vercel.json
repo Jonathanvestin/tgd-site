@@ -34,6 +34,11 @@
       "permanent": true
     },
     {
+      "source": "/blog/voiture-fonction-electrique-ecoscore-cout-salarie.html",
+      "destination": "/blog/voiture-fonction-electrique-ecoscore-cout-salarie",
+      "permanent": true
+    },
+    {
       "source": "/blog/voiture-fonction-electrique-accompagner-collaborateurs.html",
       "destination": "/blog/voiture-fonction-electrique-accompagner-collaborateurs",
       "permanent": true
@@ -300,6 +305,10 @@
       "destination": "/blog.html"
     },
     {
+      "source": "/blog/voiture-fonction-electrique-ecoscore-cout-salarie",
+      "destination": "/blog/voiture-fonction-electrique-ecoscore-cout-salarie.html"
+    },
+    {
       "source": "/blog/voiture-fonction-electrique-accompagner-collaborateurs",
       "destination": "/blog/voiture-fonction-electrique-accompagner-collaborateurs.html"
     },
@@ -441,3 +450,4 @@
     }
   ]
 }
+
