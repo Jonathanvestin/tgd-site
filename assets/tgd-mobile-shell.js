@@ -12,7 +12,7 @@
     var quoteHref = path === '/contact' || path === '/contact.html' ? '#form-contact' :
       path === '/soumettre-une-mission' ? '#form-mission' :
       path === '/chauffeur' ? '/contact?service=chauffeur-vehicule-client' : '/contact';
-    var proServices = {'/solutions-professionnelles':'solutions-professionnelles','/convoyage-concession':'convoyage-concession','/tgd-fleet':'gestion-flotte'};
+    var proServices = {'/mise-en-main':'mise-en-main','/convoyage-electrique':'convoyage-electrique','/tgd-digital':'mission-documentee','/solutions-professionnelles':'solutions-professionnelles','/convoyage-concession':'convoyage-concession','/tgd-fleet':'gestion-flotte'};
     if (proServices[path]) quoteHref = '/contact?service=' + proServices[path];
     contactBar.innerHTML = '<a href="tel:+33763695257" data-cta="phone">Appeler</a>' +
       '<a href="https://wa.me/33763695257" target="_blank" rel="noopener noreferrer" data-cta="whatsapp">WhatsApp</a>' +
