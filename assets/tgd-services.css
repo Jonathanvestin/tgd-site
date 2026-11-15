@@ -3,3 +3,10 @@
 @media(max-width:900px){.service-section .process,.process-grid{grid-template-columns:1fr 1fr}.service-section .two,.service-section .conditions{grid-template-columns:1fr}}
 @media(max-width:650px){.related-grid,.service-section .cards,.compare-grid,.frame-grid{grid-template-columns:1fr}.related-card,.service-section .card,.compare-card,.frame-card{padding:22px}.amount{font-size:2.5rem}.price{padding:24px}}
 @media(max-width:360px){.service-section .process,.process-grid{grid-template-columns:1fr}}
+/* Light service cards must override the legacy white link colour, including visited links. */
+.service-v2 .service-section.light .related-grid>a.related-card,
+.service-v2 .service-section.light .related-grid>a.related-card:visited{color:#171b1d!important;background:#fffdf8}
+.service-v2 .service-section.light .related-card-title{color:#171b1d}
+.service-v2 .service-section.light .related-card-desc{color:#4c514d}
+.service-v2 .service-section.light .related-grid>a.related-card:hover{background:#eae2d5;border-color:#795b2b}
+.service-v2 .service-section.light .related-grid>a.related-card:focus-visible{outline:3px solid #795b2b;outline-offset:4px}
