@@ -10,3 +10,12 @@
 .service-v2 .service-section.light .related-card-desc{color:#4c514d}
 .service-v2 .service-section.light .related-grid>a.related-card:hover{background:#eae2d5;border-color:#795b2b}
 .service-v2 .service-section.light .related-grid>a.related-card:focus-visible{outline:3px solid #795b2b;outline-offset:4px}
+/* Route choices and practical information on consumer/plateau pages. */
+.service-v2 .service-section .service-grid,.service-v2 .service-section .steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:28px}
+.service-v2 .service-section .service-card,.service-v2 .service-section .steps>div{display:block;padding:26px;border:1px solid #bdb3a3;text-decoration:none;color:inherit!important}
+.service-v2 .service-section .service-card-title,.service-v2 .service-section .step-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:2rem;margin:12px 0}
+.service-v2 .service-section.light .service-card,.service-v2 .service-section.light .service-card:visited{background:#fffdf8;color:#171b1d!important}
+.service-v2 .service-section.light .service-card *{color:#171b1d}
+.service-v2 .service-section .service-card-desc{font-size:.87rem;line-height:1.9}
+.service-v2 .service-section .assurance-box{padding:26px;border:1px solid var(--line);margin-top:26px}
+@media(max-width:650px){.service-v2 .service-section .service-grid,.service-v2 .service-section .steps{grid-template-columns:1fr}}
