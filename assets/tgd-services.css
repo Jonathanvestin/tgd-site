@@ -19,3 +19,15 @@
 .service-v2 .service-section .service-card-desc{font-size:.87rem;line-height:1.9}
 .service-v2 .service-section .assurance-box{padding:26px;border:1px solid var(--line);margin-top:26px}
 @media(max-width:650px){.service-v2 .service-section .service-grid,.service-v2 .service-section .steps{grid-template-columns:1fr}}
+/* Network operations: preserve the content within the shared service layout. */
+.service-v2 .use-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px;margin-top:30px}
+.service-v2 .use-card,.service-v2 .process-card{padding:25px;border:1px solid var(--line)}
+.service-v2 .light .use-card,.service-v2 .light .process-card{border-color:#cfc7b9}
+.service-v2 .use-label,.service-v2 .process-number,.service-v2 .kicker{font-size:.7rem;letter-spacing:.1em;color:#c9a96e;margin-bottom:17px}
+.service-v2 .light .use-label,.service-v2 .light .process-number,.service-v2 .light .kicker{color:#795b2b}
+.service-v2 .digital-panel,.service-v2 .handover{padding:30px;border:1px solid var(--line);margin-top:25px}
+.service-v2 .light .digital-panel,.service-v2 .light .handover{border-color:#cfc7b9}
+.service-v2 .digital-items{display:flex;gap:16px;flex-wrap:wrap;padding:24px 0;font-size:.85rem}
+.service-v2 .btn-ghost{color:inherit;text-underline-offset:5px}
+@media(max-width:900px){.service-v2 .use-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:650px){.service-v2 .use-grid{grid-template-columns:1fr}.service-v2 .digital-panel,.service-v2 .handover{padding:22px}}
