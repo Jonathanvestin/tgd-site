@@ -125,11 +125,6 @@
       "permanent": true
     },
     {
-      "source": "/chauffeur-longue-distance",
-      "destination": "/chauffeur",
-      "permanent": true
-    },
-    {
       "source": "/a-propos.html",
       "destination": "/a-propos",
       "permanent": true
@@ -141,7 +136,7 @@
     },
     {
       "source": "/chauffeur-longue-distance.html",
-      "destination": "/chauffeur",
+      "destination": "/chauffeur-longue-distance",
       "permanent": true
     },
     {
@@ -447,7 +442,10 @@
     {
       "source": "/etudes-de-cas",
       "destination": "/etudes-de-cas.html"
+    },
+    {
+      "source": "/chauffeur-longue-distance",
+      "destination": "/chauffeur-longue-distance.html"
     }
   ]
 }
-
