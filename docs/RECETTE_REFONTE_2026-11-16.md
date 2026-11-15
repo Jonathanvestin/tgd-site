@@ -21,9 +21,9 @@ Le point /_vercel/insights/script.js renvoie HTTP 404 sur la prévisualisation. 
 
 Les contenus historiques suivants sont conservés, car leur modification peut changer la présentation des engagements :
 
-- Lyon et Toulouse : facturation mensuelle et équipe dédiée ; Lyon mentionne aussi des tarifs négociés. Confirmer les modalités réellement proposées.
+- Validé par Jonathan : un ou plusieurs convoyeurs peuvent être attitrés à un client. Facturation définie en fonction de chaque client ; les mentions de facturation mensuelle systématique ont été remplacées sur Lyon et Toulouse.
 - Lyon : formulations « chaque jour » et arrivée à l’heure prévue. Confirmer leur exactitude ou valider une formulation conditionnée aux contraintes de mission.
-- Prestige : transport sur plateau fermé via partenaires et protocole photographique exhaustif. Confirmer la disponibilité et le périmètre opérationnel.
+- Corrigé selon Jonathan : aucune offre de plateau fermé. Les mentions de cette offre ont été retirées de la page Prestige et de son schéma FAQ ; transport sur plateau étudié sur devis. Le périmètre du protocole photographique exhaustif reste à confirmer.
 - Montants chauffeur conservés : courte prestation 390 € TTC à partir de ; longue distance 650 € HT / 780 € TTC la journée à partir de ; majoration électrique de 20 % selon conditions sur la page longue distance.
 
 ## Limites
