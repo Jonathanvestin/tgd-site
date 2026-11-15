@@ -12,8 +12,8 @@
     var quoteHref = path === '/contact' || path === '/contact.html' ? '#form-contact' :
       path === '/soumettre-une-mission' ? '#form-mission' :
       path === '/chauffeur' ? '/contact?service=chauffeur-vehicule-client' : '/contact';
-    contactBar.innerHTML = '<a href="tel:+33761092626" data-cta="phone">Appeler</a>' +
-      '<a href="https://wa.me/33761092626" target="_blank" rel="noopener noreferrer" data-cta="whatsapp">WhatsApp</a>' +
+    contactBar.innerHTML = '<a href="tel:+33763695257" data-cta="phone">Appeler</a>' +
+      '<a href="https://wa.me/33763695257" target="_blank" rel="noopener noreferrer" data-cta="whatsapp">WhatsApp</a>' +
       '<a href="' + quoteHref + '" data-cta="quote">Devis</a>';
     document.body.appendChild(contactBar);
     document.body.classList.add('tgd-has-contact-mobile');

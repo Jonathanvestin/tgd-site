@@ -289,3 +289,10 @@ button.hero-quote-submit{
   .tgd-contact-mobile a:focus-visible{outline:2px solid #f5f0e8!important;outline-offset:-4px!important}
   body.tgd-menu-is-open .tgd-contact-mobile{display:none!important}
 }
+
+/* Recette novembre 2026 : lisibilité et états accessibles. */
+[hidden]{display:none!important}
+input::placeholder,textarea::placeholder{color:#bdb5a6!important;opacity:1!important}
+input:not([type="hidden"]):not([type="checkbox"]):not([type="radio"]),textarea,select{font-size:1rem!important}
+input:focus-visible,textarea:focus-visible,select:focus-visible,a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #dfc28b;outline-offset:4px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0ms!important;transition-duration:.01ms!important}}
