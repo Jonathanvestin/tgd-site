@@ -52,6 +52,8 @@
     menu.classList.add('tgd-unified-mobile-menu');
     menu.id = menu.id || 'tgd-mobile-menu';
     menu.setAttribute('aria-label', 'Menu principal');
+    menu.setAttribute('role', 'dialog');
+    menu.setAttribute('aria-modal', 'true');
     toggle.setAttribute('aria-label', 'Ouvrir le menu');
     toggle.setAttribute('aria-controls', menu.id);
     toggle.setAttribute('aria-expanded', 'false');
@@ -86,6 +88,12 @@
       }
     });
     document.addEventListener('keydown', function (event) {
+      if (event.key === 'Tab' && menu.classList.contains('open')) {
+        var items = menu.querySelectorAll('a[href], button:not([disabled])');
+        var first = items[0], last = items[items.length - 1];
+        if (event.shiftKey && (document.activeElement === first || !menu.contains(document.activeElement))) { event.preventDefault(); last.focus(); }
+        else if (!event.shiftKey && (document.activeElement === last || !menu.contains(document.activeElement))) { event.preventDefault(); first.focus(); }
+      }
       if (event.key === 'Escape' && menu.classList.contains('open')) {
         event.stopImmediatePropagation();
         setOpen(false);
