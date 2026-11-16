@@ -1,5 +1,18 @@
 /* One mobile navigation across the main site. */
 (function () {
+/* Web Analytics Hobby: page views only; no paid custom-event collection. */
+function installPageAnalytics(){
+ if(location.hostname!=='www.thegentlemandriver.fr'||navigator.doNotTrack==='1'||window.doNotTrack==='1')return;
+ if(document.getElementById('tgd-page-analytics'))return;
+ window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};
+ window.va('beforeSend',function(event){
+  if(event.type==='event')return null;
+  try{var url=new URL(event.url);url.search='';url.hash='';return Object.assign({},event,{url:url.toString()});}catch(error){return null;}
+ });
+ var script=document.createElement('script');script.id='tgd-page-analytics';script.defer=true;script.src='/_vercel/insights/script.js';document.head.appendChild(script);
+}
+installPageAnalytics();
+
   function init() {
     // Replace page-specific mobile contact bars with one consistent action set.
     document.querySelectorAll('.sticky-mobile, .conversion-mobile, body > .sticky').forEach(function (oldBar) {

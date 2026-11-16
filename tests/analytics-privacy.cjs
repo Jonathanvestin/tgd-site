@@ -1,7 +1,7 @@
 const {readFileSync}=require('node:fs');const vm=require('node:vm');const assert=require('node:assert/strict');
-const source=readFileSync('tgd-conversions.js','utf8');
+const source=readFileSync('assets/tgd-mobile-shell.js','utf8')+'\n'+readFileSync('tgd-conversions.js','utf8');
 function setup(host='www.thegentlemandriver.fr',dnt='0'){
- const scripts=[],listeners={};const ctx={location:{hostname:host,pathname:'/contact'},navigator:{doNotTrack:dnt},window:{},URL,Object,document:{getElementById:id=>scripts.find(s=>s.id===id),createElement:tag=>({tag}),head:{appendChild:s=>scripts.push(s)},addEventListener:(n,fn)=>listeners[n]=fn,querySelector:()=>null}};
+ const scripts=[],listeners={};const ctx={location:{hostname:host,pathname:'/contact'},navigator:{doNotTrack:dnt},window:{},URL,Object,document:{readyState:'loading',getElementById:id=>scripts.find(s=>s.id===id),createElement:tag=>({tag}),head:{appendChild:s=>scripts.push(s)},addEventListener:(n,fn)=>listeners[n]=fn,querySelector:()=>null}};
  vm.runInNewContext(source,ctx);return{ctx,scripts,listeners};
 }
 const {ctx,scripts,listeners}=setup();assert.equal(scripts.length,1);assert.equal(scripts[0].src,'/_vercel/insights/script.js');
