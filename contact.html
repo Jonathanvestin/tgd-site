@@ -848,11 +848,18 @@ document.getElementById('form-contact').addEventListener('submit', function(e) {
 
   document.addEventListener('DOMContentLoaded', function() {
     var params = new URLSearchParams(window.location.search);
-    if (params.get('service') === 'chauffeur-vehicule-client') {
-      var chauffeurBtn = document.querySelector('.type-btn[data-value="Chauffeur avec mon vehicule"]');
-      if (chauffeurBtn) selectType(chauffeurBtn);
+    var serviceOptions = {
+      'convoyage': { value: 'Convoyage automobile', title: 'Préparons votre transfert de véhicule' },
+      'mise-en-main': { value: 'Mise en main & Livraison', title: 'Organisons votre livraison avec mise en main' },
+      'solutions-entreprises': { value: 'Solutions entreprises', title: 'Parlons de vos besoins récurrents' },
+      'chauffeur-vehicule-client': { value: 'Chauffeur avec mon vehicule', title: 'Organisons votre trajet avec chauffeur' }
+    };
+    var serviceOption = serviceOptions[params.get('service')];
+    if (serviceOption) {
+      var serviceBtn = document.querySelector('.type-btn[data-value="' + serviceOption.value + '"]');
+      if (serviceBtn) selectType(serviceBtn);
       var intro = document.querySelector('.form-intro-title');
-      if (intro) intro.textContent = 'Organisons votre trajet avec chauffeur';
+      if (intro) intro.textContent = serviceOption.title;
     }
     ['adresse_depart', 'adresse_destination'].forEach(function(id) {
       var el = document.getElementById(id);
