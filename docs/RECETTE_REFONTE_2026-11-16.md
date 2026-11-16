@@ -44,3 +44,7 @@ Après validation des points commerciaux et du résultat global : conserver le c
 Le connecteur Windsor voit deux propriétés Search Console : `sc-domain:thegentlemandriver.fr` et `https://thegentlemandriver.fr/`. La lecture effective des données est refusée par le forfait Free limité à un compte. Aucun clic, impression, position ou résultat de requête n’a été obtenu ; aucune connexion n’a été supprimée. La propriété domaine est la candidate à conserver pour couvrir tous les protocoles et sous-domaines si le doublon est retiré après validation.
 
 Contrôle statique des ressources : toutes les images des pages HTML principales ont width/height. La capture Digital utilisée sur cinq pages est le WebP de 25 900 octets, pas le PNG source d’environ 1 Mo. La photo principale de l’accueil pèse 112 000 octets et porte fetchpriority=high ; les images secondaires de l’accueil portent loading=lazy. HTML de l’accueil : 25 769 octets. Ces observations ne constituent pas une mesure des temps de chargement ou des Core Web Vitals.
+
+## Mise à jour Search Console
+
+Le doublon URL a été décoché dans Windsor avec autorisation de Jonathan ; la propriété domaine est conservée. Les statistiques sont désormais accessibles. Le constat de blocage ci-dessus est historique et résolu. Voir SEO_SEARCH_CONSOLE_2026-11-16.md pour les données du 17 octobre au 13 novembre et les optimisations préparées.
