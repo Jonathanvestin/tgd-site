@@ -298,3 +298,30 @@ input:focus-visible,textarea:focus-visible,select:focus-visible,a:focus-visible,
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0ms!important;transition-duration:.01ms!important}}
 
 .tgd-request-context{padding:1rem 1.2rem;margin:0 0 1.3rem;border-left:2px solid #c9a96e;background:#20201c;color:#eee7db;font-size:.82rem;line-height:1.75}
+
+/* Contrast follows the panel, including visited links and legacy important rules. */
+body.home-v2 .light .text-link,body.home-v2 .light .text-link:visited,
+body.home-v2 .light .p1-link,body.home-v2 .light .p1-link:visited,
+body.home-v2 .light p a:not([class]),body.home-v2 .light p a:not([class]):visited{color:#654719!important}
+body.home-v2 .light a.button:not(.button-outline),body.home-v2 .light a.button:not(.button-outline):visited,
+body.home-v2 a.button:not(.button-outline),body.home-v2 a.button:not(.button-outline):visited{color:#111!important}
+body.home-v2 .light .button-outline,body.home-v2 .light .button-outline:visited{color:#171b1d!important;border-color:#795b2b;background:transparent}
+body.home-v2 .light .button-outline:hover{background:#e6dccb}
+body.home-v2 .light :is(.related-card,.service-card,.article-card):not(.pro-case),
+body.home-v2 .light :is(.related-card,.service-card,.article-card):visited{color:#171b1d!important}
+body.home-v2 .light :is(.related-card-title,.service-card-title,.p-title){color:#171b1d}
+body.home-v2 .light :is(.related-card-desc,.service-card-desc,.p-text){color:#414741}
+body.home-v2 .light .pro-case,body.home-v2 .light .proof-document{color:#f5f0e8}
+body.home-v2 .light .pro-case :is(p,h3),body.home-v2 .light .proof-document :is(p,h3){color:#eee7db}
+body.home-v2 .light .pro-case .text-link,body.home-v2 .light .pro-case .text-link:visited,
+body.home-v2 .light .proof-document .text-link,body.home-v2 .light .proof-document .text-link:visited{color:#dfc28b!important}
+body.home-v2 :is(.related-card-desc,.service-card-desc,.p-text){font-size:.95rem;line-height:1.8}
+body.home-v2 .lead{font-size:1rem;line-height:1.8}
+body.home-v2 .button{font-size:.82rem;font-weight:600;min-height:52px}
+body.home-v2 :is(.field label,.hero-quote-note,.hero-detail){font-size:.8rem}
+body.home-v2 .hero-quote-note{line-height:1.7}
+@media(max-width:650px){
+ body.home-v2 .hero-v2 .lead{font-size:.98rem}
+ body.home-v2 .actions .button{font-size:.8rem}
+ body.home-v2 :is(.related-card-desc,.service-card-desc,.p-text){font-size:.95rem}
+}
