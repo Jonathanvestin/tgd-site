@@ -1,9 +1,36 @@
 /* One mobile navigation across the main site. */
 (function () {
+/* A successful form submission leads to its own confirmation page. No personal data is stored here. */
+var confirmationKey='tgd-form-confirmation';
+var confirmationRoutes={'form-hero':'express','form-contact':'contact','form-mission':'mission'};
+function readConfirmation(){
+ try{var value=JSON.parse(sessionStorage.getItem(confirmationKey)||'null');return value&&Object.values(confirmationRoutes).indexOf(value.source)!==-1&&value.expires>Date.now()?value:null;}catch(error){return null;}
+}
+function confirmationSource(){return location.pathname.match(/^\/demande-envoyee\/(express|contact|mission)\/?$/);}
+function showConfirmation(){
+ var route=confirmationSource(),receipt=readConfirmation();
+ if(!route||!receipt||route[1]!==receipt.source)return;
+ document.getElementById('confirmation-title').textContent='Votre demande a bien été transmise.';
+ document.getElementById('confirmation-message').textContent='Merci. Les informations de votre demande ont été envoyées à The Gentleman Driver.';
+ document.getElementById('confirmation-next').hidden=false;
+ var link=document.getElementById('confirmation-contact');link.textContent='Consulter nos prestations';link.href='/convoyage';
+}
+if(location.pathname.indexOf('/demande-envoyee')===0)showConfirmation();
+document.addEventListener('tgd:form-success',function(event){
+ var source=confirmationRoutes[event.detail&&event.detail.formId];if(!source)return;
+ try{sessionStorage.setItem(confirmationKey,JSON.stringify({source:source,expires:Date.now()+30*60*1000,counted:false}));}catch(error){return;}
+ location.assign('/demande-envoyee/'+source);
+});
 /* Web Analytics Hobby: page views only; no paid custom-event collection. */
 function installPageAnalytics(){
  if(location.hostname!=='www.thegentlemandriver.fr'||navigator.doNotTrack==='1'||window.doNotTrack==='1')return;
  if(document.getElementById('tgd-page-analytics'))return;
+ var route=confirmationSource();
+ if(location.pathname.indexOf('/demande-envoyee')===0){
+  var receipt=readConfirmation();
+  if(!route||!receipt||receipt.source!==route[1]||receipt.counted)return;
+  receipt.counted=true;try{sessionStorage.setItem(confirmationKey,JSON.stringify(receipt));}catch(error){return;}
+ }
  window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};
  window.va('beforeSend',function(event){
   if(event.type==='event')return null;

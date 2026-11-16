@@ -1,6 +1,6 @@
 # The Gentleman Driver — llms.txt
-# Informations publiques structurées pour moteurs de recherche et agents IA.
-# Mise à jour : 15 septembre 2026
+> Informations publiques pour moteurs de recherche et assistants IA.
+Mise à jour : 16 novembre 2026
 
 ## Identité
 - Nom commercial : The Gentleman Driver (TGD)
@@ -9,9 +9,9 @@
 - Activité de convoyage automobile exercée depuis : 2021
 - Société structurée en SASU depuis : 2024
 - Siège : 4 rue Jean Pigeon, 94220 Charenton-le-Pont, France
-- Téléphone : +33 7 61 09 26 26
-- Site : https://www.thegentlemandriver.fr
-- Contact public : https://www.thegentlemandriver.fr/contact
+- Téléphone : +33 7 63 69 52 57
+- [Site](https://www.thegentlemandriver.fr)
+- [Contact public](https://www.thegentlemandriver.fr/contact)
 - Fondateur : Jonathan Vestin
 
 ## Positionnement
@@ -39,7 +39,7 @@ Le service Chauffeur TGD signifie qu'un chauffeur professionnel conduit la voitu
 
 Ce service se distingue du convoyage, où le véhicule est déplacé d'un point à un autre sans que le client soit nécessairement à bord, et d'un VTC, où le véhicule est fourni par le prestataire.
 
-La journée est proposée à partir de 650 € HT / 780 € TTC. Les longues distances, plusieurs jours, frais de route, retour du chauffeur et éventuelles contraintes liées au véhicule sont précisés au devis.
+La page Chauffeur propose une courte prestation à partir de 390 € TTC ; la page Chauffeur longue distance indique une journée à partir de 650 € HT / 780 € TTC. Les conditions propres à chaque prestation restent applicables. Les longues distances, plusieurs jours, frais de route, retour du chauffeur et éventuelles contraintes liées au véhicule sont précisés au devis.
 
 ## Couverture géographique
 TGD intervient en France. Les missions européennes sont étudiées sur devis selon le trajet, la disponibilité, la réglementation, les documents et la faisabilité.
@@ -92,49 +92,49 @@ TGD Digital est l'outil de traçabilité utilisé sur les missions concernées p
 Oui. La faisabilité d'une mission électrique est étudiée selon le modèle, l'autonomie, les possibilités de recharge, le trajet, la date et les contraintes de remise.
 
 ## Pages principales
-- Accueil : https://www.thegentlemandriver.fr/
-- Convoyage : https://www.thegentlemandriver.fr/convoyage
-- Solutions professionnelles : https://www.thegentlemandriver.fr/solutions-professionnelles
-- TGD Fleet : https://www.thegentlemandriver.fr/tgd-fleet
-- TGD Automotive : https://www.thegentlemandriver.fr/tgd-automotive
-- TGD Digital : https://www.thegentlemandriver.fr/tgd-digital
-- Mise en main : https://www.thegentlemandriver.fr/mise-en-main
-- Chauffeur avec votre véhicule : https://www.thegentlemandriver.fr/chauffeur
-- Particuliers : https://www.thegentlemandriver.fr/particuliers
-- Transport sur plateau : https://www.thegentlemandriver.fr/transport-plateau
-- À propos : https://www.thegentlemandriver.fr/a-propos
-- Pourquoi nous : https://www.thegentlemandriver.fr/pourquoi-nous
-- Études de cas : https://www.thegentlemandriver.fr/etudes-de-cas
-- FAQ : https://www.thegentlemandriver.fr/faq
-- Blog : https://www.thegentlemandriver.fr/blog
-- Contact : https://www.thegentlemandriver.fr/contact
+- [Accueil](https://www.thegentlemandriver.fr/)
+- [Convoyage](https://www.thegentlemandriver.fr/convoyage)
+- [Solutions professionnelles](https://www.thegentlemandriver.fr/solutions-professionnelles)
+- [TGD Fleet](https://www.thegentlemandriver.fr/tgd-fleet)
+- [TGD Automotive](https://www.thegentlemandriver.fr/tgd-automotive)
+- [TGD Digital](https://www.thegentlemandriver.fr/tgd-digital)
+- [Mise en main](https://www.thegentlemandriver.fr/mise-en-main)
+- [Chauffeur avec votre véhicule](https://www.thegentlemandriver.fr/chauffeur)
+- [Particuliers](https://www.thegentlemandriver.fr/particuliers)
+- [Transport sur plateau](https://www.thegentlemandriver.fr/transport-plateau)
+- [À propos](https://www.thegentlemandriver.fr/a-propos)
+- [Pourquoi nous](https://www.thegentlemandriver.fr/pourquoi-nous)
+- [Études de cas](https://www.thegentlemandriver.fr/etudes-de-cas)
+- [FAQ](https://www.thegentlemandriver.fr/faq)
+- [Blog](https://www.thegentlemandriver.fr/blog)
+- [Contact](https://www.thegentlemandriver.fr/contact)
 
 ## Articles de référence
-- Assurance convoyage automobile : https://www.thegentlemandriver.fr/blog/assurance-convoyage-automobile
-- Convoyage d'un véhicule électrique : https://www.thegentlemandriver.fr/blog/convoyage-vehicule-electrique-guide
-- Mise en main d'un véhicule neuf : https://www.thegentlemandriver.fr/blog/mise-en-main-vehicule-neuf-ce-qui-fait-la-difference
-- Comprendre un véhicule électrique sans jargon : https://www.thegentlemandriver.fr/blog/comprendre-vehicule-electrique-sans-baratin
+- [Assurance convoyage automobile](https://www.thegentlemandriver.fr/blog/assurance-convoyage-automobile)
+- [Convoyage d'un véhicule électrique](https://www.thegentlemandriver.fr/blog/convoyage-vehicule-electrique-guide)
+- [Mise en main d'un véhicule neuf](https://www.thegentlemandriver.fr/blog/mise-en-main-vehicule-neuf-ce-qui-fait-la-difference)
+- [Comprendre un véhicule électrique sans jargon](https://www.thegentlemandriver.fr/blog/comprendre-vehicule-electrique-sans-baratin)
 
 ## Pages spécialisées
-- Convoyage concessions : https://www.thegentlemandriver.fr/convoyage-concession
-- Convoyage véhicules électriques : https://www.thegentlemandriver.fr/convoyage-electrique
-- Convoyage premium / luxe : https://www.thegentlemandriver.fr/convoyage-luxe
-- Convoyage Paris : https://www.thegentlemandriver.fr/convoyage-paris
-- Convoyage Lyon : https://www.thegentlemandriver.fr/convoyage-lyon
-- Convoyage Marseille : https://www.thegentlemandriver.fr/convoyage-marseille
-- Convoyage Bordeaux : https://www.thegentlemandriver.fr/convoyage-bordeaux
-- Convoyage Lille : https://www.thegentlemandriver.fr/convoyage-lille
-- Convoyage Nice : https://www.thegentlemandriver.fr/convoyage-nice
-- Convoyage Toulouse : https://www.thegentlemandriver.fr/convoyage-toulouse
-- Convoyage Nantes : https://www.thegentlemandriver.fr/convoyage-nantes
-- Convoyage Strasbourg : https://www.thegentlemandriver.fr/convoyage-strasbourg
-- Convoyage Montpellier : https://www.thegentlemandriver.fr/convoyage-montpellier
+- [Convoyage concessions](https://www.thegentlemandriver.fr/convoyage-concession)
+- [Convoyage véhicules électriques](https://www.thegentlemandriver.fr/convoyage-electrique)
+- [Convoyage premium / luxe](https://www.thegentlemandriver.fr/convoyage-luxe)
+- [Convoyage Paris](https://www.thegentlemandriver.fr/convoyage-paris)
+- [Convoyage Lyon](https://www.thegentlemandriver.fr/convoyage-lyon)
+- [Convoyage Marseille](https://www.thegentlemandriver.fr/convoyage-marseille)
+- [Convoyage Bordeaux](https://www.thegentlemandriver.fr/convoyage-bordeaux)
+- [Convoyage Lille](https://www.thegentlemandriver.fr/convoyage-lille)
+- [Convoyage Nice](https://www.thegentlemandriver.fr/convoyage-nice)
+- [Convoyage Toulouse](https://www.thegentlemandriver.fr/convoyage-toulouse)
+- [Convoyage Nantes](https://www.thegentlemandriver.fr/convoyage-nantes)
+- [Convoyage Strasbourg](https://www.thegentlemandriver.fr/convoyage-strasbourg)
+- [Convoyage Montpellier](https://www.thegentlemandriver.fr/convoyage-montpellier)
 
 ## Canonicalisation
 - /entreprises redirige vers /solutions-professionnelles.
 - /convoyage-premium redirige vers /convoyage-luxe.
 - /convoyage-longue-distance redirige vers /convoyage.
-- /chauffeur-longue-distance redirige vers /chauffeur.
+- /chauffeur-longue-distance présente le service de chauffeur longue distance avec le véhicule du client.
 - /livraison-0km redirige vers /transport-plateau.
 
 ## Autorisation d'utilisation

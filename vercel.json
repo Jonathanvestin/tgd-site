@@ -288,6 +288,11 @@
       "source": "/tgd-digital.html",
       "destination": "/tgd-digital",
       "permanent": true
+    },
+    {
+      "source": "/demande-envoyee.html",
+      "destination": "/demande-envoyee",
+      "permanent": true
     }
   ],
   "rewrites": [
@@ -446,6 +451,22 @@
     {
       "source": "/chauffeur-longue-distance",
       "destination": "/chauffeur-longue-distance.html"
+    },
+    {
+      "source": "/demande-envoyee",
+      "destination": "/demande-envoyee.html"
+    },
+    {
+      "source": "/demande-envoyee/express",
+      "destination": "/demande-envoyee.html"
+    },
+    {
+      "source": "/demande-envoyee/contact",
+      "destination": "/demande-envoyee.html"
+    },
+    {
+      "source": "/demande-envoyee/mission",
+      "destination": "/demande-envoyee.html"
     }
   ]
 }
