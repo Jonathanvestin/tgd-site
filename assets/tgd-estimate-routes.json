@@ -1,0 +1,604 @@
+[
+  {
+    "department": "1",
+    "city": "BOURG EN BRESSE",
+    "km": 429.1,
+    "thermal": 540,
+    "electric": 650
+  },
+  {
+    "department": "2",
+    "city": "SOISSONS",
+    "km": 104.1,
+    "thermal": 290,
+    "electric": 350
+  },
+  {
+    "department": "3",
+    "city": "MOULINS",
+    "km": 300.3,
+    "thermal": 430,
+    "electric": 520
+  },
+  {
+    "department": "4",
+    "city": "DIGNE LES BAINS",
+    "km": 752.7,
+    "thermal": 740,
+    "electric": 890
+  },
+  {
+    "department": "5",
+    "city": "BRIANCON",
+    "km": 688.7,
+    "thermal": 700,
+    "electric": 840
+  },
+  {
+    "department": "6",
+    "city": "NICE",
+    "km": 931.8,
+    "thermal": 1040,
+    "electric": 1250
+  },
+  {
+    "department": "7",
+    "city": "PRIVAS",
+    "km": 602.5,
+    "thermal": 670,
+    "electric": 810
+  },
+  {
+    "department": "8",
+    "city": "SEDAN",
+    "km": 239.8,
+    "thermal": 370,
+    "electric": 450
+  },
+  {
+    "department": "9",
+    "city": "FOIX",
+    "km": 761.9,
+    "thermal": 770,
+    "electric": 930
+  },
+  {
+    "department": "10",
+    "city": "TROYES",
+    "km": 163.3,
+    "thermal": 300,
+    "electric": 360
+  },
+  {
+    "department": "11",
+    "city": "NARBONNE",
+    "km": 786.3,
+    "thermal": 800,
+    "electric": 960
+  },
+  {
+    "department": "12",
+    "city": "RODEZ",
+    "km": 657.5,
+    "thermal": 700,
+    "electric": 840
+  },
+  {
+    "department": "13",
+    "city": "MARSEILLE",
+    "km": 773.8,
+    "thermal": 750,
+    "electric": 900
+  },
+  {
+    "department": "14",
+    "city": "CAEN",
+    "km": 247.8,
+    "thermal": 380,
+    "electric": 460
+  },
+  {
+    "department": "15",
+    "city": "AURILLAC",
+    "km": 557.2,
+    "thermal": 640,
+    "electric": 770
+  },
+  {
+    "department": "16",
+    "city": "ANGOULEME",
+    "km": 450.3,
+    "thermal": 570,
+    "electric": 690
+  },
+  {
+    "department": "17",
+    "city": "LA ROCHELLE",
+    "km": 471.5,
+    "thermal": 570,
+    "electric": 690
+  },
+  {
+    "department": "18",
+    "city": "BOURGES",
+    "km": 246.8,
+    "thermal": 380,
+    "electric": 460
+  },
+  {
+    "department": "19",
+    "city": "TULLE",
+    "km": 476,
+    "thermal": 560,
+    "electric": 680
+  },
+  {
+    "department": "21",
+    "city": "DIJON",
+    "km": 315,
+    "thermal": 440,
+    "electric": 530
+  },
+  {
+    "department": "22",
+    "city": "SAINT BRIEUC",
+    "km": 448.6,
+    "thermal": 570,
+    "electric": 690
+  },
+  {
+    "department": "23",
+    "city": "GUERET",
+    "km": 390.3,
+    "thermal": 510,
+    "electric": 620
+  },
+  {
+    "department": "24",
+    "city": "PERIGUEUX",
+    "km": 486.8,
+    "thermal": 570,
+    "electric": 690
+  },
+  {
+    "department": "25",
+    "city": "BESANCON",
+    "km": 410,
+    "thermal": 520,
+    "electric": 630
+  },
+  {
+    "department": "26",
+    "city": "VALENCE",
+    "km": 562.9,
+    "thermal": 620,
+    "electric": 750
+  },
+  {
+    "department": "27",
+    "city": "EVREUX",
+    "km": 108.6,
+    "thermal": 270,
+    "electric": 330
+  },
+  {
+    "department": "28",
+    "city": "CHARTRES",
+    "km": 91,
+    "thermal": 230,
+    "electric": 280
+  },
+  {
+    "department": "29",
+    "city": "QUIMPER",
+    "km": 564.4,
+    "thermal": 620,
+    "electric": 750
+  },
+  {
+    "department": "30",
+    "city": "NIMES",
+    "km": 711.8,
+    "thermal": 720,
+    "electric": 870
+  },
+  {
+    "department": "31",
+    "city": "TOULOUSE",
+    "km": 678.5,
+    "thermal": 700,
+    "electric": 840
+  },
+  {
+    "department": "32",
+    "city": "AUCH",
+    "km": 713.7,
+    "thermal": 720,
+    "electric": 870
+  },
+  {
+    "department": "33",
+    "city": "BORDEAUX",
+    "km": 584,
+    "thermal": 630,
+    "electric": 760
+  },
+  {
+    "department": "34",
+    "city": "MONTPELLIER",
+    "km": 750.6,
+    "thermal": 740,
+    "electric": 890
+  },
+  {
+    "department": "35",
+    "city": "RENNES",
+    "km": 349.5,
+    "thermal": 470,
+    "electric": 570
+  },
+  {
+    "department": "36",
+    "city": "CHATEAUROUX",
+    "km": 268.6,
+    "thermal": 400,
+    "electric": 480
+  },
+  {
+    "department": "37",
+    "city": "TOURS",
+    "km": 239.2,
+    "thermal": 370,
+    "electric": 450
+  },
+  {
+    "department": "38",
+    "city": "GRENOBLE",
+    "km": 577.9,
+    "thermal": 630,
+    "electric": 760
+  },
+  {
+    "department": "39",
+    "city": "LONS LE SAUNIER",
+    "km": 413,
+    "thermal": 520,
+    "electric": 630
+  },
+  {
+    "department": "40",
+    "city": "MONT DE MARSAN",
+    "km": 712,
+    "thermal": 720,
+    "electric": 870
+  },
+  {
+    "department": "41",
+    "city": "BLOIS",
+    "km": 183.9,
+    "thermal": 320,
+    "electric": 390
+  },
+  {
+    "department": "42",
+    "city": "SAINT ETIENNE",
+    "km": 477.9,
+    "thermal": 600,
+    "electric": 720
+  },
+  {
+    "department": "43",
+    "city": "LE PUY EN VELAY",
+    "km": 541.3,
+    "thermal": 640,
+    "electric": 770
+  },
+  {
+    "department": "44",
+    "city": "NANTES",
+    "km": 381.8,
+    "thermal": 500,
+    "electric": 600
+  },
+  {
+    "department": "45",
+    "city": "ORLEANS",
+    "km": 131.8,
+    "thermal": 270,
+    "electric": 330
+  },
+  {
+    "department": "46",
+    "city": "CAHORS",
+    "km": 574.6,
+    "thermal": 660,
+    "electric": 800
+  },
+  {
+    "department": "47",
+    "city": "AGEN",
+    "km": 715.2,
+    "thermal": 720,
+    "electric": 870
+  },
+  {
+    "department": "48",
+    "city": "MENDE",
+    "km": 589,
+    "thermal": 640,
+    "electric": 770
+  },
+  {
+    "department": "49",
+    "city": "ANGERS",
+    "km": 295.6,
+    "thermal": 420,
+    "electric": 510
+  },
+  {
+    "department": "50",
+    "city": "SAINT LO",
+    "km": 320.2,
+    "thermal": 440,
+    "electric": 530
+  },
+  {
+    "department": "51",
+    "city": "REIMS",
+    "km": 137.3,
+    "thermal": 300,
+    "electric": 360
+  },
+  {
+    "department": "52",
+    "city": "CHAUMONT",
+    "km": 255.8,
+    "thermal": 390,
+    "electric": 470
+  },
+  {
+    "department": "53",
+    "city": "LAVAL",
+    "km": 283.5,
+    "thermal": 410,
+    "electric": 500
+  },
+  {
+    "department": "54",
+    "city": "NANCY",
+    "km": 379,
+    "thermal": 500,
+    "electric": 600
+  },
+  {
+    "department": "55",
+    "city": "BAR LE DUC",
+    "km": 245.3,
+    "thermal": 380,
+    "electric": 460
+  },
+  {
+    "department": "56",
+    "city": "LORIENT",
+    "km": 500.7,
+    "thermal": 580,
+    "electric": 700
+  },
+  {
+    "department": "57",
+    "city": "METZ",
+    "km": 324.6,
+    "thermal": 450,
+    "electric": 540
+  },
+  {
+    "department": "58",
+    "city": "NEVERS",
+    "km": 241.2,
+    "thermal": 370,
+    "electric": 450
+  },
+  {
+    "department": "59",
+    "city": "LILLE",
+    "km": 223.1,
+    "thermal": 360,
+    "electric": 440
+  },
+  {
+    "department": "60",
+    "city": "BEAUVAIS",
+    "km": 99.9,
+    "thermal": 250,
+    "electric": 300
+  },
+  {
+    "department": "61",
+    "city": "ALENCON",
+    "km": 248.4,
+    "thermal": 380,
+    "electric": 460
+  },
+  {
+    "department": "62",
+    "city": "ARRAS",
+    "km": 184,
+    "thermal": 320,
+    "electric": 390
+  },
+  {
+    "department": "63",
+    "city": "CLERMONT FERRAND",
+    "km": 421.9,
+    "thermal": 540,
+    "electric": 650
+  },
+  {
+    "department": "64",
+    "city": "PAU",
+    "km": 783.6,
+    "thermal": 840,
+    "electric": 1010
+  },
+  {
+    "department": "65",
+    "city": "TARBES",
+    "km": 829,
+    "thermal": 840,
+    "electric": 1010
+  },
+  {
+    "department": "66",
+    "city": "PERPIGNAN",
+    "km": 847.1,
+    "thermal": 840,
+    "electric": 1010
+  },
+  {
+    "department": "67",
+    "city": "STRASBOURG",
+    "km": 485.6,
+    "thermal": 570,
+    "electric": 690
+  },
+  {
+    "department": "68",
+    "city": "COLMAR",
+    "km": 549.1,
+    "thermal": 610,
+    "electric": 740
+  },
+  {
+    "department": "69",
+    "city": "LYON",
+    "km": 465.5,
+    "thermal": 560,
+    "electric": 680
+  },
+  {
+    "department": "70",
+    "city": "VESOUL",
+    "km": 357,
+    "thermal": 480,
+    "electric": 580
+  },
+  {
+    "department": "71",
+    "city": "MACON",
+    "km": 396.1,
+    "thermal": 510,
+    "electric": 620
+  },
+  {
+    "department": "72",
+    "city": "LE MANS",
+    "km": 208.2,
+    "thermal": 340,
+    "electric": 410
+  },
+  {
+    "department": "73",
+    "city": "CHAMBERY",
+    "km": 570.7,
+    "thermal": 670,
+    "electric": 810
+  },
+  {
+    "department": "74",
+    "city": "ANNECY",
+    "km": 543.1,
+    "thermal": 650,
+    "electric": 780
+  },
+  {
+    "department": "76",
+    "city": "ROUEN",
+    "km": 145,
+    "thermal": 280,
+    "electric": 340
+  },
+  {
+    "department": "79",
+    "city": "NIORT",
+    "km": 411.2,
+    "thermal": 520,
+    "electric": 630
+  },
+  {
+    "department": "80",
+    "city": "AMIENS",
+    "km": 154.9,
+    "thermal": 290,
+    "electric": 350
+  },
+  {
+    "department": "81",
+    "city": "ALBI",
+    "km": 681.3,
+    "thermal": 750,
+    "electric": 900
+  },
+  {
+    "department": "82",
+    "city": "MONTAUBAN",
+    "km": 624.3,
+    "thermal": 750,
+    "electric": 900
+  },
+  {
+    "department": "83",
+    "city": "TOULON",
+    "km": 839.2,
+    "thermal": 840,
+    "electric": 1010
+  },
+  {
+    "department": "84",
+    "city": "AVIGNON",
+    "km": 688.3,
+    "thermal": 700,
+    "electric": 840
+  },
+  {
+    "department": "85",
+    "city": "LA ROCHE SUR YON",
+    "km": 422.8,
+    "thermal": 530,
+    "electric": 640
+  },
+  {
+    "department": "86",
+    "city": "POITIERS",
+    "km": 343.7,
+    "thermal": 460,
+    "electric": 560
+  },
+  {
+    "department": "87",
+    "city": "LIMOGES",
+    "km": 391.9,
+    "thermal": 510,
+    "electric": 620
+  },
+  {
+    "department": "88",
+    "city": "EPINAL",
+    "km": 381,
+    "thermal": 500,
+    "electric": 600
+  },
+  {
+    "department": "89",
+    "city": "AUXERRE",
+    "km": 168.2,
+    "thermal": 310,
+    "electric": 380
+  },
+  {
+    "department": "90",
+    "city": "BELFORT",
+    "km": 498.1,
+    "thermal": 580,
+    "electric": 700
+  }
+]
