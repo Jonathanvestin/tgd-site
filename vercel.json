@@ -293,6 +293,11 @@
       "source": "/demande-envoyee.html",
       "destination": "/demande-envoyee",
       "permanent": true
+    },
+    {
+      "source": "/estimer-un-convoyage.html",
+      "destination": "/estimer-un-convoyage",
+      "permanent": true
     }
   ],
   "rewrites": [
@@ -467,6 +472,10 @@
     {
       "source": "/demande-envoyee/mission",
       "destination": "/demande-envoyee.html"
+    },
+    {
+      "source": "/estimer-un-convoyage",
+      "destination": "/estimer-un-convoyage.html"
     }
   ]
 }
