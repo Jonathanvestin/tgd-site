@@ -1,6 +1,18 @@
 (function(){
 'use strict';
-function track(name,properties){var safe=properties||{};if(typeof window.va==='function')window.va('event',{name:name,data:safe});window.dataLayer=window.dataLayer||[];window.dataLayer.push(Object.assign({event:name},safe));}
+/* Web Analytics Hobby: page views only; no paid custom-event collection. */
+function installPageAnalytics(){
+ if(location.hostname!=='www.thegentlemandriver.fr'||navigator.doNotTrack==='1'||window.doNotTrack==='1')return;
+ if(document.getElementById('tgd-page-analytics'))return;
+ window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};
+ window.va('beforeSend',function(event){
+  if(event.type==='event')return null;
+  try{var url=new URL(event.url);url.search='';url.hash='';return Object.assign({},event,{url:url.toString()});}catch(error){return null;}
+ });
+ var script=document.createElement('script');script.id='tgd-page-analytics';script.defer=true;script.src='/_vercel/insights/script.js';document.head.appendChild(script);
+}
+installPageAnalytics();
+function track(name,properties){var safe=properties||{};window.dataLayer=window.dataLayer||[];window.dataLayer.push(Object.assign({event:name},safe));}
 function installUnifiedNav(){
  var links=document.querySelector('.nav-links');if(links)links.innerHTML='<li><a href="/convoyage">Convoyage</a></li><li class="nav-dropdown"><a href="/solutions-professionnelles" class="nav-dropdown-toggle">Solutions Pro</a><ul class="nav-dropdown-menu"><li><a href="/solutions-professionnelles">Vue d\'ensemble</a></li><li><a href="/tgd-fleet">TGD Fleet</a></li><li><a href="/tgd-automotive">TGD Automotive</a></li><li><a href="/tgd-digital">TGD Digital</a></li><li><a href="/convoyage-concession">Concessions</a></li></ul></li><li><a href="/chauffeur">Chauffeur</a></li><li><a href="/particuliers">Particuliers</a></li><li><a href="/a-propos">À propos</a></li>';
  var navCta=document.querySelector('nav .nav-cta');if(navCta){navCta.href='/contact';navCta.textContent='Confier une mission';}
