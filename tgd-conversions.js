@@ -1,6 +1,6 @@
 (function(){
 'use strict';
-function track(name,properties){var safe=properties||{};if(typeof window.va==='function')window.va('event',{name:name,data:safe});window.dataLayer=window.dataLayer||[];window.dataLayer.push(Object.assign({event:name},safe));}
+function track(name,properties){var safe=properties||{};window.dataLayer=window.dataLayer||[];window.dataLayer.push(Object.assign({event:name},safe));}
 function installUnifiedNav(){
  var links=document.querySelector('.nav-links');if(links)links.innerHTML='<li><a href="/convoyage">Convoyage</a></li><li class="nav-dropdown"><a href="/solutions-professionnelles" class="nav-dropdown-toggle">Solutions Pro</a><ul class="nav-dropdown-menu"><li><a href="/solutions-professionnelles">Vue d\'ensemble</a></li><li><a href="/tgd-fleet">TGD Fleet</a></li><li><a href="/tgd-automotive">TGD Automotive</a></li><li><a href="/tgd-digital">TGD Digital</a></li><li><a href="/convoyage-concession">Concessions</a></li></ul></li><li><a href="/chauffeur">Chauffeur</a></li><li><a href="/particuliers">Particuliers</a></li><li><a href="/a-propos">À propos</a></li>';
  var navCta=document.querySelector('nav .nav-cta');if(navCta){navCta.href='/contact';navCta.textContent='Confier une mission';}
