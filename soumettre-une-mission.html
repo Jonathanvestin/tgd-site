@@ -85,7 +85,7 @@
 </footer>
 
   <script>
-    document.querySelector('form').addEventListener('submit',async function(e){e.preventDefault();var f=e.target,s=f.querySelector('.status'),b=f.querySelector('button');b.disabled=true;s.textContent='Envoi en cours…';try{var r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}});if(!r.ok)throw new Error();s.textContent='Merci, votre mission a bien été transmise.';f.reset()}catch(err){s.textContent='Une erreur est survenue. Vous pouvez nous appeler au 07 63 69 52 57.'}finally{b.disabled=false}});
+    document.querySelector('form').addEventListener('submit',async function(e){e.preventDefault();var f=e.target,s=f.querySelector('.status'),b=f.querySelector('button');b.disabled=true;s.textContent='Envoi en cours…';try{var r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}});if(!r.ok)throw new Error();s.textContent='Merci, votre mission a bien été transmise.';document.dispatchEvent(new CustomEvent('tgd:form-success',{detail:{formId:f.id}}));f.reset()}catch(err){s.textContent='Une erreur est survenue. Vous pouvez nous appeler au 07 63 69 52 57.'}finally{b.disabled=false}});
   </script>
 <script src="/assets/tgd-mobile-shell.js"></script>
 </body>
