@@ -1,0 +1,34 @@
+/* Service detail pages share the B2B design; preserve existing service terms. */
+.service-section p{font-size:.88rem;line-height:1.95;margin-top:18px}.service-section h2{margin-bottom:25px}.service-section h3,.related-card-title,.p-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:2rem;line-height:1.2;margin-bottom:14px}.service-section .head{margin-bottom:32px}.related-grid,.service-section .cards,.compare-grid,.frame-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.related-card,.service-section .card,.compare-card,.frame-card{display:block;padding:28px;border:1px solid var(--line)}.light .related-card,.light .card,.light .compare-card,.light .frame-card{border-color:#cec5b7}.related-card-desc{font-size:.84rem;line-height:1.9}.related-card[href]{text-decoration:none}.related-card[href]:hover{border-color:#9b7845}.service-section .process,.process-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:25px}.step,.p-step{border-top:1px solid var(--line);padding-top:20px}.p-num,.num,.step>span{font-size:.72rem;color:#a18351;margin-bottom:18px}.p1-links,.service-section .actions{display:flex;flex-wrap:wrap;gap:22px;margin-top:26px}.p1-link,.p1-links>a:not(.button){text-underline-offset:5px}.service-section details{border-top:1px solid var(--line);padding:20px 0}.service-section summary{font-size:.92rem;cursor:pointer;line-height:1.7;font-weight:600}.service-section details p{max-width:850px}.service-section .two,.service-section .conditions{display:grid;grid-template-columns:1.2fr 1fr;gap:45px}.price,.statement{padding:32px;border-left:3px solid #a18351;background:#ffffff08}.light .price{background:#ffffff80}.amount{font-family:'Cormorant Garamond',Georgia,serif;font-size:3rem;line-height:1.2;margin:20px 0;color:#75582c}.fine{font-size:.78rem!important}.checklist{padding-left:22px;line-height:2.2}.service-section a{overflow-wrap:anywhere}.service-section .eyebrow{margin-top:0}.service-section .related-grid{margin-top:30px}
+@media(max-width:900px){.service-section .process,.process-grid{grid-template-columns:1fr 1fr}.service-section .two,.service-section .conditions{grid-template-columns:1fr}}
+@media(max-width:650px){.related-grid,.service-section .cards,.compare-grid,.frame-grid{grid-template-columns:1fr}.related-card,.service-section .card,.compare-card,.frame-card{padding:22px}.amount{font-size:2.5rem}.price{padding:24px}}
+@media(max-width:360px){.service-section .process,.process-grid{grid-template-columns:1fr}}
+/* Light service cards must override the legacy white link colour, including visited links. */
+.service-v2 .service-section.light .related-grid>a.related-card,
+.service-v2 .service-section.light .related-grid>a.related-card:visited{color:#171b1d!important;background:#fffdf8}
+.service-v2 .service-section.light .related-card-title{color:#171b1d}
+.service-v2 .service-section.light .related-card-desc{color:#4c514d}
+.service-v2 .service-section.light .related-grid>a.related-card:hover{background:#eae2d5;border-color:#795b2b}
+.service-v2 .service-section.light .related-grid>a.related-card:focus-visible{outline:3px solid #795b2b;outline-offset:4px}
+/* Route choices and practical information on consumer/plateau pages. */
+.service-v2 .service-section .service-grid,.service-v2 .service-section .steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:28px}
+.service-v2 .service-section .service-card,.service-v2 .service-section .steps>div{display:block;padding:26px;border:1px solid #bdb3a3;text-decoration:none;color:inherit!important}
+.service-v2 .service-section .service-card-title,.service-v2 .service-section .step-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:2rem;margin:12px 0}
+.service-v2 .service-section.light .service-card,.service-v2 .service-section.light .service-card:visited{background:#fffdf8;color:#171b1d!important}
+.service-v2 .service-section.light .service-card *{color:#171b1d}
+.service-v2 .service-section .service-card-desc{font-size:.87rem;line-height:1.9}
+.service-v2 .service-section .assurance-box{padding:26px;border:1px solid var(--line);margin-top:26px}
+@media(max-width:650px){.service-v2 .service-section .service-grid,.service-v2 .service-section .steps{grid-template-columns:1fr}}
+/* Network operations: preserve the content within the shared service layout. */
+.service-v2 .use-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px;margin-top:30px}
+.service-v2 .use-card,.service-v2 .process-card{padding:25px;border:1px solid var(--line)}
+.service-v2 .light .use-card,.service-v2 .light .process-card{border-color:#cfc7b9}
+.service-v2 .use-label,.service-v2 .process-number,.service-v2 .kicker{font-size:.7rem;letter-spacing:.1em;color:#c9a96e;margin-bottom:17px}
+.service-v2 .light .use-label,.service-v2 .light .process-number,.service-v2 .light .kicker{color:#795b2b}
+.service-v2 .digital-panel,.service-v2 .handover{padding:30px;border:1px solid var(--line);margin-top:25px}
+.service-v2 .light .digital-panel,.service-v2 .light .handover{border-color:#cfc7b9}
+.service-v2 .digital-items{display:flex;gap:16px;flex-wrap:wrap;padding:24px 0;font-size:.85rem}
+.service-v2 .btn-ghost{color:inherit;text-underline-offset:5px}
+@media(max-width:900px){.service-v2 .use-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:650px){.service-v2 .use-grid{grid-template-columns:1fr}.service-v2 .digital-panel,.service-v2 .handover{padding:22px}}
+.prestige-v2 .service-section>.wrap{max-width:1050px}.prestige-v2 .service-section ul{padding-left:23px;font-size:.88rem;line-height:2}.prestige-v2 .service-section li{margin:16px 0}.prestige-v2 .service-section h3{margin-top:32px}.prestige-v2 .highlight-box{margin:30px 0;padding:22px 26px;border-left:3px solid #96713a;background:#ded3bf}.prestige-v2 .highlight-box p{margin-top:0}.prestige-v2 .faq-a{display:block;padding-top:10px}.prestige-v2 .related-card-label,.prestige-v2 .related-card-arrow{font-size:.75rem}.prestige-v2 .light p[style]{color:#555954!important}

@@ -45,7 +45,7 @@ function installEntitySchema(){
     alternateName:'TGD',
     legalName:'THE GENTLEMAN DRIVER SASU',
     url:'https://www.thegentlemandriver.fr/',
-    telephone:'+33761092626',
+    telephone:'+33763695257',
     foundingDate:'2021',
     description:'The Gentleman Driver organise des missions de convoyage automobile, mise en main, chauffeur avec le véhicule du client et transport sur plateau en France. Les missions européennes sont étudiées sur devis selon le trajet, la disponibilité, la réglementation, les documents et la faisabilité.',
     address:{'@type':'PostalAddress',streetAddress:'4 rue Jean Pigeon',addressLocality:'Charenton-le-Pont',postalCode:'94220',addressRegion:'Île-de-France',addressCountry:'FR'},
@@ -96,6 +96,6 @@ function upgradeHome(){
  if(!document.body.classList.contains('site-home'))return;
  // Le contenu de la Home est désormais piloté directement par le HTML : pas de réécriture éditoriale côté JavaScript.
 }
-async function load(){installEntitySchema();installShell();upgradeHome();neutralReviewState();const w=document.querySelectorAll('.tgd-reviews-widget'),d=document.querySelectorAll('.tgd-rating-total,.tgd-rating-number,.tgd-rating-score');if(!w.length&&!d.length)return;try{const r=await fetch('/api/reviews',{cache:'no-store'});if(!r.ok)throw 0;const x=await r.json();render(w,Array.isArray(x.reviews)&&x.reviews.length?x.reviews:FALLBACK,x.rating,x.total)}catch(e){render(w,FALLBACK,null,null)}}
+async function load(){installEntitySchema();if(!document.body.classList.contains('home-v2'))installShell();upgradeHome();neutralReviewState();const w=document.querySelectorAll('.tgd-reviews-widget'),d=document.querySelectorAll('.tgd-rating-total,.tgd-rating-number,.tgd-rating-score');if(!w.length&&!d.length)return;try{const r=await fetch('/api/reviews',{cache:'no-store'});if(!r.ok)throw 0;const x=await r.json();render(w,Array.isArray(x.reviews)&&x.reviews.length?x.reviews:FALLBACK,x.rating,x.total)}catch(e){render(w,FALLBACK,null,null)}}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',load);else load();
 })();

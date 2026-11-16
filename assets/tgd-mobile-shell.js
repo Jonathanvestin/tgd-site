@@ -12,8 +12,10 @@
     var quoteHref = path === '/contact' || path === '/contact.html' ? '#form-contact' :
       path === '/soumettre-une-mission' ? '#form-mission' :
       path === '/chauffeur' ? '/contact?service=chauffeur-vehicule-client' : '/contact';
-    contactBar.innerHTML = '<a href="tel:+33761092626" data-cta="phone">Appeler</a>' +
-      '<a href="https://wa.me/33761092626" target="_blank" rel="noopener noreferrer" data-cta="whatsapp">WhatsApp</a>' +
+    var proServices = {'/mise-en-main':'mise-en-main','/convoyage-electrique':'convoyage-electrique','/tgd-digital':'mission-documentee','/solutions-professionnelles':'solutions-professionnelles','/convoyage-concession':'convoyage-concession','/tgd-fleet':'gestion-flotte'};
+    if (proServices[path]) quoteHref = '/contact?service=' + proServices[path];
+    contactBar.innerHTML = '<a href="tel:+33763695257" data-cta="phone">Appeler</a>' +
+      '<a href="https://wa.me/33763695257" target="_blank" rel="noopener noreferrer" data-cta="whatsapp">WhatsApp</a>' +
       '<a href="' + quoteHref + '" data-cta="quote">Devis</a>';
     document.body.appendChild(contactBar);
     document.body.classList.add('tgd-has-contact-mobile');
@@ -52,6 +54,8 @@
     menu.classList.add('tgd-unified-mobile-menu');
     menu.id = menu.id || 'tgd-mobile-menu';
     menu.setAttribute('aria-label', 'Menu principal');
+    menu.setAttribute('role', 'dialog');
+    menu.setAttribute('aria-modal', 'true');
     toggle.setAttribute('aria-label', 'Ouvrir le menu');
     toggle.setAttribute('aria-controls', menu.id);
     toggle.setAttribute('aria-expanded', 'false');
@@ -86,6 +90,12 @@
       }
     });
     document.addEventListener('keydown', function (event) {
+      if (event.key === 'Tab' && menu.classList.contains('open')) {
+        var items = menu.querySelectorAll('a[href], button:not([disabled])');
+        var first = items[0], last = items[items.length - 1];
+        if (event.shiftKey && (document.activeElement === first || !menu.contains(document.activeElement))) { event.preventDefault(); last.focus(); }
+        else if (!event.shiftKey && (document.activeElement === last || !menu.contains(document.activeElement))) { event.preventDefault(); first.focus(); }
+      }
       if (event.key === 'Escape' && menu.classList.contains('open')) {
         event.stopImmediatePropagation();
         setOpen(false);

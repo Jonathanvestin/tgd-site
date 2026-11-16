@@ -22,412 +22,87 @@
   <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <meta name="theme-color" content="#0a0a0a">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Convoyage véhicule de luxe et de prestige",
-  "provider": {"@id": "https://www.thegentlemandriver.fr/#business"},
-      "description": "Convoyage de véhicules de prestige et de collection. Protocole renforcé, couverture automobile vérifiée, prise en charge confidentielle.",
-  "areaServed": ["France", "Europe"],
-  "serviceType": "Convoyage véhicule de luxe"
-}
-</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-
-:root{--black:#0A0A0A;--black-2:#111111;--black-3:#1A1A1A;--gold:#C9A96E;--gold-light:#E8D5B0;--gold-dark:#9A7A47;--ivory:#F5F0E8;--ivory-muted:#BDB5A6}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--black);color:var(--ivory);font-family:'Montserrat',sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden}
-::-webkit-scrollbar{width:3px}::-webkit-scrollbar-thumb{background:var(--gold-dark)}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 4vw;height:80px;background:rgba(10,10,10,0.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,169,110,0.1)}
-.nav-logo{display:flex;align-items:center;text-decoration:none}
-.nav-logo img{height:46px;width:auto;display:block}
-.nav-links{display:flex;gap:1.4rem;list-style:none}
-.nav-links a{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:#D3CCBF;text-decoration:none;font-weight:400;transition:color .2s;white-space:nowrap}
-.nav-links a:hover,.nav-links a.active{color:var(--gold)}
-/* ─── DROPDOWN ─── */
-.nav-dropdown{position:relative}
-.nav-dropdown-menu{display:none;position:absolute;top:100%;left:-1rem;background:rgba(10,10,10,0.98);border:1px solid rgba(201,169,110,0.15);min-width:210px;padding:.8rem 0 .5rem;z-index:200;backdrop-filter:blur(12px)}
-.nav-dropdown-menu::before{content:'';position:absolute;top:-12px;left:0;right:0;height:12px}
-.nav-dropdown:hover .nav-dropdown-menu{display:block}
-.nav-dropdown-menu li{list-style:none}
-.nav-dropdown-menu li a{display:block;padding:.6rem 1.2rem;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:#D3CCBF;text-decoration:none;transition:color .15s,background .15s;white-space:nowrap}
-.nav-dropdown-menu li a:hover{color:var(--gold);background:rgba(201,169,110,0.05)}
-.nav-dropdown-toggle{cursor:pointer}
-.nav-dropdown-section{display:block;padding:.5rem 1.2rem .2rem;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,169,110,0.5);font-weight:500;cursor:default;border-top:1px solid rgba(201,169,110,0.08);margin-top:.3rem}
-.nav-dropdown-section:first-child{border-top:none;margin-top:0}
-.nav-cta{font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;font-weight:500;color:var(--black);background:var(--gold);border:none;padding:.6rem 1.2rem;cursor:pointer;text-decoration:none;transition:background .2s;font-family:'Montserrat',sans-serif;white-space:nowrap}
-.nav-cta:hover{background:var(--gold-light)}
-.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
-.burger span{display:block;width:22px;height:1px;background:var(--ivory)}
-.mobile-menu{display:none;position:fixed;inset:0;background:var(--black);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem}
-.mobile-menu.open{display:flex}
-.mobile-menu a{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--ivory);text-decoration:none;font-weight:300}
-.mobile-menu a:hover{color:var(--gold)}
-.mobile-close{position:absolute;top:2rem;right:4vw;background:none;border:none;color:var(--ivory);font-size:1.8rem;cursor:pointer;font-family:'Cormorant Garamond',serif}
-@media(max-width:900px){.nav-links,.nav-cta{display:none}.burger{display:flex}}
-/* HERO */
-.hero-seo{min-height:60vh;display:flex;align-items:flex-end;position:relative;overflow:hidden;padding-top:80px}
-.hero-bg{position:absolute;inset:0}
-.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,var(--black) 0%,rgba(10,10,10,.5) 50%,transparent 100%)}
-.hero-content{position:relative;z-index:2;padding:0 4vw 5rem;max-width:820px}
-.eyebrow{font-size:.75rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);font-weight:500;display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem}
-.eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--gold)}
-.hero-content h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,4.5rem);font-weight:300;line-height:1.1;margin-bottom:1.2rem}
-.hero-content h1 em{font-style:italic;color:var(--gold)}
-.hero-sub{font-size:.88rem;color:rgba(245,240,232,.75);line-height:1.85;max-width:600px;font-weight:300}
-/* BREADCRUMB */
-.breadcrumb{background:var(--black-2);padding:.8rem 4vw;border-bottom:1px solid rgba(201,169,110,0.07)}
-.breadcrumb-inner{font-size:.75rem;color:var(--ivory-muted);font-weight:300;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
-.breadcrumb-inner a{color:var(--ivory-muted);text-decoration:none;transition:color .2s}
-.breadcrumb-inner a:hover{color:var(--gold)}
-.breadcrumb-inner span{color:rgba(189,181,166,.4)}
-/* CONTENT */
-.content-section{padding:5rem 4vw}
-.content-section.alt{background:var(--black-2)}
-.content-inner{max-width:860px;margin:0 auto}
-.content-inner h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;color:var(--ivory);margin-bottom:1.2rem;line-height:1.2}
-.content-inner h2 em{font-style:italic;color:var(--gold)}
-.content-inner h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;color:var(--ivory);margin:2rem 0 .8rem}
-.content-inner p{font-size:.85rem;color:var(--ivory-muted);line-height:1.9;margin-bottom:1.2rem;font-weight:300}
-.content-inner p strong{color:var(--ivory);font-weight:500}
-.content-inner ul{margin:.8rem 0 1.2rem 1.2rem;display:flex;flex-direction:column;gap:.4rem}
-.content-inner ul li{font-size:.83rem;color:var(--ivory-muted);line-height:1.75;font-weight:300}
-.content-inner ul li::marker{color:var(--gold)}
-/* PROOF BAND */
-.proof-band{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(201,169,110,0.07)}
-.proof-item{background:var(--black-2);padding:2rem 1.5rem;text-align:center}
-.proof-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--gold);line-height:1;margin-bottom:.4rem}
-.proof-lbl{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ivory-muted);font-weight:400}
-/* PROCESS */
-.process-grid{display:flex;flex-direction:column;gap:0;margin-top:2.5rem}
-.p-step{display:grid;grid-template-columns:60px 1fr;gap:1.5rem;padding-bottom:2.5rem;position:relative}
-.p-step:not(:last-child)::before{content:'';position:absolute;left:29px;top:60px;bottom:0;width:1px;background:linear-gradient(to bottom,rgba(201,169,110,0.25),transparent)}
-.p-num{width:60px;height:60px;border:1px solid rgba(201,169,110,0.2);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--gold);flex-shrink:0;transition:background .3s}
-.p-step:hover .p-num{background:var(--gold);color:var(--black)}
-.p-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--ivory);margin-bottom:.4rem;margin-top:.6rem}
-.p-text{font-size:.8rem;color:var(--ivory-muted);line-height:1.8;font-weight:300}
-/* FAQ */
-.faq-item{border-bottom:1px solid rgba(201,169,110,0.08)}
-.faq-item:first-child{border-top:1px solid rgba(201,169,110,0.08)}
-.faq-q{width:100%;background:none;border:none;padding:1.3rem 0;display:flex;justify-content:space-between;align-items:center;cursor:pointer;text-align:left;gap:2rem}
-.faq-q-text{font-size:.85rem;color:var(--ivory);font-weight:400;font-family:'Montserrat',sans-serif;line-height:1.5;flex:1}
-.faq-q:hover .faq-q-text{color:var(--gold)}
-.faq-icon{width:22px;height:22px;border:1px solid rgba(201,169,110,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--gold);font-size:.9rem;transition:background .2s}
-.faq-item.open .faq-icon{background:var(--gold);color:var(--black)}
-.faq-a{display:none;padding:0 0 1.3rem}
-.faq-item.open .faq-a{display:block}
-.faq-a p{font-size:.82rem;color:var(--ivory-muted);line-height:1.85;font-weight:300}
-/* RELATED LINKS */
-.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,169,110,0.07)}
-.related-card{background:var(--black-2);padding:2rem 1.5rem;text-decoration:none;transition:background .3s;display:block;position:relative;overflow:hidden}
-.related-card::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--gold);transition:width .4s}
-.related-card:hover{background:var(--black-3)}
-.related-card:hover::after{width:100%}
-.related-card-label{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:.6rem}
-.related-card-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--ivory);margin-bottom:.5rem}
-.related-card-desc{font-size:.75rem;color:var(--ivory-muted);line-height:1.7;font-weight:300}
-.related-card-arrow{font-size:.75rem;color:var(--gold);margin-top:.8rem;display:block}
-/* CTA */
-.cta-section{background:var(--gold);padding:5rem 4vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:2rem}
-.cta-text{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,3vw,2.5rem);font-weight:300;color:var(--black);line-height:1.3}
-.cta-text em{font-style:italic}
-.cta-actions{display:flex;gap:1rem;flex-wrap:wrap}
-.btn-dark{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--ivory);background:var(--black);border:none;padding:1rem 2rem;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s;font-family:'Montserrat',sans-serif}
-.btn-dark:hover{background:var(--black-3)}
-.btn-gold{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--black);background:transparent;border:2px solid var(--black);padding:1rem 2rem;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s;font-family:'Montserrat',sans-serif}
-.btn-gold:hover{background:var(--black);color:var(--ivory)}
-/* FOOTER */
 
 
 
 
 
-
-/* HIGHLIGHT BOX */
-.highlight-box{background:rgba(201,169,110,0.06);border-left:3px solid var(--gold);padding:1.5rem 2rem;margin:1.5rem 0}
-.highlight-box p{font-size:.83rem;color:var(--ivory);line-height:1.8;font-weight:300;margin:0}
-.highlight-box p strong{color:var(--gold)}
-/* RESPONSIVE */
-@media(max-width:900px){.proof-band{grid-template-columns:1fr 1fr}.related-grid{grid-template-columns:1fr}.cta-section{flex-direction:column}}
-@media(max-width:600px){.proof-band{grid-template-columns:1fr 1fr}}
-
-
-/* ─── BARRE STICKY MOBILE ─── */
-.sticky-mobile{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--black);border-top:1px solid rgba(201,169,110,0.15);padding:.8rem 1rem;gap:.6rem}
-@media(max-width:900px){.sticky-mobile{display:flex}}
-.sticky-btn{flex:1;padding:.75rem .5rem;text-align:center;text-decoration:none;font-family:'Montserrat',sans-serif;font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;border:none;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;transition:opacity .2s}
-.sticky-btn:hover{opacity:.85}
-.sticky-btn-icon{font-size:1rem;line-height:1}
-.sticky-btn-label{font-size:.75rem;letter-spacing:.08em}
-.sticky-btn.call{background:var(--gold);color:var(--black)}
-.sticky-btn.whatsapp{background:#25D366;color:#fff}
-.sticky-btn.devis{background:var(--black-3);color:var(--gold);border:1px solid rgba(201,169,110,0.25)}
-
-
-/* ─── WHATSAPP FLOTTANT ─── */
-.wa-float{position:fixed;bottom:90px;right:24px;z-index:199;width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);text-decoration:none;transition:transform .2s,box-shadow .2s}
-.wa-float:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,0.55)}
-.wa-float svg{width:26px;height:26px;fill:#fff}
-@media(max-width:900px){.wa-float{bottom:80px;right:16px;width:46px;height:46px}}
-
-
-
-
-
-
-
-
-
-
-
-
-/* ═══ FOOTER TGD (centré) ═══ */
-footer.footer-mini{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.06);padding:2.5rem 4vw;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1.4rem;text-align:center}
-footer.footer-mini a.footer-logo{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);text-decoration:none}
-footer.footer-mini ul.footer-links-list{display:flex;flex-direction:row;justify-content:center;gap:2rem;list-style:none;flex-wrap:wrap;margin:0;padding:0}
-footer.footer-mini ul.footer-links-list li{margin:0;padding:0;list-style:none}
-footer.footer-mini ul.footer-links-list a{font-size:.75rem;color:rgba(189,181,166,0.45);text-decoration:none;font-weight:300;transition:color .2s}
-footer.footer-mini ul.footer-links-list a:hover{color:var(--ivory-muted)}
-footer.footer-mini span.footer-copy{font-size:.75rem;color:rgba(189,181,166,0.3);font-weight:300}
-
-/* lisibilité menu haut */
-.nav-links a{font-size:.75rem !important;letter-spacing:.12em;transition:color .2s}
-.nav-links a:hover{color:var(--gold) !important}
-.nav-cta{font-size:.75rem !important}
-/* lisibilité menu bas */
-footer.footer-mini ul.footer-links-list a{color:rgba(189,181,166,0.72) !important}
-footer.footer-mini ul.footer-links-list a:hover{color:var(--ivory) !important}
-footer.footer-mini span.footer-copy{color:rgba(189,181,166,0.55) !important}
-
-/* rythme espacements validé */
-.hero{min-height:88vh !important;height:auto !important}
-section{padding:4.5rem 4vw !important}
-.cta-section{padding:5rem 4vw !important}
-.adn{gap:4rem !important}
-.coverage-inner{gap:4rem !important}
-.cta-section{gap:4rem !important}
-.founder{padding:4.5rem 4vw !important}
-
-/* ═══ TRUST BAR ═══ */
-.trust-bar{background:rgba(201,169,110,0.07);border-bottom:1px solid rgba(201,169,110,0.12);padding:.55rem 4vw;overflow:hidden}
-.trust-bar-inner{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:.5rem 1.2rem}
-.trust-item{display:inline-flex;align-items:center;gap:.35rem;font-size:.75rem;letter-spacing:.07em;color:rgba(245,240,232,.7);white-space:nowrap}
-.trust-item svg{color:var(--gold);flex-shrink:0}
-.trust-sep{color:rgba(201,169,110,0.3);font-size:.8rem}
-@media(max-width:600px){.trust-sep{display:none}}
-
-/* Footer premium TGD — référence home */
-footer.footer-mini{background:var(--black-2,#111);border-top:1px solid rgba(201,169,110,.12);padding:2.4rem 4vw 1.7rem;display:grid;grid-template-columns:180px minmax(0,1fr);grid-template-areas:"logo links" "legal legal";align-items:start;gap:1.7rem 3rem;text-align:left}
-footer.footer-mini a.footer-logo{grid-area:logo;display:flex;align-items:flex-start;justify-content:flex-start;text-decoration:none;padding-top:.15rem}
-footer.footer-mini a.footer-logo img{height:38px!important;width:auto!important;opacity:1!important}
-footer.footer-mini ul.footer-links-list{grid-area:links;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:.45rem 2rem!important;list-style:none;margin:0!important;padding:0!important;max-width:none!important;width:100%!important;align-items:start!important;justify-content:stretch!important}
-footer.footer-mini ul.footer-links-list li{margin:0;padding:0;list-style:none}
-footer.footer-mini ul.footer-links-list a{font-size:.72rem;color:rgba(214,208,198,.7)!important;text-decoration:none;font-weight:300;transition:color .2s}
-footer.footer-mini ul.footer-links-list a:hover{color:var(--ivory,#f5f0e8)!important}
-footer.footer-mini .footer-group-label{font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold,#c9a96e);font-weight:500;opacity:.9;line-height:1.4;margin-top:.1rem}
-footer.footer-mini .footer-sep{display:none!important}
-footer.footer-mini span.footer-copy{grid-area:legal;font-size:.68rem;color:rgba(189,181,166,.45)!important;font-weight:300;text-align:center;border-top:1px solid rgba(201,169,110,.07);padding-top:1rem;width:100%}
-footer.footer-mini .footer-legal-mini{grid-area:legal;text-align:center;margin-top:1.8rem!important;padding-top:1.1rem;font-size:.64rem!important;color:rgba(189,181,166,.28)!important;pointer-events:none}
-@media(max-width:760px){footer.footer-mini{grid-template-columns:1fr;grid-template-areas:"logo" "links" "legal";padding:2rem 5vw 1.4rem;gap:1.4rem}footer.footer-mini a.footer-logo{justify-content:center}footer.footer-mini ul.footer-links-list{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:.5rem 1.4rem!important;text-align:left}footer.footer-mini .footer-legal-mini{margin-top:1.8rem!important}}
-
-/* Canonical footer: exact home reference */
-/* ═══ FOOTER TGD (centré) ═══ */
-footer.footer-mini{background:var(--black-2);border-top:1px solid rgba(201,169,110,0.06);padding:2.5rem 4vw;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1.4rem;text-align:center}
-footer.footer-mini a.footer-logo{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);text-decoration:none}
-footer.footer-mini ul.footer-links-list{display:flex;flex-direction:row;justify-content:center;align-items:center;gap:2rem;list-style:none;flex-wrap:wrap;margin:0;padding:0}
-footer.footer-mini ul.footer-links-list li{margin:0;padding:0;list-style:none}
-footer.footer-mini ul.footer-links-list a{font-size:.75rem;color:rgba(189,181,166,0.45);text-decoration:none;font-weight:300;transition:color .2s}
-footer.footer-mini ul.footer-links-list a:hover{color:var(--ivory-muted)}
-footer.footer-mini span.footer-copy{font-size:.75rem;color:rgba(189,181,166,0.3);font-weight:300}
-footer.footer-mini .footer-group-label{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500;opacity:.7;cursor:default;display:inline-flex;align-items:center;line-height:1}
-footer.footer-mini .footer-sep{color:rgba(201,169,110,0.2);font-size:1rem;line-height:1;cursor:default;display:inline-flex;align-items:center}
-
-
-footer.footer-mini a.footer-logo img{height:32px!important;width:auto!important;opacity:1!important}
-@media(max-width:700px){footer.footer-mini{padding:2rem 5vw}footer.footer-mini ul.footer-links-list{gap:.8rem 1.2rem}}
-</style>
-<link rel="stylesheet" href="/assets/responsive-polish.css">
-
-<link rel="stylesheet" href="/assets/tgd-site-polish.css">
-</head>
-<body>
-
-<nav>
-  <a href="/" class="nav-logo">
-    <img src="/assets/images/logo-the-gentleman-driver.png" alt="The Gentleman Driver" style="height:46px;width:auto;display:block" width="800" height="213">
-  </a>
-  <ul class="nav-links">
-    <li><a href="/">Accueil</a></li>
-    <li><a href="/convoyage">Convoyage</a></li>
-    <li><a href="/chauffeur">Chauffeur</a></li>
-    <li><a href="/mise-en-main">Mise en main</a></li>
-    <li><a href="/solutions-professionnelles">Entreprises</a></li>
-    <li><a href="/contact">Contact</a></li>
-  </ul>
-  <a href="/contact" class="nav-cta">Devis gratuit</a>
-  <button type="button" class="burger" onclick="document.getElementById('mm').classList.add('open')" aria-label="Menu"><span></span><span></span><span></span></button>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/tgd-site-polish.css"><link rel="stylesheet" href="/assets/tgd-home.css"><link rel="stylesheet" href="/assets/tgd-pro-pages.css"><link rel="stylesheet" href="/assets/tgd-expertise.css"><link rel="stylesheet" href="/assets/tgd-services.css"><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Service", "name": "Prestige & collection", "url": "https://www.thegentlemandriver.fr/convoyage-luxe", "provider": {"@id": "https://www.thegentlemandriver.fr/#business"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Avez-vous l’expérience des véhicules de grande puissance ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Nos collaborateurs sélectionnés ont l'expérience des véhicules de sport et de prestige. Chaque affectation est faite en fonction des compétences du convoyeur face au véhicule concerné."}}, {"@type": "Question", "name": "Que se passe-t-il si le véhicule subit un dommage pendant le convoyage ?", "acceptedAnswer": {"@type": "Answer", "text": "La couverture dépend du contrat automobile du propriétaire, qui doit autoriser la conduite par un tiers. Nous la vérifions avant la mission. Notre RC Pro intervient lorsque notre responsabilité professionnelle est engagée. Le PV photographique constitue la référence sur l’état initial du véhicule."}}, {"@type": "Question", "name": "Pouvez-vous convoyer un véhicule de collection avec boîte manuelle ancienne ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, sous réserve d'un brief préalable sur les spécificités du véhicule. Nous demandons les informations techniques utiles avant d'affecter un convoyeur."}}, {"@type": "Question", "name": "Proposez-vous le transport sur plateau ?", "acceptedAnswer": {"@type": "Answer", "text": "Une solution de transport sur plateau peut être étudiée selon le véhicule, le trajet et les disponibilités. TGD coordonne la mission et reste votre interlocuteur. Les modalités sont confirmées au devis."}}, {"@type": "Question", "name": "Respectez-vous la discrétion sur l’identité du propriétaire ?", "acceptedAnswer": {"@type": "Answer", "text": "Absolument. Discrétion sur l'identité du client, la localisation du véhicule et les détails de la mission. Nos collaborateurs s'y engagent."}}]}]}</script></head><body class="home-v2 pro-v2 expertise-v2 service-v2 prestige-v2"><a class="skip-link" href="#contenu-principal">Aller au contenu</a><nav aria-label="Navigation principale">
+ <a class="nav-logo" href="/" aria-label="The Gentleman Driver — accueil"><img src="/assets/images/logo-the-gentleman-driver.png" alt="The Gentleman Driver" width="800" height="213"></a>
+ <ul class="nav-links tgd-site-links"><li><a href="/convoyage">Convoyage</a></li><li><a href="/solutions-professionnelles">Solutions Pro</a></li><li><a href="/chauffeur">Chauffeur</a></li><li><a href="/particuliers">Particuliers</a></li><li><a href="/a-propos">À propos</a></li><li><a class="tgd-site-cta" href="/soumettre-une-mission">Soumettre une mission</a></li></ul>
+ <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="tgd-mobile-menu"><span></span><span></span><span></span></button>
 </nav>
-<!-- TRUST BAR AXA -->
-<div class="trust-bar" aria-label="Garanties">
-  <div class="trust-bar-inner">
-    <span class="trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Assurance RC Pro · Couverture vérifiée</span>
-    <span class="trust-sep" aria-hidden="true">·</span>
-    <span class="trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Conditions de couverture v&#233;rifi&#233;es avant mission</span>
-    <span class="trust-sep" aria-hidden="true">·</span>
-    <span class="trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>PV contradictoire signé</span>
-    <span class="trust-sep" aria-hidden="true">·</span>
-    <span class="trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Réponse rapide — 7j/7</span>
-    <span class="trust-sep" aria-hidden="true">·</span>
-    <span class="trust-item">&#9733; 5/5 Google</span>
-  </div>
-</div>
-
-<div class="mobile-menu" id="mm">
-  <button type="button" class="mobile-close" onclick="document.getElementById('mm').classList.remove('open')" aria-label="Fermer le menu">&#x2715;</button>
-  <a href="/" onclick="document.getElementById('mm').classList.remove('open')">Accueil</a>
-  <a href="/convoyage" onclick="document.getElementById('mm').classList.remove('open')">Convoyage</a>
-  <a href="/chauffeur" onclick="document.getElementById('mm').classList.remove('open')">Chauffeur</a>
-  <a href="/mise-en-main" onclick="document.getElementById('mm').classList.remove('open')">Mise en main</a>
-  <a href="/solutions-professionnelles" onclick="document.getElementById('mm').classList.remove('open')">Entreprises</a>
-  <a href="/contact" class="btn-primary" onclick="document.getElementById('mm').classList.remove('open')">Demander un devis</a>
-</div>
-
-
-<div class="hero-seo">
-  <div class="hero-bg">
-    <img src="/assets/images/convoyage-automobile-pour-les-concessions.webp" alt="Convoyage de v&#233;hicules de prestige et de collection." width="1400" height="1050">
-  </div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <p class="eyebrow">V&#233;hicules de prestige & collection</p>
-    <h1>Convoyage de v&#233;hicules<br><em>de prestige et de collection.</em></h1>
-    <p class="hero-sub">Porsche, Maserati, Bentley, v&#233;hicules de collection&#160;: un protocole renforc&#233;, une couverture automobile vérifiée, une attention particuli&#232;re &#224; la confidentialit&#233;. Chaque d&#233;tail compte.</p>
-  </div>
-</div>
-
-<div class="breadcrumb">
-  <div class="breadcrumb-inner"><a href="/">Accueil</a><span>/</span><a href="/convoyage">Convoyage automobile</a><span>/</span><span style="color:var(--ivory)">Véhicules de prestige</span></div>
-</div>
-
-
-<section class="content-section">
-  <div class="content-inner">
-    <h2>Convoyage de v&#233;hicules<br><em>de prestige et de collection</em></h2>
-    <p>Un v&#233;hicule de prestige ou de collection n&#8217;est pas seulement un objet de valeur financi&#232;re. C&#8217;est souvent une pi&#232;ce unique, un investissement sentimental, un patrimoine. Le confier pour un convoyage exige une confiance totale dans l&#8217;intervenant.</p>
-    <p>The Gentleman Driver convoie des v&#233;hicules de prestige depuis 2021&#160;: Porsche, Maserati, Bentley, Ferrari, Lamborghini, Rolls-Royce, mais aussi des berlines de direction, des coupés rares et des v&#233;hicules de collection. Notre protocole est identique pour tous nos v&#233;hicules &#8212; mais notre niveau d&#8217;attention est calibr&#233; en fonction de ce que nous transportons.</p>
+<div class="mobile-menu" id="tgd-mobile-menu"></div><main id="contenu-principal"><section class="hero-v2"><div class="wrap"><p class="pro-breadcrumb"><a href="/">Accueil</a> / Prestige & collection</p><div class="hero-layout"><div><p class="eyebrow">Prestige & collection</p><h1>Un véhicule singulier.<br><em>Une mission préparée pour lui.</em></h1><p class="lead">Véhicule de prestige ou de collection : les particularités de conduite, les consignes du propriétaire et les conditions de prise en charge se précisent avant le départ.</p><div class="actions"><a class="button" href="/contact?service=convoyage" data-cta="quote">Étudier mon convoyage →</a><a class="button button-outline" href="/etudes-de-cas">Voir les missions réalisées</a></div></div><figure class="hero-visual"><img src="/assets/images/convoyage-automobile-pour-les-concessions.webp" width="1400" height="1050" fetchpriority="high" alt="Véhicule photographié dans le cadre de l’activité TGD"><figcaption><strong>Les particularités du véhicule sont prises en compte.</strong>Trajet, consignes et modalités sont précisés avant confirmation.</figcaption></figure></div></div></section><section class="section service-section light">
+  <div class="wrap">
+    <h2>Convoyage de véhicules<br><em>de prestige et de collection</em></h2>
+    <p>Un véhicule de prestige ou de collection n’est pas seulement un objet de valeur financière. C’est souvent une pièce unique, un investissement sentimental, un patrimoine. Le confier pour un convoyage exige une confiance totale dans l’intervenant.</p>
+    <p>The Gentleman Driver convoie des véhicules de prestige depuis 2021 : Porsche, Maserati, Bentley, Ferrari, Lamborghini, Rolls-Royce, mais aussi des berlines de direction, des coupés rares et des véhicules de collection. Notre protocole est identique pour tous nos véhicules — mais notre niveau d’attention est calibré en fonction de ce que nous transportons.</p>
 
     <div class="highlight-box">
-      <p><strong>Protocole renforc&#233; pour les v&#233;hicules de prestige&#160;:</strong> &#233;tat des lieux photographique exhaustif sous tous les angles, v&#233;rification des niveaux et pressions, conduite &#233;co-responsable, pas d&#8217;autoroute si le client pr&#233;f&#232;re une nationale, rapport d&#233;taill&#233; &#224; la livraison. <strong>Rien n&#8217;est laiss&#233; au hasard.</strong></p>
+      <p><strong>Protocole renforcé pour les véhicules de prestige :</strong> état des lieux photographique exhaustif sous tous les angles, vérification des niveaux et pressions, conduite éco-responsable, pas d’autoroute si le client préfère une nationale, rapport détaillé à la livraison. <strong>Rien n’est laissé au hasard.</strong></p>
     </div>
 
-    <h3>Notre approche pour les v&#233;hicules d&#8217;exception</h3>
-    <p>Les v&#233;hicules de prestige ont des sp&#233;cificit&#233;s que tout conducteur ne ma&#238;trise pas&#160;: gestion de la puissance, comportement en virage, syst&#232;mes d&#8217;assistance sophistiqu&#233;s, alertes et modes de conduite particuliers. Nos collaborateurs sont s&#233;lectionn&#233;s pour leur exp&#233;rience et leur sang-froid.</p>
-    <p>Pour les pi&#232;ces tr&#232;s haute valeur ou les v&#233;hicules non-roulants (restauration en cours, incident m&#233;canique), nous organisons le transport sur plateau ferm&#233; via notre r&#233;seau de transporteurs sp&#233;cialis&#233;s. Vous restez notre interlocuteur unique du d&#233;but &#224; la fin.</p>
+    <h3>Notre approche pour les véhicules d’exception</h3>
+    <p>Les véhicules de prestige ont des spécificités que tout conducteur ne maîtrise pas : gestion de la puissance, comportement en virage, systèmes d’assistance sophistiqués, alertes et modes de conduite particuliers. Nos collaborateurs sont sélectionnés pour leur expérience et leur sang-froid.</p>
+    <p>Pour les pièces très haute valeur ou les véhicules non-roulants (restauration en cours, incident mécanique), nous étudions une solution de transport sur plateau selon le véhicule, le trajet et les disponibilités. Vous restez notre interlocuteur unique du début à la fin.</p>
 
-    <h3>V&#233;hicules de collection&#160;: une attention particuli&#232;re</h3>
-    <p>Les v&#233;hicules anciens ou de collection pr&#233;sentent des contraintes sp&#233;cifiques&#160;: absence de servodirection, bo&#238;te manuelle &#224; commande particuli&#232;re, syst&#232;mes de freinage moins assist&#233;s, pr&#233;cautions particuli&#232;res par temps froid. Nous discutons de ces sp&#233;cificit&#233;s avant chaque mission et adaptons notre conduite en cons&#233;quence.</p>
+    <h3>Véhicules de collection : une attention particulière</h3>
+    <p>Les véhicules anciens ou de collection présentent des contraintes spécifiques : absence de servodirection, boîte manuelle à commande particulière, systèmes de freinage moins assistés, précautions particulières par temps froid. Nous discutons de ces spécificités avant chaque mission et adaptons notre conduite en conséquence.</p>
 
-    <h3>Discr&#233;tion & confidentialit&#233;</h3>
-    <p>Nos collaborateurs ne photographient pas les v&#233;hicules pour leurs r&#233;seaux personnels. Pas de publication sur les r&#233;seaux sociaux sans votre accord explicite. La discr&#233;tion fait partie de notre code de conduite.</p>
+    <h3>Discrétion &amp; confidentialité</h3>
+    <p>Nos collaborateurs ne photographient pas les véhicules pour leurs réseaux personnels. Pas de publication sur les réseaux sociaux sans votre accord explicite. La discrétion fait partie de notre code de conduite.</p>
 
-    <h3>Couverture assurance sp&#233;cifique</h3>
-    <p>Avant d&#8217;accepter un v&#233;hicule de prestige, nous v&#233;rifions avec son propri&#233;taire que le contrat automobile autorise la conduite par un tiers et couvre la valeur ainsi que le trajet pr&#233;vus. Pour les v&#233;hicules de tr&#232;s haute valeur, une confirmation &#233;crite de l&#8217;assureur est demand&#233;e avant la mission.</p>
+    <h3>Couverture assurance spécifique</h3>
+    <p>Avant d’accepter un véhicule de prestige, nous vérifions avec son propriétaire que le contrat automobile autorise la conduite par un tiers et couvre la valeur ainsi que le trajet prévus. Pour les véhicules de très haute valeur, une confirmation écrite de l’assureur est demandée avant la mission.</p>
   </div>
 </section>
 
 
-<div class="proof-band">
-  <div class="proof-item"><div class="proof-num">2021</div><div class="proof-lbl">Activité de convoyage</div></div>
-  <div class="proof-item"><div class="proof-num tgd-rating-number">—</div><div class="proof-lbl">Avis 5&#9733; Google</div></div>
-  <div class="proof-item"><div class="proof-num">France</div><div class="proof-lbl">&amp; Europe sur devis</div></div>
-  <div class="proof-item"><div class="proof-num">PV</div><div class="proof-lbl">Mission document&#233;e</div></div>
-</div>
-
-<section class="content-section alt">
-  <div class="content-inner">
-    <h2>Questions fr&#233;quentes</h2>
+<section class="section service-section">
+  <div class="wrap">
+    <h2>Questions fréquentes</h2>
     <div style="margin-top:2rem">
-    <div class="faq-item">
-      <button type="button" class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">Avez-vous l&#8217;exp&#233;rience des v&#233;hicules de grande puissance&#160;?</span>
-        <span class="faq-icon">+</span>
-      </button>
-      <div class="faq-a"><p>Oui. Nos collaborateurs s&#233;lectionn&#233;s ont l'exp&#233;rience des v&#233;hicules de sport et de prestige. Chaque affectation est faite en fonction des comp&#233;tences du convoyeur face au v&#233;hicule concern&#233;.</p></div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">Que se passe-t-il si le v&#233;hicule subit un dommage pendant le convoyage&#160;?</span>
-        <span class="faq-icon">+</span>
-      </button>
-      <div class="faq-a"><p>La couverture d&#233;pend du contrat automobile du propri&#233;taire, qui doit autoriser la conduite par un tiers. Nous la v&#233;rifions avant la mission. Notre RC Pro intervient lorsque notre responsabilit&#233; professionnelle est engag&#233;e. Le PV photographique constitue la r&#233;f&#233;rence sur l&#8217;&#233;tat initial du v&#233;hicule.</p></div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">Pouvez-vous convoyer un v&#233;hicule de collection avec bo&#238;te manuelle ancienne&#160;?</span>
-        <span class="faq-icon">+</span>
-      </button>
-      <div class="faq-a"><p>Oui, sous r&#233;serve d'un brief pr&#233;alable sur les sp&#233;cificit&#233;s du v&#233;hicule. Nous demandons les informations techniques utiles avant d'affecter un convoyeur.</p></div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">Proposez-vous le transport sur plateau ferm&#233;&#160;?</span>
-        <span class="faq-icon">+</span>
-      </button>
-      <div class="faq-a"><p>Oui, via notre r&#233;seau de transporteurs partenaires. Nous g&#233;rons la coordination et restons votre interlocuteur unique. Devis sur demande.</p></div>
-    </div>
-    <div class="faq-item">
-      <button type="button" class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">Respectez-vous la discr&#233;tion sur l&#8217;identit&#233; du propri&#233;taire&#160;?</span>
-        <span class="faq-icon">+</span>
-      </button>
-      <div class="faq-a"><p>Absolument. Discr&#233;tion sur l'identit&#233; du client, la localisation du v&#233;hicule et les d&#233;tails de la mission. Nos collaborateurs s'y engagent.</p></div>
-    </div></div>
+    <details><summary>Avez-vous l’expérience des véhicules de grande puissance ?</summary><div class="faq-a"><p>Oui. Nos collaborateurs sélectionnés ont l'expérience des véhicules de sport et de prestige. Chaque affectation est faite en fonction des compétences du convoyeur face au véhicule concerné.</p></div>
+    </details><details><summary>Que se passe-t-il si le véhicule subit un dommage pendant le convoyage ?</summary><div class="faq-a"><p>La couverture dépend du contrat automobile du propriétaire, qui doit autoriser la conduite par un tiers. Nous la vérifions avant la mission. Notre RC Pro intervient lorsque notre responsabilité professionnelle est engagée. Le PV photographique constitue la référence sur l’état initial du véhicule.</p></div>
+    </details><details><summary>Pouvez-vous convoyer un véhicule de collection avec boîte manuelle ancienne ?</summary><div class="faq-a"><p>Oui, sous réserve d'un brief préalable sur les spécificités du véhicule. Nous demandons les informations techniques utiles avant d'affecter un convoyeur.</p></div>
+    </details><details><summary>Proposez-vous le transport sur plateau ?</summary><div class="faq-a"><p>Une solution de transport sur plateau peut être étudiée selon le véhicule, le trajet et les disponibilités. TGD coordonne la mission et reste votre interlocuteur. Les modalités sont confirmées au devis.</p></div>
+    </details><details><summary>Respectez-vous la discrétion sur l’identité du propriétaire ?</summary><div class="faq-a"><p>Absolument. Discrétion sur l'identité du client, la localisation du véhicule et les détails de la mission. Nos collaborateurs s'y engagent.</p></div>
+    </details></div>
   </div>
 </section>
 
-<section class="content-section">
-  <div class="content-inner">
+<section class="section service-section light">
+  <div class="wrap">
     <h2>Nos autres <em>services</em></h2>
-    <p style="margin-bottom:2rem;font-size:.85rem;color:var(--ivory-muted)">D&#233;couvrez l&#8217;ensemble de nos prestations de convoyage et de mobilit&#233; automobile.</p>
+    <p style="margin-bottom:2rem;font-size:.85rem;color:var(--ivory-muted)">Découvrez l’ensemble de nos prestations de convoyage et de mobilité automobile.</p>
     <div class="related-grid">
       
     <a href="/convoyage" class="related-card">
       <div class="related-card-label">Service</div>
       <div class="related-card-title">Convoyage automobile</div>
       <p class="related-card-desc">Notre service standard de convoyage en France et Europe.</p>
-      <span class="related-card-arrow">D&#233;couvrir &#8594;</span>
+      <span class="related-card-arrow">Découvrir →</span>
     </a>
     <a href="/transport-plateau" class="related-card">
       <div class="related-card-label">Service</div>
       <div class="related-card-title">Transport sur plateau</div>
-      <p class="related-card-desc">Pour les v&#233;hicules non-roulants ou tr&#232;s haute valeur.</p>
-      <span class="related-card-arrow">D&#233;couvrir &#8594;</span>
+      <p class="related-card-desc">Pour les véhicules non-roulants ou très haute valeur.</p>
+      <span class="related-card-arrow">Découvrir →</span>
     </a>
     <a href="/mise-en-main" class="related-card">
       <div class="related-card-label">Service</div>
-      <div class="related-card-title">Mise en main v&#233;hicule</div>
-      <p class="related-card-desc">Livraison et présentation soign&#233;e du v&#233;hicule.</p>
-      <span class="related-card-arrow">D&#233;couvrir &#8594;</span>
+      <div class="related-card-title">Mise en main véhicule</div>
+      <p class="related-card-desc">Livraison et présentation soignée du véhicule.</p>
+      <span class="related-card-arrow">Découvrir →</span>
     </a>
     </div>
   </div>
 </section>
 
-<div class="cta-section">
-  <div class="cta-text">Une mission &#224; confier&#160;?<br><em>Réponse rapide.</em></div>
-  <div class="cta-actions">
-    <a href="/contact" class="btn-dark">Demander un devis</a>
-    <a href="tel:+33761092626" class="btn-gold">07 61 09 26 26</a>
-  </div>
-</div>
-
-<footer class="footer-mini">
+<section class="closing"><div class="wrap closing-inner"><div><p class="eyebrow">Votre véhicule, votre mission</p><h2>Préparons sa prise en charge.<br><em>Avec un interlocuteur direct.</em></h2></div><div class="closing-actions"><a class="button" href="/contact?service=convoyage">Demander un devis →</a><a href="tel:+33763695257">07 63 69 52 57</a></div></div></section></main><footer class="footer-mini">
   <a href="/" class="footer-logo"><img src="/assets/images/logo-the-gentleman-driver.png" alt="The Gentleman Driver" width="800" height="213" loading="lazy" decoding="async"></a>
   <div class="footer-links-list" role="navigation" aria-label="Navigation de pied de page">
     <ul class="footer-link-group"><li class="footer-group-label">Services</li><li><a href="/convoyage">Convoyage</a></li><li><a href="/chauffeur">Chauffeur</a></li><li><a href="/mise-en-main">Mise en main</a></li><li><a href="/transport-plateau">Plateau</a></li></ul>
@@ -435,46 +110,5 @@ footer.footer-mini a.footer-logo img{height:32px!important;width:auto!important;
     <ul class="footer-link-group"><li class="footer-group-label">TGD</li><li><a href="/a-propos">À propos</a></li><li><a href="/etudes-de-cas">Études de cas</a></li><li><a href="/blog">Blog</a></li><li><a href="/faq">FAQ</a></li><li><a href="/contact">Contact</a></li><li><a href="/mentions-legales">Mentions légales</a></li></ul>
   </div>
   <span class="footer-copy">© 2026 The Gentleman Driver — SASU — Charenton-le-Pont (94)</span>
-  <span class="footer-legal-mini">SIRET 985 178 466 00019 · RCS Créteil · Assurance RC Pro</span>
-</footer>
-
-<script>
-function toggleFaq(btn) {
-  var item = btn.parentElement;
-  var isOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(function(el) {
-    el.classList.remove('open');
-    el.querySelector('.faq-icon').textContent = '+';
-  });
-  if (!isOpen) {
-    item.classList.add('open');
-    btn.querySelector('.faq-icon').textContent = '-';
-  }
-}
-</script>
-<!-- BARRE STICKY MOBILE -->
-<div class="sticky-mobile">
-  <a href="tel:+33761092626" class="sticky-btn call">
-    <span class="sticky-btn-icon">&#128222;</span>
-    <span class="sticky-btn-label">Appeler</span>
-  </a>
-  <a href="https://wa.me/33761092626" target="_blank" rel="noopener" class="sticky-btn whatsapp">
-    <span class="sticky-btn-icon">&#128172;</span>
-    <span class="sticky-btn-label">WhatsApp</span>
-  </a>
-  <a href="/contact" class="sticky-btn devis">
-    <span class="sticky-btn-icon">&#9993;</span>
-    <span class="sticky-btn-label">Devis</span>
-  </a>
-</div>
-
-<!-- WHATSAPP FLOTTANT -->
-<a href="https://wa.me/33761092626" target="_blank" rel="noopener" class="wa-float" aria-label="Nous contacter sur WhatsApp">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
-  </svg>
-</a>
-<script src="/tgd-reviews.js"></script>
-<script src="/assets/tgd-mobile-shell.js"></script>
-</body>
-</html>
+  <span class="footer-legal-mini">SIRET 985 178 466 00019 · RCS Créteil · <a href="tel:+33763695257">07 63 69 52 57</a></span>
+</footer><script src="/tgd-conversions.js"></script><script src="/assets/tgd-mobile-shell.js"></script></body></html>
