@@ -659,7 +659,7 @@ function validateStep(step) {
     var name = label ? label.textContent.replace('*', '').trim() : 'ce champ';
     var error = document.createElement('p');
     error.id = 'contact-error-' + step + '-' + index; error.className = 'contact-field-error';
-    error.textContent = field.type === 'checkbox' ? 'Merci de confirmer l’utilisation de vos informations pour répondre à votre demande.' : field.type === 'email' ? 'Saisissez une adresse e-mail valide, par exemple nom@entreprise.fr.' : field.type === 'tel' ? 'Saisissez un numéro de téléphone de 10 à 15 chiffres.' : 'Merci de renseigner ' + name.toLowerCase() + '.';
+    error.textContent = field.type === 'checkbox' ? 'Merci de confirmer l’utilisation de vos informations pour répondre à votre demande.' : field.type === 'email' ? 'Saisissez une adresse e-mail valide, par exemple nom@entreprise.fr.' : field.id === 'vous_etes' ? 'Sélectionnez votre profil.' : field.type === 'tel' ? 'Saisissez un numéro de téléphone de 10 à 15 chiffres.' : 'Merci de renseigner ' + name.toLowerCase() + '.';
     field.dataset.errorId = error.id;
     field.setAttribute('aria-describedby', ((field.getAttribute('aria-describedby') || '') + ' ' + error.id).trim());
     if (field.type === 'checkbox') field.closest('label').insertAdjacentElement('afterend', error); else field.insertAdjacentElement('afterend', error);

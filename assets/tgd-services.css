@@ -42,3 +42,5 @@
 .service-v2 .digital-panel .digital-cta{display:flex;flex-wrap:wrap;gap:16px 28px}
 .service-v2 .digital-panel .btn-ghost{display:inline-block;padding:10px 0;font-weight:500}
 .service-v2 .digital-panel :is(a,button):focus-visible{outline-color:#795b2b}
+.service-v2 .digital-panel .btn-ghost,.service-v2 .digital-panel .btn-ghost:visited{color:#6d4f1f!important}
+.service-v2 .service-section.light .step p{color:#4c514d}
