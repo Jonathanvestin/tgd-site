@@ -27,6 +27,7 @@
   "url": "https://www.thegentlemandriver.fr/contact",
   "mainEntity": {
     "@type": "LocalBusiness",
+    "@id": "https://www.thegentlemandriver.fr/#business",
     "name": "The Gentleman Driver",
     "telephone": "+33763695257",
     "email": "contact@thegentlemandriver.fr",
@@ -285,7 +286,7 @@ footer.footer-mini a.footer-logo img{height:32px!important;width:auto!important;
 <link rel="stylesheet" href="/assets/responsive-polish.css">
 
 <link rel="stylesheet" href="/assets/tgd-site-polish.css">
-<link rel="stylesheet" href="/assets/tgd-home.css"><link rel="stylesheet" href="/assets/tgd-pro-pages.css"><link rel="stylesheet" href="/assets/tgd-contact.css"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "ContactPage", "name": "Contact et devis — The Gentleman Driver", "url": "https://www.thegentlemandriver.fr/contact", "about": {"@id": "https://www.thegentlemandriver.fr/#business"}}</script></head>
+<link rel="stylesheet" href="/assets/tgd-home.css"><link rel="stylesheet" href="/assets/tgd-pro-pages.css"><link rel="stylesheet" href="/assets/tgd-contact.css"></head>
 <body class="home-v2 contact-v2 quote-v2">
 
 <a class="skip-link" href="#contenu-principal">Aller au contenu</a><nav aria-label="Navigation principale">
@@ -309,11 +310,12 @@ footer.footer-mini a.footer-logo img{height:32px!important;width:auto!important;
     <div class="form-intro-sub">3 étapes · Les champs marqués * sont obligatoires · Réponse selon disponibilité</div>
 
     <div class="steps-indicator">
-      <div class="step-ind active" id="ind-1">1 &#8212; Votre besoin</div>
+      <div class="step-ind active" id="ind-1" aria-current="step">1 &#8212; Votre besoin</div>
       <div class="step-ind" id="ind-2">2 &#8212; La mission</div>
       <div class="step-ind" id="ind-3">3 &#8212; Vos coordonn&#233;es</div>
     </div>
 
+    <p id="step-status" class="step-status" role="status" aria-live="polite">Étape 1 sur 3 : votre besoin.</p><div id="contact-error-summary" class="form-error-summary" role="alert" hidden></div>
     <div class="form-progress"><div class="progress-bar" id="progressBar"></div></div>
 
     <form id="form-contact" action="https://formspree.io/f/xwpbaozv" method="POST" novalidate>
@@ -482,7 +484,7 @@ footer.footer-mini a.footer-logo img{height:32px!important;width:auto!important;
           <textarea class="f-textarea" name="message" id="message" aria-label="Message" placeholder="Informations suppl&#233;mentaires, questions&#8230;"></textarea>
         </div>
         <label class="privacy-note"><input type="checkbox" name="consentement" value="oui" required> J’accepte que les informations saisies soient utilisées par The Gentleman Driver pour répondre à ma demande. <a href="/mentions-legales#donnees-personnelles">Politique de confidentialité</a></label>
-        <div class="form-error-band" id="form-error-band"></div>
+        <div class="form-error-band" id="form-error-band" role="alert"></div>
         <div class="form-nav">
           <button type="button" class="btn-back" onclick="goToStep(2)">&#8592; Retour</button>
           <button type="submit" class="btn-submit" id="btn-submit">Envoyer la demande &#8594;</button>
@@ -492,7 +494,7 @@ footer.footer-mini a.footer-logo img{height:32px!important;width:auto!important;
 
     </form>
 
-    <div class="form-success" id="formSuccess">
+    <div class="form-success" id="formSuccess" role="status" tabindex="-1">
       <div class="form-success-icon">&#10003;</div>
       <h3>Message re&#231;u !</h3>
       <p>Nous vous recontactons rapidement.<br>Pour une urgence&#160;: <a href="tel:+33763695257" style="color:var(--gold)">07 63 69 52 57</a></p>
@@ -627,26 +629,53 @@ footer.footer-mini a.footer-logo img{height:32px!important;width:auto!important;
 var currentStep = 1;
 
 function isValidContactField(field) {
+  if (field.type === 'checkbox') return field.checked;
   var value = field.value.trim();
   if (!value) return false;
   if (field.type === 'email') return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
   if (field.type === 'tel') { var digits = value.replace(/\D/g, ''); return digits.length >= 10 && digits.length <= 15; }
   return true;
 }
-
-function validateStep(step) {
-  var panel = document.getElementById('panel-' + step);
-  var valid = true;
-  panel.querySelectorAll('[required]').forEach(function(f) {
-    f.classList.remove('error');
-    if (!isValidContactField(f)) { f.classList.add('error'); valid = false; }
-    if (f.id === 'type_mission_hidden') {
-      var typeError = document.getElementById('type-mission-error');
-      if (typeError) typeError.style.display = isValidContactField(f) ? 'none' : 'block';
-    }
-  });
-  return valid;
+function clearContactError(field) {
+  field.classList.remove('error'); field.removeAttribute('aria-invalid');
+  var errorId = field.dataset.errorId;
+  if (errorId) {
+    var error = document.getElementById(errorId); if (error) error.remove();
+    var ids = (field.getAttribute('aria-describedby') || '').split(' ').filter(function(id) { return id && id !== errorId; });
+    if (ids.length) field.setAttribute('aria-describedby', ids.join(' ')); else field.removeAttribute('aria-describedby');
+  }
 }
+function validateStep(step) {
+  var panel = document.getElementById('panel-' + step), invalid = [];
+  panel.querySelectorAll('[required]').forEach(function(field, index) {
+    clearContactError(field);
+    if (field.id === 'type_mission_hidden') {
+      document.getElementById('type-mission-error').style.display = isValidContactField(field) ? 'none' : 'block';
+    }
+    if (isValidContactField(field)) return;
+    invalid.push(field); field.classList.add('error'); field.setAttribute('aria-invalid', 'true');
+    if (field.type === 'hidden') return;
+    var label = field.id && document.querySelector('label[for="' + field.id + '"]');
+    var name = label ? label.textContent.replace('*', '').trim() : 'ce champ';
+    var error = document.createElement('p');
+    error.id = 'contact-error-' + step + '-' + index; error.className = 'contact-field-error';
+    error.textContent = field.type === 'checkbox' ? 'Merci de confirmer l’utilisation de vos informations pour répondre à votre demande.' : field.type === 'email' ? 'Saisissez une adresse e-mail valide, par exemple nom@entreprise.fr.' : field.type === 'tel' ? 'Saisissez un numéro de téléphone de 10 à 15 chiffres.' : 'Merci de renseigner ' + name.toLowerCase() + '.';
+    field.dataset.errorId = error.id;
+    field.setAttribute('aria-describedby', ((field.getAttribute('aria-describedby') || '') + ' ' + error.id).trim());
+    if (field.type === 'checkbox') field.closest('label').insertAdjacentElement('afterend', error); else field.insertAdjacentElement('afterend', error);
+  });
+  var summary = document.getElementById('contact-error-summary');
+  summary.hidden = !invalid.length;
+  if (invalid.length) {
+    summary.textContent = 'Votre demande n’a pas été envoyée. Vérifiez les ' + invalid.length + ' champ' + (invalid.length > 1 ? 's signalés.' : ' signalé.');
+    var target = invalid[0].type === 'hidden' ? panel.querySelector('.type-btn') : invalid[0];
+    if (target) target.focus();
+  }
+  return !invalid.length;
+}
+document.getElementById('form-contact').addEventListener('input', function(event) {
+  if (event.target.classList.contains('error') && isValidContactField(event.target)) clearContactError(event.target);
+});
 
 function goToStep(step) {
   // Si on avance, valider le panel actuel d'abord
@@ -656,6 +685,11 @@ function goToStep(step) {
   document.getElementById('ind-' + currentStep).classList.add('done');
   currentStep = step;
   document.getElementById('panel-' + step).classList.add('active');
+  document.getElementById('contact-error-summary').hidden = true;
+  document.querySelectorAll('.step-ind').forEach(function(ind, i) { if (i + 1 === step) ind.setAttribute('aria-current', 'step'); else ind.removeAttribute('aria-current'); });
+  document.getElementById('step-status').textContent = 'Étape ' + step + ' sur 3 : ' + ['votre besoin', 'la mission', 'vos coordonnées'][step - 1] + '.';
+  var first = document.getElementById('panel-' + step).querySelector('button,input:not([type=hidden]),select,textarea');
+  if (first) first.focus({preventScroll:true});
   document.getElementById('ind-' + step).classList.remove('done');
   document.getElementById('ind-' + step).classList.add('active');
   var pct = step === 1 ? 33 : step === 2 ? 66 : 100;
@@ -669,7 +703,8 @@ function selectType(btn) {
   btn.classList.add('selected');
   var hidden = document.getElementById('type_mission_hidden');
   var value = btn.getAttribute('data-value') || btn.textContent.trim();
-  if (hidden) hidden.value = value;
+  if (hidden) { hidden.value = value; clearContactError(hidden); }
+  document.querySelectorAll('.type-btn').forEach(function(button) { button.setAttribute('aria-pressed', button === btn ? 'true' : 'false'); });
   var chauffeurFields = document.getElementById('chauffeur-fields');
   if (chauffeurFields) chauffeurFields.style.display = value === 'Chauffeur avec mon vehicule' ? 'block' : 'none';
   var typeError = document.getElementById('type-mission-error');
@@ -679,20 +714,13 @@ function selectType(btn) {
 document.getElementById('form-contact').addEventListener('submit', function(e) {
   e.preventDefault();
   var form = this;
-  var valid = true;
-  // Vérifier uniquement les champs required visibles (panel actif)
-  var activePanel = form.querySelector('.form-panel.active');
-  var scope = activePanel || form;
-  scope.querySelectorAll('[required]').forEach(function(f) {
-    f.classList.remove('error');
-    if (!isValidContactField(f)) { f.classList.add('error'); valid = false; }
-  });
-  if (!valid) {
-    var band = document.getElementById('form-error-band');
-    band.textContent = 'Merci de renseigner les champs obligatoires et de vérifier vos coordonnées.';
-    band.classList.add('show');
-    return;
+  for (var step = 1; step <= 3; step++) {
+    if (!validateStep(step)) {
+      if (step !== currentStep) { goToStep(step); validateStep(step); }
+      return;
+    }
   }
+  document.getElementById('form-error-band').classList.remove('show');
   var btn = document.getElementById('btn-submit');
   btn.innerHTML = 'Envoi...';
   btn.disabled = true;
@@ -703,6 +731,8 @@ document.getElementById('form-contact').addEventListener('submit', function(e) {
       document.querySelector('.steps-indicator').style.display = 'none';
       document.querySelector('.form-progress').style.display = 'none';
       document.getElementById('formSuccess').classList.add('show');
+      document.getElementById('step-status').textContent = 'Votre demande a bien été envoyée.';
+      document.getElementById('formSuccess').focus({preventScroll:true});
       document.dispatchEvent(new CustomEvent('tgd:form-success', {detail:{formId:form.id || 'contact'}}));
       window.scrollTo({ top: document.querySelector('.form-side').offsetTop - 100, behavior: 'smooth' });
     } else { throw new Error('err'); }
@@ -753,6 +783,8 @@ document.getElementById('form-contact').addEventListener('submit', function(e) {
     var currentResults = [];
 
     function showList(items) {
+      var seen = new Set();
+      items = items.filter(function(item) { var key = item.display_name.trim().toLocaleLowerCase('fr'); if (seen.has(key)) return false; seen.add(key); return true; });
       currentResults = items;
       activeIdx = -1;
       list.innerHTML = '';

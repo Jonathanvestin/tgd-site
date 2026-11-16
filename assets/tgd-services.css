@@ -32,3 +32,13 @@
 @media(max-width:900px){.service-v2 .use-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:650px){.service-v2 .use-grid{grid-template-columns:1fr}.service-v2 .digital-panel,.service-v2 .handover{padding:22px}}
 .prestige-v2 .service-section>.wrap{max-width:1050px}.prestige-v2 .service-section ul{padding-left:23px;font-size:.88rem;line-height:2}.prestige-v2 .service-section li{margin:16px 0}.prestige-v2 .service-section h3{margin-top:32px}.prestige-v2 .highlight-box{margin:30px 0;padding:22px 26px;border-left:3px solid #96713a;background:#ded3bf}.prestige-v2 .highlight-box p{margin-top:0}.prestige-v2 .faq-a{display:block;padding-top:10px}.prestige-v2 .related-card-label,.prestige-v2 .related-card-arrow{font-size:.75rem}.prestige-v2 .light p[style]{color:#555954!important}
+/* Text colours follow the actual panel background, including legacy inline rules. */
+.service-v2 .service-section.light a:not(.button):not(.service-card):not(.related-card),
+.service-v2 .service-section.light a:not(.button):not(.service-card):not(.related-card):visited{color:#6d4f1f!important;text-underline-offset:4px}
+.service-v2 .service-section.light .card p{color:#4c514d}
+.service-v2 .digital-panel{color:#202521;background:#e9e2d6;border-color:#cfc7b9}
+.service-v2 .digital-panel :is(h2,p,li){color:#202521}
+.service-v2 .digital-panel :is(.kicker,h2 em,.btn-ghost){color:#6d4f1f}
+.service-v2 .digital-panel .digital-cta{display:flex;flex-wrap:wrap;gap:16px 28px}
+.service-v2 .digital-panel .btn-ghost{display:inline-block;padding:10px 0;font-weight:500}
+.service-v2 .digital-panel :is(a,button):focus-visible{outline-color:#795b2b}

@@ -11,3 +11,9 @@ body>nav{height:88px;position:sticky;top:0;z-index:210;display:flex;align-items:
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
 
 .hero-visual figcaption strong{flex-shrink:0;white-space:nowrap}.button:disabled{opacity:.6;cursor:wait}
+/* Explicit foregrounds for the two closing-panel backgrounds. */
+.closing:not(.light) .closing-actions>a:not(.button){color:#dfc28b}
+.eyebrow{font-size:.75rem}
+:where(a,button,summary):focus-visible{outline:3px solid #c9a96e;outline-offset:4px}
+.light :where(a,button,summary):focus-visible{outline-color:#795b2b}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}

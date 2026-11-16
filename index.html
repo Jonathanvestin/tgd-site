@@ -277,6 +277,8 @@
     var currentResults = [];
 
     function showList(items) {
+      var seen = new Set();
+      items = items.filter(function(item) { var key = item.display_name.trim().toLocaleLowerCase('fr'); if (seen.has(key)) return false; seen.add(key); return true; });
       currentResults = items;
       activeIdx = -1;
       list.innerHTML = '';
@@ -289,7 +291,7 @@
         li.addEventListener('mousedown', function(e) {
           e.preventDefault();
           inputEl.value = item.display_name;
-          list.style.display = 'none';
+          hideList();
         });
         list.appendChild(li);
       });
