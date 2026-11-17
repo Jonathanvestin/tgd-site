@@ -48,3 +48,15 @@ Contrôle statique des ressources : toutes les images des pages HTML principales
 ## Mise à jour Search Console
 
 Le doublon URL a été décoché dans Windsor avec autorisation de Jonathan ; la propriété domaine est conservée. Les statistiques sont désormais accessibles. Le constat de blocage ci-dessus est historique et résolu. Voir SEO_SEARCH_CONSOLE_2026-11-16.md pour les données du 17 octobre au 13 novembre et les optimisations préparées.
+
+
+## Contrôle complémentaire — 17 novembre 2026
+
+- Production consultée : les classes de la nouvelle galerie et des cartes de choix de mission sont absentes. Ces changements restent en prévisualisation.
+- Accueil en navigateur, largeur ordinateur 1363 px : aucune image cassée ni débordement horizontal observé.
+- Contrôle mobile en iframe de 390 px : accueil (largeur utile 375 px) et contact (387 px) sans débordement horizontal. Ce contrôle ne remplace pas un téléphone physique.
+- Menu mobile ouvert et fermé ; devis express vide refusé avec message d’erreur.
+- Contact avec service=mise-en-main : titre contextualisé et prestation présélectionnée vérifiés. Parcours gestionnaire de flotte puis Paris–Lyon jusqu’à l’étape des coordonnées effectué sans envoi.
+- Lien LinkedIn de Contact corrigé vers la page entreprise vérifiée the-gentleman-driver-convoyage.
+- Contrôle statique de 47 fichiers HTML : JSON-LD lisible, ressources locales présentes, aucun ancien téléphone au format espacé. Exceptions : page de redirection livraison-0km sans H1, 404 sans canonical, ancien script Analytics dans entreprises.html (route redirigée). Aucune conclusion de conformité exhaustive tirée de ce contrôle.
+- Horaires et WhatsApp du site diffèrent de la fiche Google : conserver les valeurs existantes jusqu’à confirmation de leurs modalités réelles. Aucun tarif modifié.
