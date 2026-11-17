@@ -33,3 +33,5 @@ body>nav{height:88px;position:sticky;top:0;z-index:210;display:flex;align-items:
 .site-home .hero-quote-note{max-width:900px}
 @media(max-width:980px){.mission-choice-grid{grid-template-columns:1fr}.mission-choice-card{padding:25px}.mission-choice-card .button{width:auto;max-width:100%}}
 @media(max-width:650px){.site-home .hero-v2 h1{font-size:clamp(2.6rem,9vw,3.25rem)}.mission-choice{padding-top:46px}.mission-choice-card .button{width:100%}}
+
+.mission-photos-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem;margin:2rem 0}.mission-photos-grid figure{margin:0;overflow:hidden;border-radius:1rem;background:#fff;color:#20242b}.mission-photos-grid img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}.mission-photos-grid figcaption{padding:1rem;font-weight:600;color:#20242b}@media(max-width:700px){.mission-photos-grid{grid-template-columns:1fr}}
