@@ -471,14 +471,15 @@ footer.footer-mini a.footer-logo img{height:32px!important;width:auto!important;
         </div>
         <div class="f-row">
           <div class="f-group">
-            <label class="f-label" for="telephone">T&#233;l&#233;phone *</label>
-            <input type="tel" class="f-input" name="telephone" id="telephone" placeholder="06 XX XX XX XX" required aria-label="Telephone">
+            <label class="f-label" for="telephone">T&#233;l&#233;phone</label>
+            <input type="tel" class="f-input" name="telephone" id="telephone" placeholder="06 XX XX XX XX" aria-describedby="contact-method-help" aria-label="Telephone">
           </div>
           <div class="f-group">
-            <label class="f-label" for="email">E-mail *</label>
-            <input type="email" class="f-input" name="email" id="email" placeholder="vous@exemple.com" required aria-label="Email">
+            <label class="f-label" for="email">E-mail</label>
+            <input type="email" class="f-input" name="email" id="email" placeholder="vous@exemple.com" aria-describedby="contact-method-help" aria-label="Email">
           </div>
         </div>
+        <p id="contact-method-help" class="form-intro-sub">Un téléphone ou un e-mail est obligatoire. Renseignez le moyen de contact que vous préférez ; vous pouvez aussi indiquer les deux.</p>
         <div class="f-group">
           <label class="f-label" for="message">Message (optionnel)</label>
           <textarea class="f-textarea" name="message" id="message" aria-label="Message" placeholder="Informations suppl&#233;mentaires, questions&#8230;"></textarea>
@@ -647,8 +648,11 @@ function clearContactError(field) {
 }
 function validateStep(step) {
   var panel = document.getElementById('panel-' + step), invalid = [];
-  panel.querySelectorAll('[required]').forEach(function(field, index) {
+  panel.querySelectorAll('[required], #telephone, #email').forEach(function(field, index) {
     clearContactError(field);
+    var missingContact = step === 3 && !document.getElementById('telephone').value.trim() && !document.getElementById('email').value.trim();
+    if (field.id === 'email' && !field.value.trim()) return;
+    if (field.id === 'telephone' && !field.value.trim() && !missingContact) return;
     if (field.id === 'type_mission_hidden') {
       document.getElementById('type-mission-error').style.display = isValidContactField(field) ? 'none' : 'block';
     }
@@ -659,7 +663,7 @@ function validateStep(step) {
     var name = label ? label.textContent.replace('*', '').trim() : 'ce champ';
     var error = document.createElement('p');
     error.id = 'contact-error-' + step + '-' + index; error.className = 'contact-field-error';
-    error.textContent = field.type === 'checkbox' ? 'Merci de confirmer l’utilisation de vos informations pour répondre à votre demande.' : field.type === 'email' ? 'Saisissez une adresse e-mail valide, par exemple nom@entreprise.fr.' : field.id === 'vous_etes' ? 'Sélectionnez votre profil.' : field.type === 'tel' ? 'Saisissez un numéro de téléphone de 10 à 15 chiffres.' : 'Merci de renseigner ' + name.toLowerCase() + '.';
+    error.textContent = missingContact && field.id === 'telephone' ? 'Indiquez un téléphone ou un e-mail pour que nous puissions vous répondre.' : field.type === 'checkbox' ? 'Merci de confirmer l’utilisation de vos informations pour répondre à votre demande.' : field.type === 'email' ? 'Saisissez une adresse e-mail valide, par exemple nom@entreprise.fr.' : field.id === 'vous_etes' ? 'Sélectionnez votre profil.' : field.type === 'tel' ? 'Saisissez un numéro de téléphone de 10 à 15 chiffres.' : 'Merci de renseigner ' + name.toLowerCase() + '.';
     field.dataset.errorId = error.id;
     field.setAttribute('aria-describedby', ((field.getAttribute('aria-describedby') || '') + ' ' + error.id).trim());
     if (field.type === 'checkbox') field.closest('label').insertAdjacentElement('afterend', error); else field.insertAdjacentElement('afterend', error);
