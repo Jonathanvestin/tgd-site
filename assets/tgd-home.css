@@ -17,3 +17,21 @@ body>nav{height:88px;position:sticky;top:0;z-index:210;display:flex;align-items:
 :where(a,button,summary):focus-visible{outline:3px solid #c9a96e;outline-offset:4px}
 .light :where(a,button,summary):focus-visible{outline-color:#795b2b}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+/* Mission choices: one primary action, complete cards and readable copy. */
+.mission-choice{padding-top:64px}
+.mission-choice-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.mission-choice-card{display:flex;flex-direction:column;align-items:flex-start;padding:28px;border:1px solid #777368;background:#16191a;min-width:0}
+.mission-choice-card .eyebrow{font-size:.7rem;letter-spacing:.08em;line-height:1.6}
+.mission-choice-card h3{font-size:2.25rem;line-height:1.1;margin-bottom:18px;color:#f5f0e8}
+.mission-choice-card>p:not(.eyebrow){color:#ddd8ce;font-size:.94rem;line-height:1.8;margin-bottom:24px}
+.mission-choice-card .button{margin-top:auto;width:100%;white-space:normal}
+.mission-choice-featured{border-color:#c9a96e;background:#24231f}
+.mission-choice-note{margin-top:24px;color:#d8d3c9;font-size:.88rem}
+.mission-choice-note a,.mission-choice-note a:visited{color:#dfc28b;text-underline-offset:4px}
+.site-home .hero-v2 h1{font-size:clamp(2.8rem,4.5vw,4.7rem);line-height:1.08}
+.site-home .hero-quote-note{max-width:900px}
+@media(max-width:980px){.mission-choice-grid{grid-template-columns:1fr}.mission-choice-card{padding:25px}.mission-choice-card .button{width:auto;max-width:100%}}
+@media(max-width:650px){.site-home .hero-v2 h1{font-size:clamp(2.6rem,9vw,3.25rem)}.mission-choice{padding-top:46px}.mission-choice-card .button{width:100%}}
+
+.mission-photos-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem;margin:2rem 0}.mission-photos-grid figure{margin:0;overflow:hidden;border-radius:1rem;background:#fff;color:#20242b}.mission-photos-grid img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}.mission-photos-grid figcaption{padding:1rem;font-weight:600;color:#20242b}@media(max-width:700px){.mission-photos-grid{grid-template-columns:1fr}}
