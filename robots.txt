@@ -12,12 +12,27 @@ Allow: /
 # OpenAI — recherche, navigation utilisateur et entraînement autorisés
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /api/
 
 User-agent: ChatGPT-User
 Allow: /
 
 User-agent: GPTBot
 Allow: /
+
+# Recherche Claude et accès demandé par ses utilisateurs
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /api/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /api/
+
+# Bing / Copilot
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
 
 # Autres moteurs et assistants IA
 User-agent: ClaudeBot
@@ -28,6 +43,11 @@ Allow: /
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /api/
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /api/
 
 User-agent: Amazonbot
 Allow: /
