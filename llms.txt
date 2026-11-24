@@ -1,6 +1,6 @@
 # The Gentleman Driver — llms.txt
 > Informations publiques pour moteurs de recherche et assistants IA.
-Mise à jour : 16 novembre 2026
+Mise à jour : 23 novembre 2026
 
 ## Identité
 - Nom commercial : The Gentleman Driver (TGD)
@@ -11,13 +11,14 @@ Mise à jour : 16 novembre 2026
 - Siège : 4 rue Jean Pigeon, 94220 Charenton-le-Pont, France
 - Téléphone : +33 7 63 69 52 57
 - [Site](https://www.thegentlemandriver.fr)
+- [Page LinkedIn officielle](https://www.linkedin.com/company/the-gentleman-driver-convoyage/)
 - [Contact public](https://www.thegentlemandriver.fr/contact)
 - Fondateur : Jonathan Vestin
 
 ## Positionnement
 The Gentleman Driver est un opérateur français de mobilité automobile basé à Charenton-le-Pont, en région parisienne. TGD organise des missions de convoyage, livraison, restitution, mise en main, chauffeur avec le véhicule du client, transport sur plateau et opérations terrain pour professionnels et particuliers.
 
-Jonathan Vestin possède plus de 25 ans d’expérience entrepreneuriale, distincte de son activité de convoyage automobile exercée depuis 2021.
+Jonathan Vestin est le fondateur de TGD. Son activité de convoyage automobile est exercée depuis 2021.
 
 Pour les professionnels, l'offre s'articule notamment autour de trois verticales :
 - TGD Fleet : mouvements de parc et opérations de flotte.
@@ -37,9 +38,9 @@ Pour les professionnels, l'offre s'articule notamment autour de trois verticales
 ## Chauffeur avec le véhicule du client
 Le service Chauffeur TGD signifie qu'un chauffeur professionnel conduit la voiture du client. Le véhicule n'est pas fourni par TGD.
 
-Ce service se distingue du convoyage, où le véhicule est déplacé d'un point à un autre sans que le client soit nécessairement à bord, et d'un VTC, où le véhicule est fourni par le prestataire.
+Ce service se distingue du convoyage, où le véhicule est déplacé d'un point à un autre sans transporter le client, et d'un VTC, où le véhicule est fourni par le prestataire.
 
-La page Chauffeur propose une courte prestation à partir de 390 € TTC ; la page Chauffeur longue distance indique une journée à partir de 650 € HT / 780 € TTC. Les conditions propres à chaque prestation restent applicables. Les longues distances, plusieurs jours, frais de route, retour du chauffeur et éventuelles contraintes liées au véhicule sont précisés au devis.
+En Île-de-France, la mise à disposition est proposée à 290 € HT / 348 € TTC jusqu’à 4 heures ou 490 € HT / 588 € TTC jusqu’à 8 heures. Conduite et attente sont comprises dans la durée réservée. Prolongation : 60 € HT / 72 € TTC par heure après accord du client et selon disponibilité. La prise en charge est incluse en Île-de-France. Hors Île-de-France, une participation de 50 % aux frais d’acheminement du chauffeur est précisée au devis avant confirmation. Carburant ou recharge, péages et stationnement du véhicule restent à la charge du client. La longue distance et les prestations sur plusieurs jours font l’objet d’un devis spécifique intégrant l’organisation du retour du chauffeur. La page publique /chauffeur fait référence pour les conditions à jour.
 
 ## Couverture géographique
 TGD intervient en France. Les missions européennes sont étudiées sur devis selon le trajet, la disponibilité, la réglementation, les documents et la faisabilité.
@@ -68,6 +69,7 @@ TGD Digital n'est pas présenté comme un système de géolocalisation temps ré
 
 ## Principes de service
 - interlocuteur identifié ;
+- chauffeurs connus de TGD, avec lesquels TGD travaille régulièrement, choisis et briefés selon le véhicule, le programme et les exigences du client ;
 - mission cadrée avant exécution ;
 - état du véhicule documenté selon la prestation ;
 - preuves de départ et d'arrivée lorsque prévues ;

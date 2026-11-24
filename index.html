@@ -30,7 +30,10 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["ProfessionalService", "LocalBusiness"],
+      "@type": [
+        "ProfessionalService",
+        "LocalBusiness"
+      ],
       "@id": "https://www.thegentlemandriver.fr/#business",
       "name": "The Gentleman Driver",
       "alternateName": "TGD",
@@ -47,10 +50,18 @@
         "addressRegion": "Île-de-France",
         "addressCountry": "FR"
       },
-      "founder": {"@id": "https://www.thegentlemandriver.fr/a-propos#jonathan-vestin"},
+      "founder": {
+        "@id": "https://www.thegentlemandriver.fr/a-propos#jonathan-vestin"
+      },
       "areaServed": [
-        {"@type": "Country", "name": "France"},
-        {"@type": "Place", "name": "Europe"}
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Place",
+          "name": "Europe"
+        }
       ],
       "knowsAbout": [
         "convoyage automobile",
@@ -65,16 +76,76 @@
         "@type": "OfferCatalog",
         "name": "Services The Gentleman Driver",
         "itemListElement": [
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Convoyage automobile", "url": "https://www.thegentlemandriver.fr/convoyage"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mise en main", "url": "https://www.thegentlemandriver.fr/mise-en-main"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Chauffeur avec votre véhicule", "url": "https://www.thegentlemandriver.fr/chauffeur"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Solutions professionnelles", "url": "https://www.thegentlemandriver.fr/solutions-professionnelles"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "TGD Fleet", "url": "https://www.thegentlemandriver.fr/tgd-fleet"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "TGD Automotive", "url": "https://www.thegentlemandriver.fr/tgd-automotive"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "TGD Digital", "url": "https://www.thegentlemandriver.fr/tgd-digital"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Transport sur plateau", "url": "https://www.thegentlemandriver.fr/transport-plateau"}}
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Convoyage automobile",
+              "url": "https://www.thegentlemandriver.fr/convoyage"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Mise en main",
+              "url": "https://www.thegentlemandriver.fr/mise-en-main"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Chauffeur avec votre véhicule",
+              "url": "https://www.thegentlemandriver.fr/chauffeur"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Solutions professionnelles",
+              "url": "https://www.thegentlemandriver.fr/solutions-professionnelles"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "TGD Fleet",
+              "url": "https://www.thegentlemandriver.fr/tgd-fleet"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "TGD Automotive",
+              "url": "https://www.thegentlemandriver.fr/tgd-automotive"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "TGD Digital",
+              "url": "https://www.thegentlemandriver.fr/tgd-digital"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Transport sur plateau",
+              "url": "https://www.thegentlemandriver.fr/transport-plateau"
+            }
+          }
         ]
-      }
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/the-gentleman-driver-convoyage/"
+      ],
+      "email": "contact@thegentlemandriver.fr"
     },
     {
       "@type": "Person",
@@ -82,8 +153,13 @@
       "name": "Jonathan Vestin",
       "jobTitle": "Fondateur et gérant",
       "url": "https://www.thegentlemandriver.fr/a-propos",
-      "worksFor": {"@id": "https://www.thegentlemandriver.fr/#business"},
-      "description": "Jonathan Vestin possède plus de 25 ans d’expérience entrepreneuriale, distincte de son activité de convoyage automobile exercée depuis 2021."
+      "worksFor": {
+        "@id": "https://www.thegentlemandriver.fr/#business"
+      },
+      "description": "Jonathan Vestin est le fondateur de The Gentleman Driver, dont l’activité de convoyage automobile est exercée depuis 2021.",
+      "sameAs": [
+        "https://www.linkedin.com/in/jonathanvestin/"
+      ]
     },
     {
       "@type": "WebSite",
@@ -91,7 +167,9 @@
       "url": "https://www.thegentlemandriver.fr/",
       "name": "The Gentleman Driver",
       "alternateName": "TGD",
-      "publisher": {"@id": "https://www.thegentlemandriver.fr/#business"},
+      "publisher": {
+        "@id": "https://www.thegentlemandriver.fr/#business"
+      },
       "inLanguage": "fr-FR"
     }
   ]
