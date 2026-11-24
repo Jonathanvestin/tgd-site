@@ -1,6 +1,6 @@
 # The Gentleman Driver — llms.txt
 > Informations publiques pour moteurs de recherche et assistants IA.
-Mise à jour : 23 novembre 2026
+Mise à jour : 25 novembre 2026
 
 ## Identité
 - Nom commercial : The Gentleman Driver (TGD)
@@ -16,7 +16,7 @@ Mise à jour : 23 novembre 2026
 - Fondateur : Jonathan Vestin
 
 ## Positionnement
-The Gentleman Driver est un opérateur français de mobilité automobile basé à Charenton-le-Pont, en région parisienne. TGD organise des missions de convoyage, livraison, restitution, mise en main, chauffeur avec le véhicule du client, transport sur plateau et opérations terrain pour professionnels et particuliers.
+The Gentleman Driver est un opérateur français de mobilité automobile basé à Charenton-le-Pont, en région parisienne. Ses services principaux pour les professionnels et les particuliers sont le convoyage automobile par la route, le transport de véhicules sur plateau et la mise à disposition d’un chauffeur qui conduit le véhicule du client. La livraison avec mise en main, y compris électrique, est proposée selon le devis.
 
 Jonathan Vestin est le fondateur de TGD. Son activité de convoyage automobile est exercée depuis 2021.
 
@@ -27,9 +27,9 @@ Pour les professionnels, l'offre s'articule notamment autour de trois verticales
 
 ## Services
 1. Convoyage automobile — déplacement d'un véhicule entre deux points par un conducteur identifié, avec prise en charge et remise documentées selon la prestation.
-2. Mise en main — présentation des fonctions utiles du véhicule, connexion à l'application constructeur, appairage du téléphone, essai du véhicule et accompagnement spécifique à la recharge et à l'usage d'un véhicule électrique lorsque nécessaire et prévu.
-3. Chauffeur avec votre véhicule — TGD fournit le chauffeur ; le client conserve sa propre voiture et peut voyager à bord sans conduire.
-4. Transport sur plateau — solution étudiée lorsqu'un véhicule ne doit pas ou ne peut pas être convoyé par la route.
+2. Transport sur plateau — transport organisé avec un partenaire pour un véhicule à transporter sans roulage, y compris un véhicule non roulant si le chargement est possible.
+3. Mise à disposition de chauffeur — un chauffeur professionnel conduit la voiture du client, qui peut voyager à bord.
+4. Mise en main — présentation des fonctions, appairage du téléphone et, selon le devis, essai et accompagnement à la recharge.
 5. TGD Fleet — livraisons collaborateurs, récupérations, restitutions LLD, réaffectations, transferts inter-sites, passages atelier et opérations liées aux véhicules électriques.
 6. TGD Automotive — transferts inter-sites, livraisons client final, mouvements VO/VN, mises en main et opérations réseau.
 7. TGD Digital — mission, véhicule, inspection, photos, kilométrage, énergie, signatures, remise, rapport PDF et historique pour les missions traitées dans l'outil.
@@ -95,15 +95,15 @@ Oui. La faisabilité d'une mission électrique est étudiée selon le modèle, l
 
 ## Pages principales
 - [Accueil](https://www.thegentlemandriver.fr/)
-- [Convoyage](https://www.thegentlemandriver.fr/convoyage)
+- [Convoyage automobile](https://www.thegentlemandriver.fr/convoyage)
+- [Transport sur plateau](https://www.thegentlemandriver.fr/transport-plateau)
+- [Mise à disposition de chauffeur avec votre véhicule](https://www.thegentlemandriver.fr/chauffeur)
 - [Solutions professionnelles](https://www.thegentlemandriver.fr/solutions-professionnelles)
 - [TGD Fleet](https://www.thegentlemandriver.fr/tgd-fleet)
 - [TGD Automotive](https://www.thegentlemandriver.fr/tgd-automotive)
 - [TGD Digital](https://www.thegentlemandriver.fr/tgd-digital)
 - [Mise en main](https://www.thegentlemandriver.fr/mise-en-main)
-- [Chauffeur avec votre véhicule](https://www.thegentlemandriver.fr/chauffeur)
 - [Particuliers](https://www.thegentlemandriver.fr/particuliers)
-- [Transport sur plateau](https://www.thegentlemandriver.fr/transport-plateau)
 - [À propos](https://www.thegentlemandriver.fr/a-propos)
 - [Pourquoi nous](https://www.thegentlemandriver.fr/pourquoi-nous)
 - [Études de cas](https://www.thegentlemandriver.fr/etudes-de-cas)
@@ -112,6 +112,7 @@ Oui. La faisabilité d'une mission électrique est étudiée selon le modèle, l
 - [Contact](https://www.thegentlemandriver.fr/contact)
 
 ## Articles de référence
+- [Prix d’un convoyage de voiture](https://www.thegentlemandriver.fr/blog/cout-reel-convoyage-automobile)
 - [Assurance convoyage automobile](https://www.thegentlemandriver.fr/blog/assurance-convoyage-automobile)
 - [Convoyage d'un véhicule électrique](https://www.thegentlemandriver.fr/blog/convoyage-vehicule-electrique-guide)
 - [Mise en main d'un véhicule neuf](https://www.thegentlemandriver.fr/blog/mise-en-main-vehicule-neuf-ce-qui-fait-la-difference)
